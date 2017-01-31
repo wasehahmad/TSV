@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 74HC366
+D 6 bits Register
+K TTL REG DFF DFF6
+$ENDCMP
+#
+#End Doc Library

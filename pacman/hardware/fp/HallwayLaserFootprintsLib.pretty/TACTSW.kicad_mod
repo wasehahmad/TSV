@@ -1,0 +1,17 @@
+(module TACTSW (layer F.Cu) (tedit 54247731)
+  (fp_text reference SW1 (at -4.191 -1.651 90) (layer F.SilkS) hide
+    (effects (font (size 1.016 1.016) (thickness 0.2032)))
+  )
+  (fp_text value TACTSW (at 0 10) (layer F.SilkS) hide
+    (effects (font (size 1.016 1.016) (thickness 0.2032)))
+  )
+  (fp_line (start -0.5 3) (end 0.5 3) (layer F.SilkS) (width 0.381))
+  (fp_line (start -3 -1.5) (end -3 1.5) (layer F.SilkS) (width 0.381))
+  (fp_line (start 3 -1.5) (end 3 1.5) (layer F.SilkS) (width 0.381))
+  (fp_line (start -0.5 -3) (end 0.5 -3) (layer F.SilkS) (width 0.381))
+  (fp_circle (center 0 0) (end 0 1.75) (layer F.SilkS) (width 0.15))
+  (pad 1 thru_hole circle (at -2.25 -3.25) (size 2 2) (drill 1.2) (layers *.Cu *.Mask F.SilkS))
+  (pad 2 thru_hole circle (at -2.25 3.25) (size 2 2) (drill 1.27) (layers *.Cu *.Mask F.SilkS))
+  (pad 4 thru_hole circle (at 2.25 -3.25) (size 2 2) (drill 1.27) (layers *.Cu *.Mask F.SilkS))
+  (pad 3 thru_hole circle (at 2.25 3.25) (size 2 2) (drill 1.27) (layers *.Cu *.Mask F.SilkS))
+)

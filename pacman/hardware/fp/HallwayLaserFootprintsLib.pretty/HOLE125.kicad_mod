@@ -1,0 +1,9 @@
+(module HOLE125 locked (layer F.Cu) (tedit 54257904)
+  (fp_text reference HOLE125 (at 0 7) (layer F.SilkS) hide
+    (effects (font (thickness 0.3048)))
+  )
+  (fp_text value VAL** (at 0 10) (layer F.SilkS) hide
+    (effects (font (thickness 0.3048)))
+  )
+  (pad "" thru_hole circle (at 0 0) (size 6.35 6.35) (drill 3.175) (layers *.Cu *.Mask F.SilkS))
+)
