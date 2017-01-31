@@ -1326,4 +1326,6 @@ F 11 "0.24" H 9600 5200 60  0001 C CNN "Unit Cost"
 	1    9600 5200
 	1    0    0    -1  
 $EndComp
+Text Notes 8700 6250 0    60   ~ 0
+SK310A-LTP and NZH5V1B\nnot needed for this regulator\nHalf bridge rectifier and zener\ndiode clamp not needed
 $EndSCHEMATC

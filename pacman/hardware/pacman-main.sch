@@ -1052,4 +1052,6 @@ Wire Wire Line
 	2975 7675 3325 7675
 Text Label 3325 7675 2    60   ~ 0
 PB4
+Text Notes 7150 4100 0    60   ~ 0
+These IOs can be brought\nout to control a screen\ninstead of using an I2C\nexpander attached to\nthe screen
 $EndSCHEMATC

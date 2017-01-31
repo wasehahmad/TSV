@@ -37,8 +37,8 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 6
 Title "Battery Pack Management Computer"
-Date "2016-11-22"
-Rev "0.7"
+Date "2016-12-13"
+Rev "0.8"
 Comp "Lafayette College"
 Comment1 "Fall Semester 2016"
 Comment2 "Supervisor: Christopher Nadovich"
@@ -1052,4 +1052,6 @@ Wire Wire Line
 	2975 7675 3325 7675
 Text Label 3325 7675 2    60   ~ 0
 PB4
+Text Notes 7150 4100 0    60   ~ 0
+These IOs can be brought\nout to control a screen\ninstead of using an I2C\nexpander attached to\nthe screen
 $EndSCHEMATC

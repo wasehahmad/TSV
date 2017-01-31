@@ -1320,4 +1320,8 @@ Text Label 4425 6350 0    60   ~ 0
 SDA_IN
 Text Notes 4475 5550 0    100  ~ 0
 I2C PULLUP
+Text Notes 1750 6650 0    60   ~ 0
+Can be remove if using parallel connection\nwith the screen instead of I2C
+Text Notes 6400 4200 0    60   ~ 0
+Other GPIO pins\nthat are not used\nshould be broken\nout to this header
 $EndSCHEMATC
