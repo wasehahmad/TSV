@@ -74,59 +74,145 @@ void task_can(uint32_t data){
 
 
 
-		// PACK STATE
-		can_buff[0] = pack_state;
+		// FIRST PACKET: PACK STATE ; PACK VOLTAGE ; PACK CURRENT ; PACK SOC
 
-		//can_buff[0] = 0x30;
-
-		
-		can_frame.dlc = 1;
 		can_frame.id.std = (PACK_NUM<<8) & 0x7FF;
-		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
-		}
-		while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
-
-
+		can_frame.dlc = 8;
 		
+		can_buff[0] = pack_state;
 		
-		can_buff[0] = pack_voltage >> 8;
-		can_buff[1] = pack_voltage & 0xFF;
+		can_buff[1] = pack_voltage >> 8;
+		can_buff[2] = pack_voltage & 0xFF;
 
-		can_frame.dlc = 2;
-		can_frame.id.std = (PACK_NUM<<8 | 0x001) & 0x7FF;
+		can_buff[3] = pack_current >> 24 & 0xFF;
+		can_buff[4] = pack_current >> 16 & 0xFF;
+		can_buff[5] = pack_current >> 8 & 0xFF;
+		can_buff[6] = pack_current & 0xFF;
+
+		can_buff[7] = pack_SOC;
+		
 		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
 		}
 		while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
 
-		// PACK CURRENT
-		can_buff[0] = pack_current >> 24 & 0xFF;
-		can_buff[1] = pack_current >> 16 & 0xFF;
-		can_buff[2] = pack_current >> 8 & 0xFF;
-		can_buff[3] = pack_current & 0xFF;
-		can_frame.dlc = 4;
-		can_frame.id.std = (PACK_NUM<<8 | 0x002) & 0x7FF;
-		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
-		}
-		while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
+	        // SECOND PACKET: PACK COULOMBS ; CELL 1 STATUS ; CELL 3 STATUS ; CELL 4 STATUS ...
 
-		// PACK SOC
-		can_buff[0] = pack_SOC;
-		can_frame.dlc = 1;
-		can_frame.id.std = (PACK_NUM<<8 | 0x003) & 0x7FF;
-		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
-		}
-		while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
-
-		// PACK COULOMBS
 		can_buff[0] = pack_coulombs>>24 & 0xFF;
 		can_buff[1] = pack_coulombs>>16 & 0xFF;
 		can_buff[2] = pack_coulombs>>8 & 0xFF;
 		can_buff[3] = pack_coulombs & 0xFF;
-		can_frame.dlc = 4;
-		can_frame.id.std = (PACK_NUM<<8 | 0x004) & 0x7FF;
-		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
+
+		uint8_t packet_num = 1;
+		uint8_t packet_offset = 4;
+		uint8_t cell_num = 1;
+		uint8_t bytes_left = 4;
+
+		//SEND THE CELL STATUSES:
+		while(cell_num <= ams_board_count){
+		  while((bytes_left > 0) && (cell_num <= ams_board_count)){
+		    can_buff[packet_offset] = cell_status[cell_num];
+		    packet_offset++;
+		    cell_num++;
+		    bytes_left--;
+		  }
+		  if(bytes_left == 0){
+		    //SEND THE PACKET:
+		    can_frame.id.std = (PACK_NUM<<8 | packet_num) & 0x7FF;
+		    can_frame.dlc = packet_offset;
+		    while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
+		    }
+		    while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
+		    packet_num++;
+		    packet_offset = 0;
+		    bytes_left = 8;
+		  }
 		}
-		while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
+		
+		// FINISHED SENDING CELL STATUSES, NOW SEND CELL VOLTAGES:
+
+		cell_num = 1;
+
+		while(cell_num <= ams_board_count){
+		  while((bytes_left > 1) && (cell_num <= ams_board_count)){
+		    can_buff[packet_offset] = cell_V[cell_num] >> 8;
+		    can_buff[packet_offset+1] = cell_V[cell_num] & 0xFF;
+		    packet_offset = packet_offset+2;
+		    cell_num++;
+		    bytes_left = bytes_left - 2;
+		  }
+		  if(bytes_left <= 1){
+		    //SEND THE PACKET:
+		    can_frame.id.std = (PACK_NUM<<8 | packet_num) & 0x7FF;
+		    can_frame.dlc = packet_offset;
+		    while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
+		    }
+		    while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
+		    packet_num++;
+		    packet_offset = 0;
+		    bytes_left = 8;
+		  }
+		}
+
+		// FINISHED SENDING CELL VOLTAGES, NOW SEND CELL TEMPERATURES:
+
+		cell_num = 1;
+
+		while(cell_num <= ams_board_count){
+		  while((bytes_left > 1) && (cell_num <= ams_board_count)){
+		    can_buff[packet_offset] = cell_T[cell_num] >> 8;
+		    can_buff[packet_offset+1] = cell_T[cell_num] & 0xFF;
+		    packet_offset = packet_offset+2;
+		    cell_num++;
+		    bytes_left = bytes_left - 2;
+		  }
+		  if(bytes_left <= 1){
+		    //SEND THE PACKET:
+		    can_frame.id.std = (PACK_NUM<<8 | packet_num) & 0x7FF;
+		    can_frame.dlc = packet_offset;
+		    while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
+		    }
+		    while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
+		    packet_num++;
+		    packet_offset = 0;
+		    bytes_left = 8;
+		  }
+		}
+
+		/* can_frame.dlc = 2; */
+		/* can_frame.id.std = (PACK_NUM<<8 | 0x001) & 0x7FF; */
+		/* while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){ */
+		/* } */
+		/* while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED); */
+
+		// PACK CURRENT
+		/* can_buff[0] = pack_current >> 24 & 0xFF; */
+		/* can_buff[1] = pack_current >> 16 & 0xFF; */
+		/* can_buff[2] = pack_current >> 8 & 0xFF; */
+		/* can_buff[3] = pack_current & 0xFF; */
+		/* can_frame.dlc = 4; */
+		/* can_frame.id.std = (PACK_NUM<<8 | 0x002) & 0x7FF; */
+		/* while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){ */
+		/* } */
+		/* while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED); */
+
+		// PACK SOC
+		/* can_buff[0] = pack_SOC; */
+		/* can_frame.dlc = 1; */
+		/* can_frame.id.std = (PACK_NUM<<8 | 0x003) & 0x7FF; */
+		/* while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){ */
+		/* } */
+		/* while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED); */
+
+		// PACK COULOMBS
+		/* can_buff[0] = pack_coulombs>>24 & 0xFF; */
+		/* can_buff[1] = pack_coulombs>>16 & 0xFF; */
+		/* can_buff[2] = pack_coulombs>>8 & 0xFF; */
+		/* can_buff[3] = pack_coulombs & 0xFF; */
+		/* can_frame.dlc = 4; */
+		/* can_frame.id.std = (PACK_NUM<<8 | 0x004) & 0x7FF; */
+		/* while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){ */
+		/* } */
+		/* while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED); */
 
 		///////////////////////////////////////////////////////////////////////////////////////
 		
@@ -171,32 +257,32 @@ void task_can(uint32_t data){
 
 		// NEW:
 		// iterate for each cell
-		for(i = 0; i < 7; i = i +1){
-			can_buff[0] = cell_status[i];
-			can_frame.dlc = 1;
-			can_frame.id.std = (PACK_NUM<<8 | 0x010 | i) & 0x7FF;
-			while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
-			}
-			while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
+		/* for(i = 0; i < 7; i = i +1){ */
+		/* 	can_buff[0] = cell_status[i]; */
+		/* 	can_frame.dlc = 1; */
+		/* 	can_frame.id.std = (PACK_NUM<<8 | 0x010 | i) & 0x7FF; */
+		/* 	while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){ */
+		/* 	} */
+		/* 	while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED); */
 
-			can_buff[0] = cell_V[i] >> 8;
-			can_buff[1] = cell_V[i] & 0xFF;
-			can_frame.dlc = 2;
-			can_frame.id.std = (PACK_NUM<<8 | 0x020 | i) & 0x7FF;
-			while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
-			}
-			while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
+		/* 	can_buff[0] = cell_V[i] >> 8; */
+		/* 	can_buff[1] = cell_V[i] & 0xFF; */
+		/* 	can_frame.dlc = 2; */
+		/* 	can_frame.id.std = (PACK_NUM<<8 | 0x020 | i) & 0x7FF; */
+		/* 	while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){ */
+		/* 	} */
+		/* 	while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED); */
 
-			can_buff[0] = cell_T[i] >> 8;
-		 	can_buff[1] = cell_T[i] & 0xFF;
-			can_frame.dlc = 2;
-			can_frame.id.std = (PACK_NUM<<8 | 0x030 | i) & 0x7FF;
-			while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
-			}
-			while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
+		/* 	can_buff[0] = cell_T[i] >> 8; */
+		/*  	can_buff[1] = cell_T[i] & 0xFF; */
+		/* 	can_frame.dlc = 2; */
+		/* 	can_frame.id.std = (PACK_NUM<<8 | 0x030 | i) & 0x7FF; */
+		/* 	while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){ */
+		/* 	} */
+		/* 	while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED); */
 
 			
-		}
+		/* } */
 
 
 

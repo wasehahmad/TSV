@@ -2,6 +2,7 @@
 #include "atmel/can_drv.h"
 #include "params.h"
 #include "atomutils.h"
+#include "i2c.h"
 
 #ifndef PACK_NUM
 #define PACK_NUM 0x003

@@ -33,7 +33,7 @@ void display_top(void){
 		break;
 	case lco: d = "LCO";
 		break;
-	case flt: d = "FLT"; line0[10] = fault_code+48;
+	case flt: d = "FLT"; line0[10] = flt_cnd.cond+48;//line0[10] = fault_code+48; TESTING, REVERT BACK 03292017
 		break;
 	case dead: d = "DEAD";
 		break;

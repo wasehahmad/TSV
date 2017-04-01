@@ -28,6 +28,17 @@ unsigned char display_3[20];
 typedef enum {boot,chrg,chrgd,lco,flt,dead,rdy} State; //mirrored values in VSCADA
 volatile uint8_t fault_code;
 
+//adding 04012017
+struct flt_cond {
+  uint8_t active;
+  uint8_t cond;
+  uint8_t area;
+  uint16_t val;
+};
+
+volatile struct flt_cond flt_cnd;
+
+
 //various parameters that will be displayed on the LCD
 volatile int16_t shunt_voltage;  //part of pack current calc
 volatile int16_t pack_voltage;
