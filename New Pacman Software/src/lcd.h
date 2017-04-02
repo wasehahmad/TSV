@@ -44,8 +44,8 @@ char next_can_addr[5];	// next CAN bus address
 char off_result[5];		// cell voltage offset
 char slp_result[5];		// cell voltage slpope
 
-char curr_pack_id[2];
-char next_pack_id[2];
+char curr_pack_id;
+char next_pack_id;
 
 
 

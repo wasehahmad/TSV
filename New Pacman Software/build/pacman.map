@@ -123,7 +123,7 @@ adc_value           0x4               build/main.o
 pack_state          0x2               build/main.o
 cell_Voff           0xe               build/main.o
 display_0           0x14              build/main.o
-curr_pack_id        0x2               build/main.o
+curr_pack_id        0x1               build/main.o
 i                   0x2               build/task_can.o
 fault_code          0x1               build/main.o
 bypass_flag         0x1               build/main.o
@@ -157,7 +157,7 @@ button_up           0x1               build/main.o
 num_cells           0x1               build/task_can.o
 cell_Vslp           0xe               build/main.o
 display_3           0x14              build/main.o
-next_pack_id        0x2               build/main.o
+next_pack_id        0x1               build/main.o
 next_can_addr       0x5               build/main.o
 
 Memory Configuration
@@ -998,7 +998,7 @@ END GROUP
                 0x0000000000800300                _edata = .
                 0x0000000000800300                PROVIDE (__data_end, .)
 
-.bss            0x0000000000800300      0xb56
+.bss            0x0000000000800300      0xb54
                 0x0000000000800300                PROVIDE (__bss_start, .)
  *(.bss)
  .bss           0x0000000000800300        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr51/crtat90can128.o
@@ -1078,7 +1078,7 @@ END GROUP
  .bss           0x0000000000800cc6        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr51/libat90can128.a(eerd_block.o)
  *(.bss*)
  *(COMMON)
- COMMON         0x0000000000800cc6      0x188 build/main.o
+ COMMON         0x0000000000800cc6      0x186 build/main.o
                 0x0000000000800cc6                button_enter
                 0x0000000000800cc7                Pack_State_Strings
                 0x0000000000800cd5                ams_voltage
@@ -1103,52 +1103,52 @@ END GROUP
                 0x0000000000800d48                cell_Voff
                 0x0000000000800d56                display_0
                 0x0000000000800d6a                curr_pack_id
-                0x0000000000800d6c                fault_code
-                0x0000000000800d6d                bypass_flag
-                0x0000000000800d6e                A_mutex
-                0x0000000000800d73                off_result
-                0x0000000000800d78                can_frame
-                0x0000000000800d85                curr_can_addr
-                0x0000000000800d8a                pack_num_choice
-                0x0000000000800d8b                flt_cnd
-                0x0000000000800d90                ams_serial_array
-                0x0000000000800dd0                display_1
-                0x0000000000800de4                LOW_DET
-                0x0000000000800de5                sel
-                0x0000000000800de6                can_buff
-                0x0000000000800dee                prev_pack_SOC
-                0x0000000000800def                pack_voltage
-                0x0000000000800df1                pack_coulombs
-                0x0000000000800df5                button_down
-                0x0000000000800df6                cell
-                0x0000000000800df7                slp_result
-                0x0000000000800dfc                ams_board_count
-                0x0000000000800dfd                can_frame_id
-                0x0000000000800e01                CHRG_DET
-                0x0000000000800e02                cell_V
-                0x0000000000800e10                addr_choice
-                0x0000000000800e12                CANADD_PACKINFO2
-                0x0000000000800e14                cell_Toff
-                0x0000000000800e22                shunt_voltage
-                0x0000000000800e24                button_up
-                0x0000000000800e25                cell_Vslp
-                0x0000000000800e33                display_3
-                0x0000000000800e47                next_pack_id
-                0x0000000000800e49                next_can_addr
- COMMON         0x0000000000800e4e        0x5 build/i2c.o
-                0x0000000000800e4e                i2c_mutex
- COMMON         0x0000000000800e53        0x3 build/task_can.o
-                0x0000000000800e53                i
-                0x0000000000800e55                num_cells
-                0x0000000000800e56                PROVIDE (__bss_end, .)
+                0x0000000000800d6b                fault_code
+                0x0000000000800d6c                bypass_flag
+                0x0000000000800d6d                A_mutex
+                0x0000000000800d72                off_result
+                0x0000000000800d77                can_frame
+                0x0000000000800d84                curr_can_addr
+                0x0000000000800d89                pack_num_choice
+                0x0000000000800d8a                flt_cnd
+                0x0000000000800d8f                ams_serial_array
+                0x0000000000800dcf                display_1
+                0x0000000000800de3                LOW_DET
+                0x0000000000800de4                sel
+                0x0000000000800de5                can_buff
+                0x0000000000800ded                prev_pack_SOC
+                0x0000000000800dee                pack_voltage
+                0x0000000000800df0                pack_coulombs
+                0x0000000000800df4                button_down
+                0x0000000000800df5                cell
+                0x0000000000800df6                slp_result
+                0x0000000000800dfb                ams_board_count
+                0x0000000000800dfc                can_frame_id
+                0x0000000000800e00                CHRG_DET
+                0x0000000000800e01                cell_V
+                0x0000000000800e0f                addr_choice
+                0x0000000000800e11                CANADD_PACKINFO2
+                0x0000000000800e13                cell_Toff
+                0x0000000000800e21                shunt_voltage
+                0x0000000000800e23                button_up
+                0x0000000000800e24                cell_Vslp
+                0x0000000000800e32                display_3
+                0x0000000000800e46                next_pack_id
+                0x0000000000800e47                next_can_addr
+ COMMON         0x0000000000800e4c        0x5 build/i2c.o
+                0x0000000000800e4c                i2c_mutex
+ COMMON         0x0000000000800e51        0x3 build/task_can.o
+                0x0000000000800e51                i
+                0x0000000000800e53                num_cells
+                0x0000000000800e54                PROVIDE (__bss_end, .)
                 0x0000000000005adc                __data_load_start = LOADADDR (.data)
                 0x0000000000005cdc                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0000000000800e56        0x0
+.noinit         0x0000000000800e54        0x0
                 [!provide]                        PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                        PROVIDE (__noinit_end, .)
-                0x0000000000800e56                _end = .
+                0x0000000000800e54                _end = .
                 [!provide]                        PROVIDE (__heap_start, .)
 
 .eeprom         0x0000000000810000        0x0
@@ -1243,9 +1243,9 @@ END GROUP
  .stab          0x000000000000f84c      0x108 /usr/lib/gcc/avr/6.2.0/avr51/libgcc.a(_umulhisi3.o)
                                         0x114 (size before relaxing)
 
-.stabstr        0x0000000000000000     0x61ba
+.stabstr        0x0000000000000000     0x609e
  *(.stabstr)
- .stabstr       0x0000000000000000     0x61ba build/main.o
+ .stabstr       0x0000000000000000     0x609e build/main.o
 
 .stab.excl
  *(.stab.excl)

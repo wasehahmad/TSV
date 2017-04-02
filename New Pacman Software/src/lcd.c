@@ -359,8 +359,8 @@ int8_t set_pack_num(){
   atomTimerDelay(100);
 	
   pack_num_choice = PACK_NUM;
-  sprintf(&curr_pack_id[0], "%02X", PACK_NUM);
-  sprintf(&next_pack_id[0], "%02X", pack_num_choice);
+  sprintf(&curr_pack_id, "%01X", PACK_NUM);
+  sprintf(&next_pack_id, "%01X", pack_num_choice);
 
   atomTimerDelay(50);
 	
@@ -373,7 +373,7 @@ int8_t set_pack_num(){
 	sel++;
       }
       pack_num_choice = sel;
-      sprintf(&next_pack_id[0], "%02X", pack_num_choice);
+      sprintf(&next_pack_id, "%01X", pack_num_choice);
       if(pack_num_choice == 5){
 	sel = 1;
 	pack_num_choice = sel;
@@ -384,7 +384,7 @@ int8_t set_pack_num(){
       if(sel != 1){
 	sel--;
 	pack_num_choice = sel;
-	sprintf(&next_pack_id[0], "%02X", pack_num_choice);
+	sprintf(&next_pack_id, "%01X", pack_num_choice);
       }
       button_down = false;
     }
@@ -394,13 +394,14 @@ int8_t set_pack_num(){
     //line1[17] = sel+48;
 
     //current pack CAN address  //asdf
-    line3[7] = curr_pack_id[1];
-    //line3[8] = curr_pack_id[2];
+    line3[7] = curr_pack_id;
+    //line3[8] = curr_pack_id[2];lcd.h
+    
     //line3[9] = curr_pack_id[3];
 
 
     //next pack CAN address
-    line3[16] = next_pack_id[1];
+    line3[16] = next_pack_id;
     //line3[17] = next_can_addr[2];
     //line3[18] = next_can_addr[3];
 
