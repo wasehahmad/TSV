@@ -28,8 +28,12 @@ void display_cell_cal_tslp(uint8_t cell);
 
 int8_t set_can_address(void);
 
+int8_t set_pack_num(void);
+
 volatile uint16_t addr_choice;
 volatile uint8_t sel;
+
+volatile uint8_t pack_num_choice;
 
 // Char arrays used to by sprintf()/itoa() in set_can_address & display_cell_cal()
 // to display on LCD
@@ -39,6 +43,9 @@ char curr_can_addr[5];	// current CAN bus address
 char next_can_addr[5];	// next CAN bus address
 char off_result[5];		// cell voltage offset
 char slp_result[5];		// cell voltage slpope
+
+char curr_pack_id[2];
+char next_pack_id[2];
 
 
 

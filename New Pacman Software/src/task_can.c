@@ -2,6 +2,7 @@
 #include <avr/eeprom.h>
 
 volatile uint16_t i;
+volatile uint8_t num_cells;
 
 void task_can_init(void){
 	for(i = 0; i<7; i = i + 1){
@@ -42,6 +43,16 @@ void task_can_init(void){
 	 	 eeprom_write_word((uint16_t*)EEPROM_CAN_ADDR3, DEFAULT_CAN_ADDR3);
 	 	 CANADD_CELLINFO = eeprom_read_word((uint16_t*)EEPROM_CAN_ADDR3); 
 	 }
+
+	 PACK_NUM = eeprom_read_byte((uint8_t*)EEPROM_PACK_ID);
+
+	 if((PACK_NUM == 0x00) || (PACK_NUM == 0xFF)) {
+	 	 eeprom_write_byte((uint8_t*)EEPROM_PACK_ID, DEFAULT_PACK_NUM);
+	 	 PACK_NUM = eeprom_read_byte((uint8_t*)EEPROM_PACK_ID); 
+	 }
+
+	 // DOING THIS FOR NOW, EVENTUALLY MAKE THIS CONFIGURABLE BY THE LCD DISPLAY AND PUSH BUTTONS:
+	 num_cells = 7;
 }
 
 void task_can(uint32_t data){
@@ -108,8 +119,8 @@ void task_can(uint32_t data){
 		uint8_t bytes_left = 4;
 
 		//SEND THE CELL STATUSES:
-		while(cell_num <= ams_board_count){
-		  while((bytes_left > 0) && (cell_num <= ams_board_count)){
+		while(cell_num <= num_cells){
+		  while((bytes_left > 0) && (cell_num <= num_cells)){
 		    can_buff[packet_offset] = cell_status[cell_num];
 		    packet_offset++;
 		    cell_num++;
@@ -132,8 +143,8 @@ void task_can(uint32_t data){
 
 		cell_num = 1;
 
-		while(cell_num <= ams_board_count){
-		  while((bytes_left > 1) && (cell_num <= ams_board_count)){
+		while(cell_num <= num_cells){
+		  while((bytes_left > 1) && (cell_num <= num_cells)){
 		    can_buff[packet_offset] = cell_V[cell_num] >> 8;
 		    can_buff[packet_offset+1] = cell_V[cell_num] & 0xFF;
 		    packet_offset = packet_offset+2;
@@ -157,8 +168,8 @@ void task_can(uint32_t data){
 
 		cell_num = 1;
 
-		while(cell_num <= ams_board_count){
-		  while((bytes_left > 1) && (cell_num <= ams_board_count)){
+		while(cell_num <= num_cells){
+		  while((bytes_left > 1) && (cell_num <= num_cells)){
 		    can_buff[packet_offset] = cell_T[cell_num] >> 8;
 		    can_buff[packet_offset+1] = cell_T[cell_num] & 0xFF;
 		    packet_offset = packet_offset+2;
