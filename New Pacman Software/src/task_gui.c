@@ -42,8 +42,8 @@ void task_gui(uint32_t data) {
 					display_cell_cal(screen-8);	
 					break;
 				}break;
-			case 15: 
-			  //cal = set_can_address();
+			case 15:
+			  cal = set_can_address();
 			  cal = set_pack_num();
 				if (cal==0) screen = 0;  // exit config mode
 				break;
