@@ -40,10 +40,8 @@ void task_config(uint32_t data) {
 	
 	struct cal_data cal;
 
-	//struct flt_cond flt_cnd;
-	
 
-	
+	//?
 	flt_cnd.active = 0;
 	flt_cnd.cond = 0;
 	flt_cnd.val = 0;
@@ -76,7 +74,7 @@ void task_config(uint32_t data) {
 				flt_cnd.val = cell_T[i];
 				flt_cnd.area = i;
 			}
-			if((cell_V[i] > 4000) || (cell_V[i] <2000)){//>4000 mV or <2000 mV cell voltage //**** cell_V < 2000 uncommented 03292017
+			if(cell_V[i] > 4000){// || (cell_V[i] <2000)){//>4000 mV or <2000 mV cell voltage //**** cell_V < 2000 uncommented 03292017
 				pack_state = flt;
 				fault_code = 1;
 
@@ -147,7 +145,7 @@ void task_config(uint32_t data) {
 					fault_code = 0;
 					flt_cnd.active = 1;
 				}
-				if((cell_V[i] > 4000) || (cell_V[i] <2000)){//>4000 mV or <2000 mV cell voltage
+				if(cell_V[i] > 4000){// || (cell_V[i] <2000)){//>4000 mV or <2000 mV cell voltage
 					temp = flt;
 					fault_code = 1;
 					flt_cnd.active = 1;
