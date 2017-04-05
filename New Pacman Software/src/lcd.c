@@ -365,27 +365,29 @@ int8_t set_pack_num(){
   atomTimerDelay(50);
 	
   sel = 1;
+  // choice for pack id: 1 - 0x7f = 1 - 127
   for(;;){
 		
-
     if(button_up){
-      if(sel < 4){
+      //if(sel < 4){
 	sel++;
-      }
+	//}
       pack_num_choice = sel;
-      sprintf(&next_pack_id, "%01X", pack_num_choice);
-      if(pack_num_choice == 5){
+      
+      if(pack_num_choice == 16){
 	sel = 1;
 	pack_num_choice = sel;
       }
+      sprintf(&next_pack_id, "%01X", pack_num_choice);
       button_up = false;
 		
     }else if(button_down){
-      if(sel != 1){
-	sel--;
-	pack_num_choice = sel;
-	sprintf(&next_pack_id, "%01X", pack_num_choice);
+      sel--;
+      if(sel == 0){
+	sel = 15;
       }
+      pack_num_choice = sel;
+      sprintf(&next_pack_id, "%01X", pack_num_choice);
       button_down = false;
     }
 		
