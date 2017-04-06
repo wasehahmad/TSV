@@ -2,7 +2,7 @@
 #include <avr/eeprom.h>
 
 volatile uint16_t i;
-volatile uint8_t num_cells;
+
 
 void task_can_init(void){
 	for(i = 0; i<7; i = i + 1){
@@ -23,36 +23,36 @@ void task_can_init(void){
 	//eventually want this to be configured by hte pushbuttons and lcd display, but for now this works.  Just change depending on which pack it is.
 	
 	
-	 CANADD_PACKINFO1 = eeprom_read_word((uint16_t*)EEPROM_CAN_ADDR1);
+	/* CANADD_PACKINFO1 = eeprom_read_word((uint16_t*)EEPROM_CAN_ADDR1); */
 
-	 if((CANADD_PACKINFO1 == 0x0000) || (CANADD_PACKINFO1 == 0xFFFF)) {
-	 	 eeprom_write_word((uint16_t*)EEPROM_CAN_ADDR1, DEFAULT_CAN_ADDR1);
-	 	 CANADD_PACKINFO1 = eeprom_read_word((uint16_t*)EEPROM_CAN_ADDR1); 
-	 }
+	/*  if((CANADD_PACKINFO1 == 0x0000) || (CANADD_PACKINFO1 == 0xFFFF)) { */
+	/*  	 eeprom_write_word((uint16_t*)EEPROM_CAN_ADDR1, DEFAULT_CAN_ADDR1); */
+	/*  	 CANADD_PACKINFO1 = eeprom_read_word((uint16_t*)EEPROM_CAN_ADDR1);  */
+	/*  } */
 
- 	 CANADD_PACKINFO2 = eeprom_read_word((uint16_t*)EEPROM_CAN_ADDR2);
+ 	/*  CANADD_PACKINFO2 = eeprom_read_word((uint16_t*)EEPROM_CAN_ADDR2); */
 
-	 if((CANADD_PACKINFO2 == 0x0000) || (CANADD_PACKINFO2 == 0xFFFF)) {
-	 	 eeprom_write_word((uint16_t*)EEPROM_CAN_ADDR2, DEFAULT_CAN_ADDR2);
-	 	 CANADD_PACKINFO2 = eeprom_read_word((uint16_t*)EEPROM_CAN_ADDR2); 
-	 }
+	/*  if((CANADD_PACKINFO2 == 0x0000) || (CANADD_PACKINFO2 == 0xFFFF)) { */
+	/*  	 eeprom_write_word((uint16_t*)EEPROM_CAN_ADDR2, DEFAULT_CAN_ADDR2); */
+	/*  	 CANADD_PACKINFO2 = eeprom_read_word((uint16_t*)EEPROM_CAN_ADDR2);  */
+	/*  } */
 
-	 CANADD_CELLINFO = eeprom_read_word((uint16_t*)EEPROM_CAN_ADDR3);
+	/*  CANADD_CELLINFO = eeprom_read_word((uint16_t*)EEPROM_CAN_ADDR3); */
 
-	 if((CANADD_CELLINFO == 0x0000) || (CANADD_CELLINFO == 0xFFFF)) {
-	 	 eeprom_write_word((uint16_t*)EEPROM_CAN_ADDR3, DEFAULT_CAN_ADDR3);
-	 	 CANADD_CELLINFO = eeprom_read_word((uint16_t*)EEPROM_CAN_ADDR3); 
-	 }
+	/*  if((CANADD_CELLINFO == 0x0000) || (CANADD_CELLINFO == 0xFFFF)) { */
+	/*  	 eeprom_write_word((uint16_t*)EEPROM_CAN_ADDR3, DEFAULT_CAN_ADDR3); */
+	/*  	 CANADD_CELLINFO = eeprom_read_word((uint16_t*)EEPROM_CAN_ADDR3);  */
+	/*  } */
 
 	 PACK_NUM = eeprom_read_byte((uint8_t*)EEPROM_PACK_ID);
 
 	 if((PACK_NUM == 0x00) || (PACK_NUM == 0xFF)) {
 	 	 eeprom_write_byte((uint8_t*)EEPROM_PACK_ID, DEFAULT_PACK_NUM);
-	 	 PACK_NUM = eeprom_read_byte((uint8_t*)EEPROM_PACK_ID); 
+	 	 PACK_NUM = eeprom_read_byte((uint8_t*)EEPROM_PACK_ID);
 	 }
 
 	 // DOING THIS FOR NOW, EVENTUALLY MAKE THIS CONFIGURABLE BY THE LCD DISPLAY AND PUSH BUTTONS:
-	 num_cells = 7;
+	//num_cells = 7;
 }
 
 void task_can(uint32_t data){
@@ -128,7 +128,7 @@ void task_can(uint32_t data){
 		  }
 		  if(bytes_left == 0){
 		    //SEND THE PACKET:
-		    can_frame.id.std = (PACK_NUM<<8 | packet_num) & 0x7FF;
+		    can_frame.id.std = ((PACK_NUM<<8) + packet_num) & 0x7FF;
 		    can_frame.dlc = packet_offset;
 		    while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
 		    }
@@ -153,7 +153,7 @@ void task_can(uint32_t data){
 		  }
 		  if(bytes_left <= 1){
 		    //SEND THE PACKET:
-		    can_frame.id.std = (PACK_NUM<<8 | packet_num) & 0x7FF;
+		    can_frame.id.std = ((PACK_NUM<<8) + packet_num) & 0x7FF;
 		    can_frame.dlc = packet_offset;
 		    while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
 		    }
@@ -178,7 +178,7 @@ void task_can(uint32_t data){
 		  }
 		  if(bytes_left <= 1){
 		    //SEND THE PACKET:
-		    can_frame.id.std = (PACK_NUM<<8 | packet_num) & 0x7FF;
+		    can_frame.id.std = ((PACK_NUM<<8) + packet_num) & 0x7FF;
 		    can_frame.dlc = packet_offset;
 		    while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
 		    }

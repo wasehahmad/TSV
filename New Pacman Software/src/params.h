@@ -13,7 +13,7 @@
 
 
 //SOFTWARE VERSION (based on commit number in gitlab)
-#define version 0.15
+#define version 0.16
 
 // LCD values
 #define EN_LOW	0x08
@@ -58,6 +58,8 @@ volatile bool button_up;
 volatile bool button_down;
 volatile bool button_enter; // Is always high for some reason
 
+volatile uint8_t num_cells;
+
 volatile uint16_t CANADD_PACKINFO1;
 volatile uint16_t CANADD_PACKINFO2;
 volatile uint16_t CANADD_CELLINFO;
@@ -101,11 +103,13 @@ ATOM_MUTEX A_mutex;
 #define DEFAULT_CAN_ADDR2 	0x0501 	
 #define DEFAULT_CAN_ADDR3 	0x0502
 #define DEFAULT_PACK_NUM 	0x01
+#define DEFAULT_NUM_CELLS       7
 #define EEPROM_SOC  		1		// location in memory of last recorded State of Charge
 #define EEPROM_CAN_ADDR1	2		// location in memory of CAN address for CANADD_PACKINFO1
 #define EEPROM_CAN_ADDR2	4		// location in memory of CAN address for CANADD_PACKINFO2
 #define EEPROM_CAN_ADDR3	6		// location in memory of CAN address for CANADD_CELLINFO
 #define EEPROM_PACK_ID          8               // location in memory of the pack id
+#define EEPROM_CELL_COUNT       9               // location in memory of the number of cells beign used
 
 /*
 #define EEPROM_PACK_V_OFF  	9

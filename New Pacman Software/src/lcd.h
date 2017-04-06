@@ -30,10 +30,15 @@ int8_t set_can_address(void);
 
 int8_t set_pack_num(void);
 
+void set_num_cells(void);
+
+
 volatile uint16_t addr_choice;
 volatile uint8_t sel;
 
 volatile uint8_t pack_num_choice;
+
+volatile uint8_t cell_num_choice;
 
 // Char arrays used to by sprintf()/itoa() in set_can_address & display_cell_cal()
 // to display on LCD
@@ -44,8 +49,11 @@ char next_can_addr[5];	// next CAN bus address
 char off_result[5];		// cell voltage offset
 char slp_result[5];		// cell voltage slpope
 
-char curr_pack_id;
-char next_pack_id;
+char curr_pack_id[2];
+char next_pack_id[2];
+
+char curr_num_cells[2];
+char next_num_cells[2];
 
 
 

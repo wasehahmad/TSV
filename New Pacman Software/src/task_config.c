@@ -40,6 +40,13 @@ void task_config(uint32_t data) {
 	
 	struct cal_data cal;
 
+	num_cells = eeprom_read_byte((uint8_t*)EEPROM_CELL_COUNT);
+
+	 if((num_cells == 0) || (num_cells == 0xFF)) {
+	 	 eeprom_write_byte((uint8_t*)EEPROM_CELL_COUNT, DEFAULT_NUM_CELLS);
+	 	 num_cells = eeprom_read_byte((uint8_t*)EEPROM_CELL_COUNT);
+	 }
+
 
 	//?
 	flt_cnd.active = 0;
@@ -74,7 +81,7 @@ void task_config(uint32_t data) {
 				flt_cnd.val = cell_T[i];
 				flt_cnd.area = i;
 			}
-			if(cell_V[i] > 4000){// || (cell_V[i] <2000)){//>4000 mV or <2000 mV cell voltage //**** cell_V < 2000 uncommented 03292017
+			if(cell_V[i] > 4000){// || (cell_V[i] <2000)){//>4000 mV or <2000 mV cell voltage //**** COMMENTED: IF UNCOMMENTED, PACK GOES INTO STATE DEAD
 				pack_state = flt;
 				fault_code = 1;
 
@@ -91,6 +98,15 @@ void task_config(uint32_t data) {
 			flt_cnd.active = 1;
 			flt_cnd.cond = 2;
 			flt_cnd.val = pack_voltage;
+			flt_cnd.area = 0;
+		}
+		if(num_cells != ams_board_count){
+			pack_state = flt;
+			fault_code = 3;
+
+			flt_cnd.active = 1;
+			flt_cnd.cond = 3;
+			flt_cnd.val = num_cells;
 			flt_cnd.area = 0;
 		}
 		if(pack_state != flt){//then determine the proper state
@@ -155,6 +171,15 @@ void task_config(uint32_t data) {
 				temp = flt;
 				fault_code = 2;
 				flt_cnd.active = 1;
+			}
+			if(num_cells != ams_board_count){
+			pack_state = flt;
+			fault_code = 3;
+
+			flt_cnd.active = 1;
+			flt_cnd.cond = 3;
+			flt_cnd.val = num_cells;
+			flt_cnd.area = 0;
 			}
 			pack_state = temp; // COMMENTED 03092017 --> re-un-commented 03292017
 		}
