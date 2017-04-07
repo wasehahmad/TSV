@@ -32,6 +32,8 @@ int8_t set_pack_num(void);
 
 void set_num_cells(void);
 
+void display_error(void);
+
 
 volatile uint16_t addr_choice;
 volatile uint8_t sel;

@@ -586,6 +586,21 @@ void set_num_cells(){
 
 }
 
+void display_error(){
+
+  unsigned char line0[20] = {'E','R','R','O','R',' ','I','N','F','O',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
+  unsigned char line1[20] = {'A','C','T','I','V','E',':',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
+  unsigned char line2[20] = {'F','A','U','L','T',':',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
+  unsigned char line3[20] = {'V','A','L',':',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
+
+  memcpy((void*)display_0, (void*) line0, 20);
+  memcpy((void*)display_1, (void*) line1, 20);
+  memcpy((void*)display_2, (void*) line2, 20);
+  memcpy((void*)display_3, (void*) line3, 20);
+
+}
+
+
 
 int8_t set_can_address(/*uint16_t can_address*/) {
 	unsigned char line0[20] = {'S','E','T',' ','C','A','N',' ','A','D','D','R','E','S','S',' ',' ',' ',' ',' '};
