@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name ControlPanelCustom)(type KiCad)(uri "$(KIPRJMOD)/ControlPanelCustom.pretty")(options "")(descr ""))
+  (lib (name ControlPanelFootprints)(type KiCad)(uri "$(KIPRJMOD)/ControlPanelFootprints.pretty")(options "")(descr ""))
+)

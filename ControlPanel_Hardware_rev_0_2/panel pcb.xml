@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/Users/EGrybos/Desktop/ControlPanel_Hardware_rev_0_2/panel pcb.sch</source>
+    <date>Saturday, April 08, 2017 'PMt' 07:21:22 PM</date>
+    <tool>Eeschema 4.0.5</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company>Lafayette College ECE</company>
+        <rev>0.2</rev>
+        <date>2017-04-08</date>
+        <source>panel pcb.sch</source>
+        <comment number="1" value="Engineer: Emilie Grybos &amp; Meri Guro"/>
+        <comment number="2" value="Supervisor: Chirs Nadovich"/>
+        <comment number="3" value="Spring 2017"/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="SW1">
+      <value>RESET</value>
+      <footprint>ControlPanelCustom:SW_RACON_8</footprint>
+      <fields>
+        <field name="Supplier">Digikey</field>
+        <field name="Supplier PN">1715-1676-1-ND</field>
+        <field name="Supplier URL">http://www.digikey.com/product-detail/en/c-k-components/1.14100.5030000/CKN9363CT-ND/583462</field>
+        <field name="Manufacturer">RAFI USA</field>
+        <field name="Manufacturer PN">1.14100.5030000</field>
+        <field name="Button Header URL">http://www.digikey.com/product-detail/en/c-k-components/5.46167.0900209/CKN9207-ND/1778900</field>
+        <field name="Button Header Supplier">Digikey</field>
+        <field name="Button Header Supplier PN">1715-1517-ND</field>
+        <field name="Button Header PN">5.46167.0900209</field>
+      </fields>
+      <libsource lib="panel pcb-cache" part="SW_PUSH"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58E9470D</tstamp>
+    </comp>
+    <comp ref="P2">
+      <value>CONN_01X04</value>
+      <footprint>ControlPanelCustom:MOLEX4Vert</footprint>
+      <fields>
+        <field name="Supplier">Digikey</field>
+        <field name="Supplier URL">https://www.digikey.com/products/en?keywords=70543-0108</field>
+        <field name="Supplier P/N">WM4124-ND</field>
+        <field name="Manufacturer">Molex, LLC</field>
+        <field name="Manfacturer P/N">0705430108</field>
+        <field name="Description">4 Positions Header Connector 0.100" (2.54mm) Through Hole Gold</field>
+        <field name="Unit Cost">1.33</field>
+      </fields>
+      <libsource lib="conn" part="CONN_01X04"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58E94974</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>LED</value>
+      <footprint>LEDs:LED_D5.0mm</footprint>
+      <fields>
+        <field name="Supplier">Digikey</field>
+        <field name="Supplier URL">http://www.digikey.com/product-detail/en/kingbright/WP56BSRD%2FB/754-1883-ND/2197310</field>
+        <field name="Supplier P/N">754-1883-ND</field>
+        <field name="Manufacturer">Kingbright</field>
+        <field name="Manufacturer P/N">WP56BSRD/B</field>
+        <field name="Description">LED BLINKING RED DIFF 5MM RND TH</field>
+        <field name="Unit Cost">.70</field>
+        <field name="Accessory">LED Holder: http://www.digikey.com/product-detail/en/lumex-opto-components-inc/SSH-LX5091/67-1332-ND/144810</field>
+      </fields>
+      <libsource lib="panel pcb-rescue" part="LED-RESCUE-panel_pcb"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58E94CAC</tstamp>
+    </comp>
+    <comp ref="P1">
+      <value>GPIO</value>
+      <footprint>Connectors:IDC_Header_Straight_16pins</footprint>
+      <libsource lib="panel pcb-cache" part="GPIO"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58E973CD</tstamp>
+    </comp>
+    <comp ref="A1">
+      <value>ALARM</value>
+      <footprint>ControlPanelFootprints:ALARM</footprint>
+      <fields>
+        <field name="Supplier">Digikey</field>
+        <field name="Supplier PN">668-1454-ND</field>
+        <field name="Supplier URL">https://www.digikey.com/products/en/audio-products/alarms-buzzers-and-sirens/157?k=&amp;pkeyword=&amp;pv139=569&amp;FV=ffe0009d%2Cfffc029c%2C380029%2C7680028%2C1f140000&amp;mnonly=0&amp;newproducts=0&amp;ColumnSort=0&amp;page=1&amp;quantity=0&amp;ptm=0&amp;fid=0&amp;pageSize=25</field>
+        <field name="Manufacturer">PUI Audio, Inc.</field>
+        <field name="Manufacturer PN">AI-1027-TWT-5V-2-R</field>
+        <field name="Description">DC Buzzer Single Tone 2.73kHz Magnetic 3 ~ 7V 82dB @ 5V, 10cm</field>
+        <field name="Datasheet">http://www.puiaudio.com/pdf/AI-1027-TWT-5V-2-R.pdf</field>
+      </fields>
+      <libsource lib="panel pcb-cache" part="ALARM"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58E95280</tstamp>
+    </comp>
+    <comp ref="SW3">
+      <value>DOWN</value>
+      <footprint>ControlPanelCustom:SW_RACON_8</footprint>
+      <fields>
+        <field name="Supplier">Digikey</field>
+        <field name="Supplier PN">1715-1676-1-ND</field>
+        <field name="Supplier URL">http://www.digikey.com/product-detail/en/c-k-components/1.14100.5030000/CKN9363CT-ND/583462</field>
+        <field name="Manufacturer">RAFI USA</field>
+        <field name="Manufacturer PN">1.14100.5030000</field>
+        <field name="Button Header URL">http://www.digikey.com/product-detail/en/c-k-components/5.46167.0900209/CKN9207-ND/1778900</field>
+        <field name="Button Header Supplier">Digikey</field>
+        <field name="Button Header Supplier PN">1715-1517-ND</field>
+        <field name="Button Header PN">5.46167.0900209</field>
+      </fields>
+      <libsource lib="panel pcb-cache" part="SW_PUSH"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58E96E38</tstamp>
+    </comp>
+    <comp ref="SW4">
+      <value>UP</value>
+      <footprint>ControlPanelCustom:SW_RACON_8</footprint>
+      <fields>
+        <field name="Supplier">Digikey</field>
+        <field name="Supplier PN">1715-1676-1-ND</field>
+        <field name="Supplier URL">http://www.digikey.com/product-detail/en/c-k-components/1.14100.5030000/CKN9363CT-ND/583462</field>
+        <field name="Manufacturer">RAFI USA</field>
+        <field name="Manufacturer PN">1.14100.5030000</field>
+        <field name="Button Header URL">http://www.digikey.com/product-detail/en/c-k-components/5.46167.0900209/CKN9207-ND/1778900</field>
+        <field name="Button Header Supplier">Digikey</field>
+        <field name="Button Header Supplier PN">1715-1517-ND</field>
+        <field name="Button Header PN">5.46167.0900209</field>
+      </fields>
+      <libsource lib="panel pcb-cache" part="SW_PUSH"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58E96E7B</tstamp>
+    </comp>
+    <comp ref="SW2">
+      <value>ENTER</value>
+      <footprint>ControlPanelCustom:SW_RACON_8</footprint>
+      <fields>
+        <field name="Supplier">Digikey</field>
+        <field name="Supplier PN">1715-1676-1-ND</field>
+        <field name="Supplier URL">http://www.digikey.com/product-detail/en/c-k-components/1.14100.5030000/CKN9363CT-ND/583462</field>
+        <field name="Manufacturer">RAFI USA</field>
+        <field name="Manufacturer PN">1.14100.5030000</field>
+        <field name="Button Header URL">http://www.digikey.com/product-detail/en/c-k-components/5.46167.0900209/CKN9207-ND/1778900</field>
+        <field name="Button Header Supplier">Digikey</field>
+        <field name="Button Header Supplier PN">1715-1517-ND</field>
+        <field name="Button Header PN">5.46167.0900209</field>
+      </fields>
+      <libsource lib="panel pcb-cache" part="SW_PUSH"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58E96EBE</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="panel pcb-cache" part="ALARM">
+      <fields>
+        <field name="Reference">A</field>
+        <field name="Value">ALARM</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X04">
+      <description>Connector, single row, 01x04</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X04</fp>
+        <fp>Pin_Header_Angled_1X04</fp>
+        <fp>Socket_Strip_Straight_1X04</fp>
+        <fp>Socket_Strip_Angled_1X04</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="panel pcb-cache" part="GPIO">
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">GPIO</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="input"/>
+        <pin num="2" name="PB0" type="input"/>
+        <pin num="3" name="+3.3V" type="input"/>
+        <pin num="4" name="PB1" type="input"/>
+        <pin num="5" name="LED-" type="input"/>
+        <pin num="6" name="PB2" type="input"/>
+        <pin num="7" name="LED+" type="input"/>
+        <pin num="8" name="PB3" type="input"/>
+        <pin num="9" name="ADC1" type="input"/>
+        <pin num="10" name="PB4" type="input"/>
+        <pin num="11" name="ADC0" type="input"/>
+        <pin num="12" name="PB5" type="input"/>
+        <pin num="13" name="+5V" type="input"/>
+        <pin num="14" name="SW_SCL" type="input"/>
+        <pin num="15" name="RESET" type="input"/>
+        <pin num="16" name="SW_SDA" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="panel pcb-rescue" part="LED-RESCUE-panel_pcb">
+      <footprints>
+        <fp>LED-3MM</fp>
+        <fp>LED-5MM</fp>
+        <fp>LED-10MM</fp>
+        <fp>LED-0603</fp>
+        <fp>LED-0805</fp>
+        <fp>LED-1206</fp>
+        <fp>LEDV</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED-RESCUE-panel_pcb</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="panel pcb-cache" part="SW_PUSH">
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_PUSH</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="panel pcb-rescue">
+      <uri>/Users/EGrybos/Desktop/ControlPanel_Hardware_rev_0_2/panel pcb-rescue.lib</uri>
+    </library>
+    <library logical="conn">
+      <uri>/Library/Application Support/kicad/library/conn.lib</uri>
+    </library>
+    <library logical="panel pcb-cache">
+      <uri>/Users/EGrybos/Desktop/ControlPanel_Hardware_rev_0_2/panel pcb-cache.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/DWN">
+      <node ref="SW3" pin="1"/>
+      <node ref="P1" pin="4"/>
+    </net>
+    <net code="2" name="/ENT">
+      <node ref="SW2" pin="1"/>
+      <node ref="P1" pin="6"/>
+    </net>
+    <net code="3" name="/UP">
+      <node ref="SW4" pin="1"/>
+      <node ref="P1" pin="2"/>
+    </net>
+    <net code="4" name="/RESET">
+      <node ref="SW1" pin="1"/>
+      <node ref="P1" pin="15"/>
+    </net>
+    <net code="5" name="Net-(P1-Pad10)">
+      <node ref="P1" pin="10"/>
+    </net>
+    <net code="6" name="Net-(P1-Pad12)">
+      <node ref="P1" pin="12"/>
+    </net>
+    <net code="7" name="Net-(P1-Pad9)">
+      <node ref="P1" pin="9"/>
+    </net>
+    <net code="8" name="Net-(P1-Pad11)">
+      <node ref="P1" pin="11"/>
+    </net>
+    <net code="9" name="Net-(P1-Pad13)">
+      <node ref="P1" pin="13"/>
+    </net>
+    <net code="10" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2"/>
+      <node ref="P1" pin="5"/>
+    </net>
+    <net code="11" name="/+3.3V">
+      <node ref="P1" pin="3"/>
+      <node ref="P2" pin="1"/>
+    </net>
+    <net code="12" name="/GND">
+      <node ref="P2" pin="2"/>
+      <node ref="SW1" pin="2"/>
+      <node ref="SW3" pin="2"/>
+      <node ref="SW4" pin="2"/>
+      <node ref="SW2" pin="2"/>
+      <node ref="P1" pin="1"/>
+      <node ref="A1" pin="2"/>
+    </net>
+    <net code="13" name="/ALRM">
+      <node ref="P1" pin="8"/>
+      <node ref="A1" pin="1"/>
+    </net>
+    <net code="15" name="/LED+">
+      <node ref="P1" pin="7"/>
+      <node ref="D1" pin="1"/>
+    </net>
+    <net code="16" name="/SDA">
+      <node ref="P1" pin="16"/>
+      <node ref="P2" pin="4"/>
+    </net>
+    <net code="17" name="/SCL">
+      <node ref="P1" pin="14"/>
+      <node ref="P2" pin="3"/>
+    </net>
+  </nets>
+</export>
