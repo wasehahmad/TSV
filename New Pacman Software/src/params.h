@@ -36,6 +36,13 @@ struct flt_cond {
   uint16_t val;
 };
 
+/* struct display_time { */
+/*   uint32_t sys_seconds; */
+/*   uint32_t sys_minutes; */
+/*   uint32_t sys_hours; */
+/*   uint32_t sys_days; */
+/* }; */
+
 volatile struct flt_cond flt_cnd;
 
 
@@ -59,6 +66,12 @@ volatile bool button_down;
 volatile bool button_enter; // Is always high for some reason
 
 volatile uint8_t num_cells;
+
+// NEED TO LOG RECENT STATE TRANSITIONS AND TIMESTAMPS:
+volatile State recent_states[5];
+volatile uint32_t state_ts[5];
+//volatile struct display_time state_ts[5];
+
 
 volatile uint16_t CANADD_PACKINFO1;
 volatile uint16_t CANADD_PACKINFO2;
