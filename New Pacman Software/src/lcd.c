@@ -586,6 +586,11 @@ void set_num_cells(){
 
 }
 
+/* unsigned char line0[20] = {'E','R','R','O','R',' ','I','N','F','O',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}; */
+/* unsigned char line1[20] = {'A','C','T','I','V','E',':',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}; */
+/* unsigned char line2[20] = {'F','A','U','L','T',':',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}; */
+/* unsigned char line3[20] = {'V','A','L',':',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}; */
+
 void display_error(){
 
   unsigned char line0[20] = {'E','R','R','O','R',' ','I','N','F','O',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
@@ -598,8 +603,147 @@ void display_error(){
   memcpy((void*)display_2, (void*) line2, 20);
   memcpy((void*)display_3, (void*) line3, 20);
 
+  atomTimerDelay(100);
+
 }
 
+void disp_cell_info_screen(){
+
+  unsigned char line0[20] = {'P','R','E','S','S',' ','E','N','T','E','R',' ','T','O',' ',' ',' ',' ',' ',' '};
+  unsigned char line1[20] = {'D','I','S','P','L','A','Y',' ','C','E','L','L',' ','I','N','F','O',' ',' ',' '};
+  unsigned char line2[20] = {' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
+  unsigned char line3[20] = {' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
+
+  memcpy((void*)display_0, (void*) line0, 20);
+  memcpy((void*)display_1, (void*) line1, 20);
+  memcpy((void*)display_2, (void*) line2, 20);
+  memcpy((void*)display_3, (void*) line3, 20);
+
+  //atomTimerDelay(100);
+
+}
+
+void disp_cell_cal_screen(){
+
+  unsigned char line0[20] = {'P','R','E','S','S',' ','E','N','T','E','R',' ','T','O',' ',' ',' ',' ',' ',' '};
+  unsigned char line1[20] = {'D','I','S','P','L','A','Y',' ','C','E','L','L',' ',' ',' ',' ',' ',' ',' ',' '};
+  unsigned char line2[20] = {'C','A','L','I','B','R','A','T','I','O','N',' ',' ',' ',' ',' ',' ',' ',' ',' '};
+  unsigned char line3[20] = {' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
+
+  memcpy((void*)display_0, (void*) line0, 20);
+  memcpy((void*)display_1, (void*) line1, 20);
+  memcpy((void*)display_2, (void*) line2, 20);
+  memcpy((void*)display_3, (void*) line3, 20);
+
+  //atomTimerDelay(100);
+
+}
+
+void disp_logged_states_screen(){
+
+  unsigned char line0[20] = {'P','R','E','S','S',' ','E','N','T','E','R',' ','T','O',' ',' ',' ',' ',' ',' '};
+  unsigned char line1[20] = {'D','I','S','P','L','A','Y',' ','L','O','G','G','E','D',' ',' ',' ',' ',' ',' '};
+  unsigned char line2[20] = {'S','T','A','T','E','S',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
+  unsigned char line3[20] = {' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
+
+  memcpy((void*)display_0, (void*) line0, 20);
+  memcpy((void*)display_1, (void*) line1, 20);
+  memcpy((void*)display_2, (void*) line2, 20);
+  memcpy((void*)display_3, (void*) line3, 20);
+
+  //atomTimerDelay(100);
+
+}
+
+
+void display_logged_states(uint8_t state_num){
+
+  unsigned char line0[20] = {'S','T','A','T','E',' ','L','O','G',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
+  unsigned char line1[20] = {'S','T','A','T','E',':',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
+  unsigned char line2[20] = {'T','I','M','E','S','T','A','M','P',':',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
+  unsigned char line3[20] = {' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
+
+  memcpy((void*)display_0, (void*) line0, 20);
+  memcpy((void*)display_1, (void*) line1, 20);
+  memcpy((void*)display_2, (void*) line2, 20);
+  memcpy((void*)display_3, (void*) line3, 20);
+
+  State disp_state;
+  disp_state = recent_states[state_num];
+
+  uint32_t disp_ts = state_ts[state_num];
+
+  char* d = "DEAD";
+  switch(disp_state){
+  case chrg: d = "CHRG";
+    break;
+  case chrgd: d = "CHRGD";
+    break;
+  case lco: d = "LCO";
+    break;
+  case flt: d = "FLT";// line0[10] = flt_cnd.cond+48;//line0[10] = fault_code+48; TESTING, REVERT BACK 03292017
+    break;
+  case dead: d = "DEAD";
+    break;
+  case rdy: d = "RDY";
+    break;
+  case boot: d = "BOOT";
+    break;
+  }
+		
+  memcpy(line1+6,d, strlen(d)); // COPY INTO THE LINE
+
+  uint32_t state_seconds = disp_ts/100; //100 system ticks per sec
+  uint32_t state_minutes = (state_seconds/60);
+  uint32_t state_hours = state_minutes/60;
+  uint32_t state_days = state_hours/24;
+  state_seconds = state_seconds%60;
+  state_minutes = state_minutes%60;
+  state_hours = state_hours%24;
+  line2[19]= state_seconds%10+48;
+  line2[18]= (state_seconds/10)%10+48;
+  line2[17]= ':';
+  line2[16]= (state_minutes)%10+48;
+  line2[15]= (state_minutes/10)%10+48;
+  line2[14]= ':';
+  line2[13]= (state_hours)%10+48;
+  line2[12]= (state_hours/10)%10+48;
+  line2[11]= ':';
+  line2[10]= (state_days)%10+48;
+  line2[9]=  (state_days/10)%10+48;
+  line2[8]=  (state_days/100)%10+48;
+
+  state_seconds = disp_ts/100; //100 system ticks per sec
+  state_minutes = (state_seconds/60);
+  state_hours = state_minutes/60;
+  state_days = state_hours/24;
+  state_seconds = state_seconds%60;
+  state_minutes = state_minutes%60;
+  state_hours = state_hours%24;
+  line3[19]= state_seconds%10+48;
+  line3[18]= (state_seconds/10)%10+48;
+  line3[17]= ':';
+  line3[16]= (state_minutes)%10+48;
+  line3[15]= (state_minutes/10)%10+48;
+  line3[14]= ':';
+  line3[13]= (state_hours)%10+48;
+  line3[12]= (state_hours/10)%10+48;
+  line3[11]= ':';
+  line3[10]= (state_days)%10+48;
+  line3[9]=  (state_days/10)%10+48;
+  line3[8]=  (state_days/100)%10+48;
+
+  
+	
+  memcpy((void*)display_0, (void*) line0, 20);
+  memcpy((void*)display_1, (void*) line1, 20);
+  memcpy((void*)display_2, (void*) line2, 20);
+  memcpy((void*)display_3, (void*) line3, 20);
+
+  //atomTimerDelay(100);
+
+
+}
 
 
 int8_t set_can_address(/*uint16_t can_address*/) {

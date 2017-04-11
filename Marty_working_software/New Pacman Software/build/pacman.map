@@ -1251,9 +1251,9 @@ END GROUP
  .stab          0x000000000000fde0      0x108 /usr/lib/gcc/avr/6.2.0/avr51/libgcc.a(_umulhisi3.o)
                                         0x114 (size before relaxing)
 
-.stabstr        0x0000000000000000     0x63ba
+.stabstr        0x0000000000000000     0x63d1
  *(.stabstr)
- .stabstr       0x0000000000000000     0x63ba build/main.o
+ .stabstr       0x0000000000000000     0x63d1 build/main.o
 
 .stab.excl
  *(.stab.excl)

@@ -34,6 +34,12 @@ void set_num_cells(void);
 
 void display_error(void);
 
+void display_logged_states(uint8_t state_num);
+
+void disp_cell_info_screen(void);
+void disp_cell_cal_screen(void);
+void disp_logged_states_screen(void);
+
 
 volatile uint16_t addr_choice;
 volatile uint8_t sel;
