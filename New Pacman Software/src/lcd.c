@@ -660,7 +660,7 @@ void display_logged_states(uint8_t state_num){
 
   unsigned char line0[20] = {'S','T','A','T','E',' ','L','O','G',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
   unsigned char line1[20] = {'S','T','A','T','E',':',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
-  unsigned char line2[20] = {'T','I','M','E','S','T','A','M','P',':',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
+  unsigned char line2[20] = {'T','I','M','E',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
   unsigned char line3[20] = {' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
 
   memcpy((void*)display_0, (void*) line0, 20);
@@ -713,7 +713,7 @@ void display_logged_states(uint8_t state_num){
   line2[9]=  (state_days/10)%10+48;
   line2[8]=  (state_days/100)%10+48;
 
-  state_seconds = disp_ts/100; //100 system ticks per sec
+  state_seconds = (atomTimeGet()/100); //100 system ticks per sec
   state_minutes = (state_seconds/60);
   state_hours = state_minutes/60;
   state_days = state_hours/24;
