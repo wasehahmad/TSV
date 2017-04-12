@@ -610,8 +610,8 @@ void display_error(){
 void disp_cell_info_screen(){
 
   unsigned char line0[20] = {'P','R','E','S','S',' ','E','N','T','E','R',' ','T','O',' ',' ',' ',' ',' ',' '};
-  unsigned char line1[20] = {'D','I','S','P','L','A','Y',' ','C','E','L','L',' ','I','N','F','O',' ',' ',' '};
-  unsigned char line2[20] = {' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
+  unsigned char line2[20] = {'D','I','S','P','L','A','Y',' ','C','E','L','L',' ','I','N','F','O',' ',' ',' '};
+  unsigned char line1[20] = {' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
   unsigned char line3[20] = {' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
 
   memcpy((void*)display_0, (void*) line0, 20);
@@ -626,8 +626,8 @@ void disp_cell_info_screen(){
 void disp_cell_cal_screen(){
 
   unsigned char line0[20] = {'P','R','E','S','S',' ','E','N','T','E','R',' ','T','O',' ',' ',' ',' ',' ',' '};
-  unsigned char line1[20] = {'D','I','S','P','L','A','Y',' ','C','E','L','L',' ',' ',' ',' ',' ',' ',' ',' '};
-  unsigned char line2[20] = {'C','A','L','I','B','R','A','T','I','O','N',' ',' ',' ',' ',' ',' ',' ',' ',' '};
+  unsigned char line2[20] = {'D','I','S','P','L','A','Y',' ','C','E','L','L',' ',' ',' ',' ',' ',' ',' ',' '};
+  unsigned char line1[20] = {'C','A','L','I','B','R','A','T','I','O','N',' ',' ',' ',' ',' ',' ',' ',' ',' '};
   unsigned char line3[20] = {' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
 
   memcpy((void*)display_0, (void*) line0, 20);
@@ -642,8 +642,8 @@ void disp_cell_cal_screen(){
 void disp_logged_states_screen(){
 
   unsigned char line0[20] = {'P','R','E','S','S',' ','E','N','T','E','R',' ','T','O',' ',' ',' ',' ',' ',' '};
-  unsigned char line1[20] = {'D','I','S','P','L','A','Y',' ','L','O','G','G','E','D',' ',' ',' ',' ',' ',' '};
-  unsigned char line2[20] = {'S','T','A','T','E','S',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
+  unsigned char line2[20] = {'D','I','S','P','L','A','Y',' ','L','O','G','G','E','D',' ',' ',' ',' ',' ',' '};
+  unsigned char line1[20] = {'S','T','A','T','E','S',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
   unsigned char line3[20] = {' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '};
 
   memcpy((void*)display_0, (void*) line0, 20);
@@ -681,7 +681,7 @@ void display_logged_states(uint8_t state_num){
     break;
   case lco: d = "LCO";
     break;
-  case flt: d = "FLT";// line0[10] = flt_cnd.cond+48;//line0[10] = fault_code+48; TESTING, REVERT BACK 03292017
+  case flt: d = "FLT"; line1[10] = flt_cnd.cond+48;//line0[10] = fault_code+48; TESTING, REVERT BACK 03292017
     break;
   case dead: d = "DEAD";
     break;
