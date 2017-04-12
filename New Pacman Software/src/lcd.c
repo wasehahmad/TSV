@@ -395,7 +395,7 @@ int8_t set_pack_num(){
     //should change when down is pressed
     //line1[17] = sel+48;
 
-    //current pack CAN address  //asdf
+    //current pack CAN address
     line_3[7] = curr_pack_id[0];
     line_3[8] = curr_pack_id[1];
     //line3[8] = curr_pack_id[2];lcd.h
@@ -517,7 +517,7 @@ void set_num_cells(){
     //should change when down is pressed
     //line1[17] = sel+48;
 
-    //current pack CAN address  //asdf
+    //current pack CAN address
     line_3[7] = curr_num_cells[0];
     line_3[8] = curr_num_cells[1];
     //line3[8] = curr_pack_id[2];lcd.h
@@ -692,6 +692,27 @@ void display_logged_states(uint8_t state_num){
   }
 		
   memcpy(line1+6,d, strlen(d)); // COPY INTO THE LINE
+
+  
+
+  if(disp_state ==  flt){
+    line3[0] = flt_cnd.area+48;
+    //add flt_cnd.val to the top line of the display asdf
+    if(flt_cnd.cond == 0){
+      line0[15] = (flt_cnd.val)/1000 + 48;
+      line0[16] = ((flt_cnd.val)%1000)/100 + 48;
+      line0[17] = ((flt_cnd.val)%1000)%100/10 +48;
+      line0[18] = '.';
+      line0[19] = (flt_cnd.val)%10 +48;
+    }else if(flt_cnd.cond == 1){
+      line0[15] = (flt_cnd.val)/1000 + 48;
+      line0[16] = '.';
+      line0[17] = ((flt_cnd.val)%1000)/100 + 48;
+      line0[18] = ((flt_cnd.val)%1000)%100/10 +48;
+      line0[19] = (flt_cnd.val) %10 + 48;
+      
+    }
+  }
 
   uint32_t state_seconds = disp_ts/100; //100 system ticks per sec
   uint32_t state_minutes = (state_seconds/60);
