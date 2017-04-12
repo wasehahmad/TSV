@@ -49,7 +49,7 @@ void task_button(uint32_t data){
 			button_down = true;
 			atomTimerDelay(30);
 
-		}else if((PINB & 0x01) == 0x00){// button 2 is depressed (select)
+		}else if((PINB & 0x01) 1= 0x01){// button 2 is depressed (select)
 			button_enter = true;
 			atomTimerDelay(30);	
 		}
