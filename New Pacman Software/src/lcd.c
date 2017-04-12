@@ -704,10 +704,10 @@ void display_logged_states(uint8_t state_num){
       line0[18] = '.';
       line0[19] = (flt_cnd.val)%10 +48;
       sprintf(&hex_flt_val[0], "%04X", flt_cnd.val);
-      line1[16] = hex_flt_val[0];
-      line1[17] = hex_flt_val[1];
-      line1[18] = hex_flt_val[2];
-      line1[19] = hex_flt_val[3];
+      /* line1[16] = hex_flt_val[0]; */
+      /* line1[17] = hex_flt_val[1]; */
+      /* line1[18] = hex_flt_val[2]; */
+      /* line1[19] = hex_flt_val[3]; */
     }else if(flt_cnd.cond == 1){
       line0[15] = (flt_cnd.val)/1000 + 48;
       line0[16] = '.';
@@ -715,10 +715,10 @@ void display_logged_states(uint8_t state_num){
       line0[18] = ((flt_cnd.val)%1000)%100/10 +48;
       line0[19] = (flt_cnd.val) %10 + 48;
       sprintf(&hex_flt_val[0], "%04X", flt_cnd.val);
-      line1[16] = hex_flt_val[0];
-      line1[17] = hex_flt_val[1];
-      line1[18] = hex_flt_val[2];
-      line1[19] = hex_flt_val[3];
+      /* line1[16] = hex_flt_val[0]; */
+      /* line1[17] = hex_flt_val[1]; */
+      /* line1[18] = hex_flt_val[2]; */
+      /* line1[19] = hex_flt_val[3]; */
     }
   }
 
