@@ -88,13 +88,15 @@ void task_config(uint32_t data) {
 	flt_cnd.area = i;
       }
       if(cell_V[i] > 4000){// || (cell_V[i] <2000)){//>4000 mV or <2000 mV cell voltage //**** COMMENTED: IF UNCOMMENTED, PACK GOES INTO STATE DEAD
-	pack_state = flt;
-	fault_code = 1;
+	if(cell_V[i] != 0xFFF6){//workaround to problem with i2c...
+	  pack_state = flt;
+	  fault_code = 1;
 
-	flt_cnd.active = 1;
-	flt_cnd.cond = 1;
-	flt_cnd.val = cell_V[i];
-	flt_cnd.area = i;
+	  flt_cnd.active = 1;
+	  flt_cnd.cond = 1;
+	  flt_cnd.val = cell_V[i];
+	  flt_cnd.area = i;
+	}
       }
     }
     if(pack_voltage > 20800){//20800 * .00125 mV/bit = 26 V
@@ -168,9 +170,11 @@ void task_config(uint32_t data) {
 	  flt_cnd.active = 1;
 	}
 	if(cell_V[i] > 4000){// || (cell_V[i] <2000)){//>4000 mV or <2000 mV cell voltage
-	  temp = flt;
-	  fault_code = 1;
-	  flt_cnd.active = 1;
+	  if(cell_V[i] != 0xFFF6){//workaround to problem with i2c...
+	    temp = flt;
+	    fault_code = 1;
+	    flt_cnd.active = 1;
+	  }
 	}
       }
       if(pack_voltage > 20800){//20800 * .00125 mV/bit = 26 V
