@@ -115,12 +115,12 @@ void task_can(uint32_t data){
 
 		uint8_t packet_num = 1;
 		uint8_t packet_offset = 4;
-		uint8_t cell_num = 1;
+		uint8_t cell_num = 0;
 		uint8_t bytes_left = 4;
 
 		//SEND THE CELL STATUSES:
-		while(cell_num <= num_cells){
-		  while((bytes_left > 0) && (cell_num <= num_cells)){
+		while(cell_num < num_cells){
+		  while((bytes_left > 0) && (cell_num < num_cells)){
 		    can_buff[packet_offset] = cell_status[cell_num];
 		    packet_offset++;
 		    cell_num++;
@@ -141,10 +141,10 @@ void task_can(uint32_t data){
 		
 		// FINISHED SENDING CELL STATUSES, NOW SEND CELL VOLTAGES:
 
-		cell_num = 1;
+		cell_num = 0;
 
-		while(cell_num <= num_cells){
-		  while((bytes_left > 1) && (cell_num <= num_cells)){
+		while(cell_num < num_cells){
+		  while((bytes_left > 1) && (cell_num < num_cells)){
 		    can_buff[packet_offset] = cell_V[cell_num] >> 8;
 		    can_buff[packet_offset+1] = cell_V[cell_num] & 0xFF;
 		    packet_offset = packet_offset+2;
@@ -166,10 +166,10 @@ void task_can(uint32_t data){
 
 		// FINISHED SENDING CELL VOLTAGES, NOW SEND CELL TEMPERATURES:
 
-		cell_num = 1;
+		cell_num = 0;
 
-		while(cell_num <= num_cells){
-		  while((bytes_left > 1) && (cell_num <= num_cells)){
+		while(cell_num < num_cells){
+		  while((bytes_left > 1) && (cell_num < num_cells)){
 		    can_buff[packet_offset] = cell_T[cell_num] >> 8;
 		    can_buff[packet_offset+1] = cell_T[cell_num] & 0xFF;
 		    packet_offset = packet_offset+2;
