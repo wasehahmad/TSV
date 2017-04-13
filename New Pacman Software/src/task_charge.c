@@ -56,8 +56,10 @@ void task_charge(uint32_t data) {
 		//if a cell voltage peaks or rolls off we know it is completely full/empty
 		for(i = 0; i<ams_board_count; i = i+1){
 			if(cell_V[i] > 3700){//3700 mV cell voltage
+			  if(cell_V[i] != 0xFFF6){
 				pack_coulombs = MAX_COULOMBS;// * 10^-4 coulombs in a full pack
 				pack_SOC = 100;
+			  }
 			}
 		}
 		for(i = 0; i<ams_board_count; i = i+1){
