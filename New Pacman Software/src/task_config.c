@@ -79,13 +79,15 @@ void task_config(uint32_t data) {
     //Detect Fault in all states
     for(i = 0; i<ams_board_count; i = i+1){//if communication with an AMS board is lost, these values are out of range
       if(cell_T[i] > 600){//60.0 deg C cell temp
-	pack_state = flt;
-	fault_code = 0;
+	if(cell_T[i] != 0xE33C){//workaround to problem with i2c...
+	  pack_state = flt;
+	  fault_code = 0;
 
-	flt_cnd.active = 1;
-	flt_cnd.cond = 0;
-	flt_cnd.val = cell_T[i];
-	flt_cnd.area = i;
+	  flt_cnd.active = 1;
+	  flt_cnd.cond = 0;
+	  flt_cnd.val = cell_T[i];
+	  flt_cnd.area = i;
+	}
       }
       if(cell_V[i] > 4000){// || (cell_V[i] <2000)){//>4000 mV or <2000 mV cell voltage //**** COMMENTED: IF UNCOMMENTED, PACK GOES INTO STATE DEAD
 	if(cell_V[i] != 0xFFF6){//workaround to problem with i2c...
@@ -165,9 +167,11 @@ void task_config(uint32_t data) {
       flt_cnd.active = 0;
       for(i = 0; i<ams_board_count; i = i+1){//if communication with an AMS board is lost, these values are out of range
 	if(cell_T[i] > 600){//60.0 deg C cell temp
-	  temp = flt;
-	  fault_code = 0;
-	  flt_cnd.active = 1;
+	  if(cell_T[i] != 0xE33C){//workaround to problem with i2c...
+	    temp = flt;
+	    fault_code = 0;
+	    flt_cnd.active = 1;
+	  }
 	}
 	if(cell_V[i] > 4000){// || (cell_V[i] <2000)){//>4000 mV or <2000 mV cell voltage
 	  if(cell_V[i] != 0xFFF6){//workaround to problem with i2c...

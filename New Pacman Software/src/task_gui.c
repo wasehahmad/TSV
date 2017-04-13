@@ -84,15 +84,15 @@ void task_gui(uint32_t data) {
 	}
 	break;
       case 1:
-	screen = 0;
+	screen = 1;
 	menu = 0;
 	break;
       case 2:
-	screen = 0;
+	screen = 2;
 	menu = 0;
 	break;
       case 3:
-	screen = 0;
+	screen = 3;
 	menu = 0;
 	break;
 	
