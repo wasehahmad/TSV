@@ -130,7 +130,7 @@ ctags:
 
 fuse:
 	#see http://www.engbedded.com/fusecalc/ for details on what these settings do
-	$(AVRDUDE) -F -V -c $(PRGMR) -p $(AVR_AVRD) -U lfuse:w:0xcf:m -U hfuse:w:0x99:m -U efuse:w:0xff:m
+	$(AVRDUDE) -F -V -c $(PRGMR) -p $(AVR_AVRD) -U lfuse:w:0xcf:m -U hfuse:w:0x91:m -U efuse:w:0xff:m
 
 # Clean
 clean:

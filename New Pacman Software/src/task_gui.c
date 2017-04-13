@@ -17,9 +17,15 @@ void task_gui(uint32_t data) {
 
   uint8_t menu = 0;
 
+  uint32_t sleep_time = atomTimeGet();
+
   atomTimerDelay(100);
 	
   for(;;){
+    if(((atomTimeGet() - sleep_time)/100) > 30){ // NO BUTTONS HAVE BEEN PRESSED FOR 30 SECONDS, GO BACK TO ORIGINAL MENU
+      menu = 0;
+      screen = 0;
+    }
     switch(menu){
     case 0:
       switch(screen){
@@ -62,7 +68,8 @@ void task_gui(uint32_t data) {
     //}
 
     //ENTER BUTTON PRESSED:
-    if((PINB & 0x01) == 0x00){ 
+    if((PINB & 0x01) == 0x00){
+      sleep_time = atomTimeGet();
       switch(menu){
       case 0:
 	switch(screen){
@@ -99,6 +106,7 @@ void task_gui(uint32_t data) {
       }
     }
     else if(button_down){
+      sleep_time = atomTimeGet();
       screen = screen + 1;
       if((screen == 4) && (menu == 0)){ // max + 1
 	screen = 3;		// max
@@ -110,6 +118,7 @@ void task_gui(uint32_t data) {
       button_down = false;
     }
     else if(button_up){
+      sleep_time = atomTimeGet();
       screen = screen - 1;
       if(screen ==-1){
 	screen = 0;
