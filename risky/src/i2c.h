@@ -129,6 +129,8 @@ void lcd_reset(void);
 void lcd_transmit(uint8_t data, uint8_t rs, uint8_t rw);
 void lcd_message(unsigned char* message, uint8_t width);
 
+void lcd_off(void);
+
 
 /**
 * @brief Initialize I2C Communications

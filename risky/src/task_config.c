@@ -110,15 +110,15 @@ void task_config(uint32_t data) {
       flt_cnd.val = pack_voltage;
       flt_cnd.area = 0;
     }
-    /* if(num_cells != ams_board_count){ */
-    /*   pack_state = flt; */
-    /*   fault_code = 3; */
+    if(num_cells != ams_board_count){
+      pack_state = flt;
+      fault_code = 3;
 
-    /*   flt_cnd.active = 1; */
-    /*   flt_cnd.cond = 3; */
-    /*   flt_cnd.val = num_cells; */
-    /*   flt_cnd.area = 0; */
-    /* } */
+      flt_cnd.active = 1;
+      flt_cnd.cond = 3;
+      flt_cnd.val = num_cells;
+      flt_cnd.area = 0;
+    }
     if(pack_state != flt){//then determine the proper state
       switch(pack_state){
       case boot://we've booted and no fault
@@ -186,15 +186,15 @@ void task_config(uint32_t data) {
 	fault_code = 2;
 	flt_cnd.active = 1;
       }
-      /* if(num_cells != ams_board_count){ */
-      /* 	temp = flt; */
-      /* 	fault_code = 3; */
+      if(num_cells != ams_board_count){
+      	temp = flt;
+      	fault_code = 3;
 
-      /* 	flt_cnd.active = 1; */
-      /* 	flt_cnd.cond = 3; */
-      /* 	flt_cnd.val = num_cells; */
-      /* 	flt_cnd.area = 0; */
-      /* } */
+      	flt_cnd.active = 1;
+      	flt_cnd.cond = 3;
+      	flt_cnd.val = num_cells;
+      	flt_cnd.area = 0;
+      }
       pack_state = temp; // COMMENTED 03092017 --> re-un-commented 03292017
     }
 		

@@ -83,6 +83,8 @@ volatile uint8_t  PACK_NUM;
 volatile bool lcd_flag;
 volatile bool bypass_flag;
 
+volatile bool lcd_active;
+
 //Calibration factors
 #define pack_Voff				-0.3
 #define pack_ametes_Aoff  		.6775//amps

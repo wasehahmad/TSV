@@ -67,7 +67,9 @@ void task_i2c(uint32_t data) {
 			if(lcd_flag){
 				lcd_flag = false;
 				bypass_flag = true;
-				write_lcd();
+				if(lcd_active){
+				  write_lcd();
+				}
 			}
 		}else{
 			lcd_flag = true;

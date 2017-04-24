@@ -326,6 +326,14 @@ void lcd_reset(void){
 	
 }
 
+void lcd_off(void){
+  //sets number of display lines
+  //lcd_transmit(0x28, 0, 0);
+  // Turn off Display and Cursor
+  lcd_transmit(0x08, 0, 0);
+	
+}
+
 //Transmit a whole message to the LCD screen. Writes to Data Register
 void lcd_message(unsigned char* message, uint8_t width){
 	uint8_t i = 0;
@@ -503,33 +511,36 @@ TWI_Start_Transceiver_With_Data((unsigned char*)&set, 3);
 TWI_Start_Transceiver_With_Data((unsigned char*)&msg, 5);
 TWI_Get_Data_From_Transceiver((unsigned char*)&msg, 5);
 
-// attempts 5 times
-/* uint8_t attempts = 0; */
-/* while(attempts < 5){ */
-/*   if(ams_magic(addr) == 0xA5A5){ */
-/*     ams_voltage 	= (msg[3]<<8); */
-/*     ams_voltage 	+= (msg[4]); */
-/*     attempts = 5; */
-/*   }else{ */
-/*     attempts++; */
-/*   } */
-/* } */
+//attempts 5 times
+uint8_t attempts = 0;
+while(attempts < 5){
+  if(ams_magic(addr) == 0xA5A5){
+    ams_voltage 	= (msg[3]<<8);
+    ams_voltage 	+= (msg[4]);
+    attempts = 5;
+  }else{
+    attempts++;
+  }
+}
 
- ams_voltage 	= (msg[3]<<8);
- ams_voltage 	+= (msg[4]);
+// NOTE: REVERT BACK TO IN CASE OF CATASTROPHE
+ /* ams_voltage 	= (msg[3]<<8); */
+ /* ams_voltage 	+= (msg[4]); */
 
- ams_temp 		= (msg[1]<<8);
- ams_temp		+= msg[2];
- /* attempts = 0; */
- /* while(attempts < 5){ */
- /*   if(ams_magic(addr) == 0xA5A5){ */
- /*     ams_temp 		= (msg[1]<<8); */
- /*     ams_temp		+= msg[2]; */
- /*     attempts = 5; */
- /*   }else{ */
- /*     attempts++; */
- /*   } */
- /* } */
+ /* ams_temp 		= (msg[1]<<8); */
+ /* ams_temp		+= msg[2]; */
+
+ 
+ attempts = 0;
+ while(attempts < 5){
+   if(ams_magic(addr) == 0xA5A5){
+     ams_temp 		= (msg[1]<<8);
+     ams_temp		+= msg[2];
+     attempts = 5;
+   }else{
+     attempts++;
+   }
+ }
 
  
 // release mutex
