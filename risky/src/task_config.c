@@ -187,7 +187,7 @@ void task_config(uint32_t data) {
 	flt_cnd.active = 1;
       }
       /* if(num_cells != ams_board_count){ */
-      /* 	pack_state = flt; */
+      /* 	temp = flt; */
       /* 	fault_code = 3; */
 
       /* 	flt_cnd.active = 1; */

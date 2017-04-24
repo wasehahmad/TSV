@@ -504,26 +504,32 @@ TWI_Start_Transceiver_With_Data((unsigned char*)&msg, 5);
 TWI_Get_Data_From_Transceiver((unsigned char*)&msg, 5);
 
 // attempts 5 times
- uint8_t attempts = 0;
- while(attempts < 5){
-   if(ams_magic(addr) == 0xA5A5){
-     ams_voltage 	= (msg[3]<<8);
-     ams_voltage 	+= (msg[4]);
-     attempts = 5;
-   }else{
-     attempts++;
-   }
- }
- attempts = 0;
- while(attempts < 5){
-   if(ams_magic(addr) == 0xA5A5){
-     ams_temp 		= (msg[1]<<8);
-     ams_temp		+= msg[2];
-     attempts = 5;
-   }else{
-     attempts++;
-   }
- }
+/* uint8_t attempts = 0; */
+/* while(attempts < 5){ */
+/*   if(ams_magic(addr) == 0xA5A5){ */
+/*     ams_voltage 	= (msg[3]<<8); */
+/*     ams_voltage 	+= (msg[4]); */
+/*     attempts = 5; */
+/*   }else{ */
+/*     attempts++; */
+/*   } */
+/* } */
+
+ ams_voltage 	= (msg[3]<<8);
+ ams_voltage 	+= (msg[4]);
+
+ ams_temp 		= (msg[1]<<8);
+ ams_temp		+= msg[2];
+ /* attempts = 0; */
+ /* while(attempts < 5){ */
+ /*   if(ams_magic(addr) == 0xA5A5){ */
+ /*     ams_temp 		= (msg[1]<<8); */
+ /*     ams_temp		+= msg[2]; */
+ /*     attempts = 5; */
+ /*   }else{ */
+ /*     attempts++; */
+ /*   } */
+ /* } */
 
  
 // release mutex
