@@ -146,7 +146,6 @@ void task_gui(uint32_t data) {
       }
       button_up = false;
     }
-    //lcd_off(); // testing, be sure to remove!!!
     atomTimerDelay(50);
   }//end infinite for loop
 }

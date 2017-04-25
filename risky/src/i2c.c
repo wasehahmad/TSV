@@ -330,7 +330,14 @@ void lcd_off(void){
   //sets number of display lines
   //lcd_transmit(0x28, 0, 0);
   // Turn off Display and Cursor
-  lcd_transmit(0x08, 0, 0);
+  
+  if(lcd_active){
+    lcd_transmit(0x08, 0, 0);
+
+    uint8_t msg[2] = {I2C_ADDR_LCD, 0x00}; 
+    TWI_Start_Transceiver_With_Data(msg, 2);
+  }
+  lcd_active = 0;
 	
 }
 
