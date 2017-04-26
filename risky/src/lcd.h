@@ -40,6 +40,7 @@ void disp_cell_info_screen(void);
 void disp_cell_cal_screen(void);
 void disp_logged_states_screen(void);
 
+void clear_screen(void);
 
 volatile uint16_t addr_choice;
 volatile uint8_t sel;
@@ -63,14 +64,15 @@ char next_pack_id[2];
 char curr_num_cells[2];
 char next_num_cells[2];
 
-char *line0;
-char *line1;
-char *line2;
-char *line3;
-/* unsigned char line0[20]; */
-/* unsigned char line1[20]; */
-/* unsigned char line2[20]; */
-/* unsigned char line3[20]; */
+/* char *line0; */
+/* char *line1; */
+/* char *line2; */
+/* char *line3; */
+
+unsigned char line0[20];
+unsigned char line1[20];
+unsigned char line2[20];
+unsigned char line3[20];
 
 
 
