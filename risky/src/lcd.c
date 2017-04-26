@@ -450,13 +450,13 @@ int8_t set_pack_num(){
   memcpy((void*)display_2, (void*) line2, 20);
   memcpy((void*)display_3, (void*) line3, 20);
 
-  atomTimerDelay(100);
+  atomTimerDelay(10);
 	
   pack_num_choice = PACK_NUM;
   sprintf(&curr_pack_id[0], "%02X", PACK_NUM);
   sprintf(&next_pack_id[0], "%02X", pack_num_choice);
 
-  atomTimerDelay(50);
+  //atomTimerDelay(50);
 	
   sel = 1;
   // choice for pack id: 1 - 0x7f = 1 - 127
@@ -552,7 +552,7 @@ int8_t set_pack_num(){
   memcpy((void*)display_2, (void*) line2, 20);
   memcpy((void*)display_3, (void*) line3, 20);
 
-  atomTimerDelay(100);
+  atomTimerDelay(10);
 
   return 0;
 
@@ -586,13 +586,13 @@ void set_num_cells(){
   memcpy((void*)display_2, (void*) line2, 20);
   memcpy((void*)display_3, (void*) line3, 20);
 
-  atomTimerDelay(100);
+  atomTimerDelay(10);
 	
   cell_num_choice = num_cells;
   sprintf(&curr_num_cells[0], "%02X", num_cells);
   sprintf(&next_num_cells[0], "%02X", cell_num_choice);
 
-  atomTimerDelay(50);
+  //atomTimerDelay(50);
 	
   sel = 1;
   // choice for pack id: 1 - 0x7f = 1 - 127
@@ -688,7 +688,7 @@ void set_num_cells(){
   memcpy((void*)display_2, (void*) line2, 20);
   memcpy((void*)display_3, (void*) line3, 20);
 
-  atomTimerDelay(100);
+  atomTimerDelay(10);
 
   //return 0;
 
@@ -723,7 +723,7 @@ void display_error(){
   memcpy((void*)display_2, (void*) line2, 20);
   memcpy((void*)display_3, (void*) line3, 20);
 
-  atomTimerDelay(100);
+  //atomTimerDelay(100);
 
 }
 

@@ -43,15 +43,15 @@ void task_button(uint32_t data){
 	for(;;){
 		if((PINB & 0x04) != 0x04){// button 0 is depressed (up)
 			button_up = true;
-			atomTimerDelay(30);
+			atomTimerDelay(20);
 
 		}else if((PINB & 0x02) != 0x02){// button 1 is depressed (down)
 			button_down = true;
-			atomTimerDelay(30);
+			atomTimerDelay(20);
 
 		}else if((PINB & 0x01) != 0x01){// button 2 is depressed (select)
 			button_enter = true;
-			atomTimerDelay(30);	
+			atomTimerDelay(20);	
 		}
 	
 	}

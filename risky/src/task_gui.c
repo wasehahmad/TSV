@@ -146,6 +146,6 @@ void task_gui(uint32_t data) {
       }
       button_up = false;
     }
-    atomTimerDelay(50);
+    atomTimerDelay(20);
   }//end infinite for loop
 }
