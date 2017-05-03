@@ -18,6 +18,11 @@
 // LCD values
 #define EN_LOW	0x08
 
+#define NUM_CONFIG_PARAMS 6
+
+volatile uint8_t config_addr[NUM_CONFIG_PARAMS];
+
+
 //4 arrays for the 4 lines on the LCD
 unsigned char display_0[20];
 unsigned char display_1[20];
@@ -72,6 +77,7 @@ volatile State recent_states[5];
 volatile uint32_t state_ts[5];
 //volatile struct display_time state_ts[5];
 
+volatile uint32_t sleep_time;
 
 volatile uint16_t CANADD_PACKINFO1;
 volatile uint16_t CANADD_PACKINFO2;

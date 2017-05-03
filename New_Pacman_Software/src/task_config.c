@@ -47,6 +47,12 @@ void task_config(uint32_t data) {
     num_cells = eeprom_read_byte((uint8_t*)EEPROM_CELL_COUNT);
   }
 
+  config_addr[0] = 0x01;
+  config_addr[1] = 0x02;
+  config_addr[2] = 0x01; // temp
+  config_addr[3] = 0x01;
+  config_addr[4] = 0x01;
+  config_addr[5] = 0x01;
 
   //?
   flt_cnd.active = 0;

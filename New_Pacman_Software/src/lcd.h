@@ -40,6 +40,9 @@ void disp_cell_info_screen(void);
 void disp_cell_cal_screen(void);
 void disp_logged_states_screen(void);
 
+void disp_invalid_addr(void);
+uint8_t confirm_config(void);
+
 void set_config_param(void);
 
 void clear_screen(void);

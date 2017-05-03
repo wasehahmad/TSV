@@ -13,11 +13,11 @@ void task_gui(uint32_t data) {
   //uint8_t i = 0;
   task_gui_init();
   int8_t screen = 0;
-  int8_t cal = 1;
+  //int8_t cal = 1;
 
   uint8_t menu = 0;
 
-  uint32_t sleep_time = atomTimeGet();
+  sleep_time = atomTimeGet();
 
   atomTimerDelay(100);
 	
@@ -44,9 +44,11 @@ void task_gui(uint32_t data) {
 	  disp_logged_states_screen(); break;
 	case 15:
 	  ////cal = set_can_address();
-	  cal = set_pack_num();
-	  set_num_cells();
-	  if (cal==0) screen = 0;  // exit config mode
+	  //cal = set_pack_num();
+	  //set_num_cells();
+	  //if (cal==0) screen = 0;  // exit config mode
+	  set_config_param();
+	  screen = 0;
 	  break;
 	default:
 	  display_top();
