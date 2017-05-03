@@ -19,6 +19,7 @@
 #define EN_LOW	0x08
 
 #define NUM_CONFIG_PARAMS 6
+#define PASSWORD 0x55
 
 volatile uint8_t config_addr[NUM_CONFIG_PARAMS];
 
@@ -71,6 +72,8 @@ volatile bool button_down;
 volatile bool button_enter; // Is always high for some reason
 
 volatile uint8_t num_cells;
+
+volatile uint8_t locked;
 
 // NEED TO LOG RECENT STATE TRANSITIONS AND TIMESTAMPS:
 volatile State recent_states[5];

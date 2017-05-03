@@ -26,13 +26,15 @@ void display_cell_cal_vslp(uint8_t cell);
 void display_cell_cal_toff(uint8_t cell);
 void display_cell_cal_tslp(uint8_t cell);
 
-int8_t set_can_address(void);
+//int8_t set_can_address(void);
 
-int8_t set_pack_num(void);
+//int8_t set_pack_num(void);
 
-void set_num_cells(void);
+//void set_num_cells(void);
 
 void display_error(void);
+
+void wrong_password(void);
 
 void display_logged_states(uint8_t state_num);
 

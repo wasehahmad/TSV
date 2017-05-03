@@ -405,294 +405,294 @@ void display_cell_cal(uint8_t cell){
 // }
 
 
-int8_t set_pack_num(){
+/* int8_t set_pack_num(){ */
 
-  //atomTimerDelay(700);//zxcv
+/*   //atomTimerDelay(700);//zxcv */
 
-  //                             0   1   2   3   4   5   6   7   8   9   10  11  12  13  14  15  16  17  18  19
-  /* unsigned char line0[20] = {'S','E','T',' ','P','A','C','K',' ','I','D',' ',' ',' ',' ',' ',' ',' ',' ',' '}; */
-  /* unsigned char line1[20] = {'U','P','/','D','O','W','N',' ','T','O',' ','C','H','A','N','G','E',' ',' ',' '}; */
-  /* unsigned char line2[20] = {'E','N','T','E','R',' ','T','O',' ','S','E','T',' ',' ',' ',' ',' ',' ',' ',' '}; */
-  /* unsigned char line3[20] = {'C','U','R','R','>',' ',' ',' ',' ',' ',' ','N','X','T','>',' ',' ',' ',' ',' '}; */
-  clear_screen();
+/*   //                             0   1   2   3   4   5   6   7   8   9   10  11  12  13  14  15  16  17  18  19 */
+/*   /\* unsigned char line0[20] = {'S','E','T',' ','P','A','C','K',' ','I','D',' ',' ',' ',' ',' ',' ',' ',' ',' '}; *\/ */
+/*   /\* unsigned char line1[20] = {'U','P','/','D','O','W','N',' ','T','O',' ','C','H','A','N','G','E',' ',' ',' '}; *\/ */
+/*   /\* unsigned char line2[20] = {'E','N','T','E','R',' ','T','O',' ','S','E','T',' ',' ',' ',' ',' ',' ',' ',' '}; *\/ */
+/*   /\* unsigned char line3[20] = {'C','U','R','R','>',' ',' ',' ',' ',' ',' ','N','X','T','>',' ',' ',' ',' ',' '}; *\/ */
+/*   clear_screen(); */
 
-  line0[0] = 'S';
-  line0[1] = 'E';
-  line0[2] = 'T';
-  line0[4] = 'P';
-  line0[5] = 'A';
-  line0[6] = 'C';
-  line0[7] = 'K';
-  line0[9] = 'I';
-  line0[10] = 'D';
+/*   line0[0] = 'S'; */
+/*   line0[1] = 'E'; */
+/*   line0[2] = 'T'; */
+/*   line0[4] = 'P'; */
+/*   line0[5] = 'A'; */
+/*   line0[6] = 'C'; */
+/*   line0[7] = 'K'; */
+/*   line0[9] = 'I'; */
+/*   line0[10] = 'D'; */
   
 
-  memcpy(line1,"UP/DOWN",7);
-  line1[8] = 'T';
-  line1[9] = 'O';
+/*   memcpy(line1,"UP/DOWN",7); */
+/*   line1[8] = 'T'; */
+/*   line1[9] = 'O'; */
 
-  memcpy(line1+11,"CHANGE",6);
+/*   memcpy(line1+11,"CHANGE",6); */
 
-  memcpy(line2,"ENTER",5);
-  line2[6] = 'T';
-  line2[7] = 'O';
-  line2[9] = 'S';
-  line2[10] = 'E';
-  line2[11] = 'T';
+/*   memcpy(line2,"ENTER",5); */
+/*   line2[6] = 'T'; */
+/*   line2[7] = 'O'; */
+/*   line2[9] = 'S'; */
+/*   line2[10] = 'E'; */
+/*   line2[11] = 'T'; */
   
 
-  memcpy(line3,"CURR>",5);
-  memcpy(line3+11,"NXT>",4);
+/*   memcpy(line3,"CURR>",5); */
+/*   memcpy(line3+11,"NXT>",4); */
   
 
-  memcpy((void*)display_0, (void*) line0, 20);
-  memcpy((void*)display_1, (void*) line1, 20);
-  memcpy((void*)display_2, (void*) line2, 20);
-  memcpy((void*)display_3, (void*) line3, 20);
+/*   memcpy((void*)display_0, (void*) line0, 20); */
+/*   memcpy((void*)display_1, (void*) line1, 20); */
+/*   memcpy((void*)display_2, (void*) line2, 20); */
+/*   memcpy((void*)display_3, (void*) line3, 20); */
 
-  atomTimerDelay(10);
+/*   atomTimerDelay(10); */
 	
-  param_choice = PACK_NUM;
-  sprintf(&curr_buff[0], "%02X", PACK_NUM);
-  sprintf(&next_buff[0], "%02X", param_choice);
+/*   param_choice = PACK_NUM; */
+/*   sprintf(&curr_buff[0], "%02X", PACK_NUM); */
+/*   sprintf(&next_buff[0], "%02X", param_choice); */
 
-  //atomTimerDelay(50);
+/*   //atomTimerDelay(50); */
 	
-  sel = 1;
-  // choice for pack id: 1 - 0x7f = 1 - 127
-  for(;;){
+/*   sel = 1; */
+/*   // choice for pack id: 1 - 0x7f = 1 - 127 */
+/*   for(;;){ */
 		
-    if(button_up){
-      //if(sel < 4){
-	sel++;
-	//}
-      param_choice = sel;
+/*     if(button_up){ */
+/*       //if(sel < 4){ */
+/* 	sel++; */
+/* 	//} */
+/*       param_choice = sel; */
       
-      if(param_choice == 128){
-	sel = 1;
-	param_choice = sel;
-      }
-      sprintf(&next_buff[0], "%02X", param_choice);
-      button_up = false;
+/*       if(param_choice == 128){ */
+/* 	sel = 1; */
+/* 	param_choice = sel; */
+/*       } */
+/*       sprintf(&next_buff[0], "%02X", param_choice); */
+/*       button_up = false; */
 		
-    }else if(button_down){
-      sel--;
-      if(sel == 0){
-	sel = 127;
-      }
-      param_choice = sel;
-      sprintf(&next_buff[0], "%02X", param_choice);
-      button_down = false;
-    }
+/*     }else if(button_down){ */
+/*       sel--; */
+/*       if(sel == 0){ */
+/* 	sel = 127; */
+/*       } */
+/*       param_choice = sel; */
+/*       sprintf(&next_buff[0], "%02X", param_choice); */
+/*       button_down = false; */
+/*     } */
 		
-    //displays var sel
-    //should change when down is pressed
-    //line1[17] = sel+48;
+/*     //displays var sel */
+/*     //should change when down is pressed */
+/*     //line1[17] = sel+48; */
 
-    //current pack CAN address
-    line3[7] = curr_buff[0];
-    line3[8] = curr_buff[1];
-    //line3[8] = curr_buff[2];lcd.h
+/*     //current pack CAN address */
+/*     line3[7] = curr_buff[0]; */
+/*     line3[8] = curr_buff[1]; */
+/*     //line3[8] = curr_buff[2];lcd.h */
     
-    //line3[9] = curr_buff[3];
+/*     //line3[9] = curr_buff[3]; */
 
 
-    //next pack CAN address
-    line3[16] = next_buff[0];
-    line3[17] = next_buff[1];
-    //line3[17] = next_can_addr[2];
-    //line3[18] = next_can_addr[3];
+/*     //next pack CAN address */
+/*     line3[16] = next_buff[0]; */
+/*     line3[17] = next_buff[1]; */
+/*     //line3[17] = next_can_addr[2]; */
+/*     //line3[18] = next_can_addr[3]; */
 
-    memcpy((void*)display_0, (void*) line0, 20);
-    memcpy((void*)display_1, (void*) line1, 20);
-    memcpy((void*)display_2, (void*) line2, 20);
-    memcpy((void*)display_3, (void*) line3, 20);
+/*     memcpy((void*)display_0, (void*) line0, 20); */
+/*     memcpy((void*)display_1, (void*) line1, 20); */
+/*     memcpy((void*)display_2, (void*) line2, 20); */
+/*     memcpy((void*)display_3, (void*) line3, 20); */
 
-    if( (PINB & 0x01) == 0x00){ // if the enter button is pressed
-      break;					// didn't work correctly when button_enter bool was used 
-    }
-  }
+/*     if( (PINB & 0x01) == 0x00){ // if the enter button is pressed */
+/*       break;					// didn't work correctly when button_enter bool was used  */
+/*     } */
+/*   } */
 
-  //CANADD_PACKINFO1 = CANADD_PACKINFO1;
-  /* CANADD_PACKINFO2   = CANADD_PACKINFO1 + 1; */
-  /* CANADD_CELLINFO    = CANADD_PACKINFO1 + 2; */
-  //save to EEPROM
-  /* eeprom_write_word((uint16_t*)EEPROM_CAN_ADDR1, addr_choice); */
-  /* eeprom_write_word((uint16_t*)EEPROM_CAN_ADDR2, CANADD_PACKINFO2); */
-  /* eeprom_write_word((uint16_t*)EEPROM_CAN_ADDR3, CANADD_CELLINFO); */
+/*   //CANADD_PACKINFO1 = CANADD_PACKINFO1; */
+/*   /\* CANADD_PACKINFO2   = CANADD_PACKINFO1 + 1; *\/ */
+/*   /\* CANADD_CELLINFO    = CANADD_PACKINFO1 + 2; *\/ */
+/*   //save to EEPROM */
+/*   /\* eeprom_write_word((uint16_t*)EEPROM_CAN_ADDR1, addr_choice); *\/ */
+/*   /\* eeprom_write_word((uint16_t*)EEPROM_CAN_ADDR2, CANADD_PACKINFO2); *\/ */
+/*   /\* eeprom_write_word((uint16_t*)EEPROM_CAN_ADDR3, CANADD_CELLINFO); *\/ */
 
-  /* CANADD_PACKINFO1 = eeprom_read_word((uint16_t*)EEPROM_CAN_ADDR1); */
+/*   /\* CANADD_PACKINFO1 = eeprom_read_word((uint16_t*)EEPROM_CAN_ADDR1); *\/ */
 
-  eeprom_write_byte((uint8_t*)EEPROM_PACK_ID, param_choice);
-  PACK_NUM = eeprom_read_byte((uint8_t*)EEPROM_PACK_ID);
+/*   eeprom_write_byte((uint8_t*)EEPROM_PACK_ID, param_choice); */
+/*   PACK_NUM = eeprom_read_byte((uint8_t*)EEPROM_PACK_ID); */
 
-  line0[0] ='P'; 
-  line0[1] ='A';
-  line0[2] ='C';
-  line0[3] ='K';
-  line0[4] =' ';
-  line0[5] ='I';
-  line0[6] ='D';
-  line0[7] =' ';
-  line0[8] ='S';
-  line0[9] ='E';
-  line0[10]='T';
-  line0[11]='!';
-  line0[12]=' ';
-  line0[13]=' ';
-  line0[14]=' ';
-  line0[15]=' ';
-  line0[16]=' ';
-  line0[17]=' ';
-  line0[18]=' ';
-  line0[19]=' ';
+/*   line0[0] ='P';  */
+/*   line0[1] ='A'; */
+/*   line0[2] ='C'; */
+/*   line0[3] ='K'; */
+/*   line0[4] =' '; */
+/*   line0[5] ='I'; */
+/*   line0[6] ='D'; */
+/*   line0[7] =' '; */
+/*   line0[8] ='S'; */
+/*   line0[9] ='E'; */
+/*   line0[10]='T'; */
+/*   line0[11]='!'; */
+/*   line0[12]=' '; */
+/*   line0[13]=' '; */
+/*   line0[14]=' '; */
+/*   line0[15]=' '; */
+/*   line0[16]=' '; */
+/*   line0[17]=' '; */
+/*   line0[18]=' '; */
+/*   line0[19]=' '; */
 
-  memcpy((void*)display_0, (void*) line0, 20);
-  memcpy((void*)display_1, (void*) line1, 20);
-  memcpy((void*)display_2, (void*) line2, 20);
-  memcpy((void*)display_3, (void*) line3, 20);
+/*   memcpy((void*)display_0, (void*) line0, 20); */
+/*   memcpy((void*)display_1, (void*) line1, 20); */
+/*   memcpy((void*)display_2, (void*) line2, 20); */
+/*   memcpy((void*)display_3, (void*) line3, 20); */
 
-  atomTimerDelay(10);
+/*   atomTimerDelay(10); */
 
-  return 0;
+/*   return 0; */
 
-}
+/* } */
 
-void set_num_cells(){
+/* void set_num_cells(){ */
 
-  //atomTimerDelay(700);
+/*   //atomTimerDelay(700); */
 
-  //                             0   1   2   3   4   5   6   7   8   9   10  11  12  13  14  15  16  17  18  19
-  /* unsigned char line0[20] = {'S','E','T',' ','N','U','M','B','E','R',' ','O','F',' ','C','E','L','L','S',' '}; */
-  /* unsigned char line1[20] = {'U','P','/','D','O','W','N',' ','T','O',' ','C','H','A','N','G','E',' ',' ',' '}; */
-  /* unsigned char line2[20] = {'E','N','T','E','R',' ','T','O',' ','S','E','T',' ',' ',' ',' ',' ',' ',' ',' '}; */
-  /* unsigned char line3[20] = {'C','U','R','R','>',' ',' ',' ',' ',' ',' ','N','X','T','>',' ',' ',' ',' ',' '}; */
+/*   //                             0   1   2   3   4   5   6   7   8   9   10  11  12  13  14  15  16  17  18  19 */
+/*   /\* unsigned char line0[20] = {'S','E','T',' ','N','U','M','B','E','R',' ','O','F',' ','C','E','L','L','S',' '}; *\/ */
+/*   /\* unsigned char line1[20] = {'U','P','/','D','O','W','N',' ','T','O',' ','C','H','A','N','G','E',' ',' ',' '}; *\/ */
+/*   /\* unsigned char line2[20] = {'E','N','T','E','R',' ','T','O',' ','S','E','T',' ',' ',' ',' ',' ',' ',' ',' '}; *\/ */
+/*   /\* unsigned char line3[20] = {'C','U','R','R','>',' ',' ',' ',' ',' ',' ','N','X','T','>',' ',' ',' ',' ',' '}; *\/ */
 
-  clear_screen();
+/*   clear_screen(); */
 
-  memcpy(line0,"SET",3);
-  memcpy(line0+4,"NUMBER",6);
-  memcpy(line0+11,"OF",2);
-  memcpy(line0+14,"CELLS",5);
+/*   memcpy(line0,"SET",3); */
+/*   memcpy(line0+4,"NUMBER",6); */
+/*   memcpy(line0+11,"OF",2); */
+/*   memcpy(line0+14,"CELLS",5); */
 
-  memcpy(line1,"UP/DOWN",7);
-  memcpy(line1+8,"TO",2);
-  memcpy(line1+11,"CHANGE",6);
+/*   memcpy(line1,"UP/DOWN",7); */
+/*   memcpy(line1+8,"TO",2); */
+/*   memcpy(line1+11,"CHANGE",6); */
   
 
 
-  memcpy((void*)display_0, (void*) line0, 20);
-  memcpy((void*)display_1, (void*) line1, 20);
-  memcpy((void*)display_2, (void*) line2, 20);
-  memcpy((void*)display_3, (void*) line3, 20);
+/*   memcpy((void*)display_0, (void*) line0, 20); */
+/*   memcpy((void*)display_1, (void*) line1, 20); */
+/*   memcpy((void*)display_2, (void*) line2, 20); */
+/*   memcpy((void*)display_3, (void*) line3, 20); */
 
-  atomTimerDelay(10);
+/*   atomTimerDelay(10); */
 	
-  param_choice = num_cells;
-  sprintf(&curr_buff[0], "%02X", num_cells);
-  sprintf(&next_buff[0], "%02X", param_choice);
+/*   param_choice = num_cells; */
+/*   sprintf(&curr_buff[0], "%02X", num_cells); */
+/*   sprintf(&next_buff[0], "%02X", param_choice); */
 
-  //atomTimerDelay(50);
+/*   //atomTimerDelay(50); */
 	
-  sel = 1;
-  // choice for pack id: 1 - 0x7f = 1 - 127
-  for(;;){
+/*   sel = 1; */
+/*   // choice for pack id: 1 - 0x7f = 1 - 127 */
+/*   for(;;){ */
 		
-    if(button_up){
-      //if(sel < 4){
-	sel++;
-	//}
-      param_choice = sel;
+/*     if(button_up){ */
+/*       //if(sel < 4){ */
+/* 	sel++; */
+/* 	//} */
+/*       param_choice = sel; */
       
-      /* if(param_choice == 255){ */
-      /* 	sel = 1; */
-      /* 	param_choice = sel; */
-      /* } */
-      sprintf(&next_buff[0], "%02X", param_choice);
-      button_up = false;
+/*       /\* if(param_choice == 255){ *\/ */
+/*       /\* 	sel = 1; *\/ */
+/*       /\* 	param_choice = sel; *\/ */
+/*       /\* } *\/ */
+/*       sprintf(&next_buff[0], "%02X", param_choice); */
+/*       button_up = false; */
 		
-    }else if(button_down){
-      sel--;
-      if(sel == 0){
-	sel = 255;
-      }
-      param_choice = sel;
-      sprintf(&next_buff[0], "%02X", param_choice);
-      button_down = false;
-    }
+/*     }else if(button_down){ */
+/*       sel--; */
+/*       if(sel == 0){ */
+/* 	sel = 255; */
+/*       } */
+/*       param_choice = sel; */
+/*       sprintf(&next_buff[0], "%02X", param_choice); */
+/*       button_down = false; */
+/*     } */
 		
-    //displays var sel
-    //should change when down is pressed
-    //line1[17] = sel+48;
+/*     //displays var sel */
+/*     //should change when down is pressed */
+/*     //line1[17] = sel+48; */
 
-    //current pack CAN address
-    line3[7] = curr_buff[0];
-    line3[8] = curr_buff[1];
-    //line3[8] = curr_buff[2];lcd.h
+/*     //current pack CAN address */
+/*     line3[7] = curr_buff[0]; */
+/*     line3[8] = curr_buff[1]; */
+/*     //line3[8] = curr_buff[2];lcd.h */
     
-    //line3[9] = curr_buff[3];
+/*     //line3[9] = curr_buff[3]; */
 
 
-    //next pack CAN address
-    line3[16] = next_buff[0];
-    line3[17] = next_buff[1];
-    //line3[17] = next_can_addr[2];
-    //line3[18] = next_can_addr[3];
+/*     //next pack CAN address */
+/*     line3[16] = next_buff[0]; */
+/*     line3[17] = next_buff[1]; */
+/*     //line3[17] = next_can_addr[2]; */
+/*     //line3[18] = next_can_addr[3]; */
 
-    memcpy((void*)display_0, (void*) line0, 20);
-    memcpy((void*)display_1, (void*) line1, 20);
-    memcpy((void*)display_2, (void*) line2, 20);
-    memcpy((void*)display_3, (void*) line3, 20);
+/*     memcpy((void*)display_0, (void*) line0, 20); */
+/*     memcpy((void*)display_1, (void*) line1, 20); */
+/*     memcpy((void*)display_2, (void*) line2, 20); */
+/*     memcpy((void*)display_3, (void*) line3, 20); */
 
-    if( (PINB & 0x01) == 0x00){ // if the enter button is pressed
-      break;					// didn't work correctly when button_enter bool was used 
-    }
-  }
+/*     if( (PINB & 0x01) == 0x00){ // if the enter button is pressed */
+/*       break;					// didn't work correctly when button_enter bool was used  */
+/*     } */
+/*   } */
 
-  //CANADD_PACKINFO1 = CANADD_PACKINFO1;
-  /* CANADD_PACKINFO2   = CANADD_PACKINFO1 + 1; */
-  /* CANADD_CELLINFO    = CANADD_PACKINFO1 + 2; */
-  //save to EEPROM
-  /* eeprom_write_word((uint16_t*)EEPROM_CAN_ADDR1, addr_choice); */
-  /* eeprom_write_word((uint16_t*)EEPROM_CAN_ADDR2, CANADD_PACKINFO2); */
-  /* eeprom_write_word((uint16_t*)EEPROM_CAN_ADDR3, CANADD_CELLINFO); */
+/*   //CANADD_PACKINFO1 = CANADD_PACKINFO1; */
+/*   /\* CANADD_PACKINFO2   = CANADD_PACKINFO1 + 1; *\/ */
+/*   /\* CANADD_CELLINFO    = CANADD_PACKINFO1 + 2; *\/ */
+/*   //save to EEPROM */
+/*   /\* eeprom_write_word((uint16_t*)EEPROM_CAN_ADDR1, addr_choice); *\/ */
+/*   /\* eeprom_write_word((uint16_t*)EEPROM_CAN_ADDR2, CANADD_PACKINFO2); *\/ */
+/*   /\* eeprom_write_word((uint16_t*)EEPROM_CAN_ADDR3, CANADD_CELLINFO); *\/ */
 
-  /* CANADD_PACKINFO1 = eeprom_read_word((uint16_t*)EEPROM_CAN_ADDR1); */
+/*   /\* CANADD_PACKINFO1 = eeprom_read_word((uint16_t*)EEPROM_CAN_ADDR1); *\/ */
 
-  eeprom_write_byte((uint8_t*)EEPROM_CELL_COUNT, param_choice);
-  num_cells = eeprom_read_byte((uint8_t*)EEPROM_CELL_COUNT);
+/*   eeprom_write_byte((uint8_t*)EEPROM_CELL_COUNT, param_choice); */
+/*   num_cells = eeprom_read_byte((uint8_t*)EEPROM_CELL_COUNT); */
 
-  line0[0] ='N'; 
-  line0[1] ='U';
-  line0[2] ='M';
-  line0[3] =' ';
-  line0[4] ='C';
-  line0[5] ='E';
-  line0[6] ='L';
-  line0[7] ='L';
-  line0[8] ='S';
-  line0[9] =' ';
-  line0[10]='S';
-  line0[11]='E';
-  line0[12]='T';
-  line0[13]='!';
-  line0[14]=' ';
-  line0[15]=' ';
-  line0[16]=' ';
-  line0[17]=' ';
-  line0[18]=' ';
-  line0[19]=' ';
+/*   line0[0] ='N';  */
+/*   line0[1] ='U'; */
+/*   line0[2] ='M'; */
+/*   line0[3] =' '; */
+/*   line0[4] ='C'; */
+/*   line0[5] ='E'; */
+/*   line0[6] ='L'; */
+/*   line0[7] ='L'; */
+/*   line0[8] ='S'; */
+/*   line0[9] =' '; */
+/*   line0[10]='S'; */
+/*   line0[11]='E'; */
+/*   line0[12]='T'; */
+/*   line0[13]='!'; */
+/*   line0[14]=' '; */
+/*   line0[15]=' '; */
+/*   line0[16]=' '; */
+/*   line0[17]=' '; */
+/*   line0[18]=' '; */
+/*   line0[19]=' '; */
 
-  memcpy((void*)display_0, (void*) line0, 20);
-  memcpy((void*)display_1, (void*) line1, 20);
-  memcpy((void*)display_2, (void*) line2, 20);
-  memcpy((void*)display_3, (void*) line3, 20);
+/*   memcpy((void*)display_0, (void*) line0, 20); */
+/*   memcpy((void*)display_1, (void*) line1, 20); */
+/*   memcpy((void*)display_2, (void*) line2, 20); */
+/*   memcpy((void*)display_3, (void*) line3, 20); */
 
-  atomTimerDelay(10);
+/*   atomTimerDelay(10); */
 
-  //return 0;
+/*   //return 0; */
 
-}
+/* } */
 
 void disp_invalid_addr(void){
 
@@ -704,9 +704,38 @@ void disp_invalid_addr(void){
 
   clear_screen();
 
-  memcpy(line0, "INVALID",7);
-  memcpy(line0+8, "ADDRESS!",8);
+  if( !locked ){
 
+    memcpy(line0, "INVALID",7);
+    memcpy(line0+8, "ADDRESS!",8);
+  }else{
+    memcpy(line0, "PACK",4);
+    memcpy(line0+5, "LOCKED!",7);
+  }
+
+  memcpy((void*)display_0, (void*) line0, 20);
+  memcpy((void*)display_1, (void*) line1, 20);
+  memcpy((void*)display_2, (void*) line2, 20);
+  memcpy((void*)display_3, (void*) line3, 20);
+
+  atomTimerDelay(150);
+
+}
+
+void wrong_password(void){
+
+  //                             0   1   2   3   4   5   6   7   8   9   10  11  12  13  14  15  16  17  18  19
+  /* unsigned char line0[20] = {'W','R','O','N','G',' ','P','A','S','S','W','O','R','D','!',' ',' ',' ',' ',' '}; */
+  /* unsigned char line2[20] = {' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}; */
+  /* unsigned char line1[20] = {' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}; */
+  /* unsigned char line3[20] = {' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}; */
+
+  clear_screen();
+
+  memcpy(line0, "WRONG",5);
+  memcpy(line0+6, "PASSWORD!",9);
+      
+  
   memcpy((void*)display_0, (void*) line0, 20);
   memcpy((void*)display_1, (void*) line1, 20);
   memcpy((void*)display_2, (void*) line2, 20);
@@ -740,7 +769,6 @@ uint8_t confirm_config(){
   memcpy(line1+3,"VOID",4);
   memcpy(line1+8,"CHANGES",7);
 
-  //asdf
   memcpy((void*)display_0, (void*) line0, 20);
   memcpy((void*)display_1, (void*) line1, 20);
   memcpy((void*)display_2, (void*) line2, 20);
@@ -760,6 +788,11 @@ uint8_t confirm_config(){
   /* } */
 
   for(;;){
+
+    if(((atomTimeGet() - sleep_time)/100) > 15){
+      return 0;
+    }
+
     if(button_up){
       button_up = false;
       return 0;
@@ -769,6 +802,8 @@ uint8_t confirm_config(){
     }else if((PINB & 0x01) == 0x00){
       return 1;
     }
+
+    
     atomTimerDelay(10);
   }
 
@@ -879,7 +914,7 @@ void set_config_param(void){
       disp_invalid_addr();
       return;
     }
-    if(config_addr[i] == param_choice){
+    if((config_addr[i] == param_choice) && (!locked || (param_choice == 0x03))){
       break;
     }
     
@@ -912,6 +947,9 @@ void set_config_param(void){
     break;
   case 2:
     param_choice = num_cells;
+    break;
+  case 3:
+    param_choice = 0x01;
     break;
   } // end switch
 
@@ -989,14 +1027,17 @@ void set_config_param(void){
 
   // AT THIS POINT, WE HAVE ENTERED A NEW VAL
 
-  uint8_t confirmation;
+  uint8_t confirmation; //asdf
 
-  confirmation = confirm_config();
+  if(param_addr != 0x03){
 
-  if(confirmation == 0){
-    return;
+    confirmation = confirm_config();
+
+    if(confirmation == 0){
+      return;
+    }
   }
-  atomTimerDelay(15);
+  atomTimerDelay(20);
 
   /* eeprom_write_byte((uint8_t*)EEPROM_PACK_ID, param_choice); */
   /* PACK_NUM = eeprom_read_byte((uint8_t*)EEPROM_PACK_ID); */
@@ -1009,6 +1050,13 @@ void set_config_param(void){
   case 2:
     eeprom_write_byte((uint8_t*)EEPROM_CELL_COUNT, param_choice);
     num_cells = eeprom_read_byte((uint8_t*)EEPROM_CELL_COUNT);
+    break;
+  case 3:
+    if(param_choice == PASSWORD){
+      locked = !locked;
+    }else{
+      wrong_password();
+    }
     break;
   }
 
