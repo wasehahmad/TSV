@@ -1,0 +1,385 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16LF1827 ]
+[d frameptr 6 ]
+"62 /opt/microchip/xc8/v1.35/sources/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 /opt/microchip/xc8/v1.35/sources/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 /opt/microchip/xc8/v1.35/sources/pic/eeprom.c
+[v _eecpymem eecpymem `(v  1 e 0 0 ]
+"24
+[v _memcpyee memcpyee `(v  1 e 0 0 ]
+"22 /home/osboxes/Desktop/AMS Software 3_31/firmware/adc.c
+[v _init_ADC init_ADC `(v  1 e 0 0 ]
+"46
+[v _ADC_ISR ADC_ISR `(v  1 e 0 0 ]
+"7 /home/osboxes/Desktop/AMS Software 3_31/firmware/eeprom.c
+[v _read_eeprom read_eeprom `(uc  1 e 1 0 ]
+[v i1_read_eeprom read_eeprom `(uc  1 e 1 0 ]
+"25
+[v _write_eeprom write_eeprom `(uc  1 e 1 0 ]
+[v i1_write_eeprom write_eeprom `(uc  1 e 1 0 ]
+"46 /home/osboxes/Desktop/AMS Software 3_31/firmware/firmware.c
+[v _setup setup `(v  1 e 0 0 ]
+"114
+[v _ISR ISR `II(v  1 e 0 0 ]
+"133
+[v _main main `(i  1 e 2 0 ]
+"18 /home/osboxes/Desktop/AMS Software 3_31/firmware/i2c.c
+[v _init_I2C init_I2C `(v  1 e 0 0 ]
+[v i1_init_I2C init_I2C `(v  1 e 0 0 ]
+"57
+[v _I2C_ISR I2C_ISR `(v  1 e 0 0 ]
+"247
+[v _i2c_write i2c_write `(v  1 e 0 0 ]
+"258
+[v _i2c_read i2c_read `(uc  1 e 1 0 ]
+"20 /home/osboxes/Desktop/AMS Software 3_31/firmware/watchdog.c
+[v _init_WDT init_WDT `(v  1 e 0 0 ]
+"31
+[v _event_wdt event_wdt `(v  1 e 0 0 ]
+[s S50 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"360 /opt/microchip/xc8/v1.35/include/pic16lf1827.h
+[s S59 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S64 . 1 `S50 1 . 1 0 `S59 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES64  1 e 1 @11 ]
+[s S82 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"553
+[u S91 . 1 `S82 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES91  1 e 1 @17 ]
+"1120
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1181
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+[s S262 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
+]
+"1259
+[u S271 . 1 `S262 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES271  1 e 1 @145 ]
+[s S543 . 1 `uc 1 SWDTEN 1 0 :1:0 
+`uc 1 WDTPS0 1 0 :1:1 
+`uc 1 WDTPS1 1 0 :1:2 
+`uc 1 WDTPS2 1 0 :1:3 
+`uc 1 WDTPS3 1 0 :1:4 
+`uc 1 WDTPS4 1 0 :1:5 
+]
+"1568
+[s S550 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 WDTPS 1 0 :5:1 
+]
+[u S553 . 1 `S543 1 . 1 0 `S550 1 . 1 0 ]
+[v _WDTCONbits WDTCONbits `VES553  1 e 1 @151 ]
+"1802
+[v _ADRESL ADRESL `VEuc  1 e 1 @155 ]
+"1821
+[v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
+[s S285 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 CHS4 1 0 :1:6 
+]
+"1865
+[s S293 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ADGO 1 0 :1:1 
+`uc 1 CHS 1 0 :5:2 
+]
+[s S297 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[u S300 . 1 `S285 1 . 1 0 `S293 1 . 1 0 `S297 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES300  1 e 1 @157 ]
+[s S232 . 1 `uc 1 ADPREF0 1 0 :1:0 
+`uc 1 ADPREF1 1 0 :1:1 
+`uc 1 ADNREF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 ADCS0 1 0 :1:4 
+`uc 1 ADCS1 1 0 :1:5 
+`uc 1 ADCS2 1 0 :1:6 
+`uc 1 ADFM 1 0 :1:7 
+]
+"1941
+[s S241 . 1 `uc 1 ADPREF 1 0 :2:0 
+`uc 1 . 1 0 :2:2 
+`uc 1 ADCS 1 0 :3:4 
+]
+[u S245 . 1 `S232 1 . 1 0 `S241 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES245  1 e 1 @158 ]
+"1990
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+[s S138 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+`uc 1 LATA7 1 0 :1:7 
+]
+"2007
+[u S147 . 1 `S138 1 . 1 0 ]
+[v _LATAbits LATAbits `VES147  1 e 1 @268 ]
+"2046
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+[s S116 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"2063
+[u S125 . 1 `S116 1 . 1 0 ]
+[v _LATBbits LATBbits `VES125  1 e 1 @269 ]
+[s S204 . 1 `uc 1 ADFVR0 1 0 :1:0 
+`uc 1 ADFVR1 1 0 :1:1 
+`uc 1 CDAFVR0 1 0 :1:2 
+`uc 1 CDAFVR1 1 0 :1:3 
+`uc 1 TSRNG 1 0 :1:4 
+`uc 1 TSEN 1 0 :1:5 
+`uc 1 FVRRDY 1 0 :1:6 
+`uc 1 FVREN 1 0 :1:7 
+]
+"2421
+[s S213 . 1 `uc 1 ADFVR 1 0 :2:0 
+`uc 1 CDAFVR 1 0 :2:2 
+]
+[u S216 . 1 `S204 1 . 1 0 `S213 1 . 1 0 ]
+[v _FVRCONbits FVRCONbits `VES216  1 e 1 @279 ]
+"2848
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"2912
+[v _EEADR EEADR `VEus  1 e 2 @401 ]
+"2967
+[v _EEDATA EEDATA `VEuc  1 e 1 @403 ]
+[s S605 . 1 `uc 1 RD 1 0 :1:0 
+`uc 1 WR 1 0 :1:1 
+`uc 1 WREN 1 0 :1:2 
+`uc 1 WRERR 1 0 :1:3 
+`uc 1 FREE 1 0 :1:4 
+`uc 1 LWLO 1 0 :1:5 
+`uc 1 CFGS 1 0 :1:6 
+`uc 1 EEPGD 1 0 :1:7 
+]
+"3035
+[u S614 . 1 `S605 1 . 1 0 ]
+[v _EECON1bits EECON1bits `VES614  1 e 1 @405 ]
+"3079
+[v _EECON2 EECON2 `VEuc  1 e 1 @406 ]
+"3502
+[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
+"3539
+[v _SSP1ADD SSP1ADD `VEuc  1 e 1 @530 ]
+"3576
+[v _SSP1MSK SSP1MSK `VEuc  1 e 1 @531 ]
+[s S390 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"3635
+[u S399 . 1 `S390 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES399  1 e 1 @532 ]
+[s S411 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"3763
+[s S420 . 1 `uc 1 SSPM 1 0 :4:0 
+]
+[u S422 . 1 `S411 1 . 1 0 `S420 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES422  1 e 1 @533 ]
+[s S437 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"3959
+[u S446 . 1 `S437 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES446  1 e 1 @534 ]
+"14 /home/osboxes/Desktop/AMS Software 3_31/firmware/adc.c
+[v _voltage voltage `ui  1 e 2 0 ]
+"17
+[v _temp temp `ui  1 e 2 0 ]
+"20
+[v _adc_chan adc_chan `uc  1 e 1 0 ]
+"12 /home/osboxes/Desktop/AMS Software 3_31/firmware/i2c.c
+[v _bypass_flag bypass_flag `VEuc  1 e 1 0 ]
+"13
+[v _panic_flag panic_flag `VEuc  1 e 1 0 ]
+"16
+[v _i2c_address i2c_address `VEuc  1 e 1 0 ]
+"11 /home/osboxes/Desktop/AMS Software 3_31/firmware/i2c.h
+[v _serial serial `VE[4]uc  1 e 4 0 ]
+"12
+[v _slope slope `VEui  1 e 2 0 ]
+[v _offset offset `VEui  1 e 2 0 ]
+"13
+[v _cal_data cal_data `VE[4]uc  1 e 4 0 ]
+"14
+[v _read_type read_type `VEuc  1 e 1 0 ]
+"14 /home/osboxes/Desktop/AMS Software 3_31/firmware/watchdog.c
+[v _bypass_count bypass_count `VEui  1 e 2 0 ]
+"17
+[v _bypass_limit bypass_limit `VEui  1 e 2 0 ]
+"133 /home/osboxes/Desktop/AMS Software 3_31/firmware/firmware.c
+[v _main main `(i  1 e 2 0 ]
+{
+"147
+[v main@panic_led panic_led `uc  1 a 1 21 ]
+"174
+} 0
+"46
+[v _setup setup `(v  1 e 0 0 ]
+{
+"109
+} 0
+"25 /home/osboxes/Desktop/AMS Software 3_31/firmware/eeprom.c
+[v _write_eeprom write_eeprom `(uc  1 e 1 0 ]
+{
+[v write_eeprom@address address `uc  1 a 1 wreg ]
+[v write_eeprom@address address `uc  1 a 1 wreg ]
+[v write_eeprom@data data `uc  1 p 1 6 ]
+[v write_eeprom@address address `uc  1 a 1 9 ]
+"47
+} 0
+"7
+[v _read_eeprom read_eeprom `(uc  1 e 1 0 ]
+{
+[v read_eeprom@address address `uc  1 a 1 wreg ]
+[v read_eeprom@address address `uc  1 a 1 wreg ]
+"9
+[v read_eeprom@address address `uc  1 a 1 5 ]
+"22
+} 0
+"20 /home/osboxes/Desktop/AMS Software 3_31/firmware/watchdog.c
+[v _init_WDT init_WDT `(v  1 e 0 0 ]
+{
+"28
+} 0
+"18 /home/osboxes/Desktop/AMS Software 3_31/firmware/i2c.c
+[v _init_I2C init_I2C `(v  1 e 0 0 ]
+{
+[v init_I2C@addr addr `uc  1 a 1 wreg ]
+[v init_I2C@addr addr `uc  1 a 1 wreg ]
+[v init_I2C@addr addr `uc  1 a 1 4 ]
+"55
+} 0
+"22 /home/osboxes/Desktop/AMS Software 3_31/firmware/adc.c
+[v _init_ADC init_ADC `(v  1 e 0 0 ]
+{
+"44
+} 0
+"31 /home/osboxes/Desktop/AMS Software 3_31/firmware/watchdog.c
+[v _event_wdt event_wdt `(v  1 e 0 0 ]
+{
+"60
+} 0
+"114 /home/osboxes/Desktop/AMS Software 3_31/firmware/firmware.c
+[v _ISR ISR `II(v  1 e 0 0 ]
+{
+"128
+} 0
+"57 /home/osboxes/Desktop/AMS Software 3_31/firmware/i2c.c
+[v _I2C_ISR I2C_ISR `(v  1 e 0 0 ]
+{
+"126
+[v I2C_ISR@low_byte low_byte `uc  1 a 1 2 ]
+"125
+[v I2C_ISR@high_byte high_byte `uc  1 a 1 1 ]
+"70
+[v I2C_ISR@cmd cmd `uc  1 a 1 0 ]
+"245
+} 0
+"25 /home/osboxes/Desktop/AMS Software 3_31/firmware/eeprom.c
+[v i1_write_eeprom write_eeprom `(uc  1 e 1 0 ]
+{
+[v i1write_eeprom@address address `uc  1 a 1 wreg ]
+[v i1write_eeprom@address address `uc  1 a 1 wreg ]
+[v i1write_eeprom@data data `uc  1 p 1 3 ]
+[v i1write_eeprom@address address `uc  1 a 1 6 ]
+"47
+} 0
+"7
+[v i1_read_eeprom read_eeprom `(uc  1 e 1 0 ]
+{
+[v i1read_eeprom@address address `uc  1 a 1 wreg ]
+[v i1read_eeprom@address address `uc  1 a 1 wreg ]
+"9
+[v i1read_eeprom@address address `uc  1 a 1 2 ]
+"22
+} 0
+"18 /home/osboxes/Desktop/AMS Software 3_31/firmware/i2c.c
+[v i1_init_I2C init_I2C `(v  1 e 0 0 ]
+{
+[v i1init_I2C@addr addr `uc  1 a 1 wreg ]
+[v i1init_I2C@addr addr `uc  1 a 1 wreg ]
+[v i1init_I2C@addr addr `uc  1 a 1 1 ]
+"55
+} 0
+"247
+[v _i2c_write i2c_write `(v  1 e 0 0 ]
+{
+[v i2c_write@byte byte `uc  1 a 1 wreg ]
+[v i2c_write@byte byte `uc  1 a 1 wreg ]
+[v i2c_write@byte byte `uc  1 a 1 0 ]
+"256
+} 0
+"258
+[v _i2c_read i2c_read `(uc  1 e 1 0 ]
+{
+"266
+[v i2c_read@byte byte `uc  1 a 1 1 ]
+"276
+} 0
+"46 /home/osboxes/Desktop/AMS Software 3_31/firmware/adc.c
+[v _ADC_ISR ADC_ISR `(v  1 e 0 0 ]
+{
+"79
+} 0

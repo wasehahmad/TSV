@@ -1,0 +1,15 @@
+# use glob syntax.
+syntax: glob
+*.swp
+*.bak
+*.old
+*.orig
+
+# switch to regexp syntax.
+syntax: regexp
+^firmware/nbproject/Package
+^firmware/nbproject/private
+^firmware/nbproject/Makefile
+^firmware/debug
+^firmware/build
+^firmware/dist
