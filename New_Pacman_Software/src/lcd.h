@@ -35,6 +35,7 @@ void display_cell_cal_tslp(uint8_t cell);
 void display_error(void);
 
 void wrong_password(void);
+void lock_toggled(void);
 
 void display_logged_states(uint8_t state_num);
 

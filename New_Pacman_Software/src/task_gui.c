@@ -4,6 +4,7 @@
 #include "atomport.h"
 #include "params.h"
 #include "i2c.h"
+#include <avr/eeprom.h>
 
 void task_gui_init(){
   display_top();
@@ -12,6 +13,24 @@ void task_gui_init(){
 void task_gui(uint32_t data) {
   //uint8_t i = 0;
   task_gui_init();
+
+  config_addr[5] = 0x06; // SCREEN RESET TIME
+  config_addr[6] = 0x07; // SCREEN SLEEP TIME
+
+  screen_reset_time = eeprom_read_byte((uint8_t*)EEPROM_SCREEN_RESET_TIME);
+  
+  if((screen_reset_time == 0) || (screen_reset_time == 0xFF)) {
+    eeprom_write_byte((uint8_t*)EEPROM_SCREEN_RESET_TIME, DEFAULT_SCREEN_RESET_TIME);
+    screen_reset_time = eeprom_read_byte((uint8_t*)EEPROM_SCREEN_RESET_TIME);
+  }
+
+  screen_sleep_time = eeprom_read_byte((uint8_t*)EEPROM_SCREEN_SLEEP_TIME);
+  
+  if((screen_sleep_time == 0) || (screen_sleep_time == 0xFF)) {
+    eeprom_write_byte((uint8_t*)EEPROM_SCREEN_SLEEP_TIME, DEFAULT_SCREEN_SLEEP_TIME);
+    screen_sleep_time = eeprom_read_byte((uint8_t*)EEPROM_SCREEN_SLEEP_TIME);
+  }
+
   int8_t screen = 0;
   //int8_t cal = 1;
 
@@ -22,11 +41,11 @@ void task_gui(uint32_t data) {
   atomTimerDelay(100);
 	
   for(;;){
-    if(((atomTimeGet() - sleep_time)/100) > 30){ // NO BUTTONS HAVE BEEN PRESSED FOR 30 SECONDS, GO BACK TO ORIGINAL MENU
+    if(((atomTimeGet() - sleep_time)/100) > screen_reset_time){ // NO BUTTONS HAVE BEEN PRESSED FOR 30 SECONDS, GO BACK TO ORIGINAL MENU
       menu = 0;
       screen = 0;
     }
-    if(((atomTimeGet() - sleep_time)/100) > 120){ // NO BUTTONS HAVE BEEN PRESSED FOR 2 MINUTES, TURN OFF DISPLAY
+    if(((atomTimeGet() - sleep_time)/100) > screen_sleep_time){ // NO BUTTONS HAVE BEEN PRESSED FOR 2 MINUTES, TURN OFF DISPLAY
       lcd_off();
       lcd_active = 0;
     }else{

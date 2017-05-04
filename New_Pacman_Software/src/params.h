@@ -18,8 +18,8 @@
 // LCD values
 #define EN_LOW	0x08
 
-#define NUM_CONFIG_PARAMS 6
-#define PASSWORD 0x55
+#define NUM_CONFIG_PARAMS 7
+#define PASSWORD 0xFF
 
 volatile uint8_t config_addr[NUM_CONFIG_PARAMS];
 
@@ -129,10 +129,27 @@ ATOM_MUTEX A_mutex;
 #define DEFAULT_PACK_NUM 	0x01
 #define DEFAULT_NUM_CELLS       7
 
+#define DEFAULT_MAX_CELL_TEMP 0x3C
+#define DEFAULT_MAX_CELL_VOLTAGE 0x28
+#define DEFAULT_SCREEN_RESET_TIME 0x0F
+#define DEFAULT_SCREEN_SLEEP_TIME 0x78
+
+volatile uint8_t max_cell_voltage;
+volatile uint8_t max_cell_temp;
+volatile uint8_t screen_reset_time;
+volatile uint8_t screen_sleep_time;
+
 
 #define EEPROM_SOC  		1		// location in memory of last recorded State of Charge
+#define EEPROM_LOCK             2               // location in memory of the lock state
+#define EEPROM_MAX_CELL_TEMP    3
+#define EEPROM_MAX_CELL_VOLTAGE 4
+#define EEPROM_SCREEN_RESET_TIME 5
+#define EEPROM_SCREEN_SLEEP_TIME 6
 #define EEPROM_PACK_ID          8               // location in memory of the pack id
 #define EEPROM_CELL_COUNT       9               // location in memory of the number of cells beign used
+
+
 
 /* #define EEPROM_CAN_ADDR1	2		// location in memory of CAN address for CANADD_PACKINFO1 */
 /* #define EEPROM_CAN_ADDR2	4		// location in memory of CAN address for CANADD_PACKINFO2 */

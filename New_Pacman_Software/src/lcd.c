@@ -745,6 +745,35 @@ void wrong_password(void){
 
 }
 
+void lock_toggled(void){
+
+  //                             0   1   2   3   4   5   6   7   8   9   10  11  12  13  14  15  16  17  18  19
+  /* unsigned char line0[20] = {'P','A','C','K',' ','L','O','C','K','E','D',' ',' ',' ',' ',' ',' ',' ',' ',' '}; */
+  /* unsigned char line2[20] = {'P','A','C','K',' ','U','N','L','O','C','K','E','D',' ',' ',' ',' ',' ',' ',' '}; */
+  /* unsigned char line1[20] = {' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}; */
+  /* unsigned char line3[20] = {' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}; */
+
+  clear_screen();
+
+  memcpy(line0, "PACK",4);
+
+  if(locked){
+    memcpy(line0+5, "LOCKED",6);
+  }else{
+    memcpy(line0+5, "UNLOCKED",8);
+  }
+  
+      
+  
+  memcpy((void*)display_0, (void*) line0, 20);
+  memcpy((void*)display_1, (void*) line1, 20);
+  memcpy((void*)display_2, (void*) line2, 20);
+  memcpy((void*)display_3, (void*) line3, 20);
+
+  atomTimerDelay(150);
+
+}
+
 uint8_t confirm_config(){
 
   sleep_time = atomTimeGet();
@@ -789,17 +818,20 @@ uint8_t confirm_config(){
 
   for(;;){
 
-    if(((atomTimeGet() - sleep_time)/100) > 15){
+    if(((atomTimeGet() - sleep_time)/100) > screen_reset_time){
       return 0;
     }
 
     if(button_up){
+      sleep_time = atomTimeGet();
       button_up = false;
       return 0;
     }else if(button_down){
+      sleep_time = atomTimeGet();
       button_down = false;
       return 0;
     }else if((PINB & 0x01) == 0x00){
+      sleep_time = atomTimeGet();
       return 1;
     }
 
@@ -816,7 +848,7 @@ void set_config_param(void){
 
   //                             0   1   2   3   4   5   6   7   8   9   10  11  12  13  14  15  16  17  18  19
   /* unsigned char line0[20] = {'C','O','N','F','I','G',' ','P','A','R','A','M','S',' ',' ',' ',' ',' ',' ',' '}; */
-  /* unsigned char line2[20] = {'A','D','D','R',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}; */ // ADDR REPLACED BY VAL
+  /* unsigned char line2[20] = {'E','N','T','E','R',' ','A','D','D','R',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}; */ // ADDR REPLACED BY VAL
   /* unsigned char line1[20] = {'C','U','R','R','>',' ',' ',' ',' ',' ',' ','N','X','T','>',' ',' ',' ',' ',' '}; */
   /* unsigned char line3[20] = {'D','E','F','A','U','L','T',':',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}; */
   
@@ -825,23 +857,24 @@ void set_config_param(void){
   memcpy(line0, "CONFIG",6);
   memcpy(line0+7, "PARAMS",6);
 
-  memcpy(line2,"ADDR",4);
+  memcpy(line2,"ENTER",5);
+  memcpy(line2+6,"ADDR",4);
 
-  memcpy(line1,"CURR>",5);
-  memcpy(line1+11,"NXT>",4);
+  memcpy(line1,"EDIT:",5);
+  //memcpy(line1+11,"NXT>",4);
 
   // FIRST SET THE ADDRESS FOR THE CONFIG PARAM WE ARE LOOKING TO SET
 	
   param_choice = 0x01;
-  sprintf(&curr_buff[0], "%02X", param_choice);
+  //sprintf(&curr_buff[0], "%02X", param_choice);
   sprintf(&next_buff[0], "%02X", param_choice);
 
-  line1[5] = curr_buff[0];
-  line1[6] = curr_buff[1];
+  //line1[5] = curr_buff[0];
+  //line1[6] = curr_buff[1];
 
   
-  line1[15] = next_buff[0];
-  line1[16] = next_buff[1];
+  line1[5] = next_buff[0];
+  line1[6] = next_buff[1];
 
   memcpy((void*)display_0, (void*) line0, 20);
   memcpy((void*)display_1, (void*) line1, 20);
@@ -855,7 +888,7 @@ void set_config_param(void){
 
   for(;;){
 
-    if(((atomTimeGet() - sleep_time)/100) > 15){
+    if(((atomTimeGet() - sleep_time)/100) > screen_reset_time){
       return;
     }
 		
@@ -881,16 +914,15 @@ void set_config_param(void){
     //line1[17] = sel+48;
 
     //current pack CAN address
-    line1[5] = curr_buff[0];
-    line1[6] = curr_buff[1];
+    line1[5] = next_buff[0];
+    line1[6] = next_buff[1];
     //line3[8] = curr_buff[2];lcd.h
     
     //line3[9] = curr_buff[3];
 
 
-    //next pack CAN address
-    line1[15] = next_buff[0];
-    line1[16] = next_buff[1];
+    /* line1[15] = next_buff[0]; */
+    /* line1[16] = next_buff[1]; */
     //line3[17] = next_can_addr[2];
     //line3[18] = next_can_addr[3];
 
@@ -906,6 +938,7 @@ void set_config_param(void){
 
     atomTimerDelay(10);
   }
+  atomTimerDelay(20);
 
   // AT THIS POINT, WE HAVE DECIDED THE ADDRESS OF THE CONFIG PARAM TO EDIT, LETS MAKE SURE IT'S A REAL ADDR
   for(int i = 0; i < NUM_CONFIG_PARAMS+1; i++){
@@ -924,20 +957,27 @@ void set_config_param(void){
 
   //                             0   1   2   3   4   5   6   7   8   9   10  11  12  13  14  15  16  17  18  19
   /* unsigned char line0[20] = {'C','O','N','F','I','G',' ','P','A','R','A','M','S',' ',' ',' ',' ',' ',' ',' '}; */
-  /* unsigned char line2[20] = {'V','A','L',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}; */
+  /* unsigned char line2[20] = {'E','N','T','E','R',' ','V','A','L',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}; */
   /* unsigned char line1[20] = {'C','U','R','R','>',' ',' ',' ',' ',' ',' ','N','X','T','>',' ',' ',' ',' ',' '}; */
-  /* unsigned char line3[20] = {'D','E','F','A','U','L','T',':',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}; */
+  /* unsigned char line3[20] = {'A','D','D','R',':',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}; */
 
   clear_screen();
   memcpy(line0, "CONFIG",6);
   memcpy(line0+7, "PARAMS",6);
 
-  memcpy(line2,"VAL",3);
+  memcpy(line2,"ENTER",5);
+  memcpy(line2+6,"VAL",3);
 
-  memcpy(line1,"CURR>",5);
+  if(param_choice != 0x03){
+    memcpy(line1,"CURR>",5);
+  }
   memcpy(line1+11,"NXT>",4);
 
-  memcpy(line3,"DEFAULT:",8);
+  memcpy(line3,"ADDR:",5);
+  line3[5] = next_buff[0];
+  line3[6] = next_buff[1];
+
+  //memcpy(line3,"DEFAULT:",8);
 
   uint8_t param_addr = param_choice;
 
@@ -951,21 +991,35 @@ void set_config_param(void){
   case 3:
     param_choice = 0x01;
     break;
+  case 4:
+    param_choice = max_cell_temp;
+    break;
+  case 5:
+    param_choice = max_cell_voltage;
+    break;
+  case 6:
+    param_choice = screen_reset_time;
+    break;
+  case 7:
+    param_choice = screen_sleep_time;
+    break;
   } // end switch
 
   sprintf(&curr_buff[0], "%02X", param_choice);
   sprintf(&next_buff[0], "%02X", param_choice);
 
-  line1[5] = curr_buff[0];
-  line1[6] = curr_buff[1];
+  if(param_addr != 0x03){
+    line1[5] = curr_buff[0];
+    line1[6] = curr_buff[1];
+  }
 
   line1[15] = next_buff[0];
   line1[16] = next_buff[1];
 
   // DISPLAY DEFAULT VAL
   
-  line3[8] = curr_buff[0];
-  line3[9] = curr_buff[1];
+  /* line3[8] = curr_buff[0]; */
+  /* line3[9] = curr_buff[1]; */
 
   memcpy((void*)display_0, (void*) line0, 20);
   memcpy((void*)display_1, (void*) line1, 20);
@@ -977,11 +1031,15 @@ void set_config_param(void){
   sel = param_choice;
 
   for(;;){
+
+    if(((atomTimeGet() - sleep_time)/100) > screen_reset_time){
+      return;
+    }
 		
     if(button_up){
       sel++;
       param_choice = sel;
-      
+      sleep_time = atomTimeGet();
       
       sprintf(&next_buff[0], "%02X", param_choice);
       button_up = false;
@@ -989,6 +1047,8 @@ void set_config_param(void){
     }else if(button_down){
       sel--;
       param_choice = sel;
+      sleep_time = atomTimeGet();
+      
       sprintf(&next_buff[0], "%02X", param_choice);
       button_down = false;
     }
@@ -998,8 +1058,10 @@ void set_config_param(void){
     //line1[17] = sel+48;
 
     //current pack CAN address
-    line1[5] = curr_buff[0];
-    line1[6] = curr_buff[1];
+    if(param_addr != 0x03){
+      line1[5] = curr_buff[0];
+      line1[6] = curr_buff[1];
+    }
     //line3[8] = curr_buff[2];lcd.h
     
     //line3[9] = curr_buff[3];
@@ -1034,6 +1096,7 @@ void set_config_param(void){
     confirmation = confirm_config();
 
     if(confirmation == 0){
+      atomTimerDelay(20);
       return;
     }
   }
@@ -1053,12 +1116,33 @@ void set_config_param(void){
     break;
   case 3:
     if(param_choice == PASSWORD){
-      locked = !locked;
+      //locked = !locked;
+      eeprom_write_byte((uint8_t*)EEPROM_LOCK, !locked);
+      locked = eeprom_read_byte((uint8_t*)EEPROM_LOCK);
+      lock_toggled();
     }else{
       wrong_password();
     }
     break;
+  case 4:
+    eeprom_write_byte((uint8_t*)EEPROM_MAX_CELL_TEMP, param_choice);
+    max_cell_temp = eeprom_read_byte((uint8_t*)EEPROM_MAX_CELL_TEMP);
+    break;
+  case 5:
+    eeprom_write_byte((uint8_t*)EEPROM_MAX_CELL_VOLTAGE, param_choice);
+    max_cell_voltage = eeprom_read_byte((uint8_t*)EEPROM_MAX_CELL_VOLTAGE);
+    break;
+  case 6:
+    eeprom_write_byte((uint8_t*)EEPROM_SCREEN_RESET_TIME, param_choice);
+    screen_reset_time = eeprom_read_byte((uint8_t*)EEPROM_SCREEN_RESET_TIME);
+    break;
+  case 7:
+    eeprom_write_byte((uint8_t*)EEPROM_SCREEN_SLEEP_TIME, param_choice);
+    screen_sleep_time = eeprom_read_byte((uint8_t*)EEPROM_SCREEN_SLEEP_TIME);
+    break;
   }
+
+  atomTimerDelay(20);
 
   
 
