@@ -327,12 +327,8 @@ void lcd_reset(void){
 }
 
 void lcd_off(void){
-  //sets number of display lines
-  //lcd_transmit(0x28, 0, 0);
-  // Turn off Display and Cursor
-
-  
-  
+  // TODO remove this condition
+  // If this is called turn the display off
   if(lcd_active){
     //Turn off display
     lcd_transmit(0x08, 0, 0);

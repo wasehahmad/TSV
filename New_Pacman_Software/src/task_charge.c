@@ -46,13 +46,15 @@ void task_charge(uint32_t data) {
 	if(pack_state != boot){//wait 2 sec for all other tasks to start successfully
 		if(pack_state == chrg){
 			PORTA |= 0x30;//turn on charge relay and fan
-		}else{
+		}
+		else{
 			if(pack_state == lco){
 				PORTA |= 0x10;//turn on charge relay
 			}else{
 				PORTA &= ~(0x30);//turn off charge relay and fan
 			}
 		}
+		// TODO change this logic to check for all cells to be at least 3700
 		//if a cell voltage peaks or rolls off we know it is completely full/empty
 		for(i = 0; i<ams_board_count; i = i+1){
 			if(cell_V[i] > 3700){//3700 mV cell voltage
@@ -62,6 +64,7 @@ void task_charge(uint32_t data) {
 			  }
 			}
 		}
+		// TODO remove or change to check for no current (<1A)
 		for(i = 0; i<ams_board_count; i = i+1){
 			if(cell_V[i] < 2700){//2700 mV cell voltage
 				pack_coulombs = 0;
@@ -73,6 +76,7 @@ void task_charge(uint32_t data) {
 		current_tick = atomTimeGet();
 		d_t = current_tick-last_tick; //diff in time between updates, in .01 sec
 		atomMutexGet(&A_mutex,0);
+		// TODO should this let negative numbers? We can do regeneration
 		if(pack_coulombs - ((pack_current)*(d_t)/100) >= 0){//never let coulombs be negative
 			pack_coulombs = pack_coulombs - (((pack_current)*(d_t))/100);
 		}
