@@ -13,7 +13,7 @@
 
 
 //SOFTWARE VERSION (based on commit number in gitlab)
-#define version 0.16
+#define version 0.17
 
 // LCD values
 #define EN_LOW	0x08

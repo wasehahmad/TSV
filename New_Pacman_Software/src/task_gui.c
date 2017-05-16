@@ -48,7 +48,6 @@ void task_gui(uint32_t data) {
     if(((atomTimeGet() - sleep_time)/100) > screen_sleep_time){ // NO BUTTONS HAVE BEEN PRESSED FOR 2 MINUTES, TURN OFF DISPLAY
       lcd_off();
 	  // TODO remove lcd_active, lcd_off does it
-      lcd_active = 0;
     }else{
       lcd_active = 1;
       switch(menu){
