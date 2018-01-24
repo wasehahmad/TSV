@@ -65,7 +65,7 @@ void task_config(uint32_t data) {
 
   min_cell_voltage = eeprom_read_byte((uint8_t*)EEPROM_MIN_CELL_VOLTAGE);
   if((min_cell_voltage == 0) || (min_cell_voltage == 0xFF)) {
-    eeprom_write_byte((uint8_t*)EEPROM_MAX_CELL_VOLTAGE, DEFAULT_MIN_CELL_VOLTAGE);
+    eeprom_write_byte((uint8_t*)EEPROM_MIN_CELL_VOLTAGE, DEFAULT_MIN_CELL_VOLTAGE);
     min_cell_voltage = eeprom_read_byte((uint8_t*)EEPROM_MIN_CELL_VOLTAGE);
   }
 
