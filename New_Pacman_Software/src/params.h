@@ -18,7 +18,7 @@
 // LCD values
 #define EN_LOW	0x08
 
-#define NUM_CONFIG_PARAMS 7
+#define NUM_CONFIG_PARAMS 8
 #define PASSWORD 0xFF
 
 volatile uint8_t config_addr[NUM_CONFIG_PARAMS];
@@ -70,6 +70,11 @@ volatile bool LOW_DET;
 volatile bool button_up;
 volatile bool button_down;
 volatile bool button_enter; // Is always high for some reason
+
+//debouncing variables
+volatile bool prev_button_up;
+volatile bool prev_button_down;
+volatile bool prev_button_enter;
 
 volatile uint8_t num_cells;
 
@@ -131,11 +136,14 @@ ATOM_MUTEX A_mutex;
 
 #define DEFAULT_MAX_CELL_TEMP 0x3C
 #define DEFAULT_MAX_CELL_VOLTAGE 0x28
+#define DEFAULT_MIN_CELL_VOLTAGE 0x1B
 #define DEFAULT_SCREEN_RESET_TIME 0x0F
 #define DEFAULT_SCREEN_SLEEP_TIME 0x78
 
+volatile uint8_t min_cell_voltage;
 volatile uint8_t max_cell_voltage;
 volatile uint8_t max_cell_temp;
+
 volatile uint8_t screen_reset_time;
 volatile uint8_t screen_sleep_time;
 
@@ -148,6 +156,7 @@ volatile uint8_t screen_sleep_time;
 #define EEPROM_SCREEN_SLEEP_TIME 6
 #define EEPROM_PACK_ID          8               // location in memory of the pack id
 #define EEPROM_CELL_COUNT       9               // location in memory of the number of cells beign used
+#define EEPROM_MIN_CELL_VOLTAGE 10
 
 
 

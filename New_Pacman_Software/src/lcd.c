@@ -1003,6 +1003,9 @@ void set_config_param(void){
   case 7:
     param_choice = screen_sleep_time;
     break;
+  case 8:
+    param_choice = min_cell_voltage;
+    break;
   } // end switch
 
   sprintf(&curr_buff[0], "%02X", param_choice);
@@ -1139,6 +1142,10 @@ void set_config_param(void){
   case 7:
     eeprom_write_byte((uint8_t*)EEPROM_SCREEN_SLEEP_TIME, param_choice);
     screen_sleep_time = eeprom_read_byte((uint8_t*)EEPROM_SCREEN_SLEEP_TIME);
+    break;
+  case 8:
+    eeprom_write_byte((uint8_t*)EEPROM_MIN_CELL_VOLTAGE, param_choice);
+    min_cell_voltage = eeprom_read_byte((uint8_t*)EEPROM_MIN_CELL_VOLTAGE);
     break;
   }
 

@@ -54,12 +54,19 @@ void task_config(uint32_t data) {
   config_addr[2] = 0x03; // LOCK PACK
   config_addr[3] = 0x04; // MAX CELL TEMP
   config_addr[4] = 0x05; // MAX CELL VOLTAGE
+  config_addr[5] = 0x07; // MIN CELL VOLTAGE
 
   //asdf
   max_cell_voltage = eeprom_read_byte((uint8_t*)EEPROM_MAX_CELL_VOLTAGE);
   if((max_cell_voltage == 0) || (max_cell_voltage == 0xFF)) {
     eeprom_write_byte((uint8_t*)EEPROM_MAX_CELL_VOLTAGE, DEFAULT_MAX_CELL_VOLTAGE);
     max_cell_voltage = eeprom_read_byte((uint8_t*)EEPROM_MAX_CELL_VOLTAGE);
+  }
+
+  min_cell_voltage = eeprom_read_byte((uint8_t*)EEPROM_MIN_CELL_VOLTAGE);
+  if((min_cell_voltage == 0) || (min_cell_voltage == 0xFF)) {
+    eeprom_write_byte((uint8_t*)EEPROM_MAX_CELL_VOLTAGE, DEFAULT_MIN_CELL_VOLTAGE);
+    min_cell_voltage = eeprom_read_byte((uint8_t*)EEPROM_MIN_CELL_VOLTAGE);
   }
 
   max_cell_temp = eeprom_read_byte((uint8_t*)EEPROM_MAX_CELL_TEMP);
