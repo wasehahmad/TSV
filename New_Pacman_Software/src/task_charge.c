@@ -66,7 +66,7 @@ void task_charge(uint32_t data) {
 		}
 		// TODO remove or change to check for no current (<1A)
 		for(i = 0; i<ams_board_count; i = i+1){
-			if(cell_V[i] < 2700 && pack_current < 1){//2700 mV cell voltage and less than 1A
+			if(cell_V[i] < (100*min_cell_voltage) && pack_current < 1){//2700 mV cell voltage and less than 1A
 				pack_coulombs = 0;
 				pack_SOC = 0;
 			}
