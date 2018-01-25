@@ -55,6 +55,7 @@ void task_config(uint32_t data) {
   config_addr[3] = 0x04; // MAX CELL TEMP
   config_addr[4] = 0x05; // MAX CELL VOLTAGE
   config_addr[5] = 0x08; // MIN CELL VOLTAGE
+  config_addr[6] = 0x09; // max charge cell voltage
 
   //asdf
   max_cell_voltage = eeprom_read_byte((uint8_t*)EEPROM_MAX_CELL_VOLTAGE);
@@ -74,9 +75,22 @@ void task_config(uint32_t data) {
     eeprom_write_byte((uint8_t*)EEPROM_MAX_CELL_TEMP, DEFAULT_MAX_CELL_TEMP);
     max_cell_temp = eeprom_read_byte((uint8_t*)EEPROM_MAX_CELL_TEMP);
   }
+  
+  //max charging cell voltage i.e. when pack should stop charging
+  max_charge_cell_voltage = eeprom_read_byte((uint8_t*)EEPROM_MAX_CHARGE_CELL_VOLTAGE);
+  if((max_charge_cell_voltage == 0) || (max_charge_cell_voltage == 0xFF)) {
+    eeprom_write_byte((uint8_t*)EEPROM_MAX_CHARGE_CELL_VOLTAGE, DEFAULT_MAX_CHARGE_CELL_VOLTAGE);
+    min_cell_voltage = eeprom_read_byte((uint8_t*)EEPROM_MAX_CHARGE_CELL_VOLTAGE);
+  }
 
+//min current requirement for the SOC
+  min_current = eeprom_read_byte((uint8_t*)EEPROM_MIN_CURRENT);
+  if((min_current == 0) || (min_current == 0xFF)) {
+    eeprom_write_byte((uint8_t*)EEPROM_MIN_CURRENT, DEFAULT_MIN_CURRENT);
+    min_current = eeprom_read_byte((uint8_t*)EEPROM_MIN_CURRENT);
+  }
   
-  
+
 
   
   locked = eeprom_read_byte((uint8_t*)EEPROM_LOCK);

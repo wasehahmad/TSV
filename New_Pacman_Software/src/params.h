@@ -139,9 +139,15 @@ ATOM_MUTEX A_mutex;
 #define DEFAULT_MIN_CELL_VOLTAGE 0x1B
 #define DEFAULT_SCREEN_RESET_TIME 0x0F
 #define DEFAULT_SCREEN_SLEEP_TIME 0x78
+#define DEFAULT_MAX_CHARGE_CELL_VOLTAGE 0x25
+#define DEFAULT_MIN_CURRENT 0x01
+
 
 volatile uint8_t min_cell_voltage;
 volatile uint8_t max_cell_voltage;
+volatile uint8_t max_charge_cell_voltage;
+volatile uint8_t min_current;
+
 volatile uint8_t max_cell_temp;
 
 volatile uint8_t screen_reset_time;
@@ -157,6 +163,8 @@ volatile uint8_t screen_sleep_time;
 #define EEPROM_PACK_ID          8               // location in memory of the pack id
 #define EEPROM_CELL_COUNT       9               // location in memory of the number of cells beign used
 #define EEPROM_MIN_CELL_VOLTAGE 10
+#define EEPROM_MAX_CHARGE_CELL_VOLTAGE 11
+#define EEPROM_MIN_CURRENT 12
 
 
 

@@ -1006,6 +1006,12 @@ void set_config_param(void){
   case 8:
     param_choice = min_cell_voltage;
     break;
+  case 9:
+    param_choice = max_charge_cell_voltage;
+    break;
+  case 9:
+    param_choice = min_current;
+    break;
   } // end switch
 
   sprintf(&curr_buff[0], "%02X", param_choice);
@@ -1146,6 +1152,14 @@ void set_config_param(void){
   case 8:
     eeprom_write_byte((uint8_t*)EEPROM_MIN_CELL_VOLTAGE, param_choice);
     min_cell_voltage = eeprom_read_byte((uint8_t*)EEPROM_MIN_CELL_VOLTAGE);
+    break;
+  case 9:
+    eeprom_write_byte((uint8_t*)EEPROM_MAX_CHARGE_CELL_VOLTAGE, param_choice);
+    max_charge_cell_voltage = eeprom_read_byte((uint8_t*)EEPROM_MAX_CHARGE_CELL_VOLTAGE);
+    break;
+  case 10:
+    eeprom_write_byte((uint8_t*)EEPROM_MIN_CURRENT, param_choice);
+    min_current = eeprom_read_byte((uint8_t*)EEPROM_MIN_CURRENT);
     break;
   }
 
