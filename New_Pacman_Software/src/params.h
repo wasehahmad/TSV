@@ -20,8 +20,10 @@
 
 #define NUM_CONFIG_PARAMS 10
 #define PASSWORD 0xFF
+#define NUM_TASKS 8
 
 volatile uint8_t config_addr[NUM_CONFIG_PARAMS];
+volatile uint8_t watch_dog_list[NUM_TASKS];
 
 
 //4 arrays for the 4 lines on the LCD

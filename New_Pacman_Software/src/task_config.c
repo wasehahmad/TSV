@@ -124,6 +124,9 @@ void task_config(uint32_t data) {
   save_SOC();
   uint8_t i = 0;
   for(;;) {
+    
+
+    
     save_SOC();
     //Detect Fault in all states
     for(i = 0; i<ams_board_count; i = i+1){//if communication with an AMS board is lost, these values are out of range
