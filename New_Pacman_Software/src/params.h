@@ -31,9 +31,12 @@
 #define WATCH_HEART 		5
 #define WATCH_CAN 			6
 #define WATCH_BUTTON 		7
+volatile uint8_t watch_dog_list[NUM_TASKS];
+volatile bool pet_dog;
+volatile uint8_t wait_counter;
+
 
 volatile uint8_t config_addr[NUM_CONFIG_PARAMS];
-volatile uint8_t watch_dog_list[NUM_TASKS];
 
 
 //4 arrays for the 4 lines on the LCD
