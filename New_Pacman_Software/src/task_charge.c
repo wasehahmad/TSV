@@ -43,6 +43,9 @@ void task_charge(uint32_t data) {
 	task_charge_init();
 	for(;;) {
 
+		watch_dog_list[WATCH_CHARGE]++;
+
+
 	if(pack_state != boot){//wait 2 sec for all other tasks to start successfully
 		if(pack_state == chrg){
 			PORTA |= 0x30;//turn on charge relay and fan

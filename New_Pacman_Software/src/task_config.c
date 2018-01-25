@@ -125,7 +125,7 @@ void task_config(uint32_t data) {
   uint8_t i = 0;
   for(;;) {
     
-
+    watch_dog_list[WATCH_CONFIG]++;
     
     save_SOC();
     //Detect Fault in all states

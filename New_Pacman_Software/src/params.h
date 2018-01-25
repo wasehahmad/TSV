@@ -22,6 +22,16 @@
 #define PASSWORD 0xFF
 #define NUM_TASKS 8
 
+//watchdog task indices
+#define WATCH_I2C 			0
+#define WATCH_GUI 			1
+#define WATCH_CHARGE 		2
+#define WATCH_SAFETY 		3
+#define WATCH_CONFIG 		4
+#define WATCH_HEART 		5
+#define WATCH_CAN 			6
+#define WATCH_BUTTON 		7
+
 volatile uint8_t config_addr[NUM_CONFIG_PARAMS];
 volatile uint8_t watch_dog_list[NUM_TASKS];
 
