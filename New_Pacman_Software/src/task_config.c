@@ -54,8 +54,10 @@ void task_config(uint32_t data) {
   config_addr[2] = 0x03; // LOCK PACK
   config_addr[3] = 0x04; // MAX CELL TEMP
   config_addr[4] = 0x05; // MAX CELL VOLTAGE
-  config_addr[5] = 0x08; // MIN CELL VOLTAGE
-  config_addr[6] = 0x09; // max charge cell voltage
+  config_addr[6] = 0x08; // MIN CELL VOLTAGE
+  config_addr[7] = 0x09; // MAX CHARGE CELL VOLTAGE
+  config_addr[8] = 0x0A; // MIN CURRENT
+
 
   //asdf
   max_cell_voltage = eeprom_read_byte((uint8_t*)EEPROM_MAX_CELL_VOLTAGE);
@@ -126,28 +128,29 @@ void task_config(uint32_t data) {
     //Detect Fault in all states
     for(i = 0; i<ams_board_count; i = i+1){//if communication with an AMS board is lost, these values are out of range
       if(cell_T[i] > 10*max_cell_temp){//60.0 deg C cell temp // i.e. if cell_T[i] > 600
-	if(cell_T[i] != 0xE33C){//workaround to problem with i2c...
-	  pack_state = flt;
-	  fault_code = 0;
+      	if(cell_T[i] != 0xE33C){//workaround to problem with i2c...
+      	  pack_state = flt;
+      	  fault_code = 0;
 
-	  flt_cnd.active = 1;
-	  flt_cnd.cond = 0;
-	  flt_cnd.val = cell_T[i];
-	  flt_cnd.area = i;
-	}
+      	  flt_cnd.active = 1;
+      	  flt_cnd.cond = 0;
+      	  flt_cnd.val = cell_T[i];
+      	  flt_cnd.area = i;
+      	}
       }
       if(cell_V[i] > 100*max_cell_voltage){// || (cell_V[i] <2000)){//>4000 mV or <2000 mV cell voltage //**** COMMENTED: IF UNCOMMENTED, PACK GOES INTO STATE DEAD
-	if(cell_V[i] != 0xFFF6){//workaround to problem with i2c...
-	  pack_state = flt;
-	  fault_code = 1;
+      	if(cell_V[i] != 0xFFF6){//workaround to problem with i2c...
+      	  pack_state = flt;
+      	  fault_code = 1;
 
-	  flt_cnd.active = 1;
-	  flt_cnd.cond = 1;
-	  flt_cnd.val = cell_V[i];
-	  flt_cnd.area = i;
-	}
+      	  flt_cnd.active = 1;
+      	  flt_cnd.cond = 1;
+      	  flt_cnd.val = cell_V[i];
+      	  flt_cnd.area = i;
+      	}
       }
     }
+
     if(pack_voltage > 20800){//20800 * .00125 mV/bit = 26 V
       pack_state = flt;
       fault_code = 2;
@@ -166,6 +169,16 @@ void task_config(uint32_t data) {
       flt_cnd.val = num_cells;
       flt_cnd.area = 0;
     }
+    if(!locked){
+      pack_state = flt;
+      fault_code = 4;
+
+      flt_cnd.active = 1;
+      flt_cnd.cond = 4;
+      flt_cnd.val = 0;
+      flt_cnd.area = 0;
+    }
+
     if(pack_state != flt){//then determine the proper state
       switch(pack_state){
       case boot://we've booted and no fault
@@ -213,25 +226,25 @@ void task_config(uint32_t data) {
       State temp = rdy;
       flt_cnd.active = 0;
       for(i = 0; i<ams_board_count; i = i+1){//if communication with an AMS board is lost, these values are out of range
-	if(cell_T[i] > 10*max_cell_temp){//60.0 deg C cell temp i.e. cell_T[i] > 600
-	  if(cell_T[i] != 0xE33C){//workaround to problem with i2c...
-	    temp = flt;
-	    fault_code = 0;
-	    flt_cnd.active = 1;
-	  }
-	}
-	if(cell_V[i] > 100*max_cell_voltage){// || (cell_V[i] <2000)){//>4000 mV or <2000 mV cell voltage
-	  if(cell_V[i] != 0xFFF6){//workaround to problem with i2c...
-	    temp = flt;
-	    fault_code = 1;
-	    flt_cnd.active = 1;
-	  }
-	}
+      	if(cell_T[i] > 10*max_cell_temp){//60.0 deg C cell temp i.e. cell_T[i] > 600
+      	  if(cell_T[i] != 0xE33C){//workaround to problem with i2c...
+      	    temp = flt;
+      	    fault_code = 0;
+      	    flt_cnd.active = 1;
+      	  }
+      	}
+      	if(cell_V[i] > 100*max_cell_voltage){// || (cell_V[i] <2000)){//>4000 mV or <2000 mV cell voltage
+      	  if(cell_V[i] != 0xFFF6){//workaround to problem with i2c...
+      	    temp = flt;
+      	    fault_code = 1;
+      	    flt_cnd.active = 1;
+      	  }
+      	}
       }
       if(pack_voltage > 20800){//20800 * .00125 mV/bit = 26 V
-	temp = flt;
-	fault_code = 2;
-	flt_cnd.active = 1;
+      	temp = flt;
+      	fault_code = 2;
+      	flt_cnd.active = 1;
       }
       if(num_cells != ams_board_count){
       	temp = flt;
@@ -242,6 +255,14 @@ void task_config(uint32_t data) {
       	flt_cnd.val = num_cells;
       	flt_cnd.area = 0;
       }
+      if(!locked){
+        temp = flt;
+        flt_cnd.active = 1;
+        flt_cnd.cond = 4;
+        flt_cnd.val = 0;
+        flt_cnd.area = 0;
+      }
+
       pack_state = temp; // COMMENTED 03092017 --> re-un-commented 03292017
     }
 		

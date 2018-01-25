@@ -947,7 +947,7 @@ void set_config_param(void){
       disp_invalid_addr();
       return;
     }
-    if((config_addr[i] == param_choice) && (!locked || (param_choice == 0x03))){
+    if((config_addr[i] == param_choice) /*&& (!locked || (param_choice == 0x03))*/){ //commented out 01/24/2018. for no longer using lock for configs but for pack_state 
       break;
     }
     
@@ -1009,7 +1009,7 @@ void set_config_param(void){
   case 9:
     param_choice = max_charge_cell_voltage;
     break;
-  case 9:
+  case 10:
     param_choice = min_current;
     break;
   } // end switch
@@ -1129,6 +1129,13 @@ void set_config_param(void){
       eeprom_write_byte((uint8_t*)EEPROM_LOCK, !locked);
       locked = eeprom_read_byte((uint8_t*)EEPROM_LOCK);
       lock_toggled();
+      //if locked now, undo the fault. 
+      if(locked){
+        if(pack_state == flt && fault_code==4){
+          pack_state = rdy;
+          flt_cnd.active = 0;
+        }
+      }
     }else{
       wrong_password();
     }

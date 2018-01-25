@@ -18,7 +18,7 @@
 // LCD values
 #define EN_LOW	0x08
 
-#define NUM_CONFIG_PARAMS 8
+#define NUM_CONFIG_PARAMS 10
 #define PASSWORD 0xFF
 
 volatile uint8_t config_addr[NUM_CONFIG_PARAMS];
