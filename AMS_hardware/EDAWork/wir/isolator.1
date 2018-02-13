@@ -1,0 +1,100 @@
+| Wirelist created using version 6.0 
+V 6.0
+DW isolator
+AS Pins_etc:out OUT
+AS Pins_etc:out Pin!Order=OUT
+AS Pins_etc:out PINORDER=OUT
+AP Pins_etc:out 1 PINTYPE=OUT
+AS Pins_etc:in Pin!Order=IN
+AS Pins_etc:in IN
+AS Pins_etc:in PINORDER=IN
+AP Pins_etc:in 1 PINTYPE=IN
+|Q Linear:chipcap 1
+AS Linear:chipcap INOV_VER_REC=16:08:36_3-8-14
+AS Linear:chipcap DEVICE=CHIPCAP
+AS Linear:chipcap PKG_TYPE=0805
+AS Linear:chipcap REFDES=C?
+AS Linear:chipcap Order=C$
+AS Linear:chipcap VALUE=0.1UF
+AS Linear:chipcap Prefix=C
+AS Linear:chipcap PINORDER=1 2
+AP Linear:chipcap 1 #=1
+AP Linear:chipcap 1 PINTYPE=BI
+AP Linear:chipcap 2 #=2
+AP Linear:chipcap 2 PINTYPE=BI
+|Q Linear:chipres 1
+AS Linear:chipres INOV_VER_REC=15:52:28_3-8-14
+AS Linear:chipres DEVICE=CHIPRES
+AS Linear:chipres PKG_TYPE=0805
+AS Linear:chipres Prefix=R
+AS Linear:chipres Order=R$
+AS Linear:chipres REFDES=R?
+AS Linear:chipres VALUE=1K
+AS Linear:chipres PINORDER=1 2
+AP Linear:chipres 1 #=1
+AP Linear:chipres 1 PINTYPE=BI
+AP Linear:chipres 2 #=2
+AP Linear:chipres 2 PINTYPE=BI
+|Q Active_Linear:adum1250 1
+AS Active_Linear:adum1250 INOV_VER_REC=16:15:4_3-8-14
+AS Active_Linear:adum1250 COST=6.00
+AS Active_Linear:adum1250 DEVICE=ADUM1250
+AS Active_Linear:adum1250 PKG_TYPE=SO8
+AS Active_Linear:adum1250 REFDES=U?
+AS Active_Linear:adum1250 PINORDER=SCL1 SCL2 SDA1 SDA2 VDD1 VDD2 VSS1 VSS2
+AP Active_Linear:adum1250 1 #=3
+AP Active_Linear:adum1250 2 #=6
+AP Active_Linear:adum1250 3 #=2
+AP Active_Linear:adum1250 4 #=7
+AP Active_Linear:adum1250 5 #=1
+AP Active_Linear:adum1250 6 #=8
+AP Active_Linear:adum1250 7 #=4
+AP Active_Linear:adum1250 8 #=5
+P Pins_etc:out SSDA
+I SSDA Pins_etc:out SSDA 
+P Pins_etc:out SVDD
+I SVDD Pins_etc:out SVDD 
+P Pins_etc:out SSCL
+I SSCL Pins_etc:out SSCL 
+P Pins_etc:in SDAT
+I SDAT Pins_etc:in SDAT 
+P Pins_etc:in SCLK
+I SCLK Pins_etc:in SCLK 
+P Pins_etc:in V_REG
+I V_REG Pins_etc:in V_REG 
+P Pins_etc:in CELL_NEG
+I CELL_NEG Pins_etc:in CELL_NEG 
+P Pins_etc:out SVSS
+I SVSS Pins_etc:out SVSS 
+M Linear:chipcap $1I631
+I $1I631 Linear:chipcap V_REG CELL_NEG REFDES=C11`VALUE=0.1 UF`
+|R 16:08:36_3-8-14
+API $1I631 Linear:chipcap 1 #=1
+API $1I631 Linear:chipcap 2 #=2
+M Linear:chipres $1I629
+I $1I629 Linear:chipres SDAT V_REG REFDES=R20`VALUE=10K`
+|R 15:52:28_3-8-14
+API $1I629 Linear:chipres 1 #=1
+API $1I629 Linear:chipres 2 #=2
+M Linear:chipres $1I648
+I $1I648 Linear:chipres SCLK V_REG REFDES=R17`VALUE=10K`
+|R 15:52:28_3-8-14
+API $1I648 Linear:chipres 1 #=1
+API $1I648 Linear:chipres 2 #=2
+M Linear:chipcap $1I639
+I $1I639 Linear:chipcap SVDD SVSS REFDES=C12`VALUE=0.1 UF`
+|R 16:08:36_3-8-14
+API $1I639 Linear:chipcap 1 #=1
+API $1I639 Linear:chipcap 2 #=2
+M Active_Linear:adum1250 $1I597
+I $1I597 Active_Linear:adum1250 SCLK SSCL SDAT SSDA V_REG SVDD CELL_NEG SVSS DEVICE=ADUM1250`REFDES=U11`
+|R 16:15:4_3-8-14
+API $1I597 Active_Linear:adum1250 1 #=3
+API $1I597 Active_Linear:adum1250 2 #=6
+API $1I597 Active_Linear:adum1250 3 #=2
+API $1I597 Active_Linear:adum1250 4 #=7
+API $1I597 Active_Linear:adum1250 5 #=1
+API $1I597 Active_Linear:adum1250 6 #=8
+API $1I597 Active_Linear:adum1250 7 #=4
+API $1I597 Active_Linear:adum1250 8 #=5
+EW

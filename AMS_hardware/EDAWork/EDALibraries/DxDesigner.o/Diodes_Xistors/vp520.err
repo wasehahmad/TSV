@@ -1,0 +1,4 @@
+vdraw: Warning 1236: Symbol not found - eceborder_a.1
+vdraw: Warning 1236: Symbol not found - 18u4410.1
+vdraw: Error 1093: Both pin points the same
+vdraw: Warning 5247: pic_18f4410.1 com $1I20: Component $1I20 (U?), Symbol=LART2008:18u4410 at (320, 280), is not connected.

@@ -1,0 +1,67 @@
+SECTION DesignInfo
+LIST IndependentLibraries
+VALUE "DIR [W] ."
+VALUE "DIR [w] C:\EDAWork\EDALibraries\DxDesigner\Active_Linear (Active_Linear)"
+VALUE "DIR [w] C:\EDAWork\EDALibraries\DxDesigner\Digital (Digital)"
+VALUE "DIR [w] C:\EDAWork\EDALibraries\DxDesigner\Diodes_Xistors (Diodes_Xistors)"
+VALUE "DIR [w] C:\EDAWork\EDALibraries\DxDesigner\Linear (Linear)"
+VALUE "DIR [w] C:\EDAWork\EDALibraries\DxDesigner\Pins_etc (Pins_etc)"
+VALUE "DIR [w] C:\EDAWork\EDALibraries\DxDesigner\Transducers (Transducers)"
+ENDLIST
+KEY CentralLibrary ""
+KEY FrontEndSnapshot "DxD"
+KEY PinComponents ".\pintype.pin"
+KEY DxD_Version "7.9.3"
+KEY SheetsEditMode "1"
+KEY Bus_Contents ""
+KEY BorderSymbols ""
+KEY PropertyDefinitions "%SDD_HOME%\standard\netlist.prp"
+KEY LayoutID "%SDD_HOME%\standard\netlist.prp"
+KEY CnsFileName ""
+KEY PcbCfgFileName ""
+KEY DBCFile ""
+ENDSECTION
+SECTION FlowSettings
+KEY FlowType "NETLIST"
+ENDSECTION
+SECTION ProjectBackup
+KEY ConfigFile ".\ProjectBackup\ProjectBackup.cfg"
+ENDSECTION
+SECTION Template_Design
+KEY CADBackAnno "0"
+KEY ConfigType "PCB"
+KEY SchematicConflict "FE"
+KEY SchematicDesignBackAnno "0"
+KEY SchematicDesignStatus "0"
+KEY SearchPathScheme "(Default)"
+ENDSECTION
+SECTION bmstop
+KEY AllowAlpha "0"
+KEY CADBackAnno "0"
+KEY ConfigType "PCB"
+KEY DisableBackAnnoChanges "0"
+KEY FwdAnnoCleanBuildFlag "0"
+KEY FwdAnnoExtractFlag "0"
+KEY FwdAnnoRebuildFlag "0"
+KEY FwdAnnoReplaceFlag "0"
+KEY FwdAnnoSchematicrefDesChanges "0"
+KEY LayoutTemplate "4 Layer Template"
+KEY ModelManagerDir "ICXPro\Local_Cache\Model_Manager"
+KEY ModelManagerProjPath "ICXPro"
+KEY PCBForwardAnno "-1"
+KEY RootBlock "bmstop"
+KEY SchematicConflict "FE"
+KEY SchematicDesignBackAnno "0"
+KEY SchematicDesignStatus "0"
+KEY SearchPathScheme "(Default)"
+KEY SimControlDir "ICXPro\Simulation_Templates"
+KEY UnusedPartsFlag "0"
+KEY UpdateJobPrefsDB "Sync"
+ENDSECTION
+SECTION iCDB
+LIST Designs
+VALUE "bmstop"
+ENDLIST
+KEY iCDBDir ".\database"
+KEY DedicatedServerName ""
+ENDSECTION

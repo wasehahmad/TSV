@@ -1,0 +1,12 @@
+(module do214ac (layer F.Cu) (tedit 583458DB)
+  (fp_text reference D5 (at -5.0165 0) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value SK310A-LTP (at 0.3 -3) (layer F.Fab) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_line (start 3.81 0.889) (end 3.81 1.016) (layer F.SilkS) (width 0.15))
+  (fp_line (start 3.81 -1.016) (end 3.81 0.889) (layer F.SilkS) (width 0.15))
+  (pad 1 smd rect (at -2.3 0) (size 2.4 2) (layers F.Cu F.Paste F.Mask))
+  (pad 2 smd rect (at 2.3 0) (size 2.4 2) (layers F.Cu F.Paste F.Mask))
+)

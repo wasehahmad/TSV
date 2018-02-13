@@ -1,0 +1,11 @@
+(module cap_elec_10x10 (layer F.Cu) (tedit 56DBB5FE)
+  (fp_text reference REF** (at 0.7 5.8) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value cap_elec_10x10 (at 0.15 -5.85) (layer F.Fab) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_circle (center 0 0) (end 5 0) (layer F.SilkS) (width 0.15))
+  (pad 1 smd rect (at -5.35 0) (size 2 1.5) (layers F.Cu F.Paste F.Mask))
+  (pad 2 smd rect (at 5.35 0) (size 2 1.5) (layers F.Cu F.Paste F.Mask))
+)

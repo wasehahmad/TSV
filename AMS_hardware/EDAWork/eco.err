@@ -1,0 +1,20 @@
+** ECO In Report **
+
+Thu Apr 03 14:26:25 2014
+
+Input  File : C:\EDAWork\bmstop.eco
+Current Job : bms2014.pcb
+
+
+* Warning: deleting single-pin signal $1N1609
+* Warning: deleting single-pin signal $1N1838
+* Warning: deleting single-pin signal $1N1842
+* Warning: deleting single-pin signal $1N1889
+* Warning: deleting single-pin signal $1N1893
+* Warning: deleting single-pin signal $1N1894
+* Warning: deleting single-pin signal $1N1895
+* Warning: deleting single-pin signal $1N1957
+* Warning: deleting single-pin signal $1N2018
+* Warning: deleting single-pin signal $1N2048
+* Warning: deleting single-pin signal $1N2052
+* Warning: deleting single-pin signal $1N2095

@@ -1,0 +1,52 @@
+
+
+
+bmstop                             Wednesday, February 27, 2013 2:15 pm                             Page  1
+
+
+ #  QTY   REFDES         DEVICE               PACKAGE         VALUE      DIGIKEY              PRICE  TOTAL 
+-----------------------------------------------------------------------------------------------------------
+ 1   9     C1,C6,C7,      CHIPCAP              0805            0.1 UF     490-1666-1-ND        0.10     0.90
+           C8,C9,C10,                                                                                      
+           C11,C12,                                                                                        
+           C13                                                                                             
+ 2   1     C2             CHIPCAP              0805            680 PF     311-1126-1-ND        0.10     0.10
+ 3   1     C3             CHIPCAP              0805            1 UF       490-1691-1-ND        0.13     0.13
+ 4   2     C4,C5          CHIPCAP              0805            10 UF      490-3905-1-ND        0.60     1.20
+ 5   1     D1             MBR0520L             SOD123                     MBR0520LCT-ND        0.36     0.36
+ 6   1     D2             LED                  LED0805         RED        475-1278-1-ND        0.09     0.09
+ 7   1     D3             LED                  LED0805         YELLOW     475-2560-1-ND        0.09     0.09
+ 8   1     D4             LED                  LED0805         GREEN      475-1410-1-ND        0.09     0.09
+ 9   4     E1,E2,E3,                           HOLE3MM                    655K-ND              2.24     8.96
+           E4                                                                                              
+ 10  1     J1                                  SIP2-100MIL-I                                               
+ 11  2     J2,J5                               SIP6-100MIL-I                                               
+ 12  1     J3                                  SIP3-100MIL-I                                               
+ 13  1     L1             SRN8040              SRN8040         10UH       SRN8040-100MCT-ND    0.54     0.54
+ 14  1     Q1             TIP102               TO-220                     TIP102TU-ND          0.91     0.91
+ 15  1     R1             CHIPRES              0805            470        RMCF0805FT470RCT-ND  0.04     0.04
+ 16  7     R2,R12,        CHIPRES              0805            10K        RMCF0805FT10K0CT-ND  0.04     0.28
+           R16,R17,                                                                                        
+           R18,R20,                                                                                        
+           R21                                                                                             
+ 17  1     R3             CHIPRES              0805            1.02M      311-1.02MCRCT-ND     0.10     0.10
+ 18  1     R4             CHIPRES              0805            604K       311-604KCRCT-ND      0.10     0.10
+ 19  2     R5,R15         CHIPRES              0805            100K       RMCF0805FT100KCT-ND  0.04     0.08
+ 20  5     R6,R9,R13,     CHIPRES              0805            1K         RMCF0805FT1K00CT-ND  0.04     0.20
+           R14,R19                                                                                         
+ 21  2     R7,R8          CHIPRES              0805            200        RMCF0805FT200RCT-ND  0.04     0.08
+ 22  2     R10,R11        CHIPRES              0805            11K        RMCF0805FT11K0CT-ND  0.04     0.08
+ 23  1     RBASE          CHIPRES              0805            383        RMCF0805FT383RCT-ND  0.04     0.04
+ 24  1     RLED           CHIPRES              0805            36         RMCF0805FT36R0CT-ND  0.04     0.04
+ 25  1     RPOW           PWR220T              TO-220          0.75       PWR220T-20-R750F-ND  4.00     4.00
+ 26  2     U1,U9          MCP6242              SO8                        MCP6242-E/SN-ND      0.40     0.80
+ 27  1     U2             LT1307B              SO8                        LT1307BCS8#PBF-ND    4.15     4.15
+ 28  1     U3             MCP9700              SOT23                      MCP9700AT-E/TTCT-ND  0.38     0.38
+ 29  1     U4             PIC16LF1827          SO18                       PIC16LF1827-I/SO-ND  1.82     1.82
+ 30  2     U5,U6          AA005-02             SO8                        391-1052-5-ND        7.70    15.40
+ 31  2     U7,U8          INA333               MSOP8                      296-23564-2-ND       4.67     9.34
+ 32  1     U10            MCP6V11              SOT23-5                    MCP6V11T-E/OTCT-ND   1.35     1.35
+ 33  1     U11            ADUM1250             SO8                        ADUM1250ARZ-ND       6.00     6.00
+    --                                                                                                ------
+    62                                                                                                 57.65
+

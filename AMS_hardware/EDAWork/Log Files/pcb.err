@@ -1,0 +1,4 @@
+pcb: Note 5996: Using Config File P:\ece_drive\ECE322_F2014\Wey_Test2\Netlisters\cdl.cfg
+pcb: Error 5621: file P:\ece_drive\ECE322_F2014\Wey_Test2\Netlisters\cdl.cfg, line 2: unrecognized token NOSLASH
+pcb: Error 5621: file P:\ece_drive\ECE322_F2014\Wey_Test2\Netlisters\cdl.cfg, line 3: unrecognized token STRIP
+pcb: Fatal 7456: Error loading  interface

@@ -1,0 +1,170 @@
+
+(pcb
+ "S:\ece_drive\ECE492\Nick\ICD\ICD.isolator_PowerPCB50.isolator.db"
+	(version "4.1.0")
+	(units "basic")
+	(config_properties
+		(attributes
+			(attval "PcbConfigName" "c:\mentorgraphics\2004\standard\powerpcb50.cfg")
+			(attval "CnsFile" "c:\mentorgraphics\2004\standard\isis\powerpcb50.cns")
+			(attval "BeAdapter" "PowerPCB50")
+			(attval "FeAdapter" "DxDesigner")
+			(attval "SYSCONFIG" "pcbfwd")
+			(attval "LASTSYSCONFIG" "pcbfwd"))
+		(constraints
+			(cnsval "U:Velocity" "Unknown:3")
+			(cnsval "U:Time" "Unknown:3")
+			(cnsval "U:Ampere" "Unknown:3")
+			(cnsval "U:Capacitance" "Unknown:3")
+			(cnsval "U:Inductance" "Unknown:3")
+			(cnsval "U:Ohm" "Unknown:3")
+			(cnsval "U:Volt" "Unknown:3")
+			(cnsval "U:Power" "Unknown:3")
+			(cnsval "U:Unknown" "Unknown:3")
+			(cnsval "U:Angle" "Unknown:3")
+			(cnsval "U:Linear" "THOUSANDTHS:3")))
+	(project_properties
+		(attributes
+			(attval "EPLANNER_DSN" "1.0")))
+	(files_ext
+		(file_ext "isolator.pxr" "1362450581"))
+	(part_library
+		(part "CHIPRES")
+		(logical_part_mapping "CHIPRES"
+			(comp "R20" "R17"))
+		(logical_part "CHIPRES"
+			(slots
+				(slot "CHIPRES__CHIPRES_1"
+					(attributes
+						(attval "DEVICE" "CHIPRES")
+						(attval "PKG_TYPE" "0805")
+						(attval "REFDES" "R?"))))
+			(pin 2  5 "CHIPRES__CHIPRES_1" 0 "2" 0)
+			(pin 1  5 "CHIPRES__CHIPRES_1" 0 "1" 0))
+		(part "CHIPCAP")
+		(logical_part_mapping "CHIPCAP"
+			(comp "C12" "C11"))
+		(logical_part "CHIPCAP"
+			(slots
+				(slot "CHIPCAP__CHIPCAP_1"
+					(attributes
+						(attval "DEVICE" "CHIPCAP")
+						(attval "PKG_TYPE" "0805")
+						(attval "REFDES" "C?")
+						(attval "VALUE" "0.1UF"))))
+			(pin 2  5 "CHIPCAP__CHIPCAP_1" 0 "2" 0)
+			(pin 1  5 "CHIPCAP__CHIPCAP_1" 0 "1" 0))
+		(part "ADUM1250")
+		(logical_part_mapping "ADUM1250"
+			(comp "U11"))
+		(logical_part "ADUM1250"
+			(slots
+				(slot "ADUM1250__ADUM1250_1"
+					(attributes
+						(attval "Cost" "6.00")
+						(attval "DEVICE" "ADUM1250")
+						(attval "PKG_TYPE" "SO8")
+						(attval "REFDES" "U?"))))
+			(pin 5  0 "ADUM1250__ADUM1250_1" 0 "VSS2" 0)
+			(pin 4  0 "ADUM1250__ADUM1250_1" 0 "VSS1" 0)
+			(pin 8  0 "ADUM1250__ADUM1250_1" 0 "VDD2" 0)
+			(pin 1  0 "ADUM1250__ADUM1250_1" 0 "VDD1" 0)
+			(pin 7  0 "ADUM1250__ADUM1250_1" 0 "SDA2" 0)
+			(pin 2  0 "ADUM1250__ADUM1250_1" 0 "SDA1" 0)
+			(pin 6  0 "ADUM1250__ADUM1250_1" 0 "SCL2" 0)
+			(pin 3  0 "ADUM1250__ADUM1250_1" 0 "SCL1" 0)))
+	(placement
+		(component "SO8"
+			(place "U11" 0.0 0.0 top 0.0
+				(comp_pin "5" 0.0 0.0)
+				(comp_pin "4" 0.0 0.0)
+				(comp_pin "8" 0.0 0.0)
+				(comp_pin "1" 0.0 0.0)
+				(comp_pin "7" 0.0 0.0)
+				(comp_pin "2" 0.0 0.0)
+				(comp_pin "6" 0.0 0.0)
+				(comp_pin "3" 0.0 0.0))
+			(attributes
+				(attval "COST" "6.00")
+				(attval "DEVICE" "ADUM1250")
+				(attval "REFDES" "U11")))
+		(component "0805"
+			(place "R20" 0.0 0.0 top 0.0
+				(comp_pin "2" 0.0 0.0 "BI")
+				(comp_pin "1" 0.0 0.0 "BI"))
+			(attributes
+				(attval "VALUE" "10K")
+				(attval "DEVICE" "CHIPRES")
+				(attval "REFDES" "R20")))
+		(component "0805"
+			(place "R17" 0.0 0.0 top 0.0
+				(comp_pin "2" 0.0 0.0 "BI")
+				(comp_pin "1" 0.0 0.0 "BI"))
+			(attributes
+				(attval "VALUE" "10K")
+				(attval "DEVICE" "CHIPRES")
+				(attval "REFDES" "R17")))
+		(component "0805"
+			(place "C12" 0.0 0.0 top 0.0
+				(comp_pin "2" 0.0 0.0 "BI")
+				(comp_pin "1" 0.0 0.0 "BI"))
+			(attributes
+				(attval "VALUE" "0.1 UF")
+				(attval "DEVICE" "CHIPCAP")
+				(attval "REFDES" "C12")))
+		(component "0805"
+			(place "C11" 0.0 0.0 top 0.0
+				(comp_pin "2" 0.0 0.0 "BI")
+				(comp_pin "1" 0.0 0.0 "BI"))
+			(attributes
+				(attval "VALUE" "0.1 UF")
+				(attval "DEVICE" "CHIPCAP")
+				(attval "REFDES" "C11"))))
+	(functions
+		(func "$1I597" "" "U11" 1)
+		(func "$1I629" "" "R20" 1)
+		(func "$1I648" "" "R17" 1)
+		(func "$1I639" "" "C12" 1)
+		(func "$1I631" "" "C11" 1))
+	(network
+		(net "CELL_NEG"
+			(pins C11-2 U11-4))
+		(net "SCLK"
+			(pins U11-3 R17-1))
+		(net "SDAT"
+			(pins U11-2 R20-1))
+		(net "SSCL"
+			(pins U11-6))
+		(net "SSDA"
+			(pins U11-7))
+		(net "SVDD"
+			(pins C12-1 U11-8))
+		(net "SVSS"
+			(pins C12-2 U11-5))
+		(net "V_REG"
+			(pins C11-1 U11-1 R20-2 R17-2)))
+	(network_electrical
+		(net_scalar "V_REG"
+			(constraints
+				(cnsval "SCHEDULED" "FALSE")))
+		(net_scalar "SVSS"
+			(constraints
+				(cnsval "SCHEDULED" "FALSE")))
+		(net_scalar "SVDD"
+			(constraints
+				(cnsval "SCHEDULED" "FALSE")))
+		(net_scalar "SSDA"
+			(constraints
+				(cnsval "SCHEDULED" "FALSE")))
+		(net_scalar "SSCL"
+			(constraints
+				(cnsval "SCHEDULED" "FALSE")))
+		(net_scalar "SDAT"
+			(constraints
+				(cnsval "SCHEDULED" "FALSE")))
+		(net_scalar "SCLK"
+			(constraints
+				(cnsval "SCHEDULED" "FALSE")))
+		(net_scalar "CELL_NEG"
+			(constraints
+				(cnsval "SCHEDULED" "FALSE")))))

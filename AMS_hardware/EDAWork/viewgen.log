@@ -1,0 +1,25 @@
+Viewgen - V3.6.2; DxDesigner 2004.0 (30Aug04)
+c Copyright 1985,2004 by Mentor Graphics Corporation.
+
+Running Viewgen with Command Line Inputs: 
+viewgen.exe safetybox aaaaa -makesym -noschem -sympinspc 20 
+
+Schematic Generation Started : 12 Mar 13  9:14 
+[I] Initializing Library...
+[I] Graphical Libraries Initialized. 
+[I] Library Initialization Complete.
+[I] Reading Netlist: safetybox 
+[I] Loading Netlist using version: 6.1 
+[I] Netlist Read Complete
+[I] Searching Nets for net alias 
+[I] Searching for Netlist Symbol Pins for I/O....
+[I] Searching for labeled nets for I/O...
+[I] Searching for input and output connected nets for I/O
+[I] Using input and output connected nets for I/O
+[I] Creating Symbols...
+
+[I] Created   1 Symbol(s) 
+[I] Creating Schematics...
+
+[I] Created   1 Symbols and   0 Schematic sheet(s) 
+[I] Schematic Generation Complete 

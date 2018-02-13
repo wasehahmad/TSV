@@ -1,0 +1,68 @@
+
+Net_Cross_Reference  
+("V_REG"    "V_REG")
+("SVSS"    "SVSS")
+("SVDD"    "SVDD")
+("SSDA"    "SSDA")
+("SSCL"    "SSCL")
+("SDAT"    "SDAT")
+("SCLK"    "SCLK")
+("CELL_NEG"    "CELL_NEG")
+
+End_Net_Cross_Reference  
+
+Internal_Net_Cross_Reference  
+("V_REG"    "V_REG")
+("SVSS"    "SVSS")
+("SVDD"    "SVDD")
+("SSDA"    "SSDA")
+("SSCL"    "SSCL")
+("SDAT"    "SDAT")
+("SCLK"    "SCLK")
+("CELL_NEG"    "CELL_NEG")
+
+End_Internal_Net_Cross_Reference  
+
+Pin_Cross_Reference  
+("U11"
+	( 1    "$1I597"
+		(3    "SCLK")
+		(6    "SSCL")
+		(2    "SDAT")
+		(7    "SSDA")
+		(1    "V_REG")
+		(8    "SVDD")
+		(4    "CELL_NEG")
+		(5    "SVSS")
+	)
+)
+("C11"
+	( 1    "$1I631"
+		(1    "V_REG")
+		(2    "CELL_NEG")
+	)
+)
+("C12"
+	( 1    "$1I639"
+		(1    "SVDD")
+		(2    "SVSS")
+	)
+)
+("R17"
+	( 1    "$1I648"
+		(1    "SCLK")
+		(2    "V_REG")
+	)
+)
+("R20"
+	( 1    "$1I629"
+		(1    "SDAT")
+		(2    "V_REG")
+	)
+)
+
+End_Pin_Cross_Reference
+
+Hetero_Cross_Reference
+
+End_Hetero_Cross_Reference

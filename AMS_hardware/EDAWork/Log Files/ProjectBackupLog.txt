@@ -1,0 +1,410 @@
+[2014-02-17 15.00.43] -------------------- CREATE --------------------
+[2014-02-17 15.00.43] Creating Project Backup infrastructure for project [C:\EDAWork\ICD.prj].
+[2014-02-17 15.00.45] Successfully created [AutoSave] backup [2014-02-17 15.00.45 - auto.zip] requested by [WINDOWS-BKU6PRT:lombinor].
+[2014-02-20 13.43.41] Successfully created [AutoSave] backup [2014-02-20 13.43.41 - auto.zip] requested by [WINDOWS-BKU6PRT:lombinor].
+[2014-02-20 17.43.41] Successfully created [AutoSave] backup [2014-02-20 17.43.41 - auto.zip] requested by [WINDOWS-BKU6PRT:lombinor].
+[2014-02-20 21.43.42] Successfully created [AutoSave] backup [2014-02-20 21.43.41 - auto.zip] requested by [WINDOWS-BKU6PRT:lombinor].
+[2014-02-20 21.43.42] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-17 15.00.45 - auto.zip].
+[2014-02-20 21.43.42] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-17 15.00.45 - auto.zip] removed.
+[2014-02-21 11.20.53] Successfully created [AutoSave] backup [2014-02-21 11.20.53 - auto.zip] requested by [WINDOWS-BKU6PRT:lombinor].
+[2014-02-21 11.20.53] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-20 13.43.41 - auto.zip].
+[2014-02-21 11.20.53] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-20 13.43.41 - auto.zip] removed.
+[2014-02-21 15.20.54] Successfully created [AutoSave] backup [2014-02-21 15.20.53 - auto.zip] requested by [WINDOWS-BKU6PRT:lombinor].
+[2014-02-21 15.20.54] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-20 17.43.41 - auto.zip].
+[2014-02-21 15.20.54] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-20 17.43.41 - auto.zip] removed.
+[2014-02-21 19.20.55] Successfully created [AutoSave] backup [2014-02-21 19.20.53 - auto.zip] requested by [WINDOWS-BKU6PRT:lombinor].
+[2014-02-21 19.20.55] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-20 21.43.41 - auto.zip].
+[2014-02-21 19.20.55] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-20 21.43.41 - auto.zip] removed.
+[2014-02-21 23.20.53] Successfully created [AutoSave] backup [2014-02-21 23.20.53 - auto.zip] requested by [WINDOWS-BKU6PRT:lombinor].
+[2014-02-21 23.20.53] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-21 11.20.53 - auto.zip].
+[2014-02-21 23.20.53] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-21 11.20.53 - auto.zip] removed.
+[2014-02-22 03.20.57] Successfully created [AutoSave] backup [2014-02-22 03.20.53 - auto.zip] requested by [WINDOWS-BKU6PRT:lombinor].
+[2014-02-22 03.20.57] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-21 15.20.53 - auto.zip].
+[2014-02-22 03.20.57] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-21 15.20.53 - auto.zip] removed.
+[2014-02-22 07.20.58] Successfully created [AutoSave] backup [2014-02-22 07.20.53 - auto.zip] requested by [WINDOWS-BKU6PRT:lombinor].
+[2014-02-22 07.20.58] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-21 19.20.53 - auto.zip].
+[2014-02-22 07.20.58] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-21 19.20.53 - auto.zip] removed.
+[2014-02-22 11.20.54] Successfully created [AutoSave] backup [2014-02-22 11.20.53 - auto.zip] requested by [WINDOWS-BKU6PRT:lombinor].
+[2014-02-22 11.20.54] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-21 23.20.53 - auto.zip].
+[2014-02-22 11.20.54] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-21 23.20.53 - auto.zip] removed.
+[2014-02-22 15.21.02] Successfully created [AutoSave] backup [2014-02-22 15.20.53 - auto.zip] requested by [WINDOWS-BKU6PRT:lombinor].
+[2014-02-22 15.21.02] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-22 03.20.53 - auto.zip].
+[2014-02-22 15.21.02] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-22 03.20.53 - auto.zip] removed.
+[2014-02-22 21.03.01] Successfully created [AutoSave] backup [2014-02-22 21.02.59 - auto.zip] requested by [WINDOWS-BKU6PRT:lombinor].
+[2014-02-22 21.03.01] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-22 07.20.53 - auto.zip].
+[2014-02-22 21.03.01] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-22 07.20.53 - auto.zip] removed.
+[2014-02-23 01.03.08] Successfully created [AutoSave] backup [2014-02-23 01.02.59 - auto.zip] requested by [WINDOWS-BKU6PRT:lombinor].
+[2014-02-23 01.03.08] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-22 11.20.53 - auto.zip].
+[2014-02-23 01.03.08] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-22 11.20.53 - auto.zip] removed.
+[2014-02-23 05.03.01] Successfully created [AutoSave] backup [2014-02-23 05.02.59 - auto.zip] requested by [WINDOWS-BKU6PRT:lombinor].
+[2014-02-23 05.03.01] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-22 15.20.53 - auto.zip].
+[2014-02-23 05.03.01] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-22 15.20.53 - auto.zip] removed.
+[2014-02-23 09.03.10] Successfully created [AutoSave] backup [2014-02-23 09.02.59 - auto.zip] requested by [WINDOWS-BKU6PRT:lombinor].
+[2014-02-23 09.03.10] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-22 21.02.59 - auto.zip].
+[2014-02-23 09.03.10] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-22 21.02.59 - auto.zip] removed.
+[2014-02-23 13.03.01] Successfully created [AutoSave] backup [2014-02-23 13.02.59 - auto.zip] requested by [WINDOWS-BKU6PRT:lombinor].
+[2014-02-23 13.03.01] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-23 01.02.59 - auto.zip].
+[2014-02-23 13.03.01] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-23 01.02.59 - auto.zip] removed.
+[2014-02-23 17.03.12] Successfully created [AutoSave] backup [2014-02-23 17.02.59 - auto.zip] requested by [WINDOWS-BKU6PRT:lombinor].
+[2014-02-23 17.03.12] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-23 05.02.59 - auto.zip].
+[2014-02-23 17.03.12] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-23 05.02.59 - auto.zip] removed.
+[2014-02-23 21.03.01] Successfully created [AutoSave] backup [2014-02-23 21.02.59 - auto.zip] requested by [WINDOWS-BKU6PRT:lombinor].
+[2014-02-23 21.03.01] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-23 09.02.59 - auto.zip].
+[2014-02-23 21.03.01] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-23 09.02.59 - auto.zip] removed.
+[2014-02-24 01.03.18] Successfully created [AutoSave] backup [2014-02-24 01.02.59 - auto.zip] requested by [WINDOWS-BKU6PRT:lombinor].
+[2014-02-24 01.03.18] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-23 13.02.59 - auto.zip].
+[2014-02-24 01.03.18] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-23 13.02.59 - auto.zip] removed.
+[2014-02-24 05.03.01] Successfully created [AutoSave] backup [2014-02-24 05.02.59 - auto.zip] requested by [WINDOWS-BKU6PRT:lombinor].
+[2014-02-24 05.03.01] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-23 17.02.59 - auto.zip].
+[2014-02-24 05.03.01] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-23 17.02.59 - auto.zip] removed.
+[2014-02-24 09.03.02] Successfully created [AutoSave] backup [2014-02-24 09.02.59 - auto.zip] requested by [WINDOWS-BKU6PRT:lombinor].
+[2014-02-24 09.03.02] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-23 21.02.59 - auto.zip].
+[2014-02-24 09.03.02] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-23 21.02.59 - auto.zip] removed.
+[2014-02-24 13.03.01] Successfully created [AutoSave] backup [2014-02-24 13.02.59 - auto.zip] requested by [WINDOWS-BKU6PRT:lombinor].
+[2014-02-24 13.03.01] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-24 01.02.59 - auto.zip].
+[2014-02-24 13.03.01] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-24 01.02.59 - auto.zip] removed.
+[2014-02-24 17.03.05] Successfully created [AutoSave] backup [2014-02-24 17.02.59 - auto.zip] requested by [WINDOWS-BKU6PRT:lombinor].
+[2014-02-24 17.03.05] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-24 05.02.59 - auto.zip].
+[2014-02-24 17.03.05] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-24 05.02.59 - auto.zip] removed.
+[2014-02-24 21.03.02] Successfully created [AutoSave] backup [2014-02-24 21.02.59 - auto.zip] requested by [WINDOWS-BKU6PRT:lombinor].
+[2014-02-24 21.03.02] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-24 09.02.59 - auto.zip].
+[2014-02-24 21.03.02] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-24 09.02.59 - auto.zip] removed.
+[2014-02-26 12.21.43] Successfully created [AutoSave] backup [2014-02-26 12.21.38 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-02-26 12.21.43] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-24 13.02.59 - auto.zip].
+[2014-02-26 12.21.43] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-24 13.02.59 - auto.zip] removed.
+[2014-02-26 16.21.38] Successfully created [AutoSave] backup [2014-02-26 16.21.38 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-02-26 16.21.38] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-24 17.02.59 - auto.zip].
+[2014-02-26 16.21.38] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-24 17.02.59 - auto.zip] removed.
+[2014-02-26 20.21.38] Successfully created [AutoSave] backup [2014-02-26 20.21.38 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-02-26 20.21.38] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-24 21.02.59 - auto.zip].
+[2014-02-26 20.21.38] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-24 21.02.59 - auto.zip] removed.
+[2014-02-27 00.21.39] Successfully created [AutoSave] backup [2014-02-27 00.21.38 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-02-27 00.21.39] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-26 12.21.38 - auto.zip].
+[2014-02-27 00.21.39] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-26 12.21.38 - auto.zip] removed.
+[2014-02-27 04.21.40] Successfully created [AutoSave] backup [2014-02-27 04.21.38 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-02-27 04.21.40] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-26 16.21.38 - auto.zip].
+[2014-02-27 04.21.40] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-26 16.21.38 - auto.zip] removed.
+[2014-02-27 08.21.38] Successfully created [AutoSave] backup [2014-02-27 08.21.38 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-02-27 08.21.38] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-26 20.21.38 - auto.zip].
+[2014-02-27 08.21.38] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-26 20.21.38 - auto.zip] removed.
+[2014-02-27 12.21.38] Successfully created [AutoSave] backup [2014-02-27 12.21.38 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-02-27 12.21.38] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-27 00.21.38 - auto.zip].
+[2014-02-27 12.21.38] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-27 00.21.38 - auto.zip] removed.
+[2014-02-27 16.21.41] Successfully created [AutoSave] backup [2014-02-27 16.21.38 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-02-27 16.21.41] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-27 04.21.38 - auto.zip].
+[2014-02-27 16.21.41] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-27 04.21.38 - auto.zip] removed.
+[2014-02-27 20.21.39] Successfully created [AutoSave] backup [2014-02-27 20.21.38 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-02-27 20.21.39] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-27 08.21.38 - auto.zip].
+[2014-02-27 20.21.39] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-27 08.21.38 - auto.zip] removed.
+[2014-02-28 00.21.39] Successfully created [AutoSave] backup [2014-02-28 00.21.38 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-02-28 00.21.39] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-27 12.21.38 - auto.zip].
+[2014-02-28 00.21.39] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-27 12.21.38 - auto.zip] removed.
+[2014-02-28 10.14.55] Successfully created [AutoSave] backup [2014-02-28 10.14.47 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-02-28 10.14.55] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-27 16.21.38 - auto.zip].
+[2014-02-28 10.14.55] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-27 16.21.38 - auto.zip] removed.
+[2014-02-28 14.14.59] Successfully created [AutoSave] backup [2014-02-28 14.14.47 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-02-28 14.14.59] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-27 20.21.38 - auto.zip].
+[2014-02-28 14.14.59] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-27 20.21.38 - auto.zip] removed.
+[2014-02-28 18.14.48] Successfully created [AutoSave] backup [2014-02-28 18.14.47 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-02-28 18.14.48] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-28 00.21.38 - auto.zip].
+[2014-02-28 18.14.48] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-28 00.21.38 - auto.zip] removed.
+[2014-02-28 22.14.48] Successfully created [AutoSave] backup [2014-02-28 22.14.47 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-02-28 22.14.48] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-28 10.14.47 - auto.zip].
+[2014-02-28 22.14.48] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-28 10.14.47 - auto.zip] removed.
+[2014-03-01 02.14.57] Successfully created [AutoSave] backup [2014-03-01 02.14.47 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-01 02.14.57] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-28 14.14.47 - auto.zip].
+[2014-03-01 02.14.57] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-28 14.14.47 - auto.zip] removed.
+[2014-03-01 06.14.57] Successfully created [AutoSave] backup [2014-03-01 06.14.47 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-01 06.14.57] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-28 18.14.47 - auto.zip].
+[2014-03-01 06.14.57] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-28 18.14.47 - auto.zip] removed.
+[2014-03-01 10.14.48] Successfully created [AutoSave] backup [2014-03-01 10.14.47 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-01 10.14.48] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-02-28 22.14.47 - auto.zip].
+[2014-03-01 10.14.48] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-02-28 22.14.47 - auto.zip] removed.
+[2014-03-01 14.14.49] Successfully created [AutoSave] backup [2014-03-01 14.14.47 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-01 14.14.49] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-01 02.14.47 - auto.zip].
+[2014-03-01 14.14.49] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-01 02.14.47 - auto.zip] removed.
+[2014-03-01 18.14.58] Successfully created [AutoSave] backup [2014-03-01 18.14.47 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-01 18.14.58] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-01 06.14.47 - auto.zip].
+[2014-03-01 18.14.58] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-01 06.14.47 - auto.zip] removed.
+[2014-03-01 22.14.52] Successfully created [AutoSave] backup [2014-03-01 22.14.47 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-01 22.14.52] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-01 10.14.47 - auto.zip].
+[2014-03-01 22.14.52] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-01 10.14.47 - auto.zip] removed.
+[2014-03-02 02.15.03] Successfully created [AutoSave] backup [2014-03-02 02.14.47 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-02 02.15.03] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-01 14.14.47 - auto.zip].
+[2014-03-02 02.15.03] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-01 14.14.47 - auto.zip] removed.
+[2014-03-02 06.15.03] Successfully created [AutoSave] backup [2014-03-02 06.14.47 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-02 06.15.03] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-01 18.14.47 - auto.zip].
+[2014-03-02 06.15.03] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-01 18.14.47 - auto.zip] removed.
+[2014-03-02 10.14.49] Successfully created [AutoSave] backup [2014-03-02 10.14.47 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-02 10.14.49] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-01 22.14.47 - auto.zip].
+[2014-03-02 10.14.49] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-01 22.14.47 - auto.zip] removed.
+[2014-03-02 14.14.49] Successfully created [AutoSave] backup [2014-03-02 14.14.47 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-02 14.14.49] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-02 02.14.47 - auto.zip].
+[2014-03-02 14.14.49] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-02 02.14.47 - auto.zip] removed.
+[2014-03-02 18.14.51] Successfully created [AutoSave] backup [2014-03-02 18.14.47 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-02 18.14.51] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-02 06.14.47 - auto.zip].
+[2014-03-02 18.14.51] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-02 06.14.47 - auto.zip] removed.
+[2014-03-02 22.14.50] Successfully created [AutoSave] backup [2014-03-02 22.14.47 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-02 22.14.50] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-02 10.14.47 - auto.zip].
+[2014-03-02 22.14.50] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-02 10.14.47 - auto.zip] removed.
+[2014-03-03 02.14.54] Successfully created [AutoSave] backup [2014-03-03 02.14.47 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-03 02.14.54] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-02 14.14.47 - auto.zip].
+[2014-03-03 02.14.54] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-02 14.14.47 - auto.zip] removed.
+[2014-03-03 06.14.55] Successfully created [AutoSave] backup [2014-03-03 06.14.47 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-03 06.14.55] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-02 18.14.47 - auto.zip].
+[2014-03-03 06.14.55] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-02 18.14.47 - auto.zip] removed.
+[2014-03-03 10.14.50] Successfully created [AutoSave] backup [2014-03-03 10.14.47 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-03 10.14.50] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-02 22.14.47 - auto.zip].
+[2014-03-03 10.14.50] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-02 22.14.47 - auto.zip] removed.
+[2014-03-03 14.14.54] Successfully created [AutoSave] backup [2014-03-03 14.14.47 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-03 14.14.54] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-03 02.14.47 - auto.zip].
+[2014-03-03 14.14.54] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-03 02.14.47 - auto.zip] removed.
+[2014-03-03 18.14.59] Successfully created [AutoSave] backup [2014-03-03 18.14.47 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-03 18.14.59] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-03 06.14.47 - auto.zip].
+[2014-03-03 18.14.59] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-03 06.14.47 - auto.zip] removed.
+[2014-03-03 22.14.59] Successfully created [AutoSave] backup [2014-03-03 22.14.47 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-03 22.14.59] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-03 10.14.47 - auto.zip].
+[2014-03-03 22.14.59] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-03 10.14.47 - auto.zip] removed.
+[2014-03-04 02.15.00] Successfully created [AutoSave] backup [2014-03-04 02.14.47 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-04 02.15.00] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-03 14.14.47 - auto.zip].
+[2014-03-04 02.15.00] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-03 14.14.47 - auto.zip] removed.
+[2014-03-04 06.15.03] Successfully created [AutoSave] backup [2014-03-04 06.14.48 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-04 06.15.03] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-03 18.14.47 - auto.zip].
+[2014-03-04 06.15.03] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-03 18.14.47 - auto.zip] removed.
+[2014-03-04 10.14.53] Successfully created [AutoSave] backup [2014-03-04 10.14.48 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-04 10.14.53] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-03 22.14.47 - auto.zip].
+[2014-03-04 10.14.53] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-03 22.14.47 - auto.zip] removed.
+[2014-03-06 14.06.52] Successfully created [AutoSave] backup [2014-03-06 14.06.45 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-06 14.06.52] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-04 02.14.47 - auto.zip].
+[2014-03-06 14.06.52] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-04 02.14.47 - auto.zip] removed.
+[2014-03-06 18.06.49] Successfully created [AutoSave] backup [2014-03-06 18.06.45 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-06 18.06.49] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-04 06.14.48 - auto.zip].
+[2014-03-06 18.06.49] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-04 06.14.48 - auto.zip] removed.
+[2014-03-06 22.06.49] Successfully created [AutoSave] backup [2014-03-06 22.06.45 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-06 22.06.49] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-04 10.14.48 - auto.zip].
+[2014-03-06 22.06.49] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-04 10.14.48 - auto.zip] removed.
+[2014-03-07 02.06.52] Successfully created [AutoSave] backup [2014-03-07 02.06.45 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-07 02.06.52] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-06 14.06.45 - auto.zip].
+[2014-03-07 02.06.52] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-06 14.06.45 - auto.zip] removed.
+[2014-03-07 06.06.53] Successfully created [AutoSave] backup [2014-03-07 06.06.45 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-07 06.06.53] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-06 18.06.45 - auto.zip].
+[2014-03-07 06.06.53] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-06 18.06.45 - auto.zip] removed.
+[2014-03-07 10.06.50] Successfully created [AutoSave] backup [2014-03-07 10.06.45 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-07 10.06.50] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-06 22.06.45 - auto.zip].
+[2014-03-07 10.06.50] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-06 22.06.45 - auto.zip] removed.
+[2014-03-07 14.06.55] Successfully created [AutoSave] backup [2014-03-07 14.06.45 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-07 14.06.55] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-07 02.06.45 - auto.zip].
+[2014-03-07 14.06.55] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-07 02.06.45 - auto.zip] removed.
+[2014-03-07 18.06.54] Successfully created [AutoSave] backup [2014-03-07 18.06.45 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-07 18.06.54] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-07 06.06.45 - auto.zip].
+[2014-03-07 18.06.54] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-07 06.06.45 - auto.zip] removed.
+[2014-03-07 22.06.55] Successfully created [AutoSave] backup [2014-03-07 22.06.45 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-07 22.06.55] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-07 10.06.45 - auto.zip].
+[2014-03-07 22.06.55] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-07 10.06.45 - auto.zip] removed.
+[2014-03-08 02.06.55] Successfully created [AutoSave] backup [2014-03-08 02.06.45 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-08 02.06.55] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-07 14.06.45 - auto.zip].
+[2014-03-08 02.06.55] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-07 14.06.45 - auto.zip] removed.
+[2014-03-08 06.06.56] Successfully created [AutoSave] backup [2014-03-08 06.06.45 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-08 06.06.56] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-07 18.06.45 - auto.zip].
+[2014-03-08 06.06.56] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-07 18.06.45 - auto.zip] removed.
+[2014-03-08 10.06.50] Successfully created [AutoSave] backup [2014-03-08 10.06.45 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-08 10.06.50] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-07 22.06.45 - auto.zip].
+[2014-03-08 10.06.50] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-07 22.06.45 - auto.zip] removed.
+[2014-03-08 14.06.55] Successfully created [AutoSave] backup [2014-03-08 14.06.45 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-08 14.06.55] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-08 02.06.45 - auto.zip].
+[2014-03-08 14.06.55] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-08 02.06.45 - auto.zip] removed.
+[2014-03-10 20.48.02] Successfully created [AutoSave] backup [2014-03-10 20.47.55 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-10 20.48.02] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-08 06.06.45 - auto.zip].
+[2014-03-10 20.48.02] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-08 06.06.45 - auto.zip] removed.
+[2014-03-11 19.45.36] Successfully created [AutoSave] backup [2014-03-11 19.45.26 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-11 19.45.36] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-08 10.06.45 - auto.zip].
+[2014-03-11 19.45.36] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-08 10.06.45 - auto.zip] removed.
+[2014-03-11 23.45.32] Successfully created [AutoSave] backup [2014-03-11 23.45.26 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-11 23.45.32] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-08 14.06.45 - auto.zip].
+[2014-03-11 23.45.32] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-08 14.06.45 - auto.zip] removed.
+[2014-03-12 11.09.00] Successfully created [AutoSave] backup [2014-03-12 11.09.00 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-12 11.09.00] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-10 20.47.55 - auto.zip].
+[2014-03-12 11.09.00] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-10 20.47.55 - auto.zip] removed.
+[2014-03-12 15.09.00] Successfully created [AutoSave] backup [2014-03-12 15.09.00 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-12 15.09.00] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-11 19.45.26 - auto.zip].
+[2014-03-12 15.09.00] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-11 19.45.26 - auto.zip] removed.
+[2014-03-12 19.09.00] Successfully created [AutoSave] backup [2014-03-12 19.09.00 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-12 19.09.00] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-11 23.45.26 - auto.zip].
+[2014-03-12 19.09.00] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-11 23.45.26 - auto.zip] removed.
+[2014-03-12 23.09.00] Successfully created [AutoSave] backup [2014-03-12 23.09.00 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-12 23.09.00] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-12 11.09.00 - auto.zip].
+[2014-03-12 23.09.00] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-12 11.09.00 - auto.zip] removed.
+[2014-03-13 03.09.03] Successfully created [AutoSave] backup [2014-03-13 03.09.00 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-13 03.09.03] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-12 15.09.00 - auto.zip].
+[2014-03-13 03.09.03] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-12 15.09.00 - auto.zip] removed.
+[2014-03-13 07.09.05] Successfully created [AutoSave] backup [2014-03-13 07.09.00 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-13 07.09.05] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-12 19.09.00 - auto.zip].
+[2014-03-13 07.09.05] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-12 19.09.00 - auto.zip] removed.
+[2014-03-13 11.09.00] Successfully created [AutoSave] backup [2014-03-13 11.09.00 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-13 11.09.00] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-12 23.09.00 - auto.zip].
+[2014-03-13 11.09.01] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-12 23.09.00 - auto.zip] removed.
+[2014-03-13 15.09.07] Successfully created [AutoSave] backup [2014-03-13 15.09.00 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-13 15.09.07] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-13 03.09.00 - auto.zip].
+[2014-03-13 15.09.07] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-13 03.09.00 - auto.zip] removed.
+[2014-03-15 16.03.18] Successfully created [AutoSave] backup [2014-03-15 16.03.16 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-15 16.03.18] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-13 07.09.00 - auto.zip].
+[2014-03-15 16.03.18] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-13 07.09.00 - auto.zip] removed.
+[2014-03-26 11.07.28] Successfully created [AutoSave] backup [2014-03-26 11.07.27 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-26 11.07.28] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-13 11.09.00 - auto.zip].
+[2014-03-26 11.07.28] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-13 11.09.00 - auto.zip] removed.
+[2014-03-26 15.07.28] Successfully created [AutoSave] backup [2014-03-26 15.07.27 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-26 15.07.28] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-13 15.09.00 - auto.zip].
+[2014-03-26 15.07.28] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-13 15.09.00 - auto.zip] removed.
+[2014-03-26 19.07.28] Successfully created [AutoSave] backup [2014-03-26 19.07.27 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-26 19.07.28] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-15 16.03.16 - auto.zip].
+[2014-03-26 19.07.28] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-15 16.03.16 - auto.zip] removed.
+[2014-03-26 23.07.28] Successfully created [AutoSave] backup [2014-03-26 23.07.27 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-26 23.07.28] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-26 11.07.27 - auto.zip].
+[2014-03-26 23.07.28] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-26 11.07.27 - auto.zip] removed.
+[2014-03-27 03.07.30] Successfully created [AutoSave] backup [2014-03-27 03.07.27 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-27 03.07.30] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-26 15.07.27 - auto.zip].
+[2014-03-27 03.07.30] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-26 15.07.27 - auto.zip] removed.
+[2014-03-27 07.07.31] Successfully created [AutoSave] backup [2014-03-27 07.07.27 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-27 07.07.31] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-26 19.07.27 - auto.zip].
+[2014-03-27 07.07.31] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-26 19.07.27 - auto.zip] removed.
+[2014-03-27 11.07.31] Successfully created [AutoSave] backup [2014-03-27 11.07.27 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-27 11.07.31] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-26 23.07.27 - auto.zip].
+[2014-03-27 11.07.31] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-26 23.07.27 - auto.zip] removed.
+[2014-03-27 15.07.29] Successfully created [AutoSave] backup [2014-03-27 15.07.27 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-27 15.07.29] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-27 03.07.27 - auto.zip].
+[2014-03-27 15.07.29] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-27 03.07.27 - auto.zip] removed.
+[2014-03-27 19.07.29] Successfully created [AutoSave] backup [2014-03-27 19.07.27 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-27 19.07.29] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-27 07.07.27 - auto.zip].
+[2014-03-27 19.07.29] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-27 07.07.27 - auto.zip] removed.
+[2014-03-27 23.07.35] Successfully created [AutoSave] backup [2014-03-27 23.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-27 23.07.35] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-27 11.07.27 - auto.zip].
+[2014-03-27 23.07.35] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-27 11.07.27 - auto.zip] removed.
+[2014-03-28 03.07.33] Successfully created [AutoSave] backup [2014-03-28 03.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-28 03.07.33] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-27 15.07.27 - auto.zip].
+[2014-03-28 03.07.33] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-27 15.07.27 - auto.zip] removed.
+[2014-03-28 07.07.33] Successfully created [AutoSave] backup [2014-03-28 07.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-28 07.07.33] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-27 19.07.27 - auto.zip].
+[2014-03-28 07.07.33] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-27 19.07.27 - auto.zip] removed.
+[2014-03-28 11.07.34] Successfully created [AutoSave] backup [2014-03-28 11.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-28 11.07.34] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-27 23.07.28 - auto.zip].
+[2014-03-28 11.07.34] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-27 23.07.28 - auto.zip] removed.
+[2014-03-28 15.07.30] Successfully created [AutoSave] backup [2014-03-28 15.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-28 15.07.30] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-28 03.07.28 - auto.zip].
+[2014-03-28 15.07.30] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-28 03.07.28 - auto.zip] removed.
+[2014-03-28 19.07.35] Successfully created [AutoSave] backup [2014-03-28 19.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-28 19.07.35] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-28 07.07.28 - auto.zip].
+[2014-03-28 19.07.35] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-28 07.07.28 - auto.zip] removed.
+[2014-03-28 23.07.30] Successfully created [AutoSave] backup [2014-03-28 23.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-28 23.07.30] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-28 11.07.28 - auto.zip].
+[2014-03-28 23.07.30] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-28 11.07.28 - auto.zip] removed.
+[2014-03-29 03.07.36] Successfully created [AutoSave] backup [2014-03-29 03.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-29 03.07.36] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-28 15.07.28 - auto.zip].
+[2014-03-29 03.07.36] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-28 15.07.28 - auto.zip] removed.
+[2014-03-29 07.07.37] Successfully created [AutoSave] backup [2014-03-29 07.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-29 07.07.37] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-28 19.07.28 - auto.zip].
+[2014-03-29 07.07.37] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-28 19.07.28 - auto.zip] removed.
+[2014-03-29 11.07.37] Successfully created [AutoSave] backup [2014-03-29 11.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-29 11.07.37] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-28 23.07.28 - auto.zip].
+[2014-03-29 11.07.38] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-28 23.07.28 - auto.zip] removed.
+[2014-03-29 15.07.31] Successfully created [AutoSave] backup [2014-03-29 15.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-29 15.07.31] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-29 03.07.28 - auto.zip].
+[2014-03-29 15.07.31] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-29 03.07.28 - auto.zip] removed.
+[2014-03-29 19.07.34] Successfully created [AutoSave] backup [2014-03-29 19.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-29 19.07.34] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-29 07.07.28 - auto.zip].
+[2014-03-29 19.07.34] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-29 07.07.28 - auto.zip] removed.
+[2014-03-29 23.07.31] Successfully created [AutoSave] backup [2014-03-29 23.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-29 23.07.31] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-29 11.07.28 - auto.zip].
+[2014-03-29 23.07.31] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-29 11.07.28 - auto.zip] removed.
+[2014-03-30 03.07.39] Successfully created [AutoSave] backup [2014-03-30 03.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-30 03.07.39] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-29 15.07.28 - auto.zip].
+[2014-03-30 03.07.39] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-29 15.07.28 - auto.zip] removed.
+[2014-03-30 07.07.40] Successfully created [AutoSave] backup [2014-03-30 07.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-30 07.07.40] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-29 19.07.28 - auto.zip].
+[2014-03-30 07.07.40] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-29 19.07.28 - auto.zip] removed.
+[2014-03-30 11.07.40] Successfully created [AutoSave] backup [2014-03-30 11.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-30 11.07.40] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-29 23.07.28 - auto.zip].
+[2014-03-30 11.07.40] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-29 23.07.28 - auto.zip] removed.
+[2014-03-30 15.07.41] Successfully created [AutoSave] backup [2014-03-30 15.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-30 15.07.41] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-30 03.07.28 - auto.zip].
+[2014-03-30 15.07.41] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-30 03.07.28 - auto.zip] removed.
+[2014-03-30 19.07.33] Successfully created [AutoSave] backup [2014-03-30 19.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-30 19.07.33] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-30 07.07.28 - auto.zip].
+[2014-03-30 19.07.33] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-30 07.07.28 - auto.zip] removed.
+[2014-03-30 23.07.32] Successfully created [AutoSave] backup [2014-03-30 23.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-30 23.07.32] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-30 11.07.28 - auto.zip].
+[2014-03-30 23.07.32] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-30 11.07.28 - auto.zip] removed.
+[2014-03-31 03.07.34] Successfully created [AutoSave] backup [2014-03-31 03.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-31 03.07.34] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-30 15.07.28 - auto.zip].
+[2014-03-31 03.07.34] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-30 15.07.28 - auto.zip] removed.
+[2014-03-31 07.07.36] Successfully created [AutoSave] backup [2014-03-31 07.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-31 07.07.36] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-30 19.07.28 - auto.zip].
+[2014-03-31 07.07.36] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-30 19.07.28 - auto.zip] removed.
+[2014-03-31 11.07.36] Successfully created [AutoSave] backup [2014-03-31 11.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-31 11.07.36] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-30 23.07.28 - auto.zip].
+[2014-03-31 11.07.36] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-30 23.07.28 - auto.zip] removed.
+[2014-03-31 15.07.38] Successfully created [AutoSave] backup [2014-03-31 15.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-31 15.07.38] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-31 03.07.28 - auto.zip].
+[2014-03-31 15.07.38] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-31 03.07.28 - auto.zip] removed.
+[2014-03-31 19.07.38] Successfully created [AutoSave] backup [2014-03-31 19.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-31 19.07.38] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-31 07.07.28 - auto.zip].
+[2014-03-31 19.07.38] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-31 07.07.28 - auto.zip] removed.
+[2014-03-31 23.07.39] Successfully created [AutoSave] backup [2014-03-31 23.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-03-31 23.07.39] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-31 11.07.28 - auto.zip].
+[2014-03-31 23.07.39] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-31 11.07.28 - auto.zip] removed.
+[2014-04-01 03.07.40] Successfully created [AutoSave] backup [2014-04-01 03.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-04-01 03.07.40] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-31 15.07.28 - auto.zip].
+[2014-04-01 03.07.40] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-31 15.07.28 - auto.zip] removed.
+[2014-04-01 07.07.41] Successfully created [AutoSave] backup [2014-04-01 07.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-04-01 07.07.42] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-31 19.07.28 - auto.zip].
+[2014-04-01 07.07.42] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-31 19.07.28 - auto.zip] removed.
+[2014-04-01 11.07.42] Successfully created [AutoSave] backup [2014-04-01 11.07.28 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-04-01 11.07.42] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-03-31 23.07.28 - auto.zip].
+[2014-04-01 11.07.42] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-03-31 23.07.28 - auto.zip] removed.
+[2014-04-03 12.39.33] Successfully created [AutoSave] backup [2014-04-03 12.39.23 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-04-03 12.39.33] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-04-01 03.07.28 - auto.zip].
+[2014-04-03 12.39.33] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-04-01 03.07.28 - auto.zip] removed.
+[2014-04-03 16.39.29] Successfully created [AutoSave] backup [2014-04-03 16.39.23 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-04-03 16.39.29] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-04-01 07.07.28 - auto.zip].
+[2014-04-03 16.39.29] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-04-01 07.07.28 - auto.zip] removed.
+[2014-04-11 12.51.47] Successfully created [AutoSave] backup [2014-04-11 12.51.37 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-04-11 12.51.47] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-04-01 11.07.28 - auto.zip].
+[2014-04-11 12.51.47] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-04-01 11.07.28 - auto.zip] removed.
+[2014-04-16 10.12.22] Successfully created [AutoSave] backup [2014-04-16 10.12.13 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-04-16 10.12.22] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-04-03 12.39.23 - auto.zip].
+[2014-04-16 10.12.22] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-04-03 12.39.23 - auto.zip] removed.
+[2014-04-16 14.12.22] Successfully created [AutoSave] backup [2014-04-16 14.12.13 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-04-16 14.12.22] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-04-03 16.39.23 - auto.zip].
+[2014-04-16 14.12.22] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-04-03 16.39.23 - auto.zip] removed.
+[2014-04-16 18.12.21] Successfully created [AutoSave] backup [2014-04-16 18.12.13 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-04-16 18.12.21] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-04-11 12.51.37 - auto.zip].
+[2014-04-16 18.12.21] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-04-11 12.51.37 - auto.zip] removed.
+[2014-04-16 22.12.21] Successfully created [AutoSave] backup [2014-04-16 22.12.13 - auto.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2014-04-16 22.12.21] Removing excessive [AutoSave] backup file [C:\EDAWork\ProjectBackup\backups\2014-04-16 10.12.13 - auto.zip].
+[2014-04-16 22.12.21] [AutoSave] backup file [\EDAWork\ProjectBackup\backups\2014-04-16 10.12.13 - auto.zip] removed.
+[2015-02-27 15.34.32] Migrating iCDB upgrade backups from directory [EDAWork\database\cdbback] to Project Backup format.
+[2015-02-27 15.34.33] WARNING: Ignoring iCDB backup file [2015-02-27 15.33.44-4816-i.zip] - will not be migrated.
+[2015-04-15 16.56.55] Migrating iCDB upgrade backups from directory [EDAWork\database\cdbback] to Project Backup format.
+[2015-04-15 16.56.55] WARNING: Ignoring iCDB backup file [2015-04-15 16.56.21-4724-i.zip] - will not be migrated.
+[2015-04-15 16.56.55] WARNING: Ignoring iCDB backup file [2015-04-15 16.54.22-3388-i.zip] - will not be migrated.
+[2015-04-15 16.56.55] WARNING: Ignoring iCDB backup file [2015-02-27 15.33.44-4816-i.zip] - will not be migrated.
+[2015-04-15 17.08.57] Migrating iCDB upgrade backups from directory [\EDAWork\database\cdbback] to Project Backup format.
+[2015-04-15 17.08.57] WARNING: Ignoring iCDB backup file [2015-04-15 17.03.38-1544-i.zip] - will not be migrated.
+[2015-04-15 17.08.57] WARNING: Ignoring iCDB backup file [2015-04-15 16.56.21-4724-i.zip] - will not be migrated.
+[2015-04-15 17.08.57] WARNING: Ignoring iCDB backup file [2015-04-15 16.54.22-3388-i.zip] - will not be migrated.
+[2015-04-15 17.08.57] WARNING: Ignoring iCDB backup file [2015-02-27 15.33.44-4816-i.zip] - will not be migrated.
+[2015-04-15 17.10.08] Successfully created [Project Repair] backup [2015-04-15 17.10.08 - repair.zip] requested by [ECE400-03:stathisw].
+[2015-04-15 17.13.46] Migrating iCDB upgrade backups from directory [\EDAWork\database\cdbback] to Project Backup format.
+[2015-04-15 17.13.46] Migrating iCDB upgrade backup file [2015-04-15 17.13.32-5388].
+[2015-04-15 17.13.47] Successfully created [Constraints Definition Upgrade] backup [2015-04-15 17.13.32 - consDefUpgr.zip] requested by [WINDOWS-BKU6PRT:richardb].
+[2015-04-15 17.13.47] Migrated iCDB content backup file [cdbback\2015-04-15 17.13.32-5388.zip] removed.
+[2015-04-15 17.13.47] Successfully migrated iCDB upgrade backup file [2015-04-15 17.13.32-5388] to Project Backup format [2015-04-15 17.13.32 - consDefUpgr.zip]
+[2015-04-15 17.13.47] WARNING: Ignoring iCDB backup file [2015-04-15 17.03.38-1544-i.zip] - will not be migrated.
+[2015-04-15 17.13.47] WARNING: Ignoring iCDB backup file [2015-04-15 16.56.21-4724-i.zip] - will not be migrated.
+[2015-04-15 17.13.47] WARNING: Ignoring iCDB backup file [2015-04-15 16.54.22-3388-i.zip] - will not be migrated.
+[2015-04-15 17.13.47] WARNING: Ignoring iCDB backup file [2015-02-27 15.33.44-4816-i.zip] - will not be migrated.
+[2015-04-15 17.13.47] Successfully created [AutoSave] backup [2015-04-15 17.13.47 - auto.zip] requested by [ECE400-03:stathisw].
+[2015-04-15 17.32.32] Migrating iCDB upgrade backups from directory [\EDAWork\database\cdbback] to Project Backup format.
+[2015-04-15 17.32.32] WARNING: Ignoring iCDB backup file [2015-04-15 17.03.38-1544-i.zip] - will not be migrated.
+[2015-04-15 17.32.32] WARNING: Ignoring iCDB backup file [2015-04-15 16.56.21-4724-i.zip] - will not be migrated.
+[2015-04-15 17.32.32] WARNING: Ignoring iCDB backup file [2015-04-15 16.54.22-3388-i.zip] - will not be migrated.
+[2015-04-15 17.32.32] WARNING: Ignoring iCDB backup file [2015-02-27 15.33.44-4816-i.zip] - will not be migrated.

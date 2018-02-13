@@ -1,0 +1,696 @@
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -parent dx -icdb C:\EDAWork\database -snapshot DxD sensorarray.1 
+nse::setmode -icdb C:\\EDAWork\\database -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -snapshot DxD sensorarray.1
+nse::selectitems {22 24}
+edit::move -offset 0,0
+nse::clearselection
+nse::savesymbol
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -file C:\EDAWork\EDALibraries\DxDesigner\Active_Linear/sym/tip102.1 
+nse::setmode -file -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Active_Linear\\SYM\\tip102.1 tip102.1
+nse::selectitems 8
+prop::setvalue -value 1 -valueindex 0 -dest port \#
+nse::deselectitems 8
+nse::selectitems 5
+prop::setvalue -value 3 -valueindex 0 -dest port \#
+nse::deselectitems 5
+nse::selectitems 6
+prop::setvalue -value 2 -valueindex 0 -dest port \#
+nse::deselectitems 6
+nse::selectitems 8
+nse::deselectitems 8
+nse::selectitems 12
+nse::deselectitems 12
+nse::selectitems 14
+nse::deselectitems 14
+nse::selectitems 5
+nse::deselectitems 5
+nse::selectitems 6
+nse::deselectitems 6
+nse::selectitems 8
+nse::savesymbol
+symbol::updateoutline
+symbol::setoutline -rect 0,-20320,20320,23876
+nse::savesymbol
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -file C:\EDAWork\EDALibraries\DxDesigner\Active_Linear/sym/tip102.1 
+nse::setmode -file -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Active_Linear\\SYM\\tip102.1 tip102.1
+nse::selectitems 5
+nse::deselectitems 5
+nse::selectitems 8
+nse::deselectitems 8
+nse::selectitems 6
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -parent dx -icdb C:\EDAWork\database -snapshot DxD mcp9700.1 
+nse::setmode -icdb C:\\EDAWork\\database -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -snapshot DxD mcp9700.1
+nse::selectitems 2
+prop::setvalue -value 1 -valueindex 0 -dest port \#
+nse::deselectitems 2
+nse::selectitems 1
+prop::setvalue -value 2 -valueindex 0 -dest port \#
+nse::deselectitems 1
+nse::selectitems 9
+prop::setvalue -value 3 -valueindex 0 -dest port \#
+nse::clearselection
+nse::selectitems 10
+nse::deselectitems 10
+nse::selectitems 2
+nse::deselectitems 2
+nse::selectitems 1
+nse::deselectitems 1
+nse::selectitems 9
+nse::savesymbol
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -file C:\EDAWork\EDALibraries\DxDesigner\Active_Linear/sym/mcp1825s.1 
+nse::setmode -file -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Active_Linear\\SYM\\mcp1825s.1 mcp1825s.1
+nse::selectitems 19
+symbol::deleteitems
+symbol::setoutline -rect 0,-33020,35560,33020
+nse::savesymbol
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -file C:\EDAWork\EDALibraries\DxDesigner\Active_Linear/sym/tip102.1 
+nse::setmode -file -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Active_Linear\\SYM\\tip102.1 tip102.1
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -file C:\EDAWork\EDALibraries\DxDesigner\Active_Linear/sym/tip102.1 
+nse::setmode -file -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Active_Linear\\SYM\\tip102.1 tip102.1
+prop::setvalue -value TO-220-UP-HEATSINK -valueindex 0 PKG_TYPE
+nse::savesymbol
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -file C:\EDAWork\EDALibraries\DxDesigner\Pins_etc/sym/hole125.1 
+nse::setmode -file -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Pins_etc\\sym\\hole125.1 hole125.1
+prop::setvalue -value HOLE100 -valueindex 0 PKG_TYPE
+nse::savesymbol
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -file C:\EDAWork\EDALibraries\DxDesigner\Pins_etc/sym/hole125.1 
+nse::setmode -file -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Pins_etc\\sym\\hole125.1 hole125.1
+prop::setvalue -value HOLE125 -valueindex 0 PKG_TYPE
+nse::savesymbol
+nse::savesymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Pins_etc\\sym\\hole100.1 -saveas hole100.1
+prop::setvalue -value HOLE100 -valueindex 0 PKG_TYPE
+nse::savesymbol
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -parent dx -icdb C:\EDAWork\database -snapshot DxD sensorarray.1 
+nse::setmode -icdb C:\\EDAWork\\database -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -snapshot DxD sensorarray.1
+nse::selectitems 16
+nse::deselectitems 16
+nse::selectitems 20
+symbol::deleteitems
+nse::selectitems 16
+symbol::deleteitems
+nse::selectitems 5
+symbol::deleteitems
+nse::selectitems 7
+symbol::deleteitems
+nse::selectitems 11
+nse::deselectitems 11
+nse::selectitems 18
+nse::clearselection
+nse::selectitems 18
+edit::move -offset 0,5080
+nse::deselectitems 18
+nse::selectitems 6
+edit::move -offset 0,5080
+nse::deselectitems 6
+nse::selectitems 18
+edit::move -offset 0,-5080
+nse::clearselection
+nse::selectitems 11
+item::setrect -rect 2540,-22860,63500,20320
+item::setrect -rect 2540,-22860,43180,20320
+item::setrect -rect 2540,-22860,63500,20320
+nse::clearselection
+nse::savesymbol
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -file C:\EDAWork\EDALibraries\DxDesigner\Pins_etc/sym/header4.1 
+nse::setmode -file -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Pins_etc\\sym\\header4.1 header4.1
+nse::selectitems 2
+nse::deselectitems 2
+nse::selectitems 1
+prop::setvisible -valueindex 0 -dest port \#
+nse::deselectitems 1
+nse::selectitems 30
+nse::deselectitems 30
+nse::selectitems 2
+prop::setvisible -valueindex 0 -dest port \#
+nse::deselectitems 2
+nse::selectitems 26
+prop::setvisible -valueindex 0 -dest port \#
+nse::deselectitems 26
+nse::selectitems 27
+prop::setvisible -valueindex 0 -dest port \#
+nse::savesymbol
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -file C:\EDAWork\EDALibraries\DxDesigner\Pins_etc/sym/header6.1 
+nse::setmode -file -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Pins_etc\\sym\\header6.1 header6.1
+nse::selectitems 32
+nse::deselectitems 32
+nse::selectitems 1
+nse::clearselection
+nse::selectitems {1 2 26 27 28 30 31 32 33 34 35 36 37}
+prop::setvisible -valueindex 0 -dest port \#
+nse::clearselection
+nse::savesymbol
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -file C:\EDAWork\EDALibraries\DxDesigner\Pins_etc/sym/header6.1 
+nse::setmode -file -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Pins_etc\\sym\\header6.1 header6.1
+nse::savesymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Pins_etc\\sym\\header6-SL.1 -saveas header6-SL.1
+prop::setvalue -value SIP6-100MIL-ZIGZAG-HEADER -valueindex 0 PKG_TYPE
+nse::savesymbol
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -file C:\EDAWork\EDALibraries\DxDesigner\Active_Linear/sym/cts636.1 
+nse::setmode -file -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Active_Linear\\SYM\\cts636.1 cts636.1
+nse::savesymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Active_Linear\\SYM\\ltv357t.1 -saveas ltv357t.1
+nse::selectitems 12
+symbol::deleteitems
+nse::selectitems 9
+edit::vertmirror
+nse::clearselection
+nse::selectitems {1 2 3 6 7 8 9 13 16 17 18 19 20 21 22 23}
+edit::vertmirror
+edit::vertmirror
+edit::horzmirror
+edit::horzmirror
+edit::rotate -center 15240,-5080 -angle 180
+nse::clearselection
+nse::selectitems 13
+nse::clearselection
+symbol::setoutline -rect 0,-15240,30480,20320
+symbol::setoutline -rect 0,-15240,33020,20320
+nse::selectitems 13
+edit::rotate -center 27940,-10160 -angle 180
+edit::move -offset -27940,17780
+nse::clearselection
+nse::selectitems {1 2 3 6 7 8 9 16 17 18 19 20 21 22 23}
+nse::clearselection
+nse::selectitems 7
+nse::clearselection
+nse::selectitems {1 2 3 6 7 8 9 13 16 17 18 19 20 21 22 23}
+edit::move -offset 0,-5080
+nse::clearselection
+symbol::setoutline -rect -2540,-15240,35560,20320
+symbol::setoutline -rect -2540,-15240,35560,17780
+nse::selectitems 13
+edit::move -offset 5080,2540
+nse::clearselection
+symbol::setoutline -rect -2540,-17780,35560,20320
+nse::selectitems 16
+edit::move -offset 5080,3810
+nse::deselectitems 16
+nse::selectitems 1
+nse::deselectitems 1
+nse::selectitems 18
+edit::move -offset 7620,3810
+nse::deselectitems 18
+nse::selectitems 22
+edit::move -offset -2540,3810
+nse::deselectitems 22
+nse::selectitems 18
+edit::move -offset 0,0
+nse::deselectitems 18
+nse::selectitems 20
+edit::move -offset 17780,3810
+edit::move -offset 0,-1270
+nse::deselectitems 20
+nse::selectitems 22
+edit::move -offset 0,-1270
+nse::deselectitems 22
+nse::selectitems 16
+edit::move -offset 0,-1270
+nse::deselectitems 16
+nse::selectitems 18
+edit::move -offset 0,-1270
+nse::clearselection
+nse::selectitems 8
+symbol::deleteitems
+nse::selectitems 7
+symbol::deleteitems
+symbol::addline -points {12700,-10160 15240,-7620}
+item::setline -points {12700,-10160 15240,-7620 15240,-7620 17780,-10160} 24
+item::setline -points {17780,-10160 12700,-10160 12700,-10160 15240,-7620 17780,-10160} 24
+symbol::addline -points {12700,-7620 17780,-7620}
+nse::selectitems 24
+item::setline -points {17780,-10160 13970,-10160 15240,-7620 17780,-10160}
+item::setline -points {15240,-10160 13970,-10160 15240,-7620 17780,-10160}
+item::setline -points {15240,-10160 13970,-10160 15240,-7620 16510,-10160}
+item::setline -points {16510,-10160 13970,-10160 15240,-7620 16510,-10160}
+nse::deselectitems 24
+nse::selectitems 25
+item::setline -points {12700,-7620 15240,-7620}
+edit::move -offset 1270,0
+nse::clearselection
+nse::selectitems 16
+symbol::deleteitems
+nse::selectitems 22
+symbol::deleteitems
+nse::selectitems 20
+symbol::deleteitems
+nse::selectitems 18
+symbol::deleteitems
+nse::selectitems 24
+nse::clearselection
+nse::selectitems {24 25}
+edit::move -offset -3810,1270
+nse::clearselection
+symbol::addline -points {7620,-12700 11430,-12700}
+item::setline -points {7620,-12700 11430,-12700 11430,-12700 11430,-8890} 26
+symbol::addline -points {11430,-6350 11430,-2540}
+item::setline -points {11430,-6350 11430,-2540 11430,-2540 7620,-2540} 27
+symbol::addline -points {25400,-12700 20320,-12700}
+item::setline -points {25400,-12700 20320,-12700 20320,-12700 20320,-8890} 28
+item::setline -points {25400,-12700 20320,-12700 20320,-8890 20320,-8890 19050,-7620} 28
+symbol::addline -points {19050,-6350 20320,-5080}
+item::setline -points {19050,-6350 20320,-5080 20320,-5080 20320,-2540} 29
+item::setline -points {19050,-6350 20320,-5080 20320,-2540 20320,-2540 25400,-2540} 29
+nse::savesymbol
+nse::selectitems 1
+port::rename -newname AN 1
+nse::clearselection
+nse::selectitems 2
+nse::clearselection
+nse::selectitems 3
+port::rename -newname CAT 2
+nse::clearselection
+nse::selectitems 6
+port::rename -newname E 3
+port::rename -newname C 6
+nse::clearselection
+nse::selectitems 2
+prop::setvalue -value 2 -dest port -ports 2 \#
+nse::clearselection
+nse::selectitems 3
+prop::setvalue -value 3 -dest port -ports 3 \#
+nse::clearselection
+nse::selectitems 6
+prop::setvalue -value 4 -dest port -ports 6 \#
+nse::clearselection
+nse::selectitems 2
+symbol::addline -points {19050,-8890 19050,-5080}
+nse::deselectitems 2
+nse::selectitems 29
+nse::clearselection
+nse::savesymbol
+nse::selectitems 29
+symbol::addline -points {20320,-5080 20320,-5080}
+symbol::addline -points {20339,-5088 20261,-5508}
+symbol::addline -points {20248,-5528 19938,-5140}
+symbol::addline -points {19925,-5133 20339,-5075}
+nse::deselectitems 29
+nse::selectitems 38
+item::setline -points {19893,-5101 20339,-5075}
+nse::deselectitems 38
+nse::selectitems 37
+nse::deselectitems 37
+nse::selectitems 38
+edit::move -offset 1697,21
+nse::deselectitems 38
+nse::selectitems 37
+item::setline -points {20248,-5528 19893,-5172}
+nse::deselectitems 37
+nse::selectitems 38
+edit::move -offset -1270,0
+item::setline -points {20320,-5080 19893,-5172}
+item::setline -points {20320,-5080 19899,-5146}
+item::setline -points {20320,-5080 19899,-5153}
+nse::clearselection
+nse::selectitems 33
+edit::move -offset -2329,1270
+nse::deselectitems 33
+nse::selectitems 32
+edit::move -offset -2329,-1270
+nse::deselectitems 32
+nse::selectitems 30
+edit::move -offset -211,-1270
+nse::deselectitems 30
+nse::selectitems 31
+edit::move -offset -211,1270
+nse::deselectitems 31
+nse::selectitems 32
+edit::move -offset 0,2540
+nse::deselectitems 32
+nse::selectitems 33
+edit::move -offset 0,-2540
+nse::clearselection
+nse::selectitems 24
+nse::clearselection
+nse::selectitems {24 25 26 27}
+nse::clearselection
+nse::selectitems 24
+edit::move -offset 2540,0
+nse::deselectitems 24
+nse::selectitems 26
+edit::move -offset 2540,0
+item::setline -points {9968,-8790 13970,-12700 13970,-8890}
+item::setline -points {7620,-12700 13970,-12700 13970,-8890}
+nse::deselectitems 26
+nse::selectitems 25
+edit::move -offset 2540,0
+nse::deselectitems 25
+nse::selectitems 27
+edit::move -offset 2540,0
+item::setline -points {13970,-6350 13970,-2540 7620,-2540}
+nse::deselectitems 27
+nse::selectitems 34
+edit::move -offset -1270,0
+nse::deselectitems 34
+nse::selectitems 28
+item::setline -points {25400,-12700 20320,-12700 20320,-8890 17780,-7620}
+nse::deselectitems 28
+nse::selectitems 29
+item::setline -points {17780,-6350 20320,-5080 20320,-2540 25400,-2540}
+nse::clearselection
+nse::selectitems 36
+symbol::deleteitems
+nse::selectitems 37
+symbol::deleteitems
+nse::selectitems 38
+symbol::deleteitems
+symbol::addline -points {20294,-5078 19478,-5078}
+symbol::addline -points {19469,-5078 19873,-5722}
+symbol::addline -points {19873,-5739 20329,-5095}
+symbol::addline -points {15794,-7863 16977,-7326}
+symbol::addline -points {15444,-7218 16627,-6680}
+symbol::addline -points {16618,-6722 16412,-7135}
+item::setline -points {16618,-6722 16412,-7135 16412,-7135 16173,-6612} 44
+item::setline -points {16618,-6722 16412,-7135 16173,-6612 16173,-6612 16612,-6676} 44
+symbol::addline -points {16961,-7361 16819,-7729}
+item::setline -points {16961,-7361 16819,-7729 16819,-7729 16599,-7284} 45
+symbol::addline -points {16599,-7251 16954,-7322}
+nse::savesymbol
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -parent dx -icdb C:\EDAWork\database -snapshot DxD sensorarray.1 
+nse::setmode -icdb C:\\EDAWork\\database -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -snapshot DxD sensorarray.1
+nse::selectitems 11
+edit::move -offset -2540,2540
+nse::clearselection
+nse::selectitems 24
+nse::deselectitems 24
+nse::selectitems 22
+nse::clearselection
+nse::selectitems {3 4 11 22 24}
+edit::move -offset 0,0
+nse::clearselection
+nse::selectitems {3 4 11 22 24}
+nse::deselectitems 11
+edit::move -offset -20320,0
+nse::clearselection
+nse::selectitems 11
+item::setrect -rect 0,-20320,45801,20320
+item::setrect -rect 0,-20320,58420,20320
+nse::undo
+nse::undo
+item::setrect -rect 0,-20320,45720,20320
+symbol::setoutline -rect 0,-35560,48260,35560
+symbol::setoutline -rect 0,-20320,48260,20320
+nse::savesymbol
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -file C:\EDAWork\EDALibraries\DxDesigner\Linear/sym/chipres.1 
+nse::setmode -file -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Linear\\sym\\chipres.1 chipres.1
+prop::delete -valueindex 0 DPART
+prop::delete -valueindex 0 PINORDER
+prop::delete -valueindex 0 PRICE
+prop::delete -valueindex 0 R
+prop::add -value 1K VALUE
+prop::setvisible -valueindex 0 VALUE
+nse::savesymbol
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -file C:\EDAWork\EDALibraries\DxDesigner\Linear/sym/chipcap.1 
+nse::setmode -file -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Linear\\sym\\chipcap.1 chipcap.1
+prop::delete -valueindex 0 MPART
+prop::delete -valueindex 0 DPART
+prop::delete -valueindex 0 PRICE
+nse::savesymbol
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -file C:\EDAWork\EDALibraries\DxDesigner\Linear/sym/chipcap.1 
+nse::setmode -file -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Linear\\sym\\chipcap.1 chipcap.1
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -file C:\EDAWork\EDALibraries\DxDesigner\Linear/sym/chipcap.1 
+nse::setmode -file -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Linear\\sym\\chipcap.1 chipcap.1
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -file C:\EDAWork\EDALibraries\DxDesigner\Transducers/sym/fsm4jsma.1 
+nse::setmode -file -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Transducers\\SYM\\fsm4jsma.1 fsm4jsma.1
+prop::delete -valueindex 0 DPART
+prop::delete -valueindex 0 PRICE
+nse::savesymbol
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -file C:\EDAWork\EDALibraries\DxDesigner\Linear/sym/chipcap.1 
+nse::setmode -file -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Linear\\sym\\chipcap.1 chipcap.1
+prop::delete -valueindex 0 PREFIX
+nse::savesymbol
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -file C:\EDAWork\EDALibraries\DxDesigner\Linear/sym/chipcap.1 
+nse::setmode -file -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Linear\\sym\\chipcap.1 chipcap.1
+prop::add -value C Prefix
+prop::setvisible -valueindex 0 -visible none Prefix
+nse::savesymbol
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -file C:\EDAWork\EDALibraries\DxDesigner\Transducers/sym/led.1 
+nse::setmode -file -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Transducers\\SYM\\led.1 led.1
+prop::delete -valueindex 0 PINORDER
+nse::savesymbol
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -file C:\EDAWork\EDALibraries\DxDesigner\Linear/sym/pwrres.1 
+nse::setmode -file -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Linear\\sym\\pwrres.1 pwrres.1
+prop::delete -valueindex 0 DPART
+prop::delete -valueindex 0 PINORDER
+prop::delete -valueindex 0 PRICE
+prop::delete -valueindex 0 R
+prop::setvisible -valueindex 0 VALUE
+nse::savesymbol
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -file C:\EDAWork\EDALibraries\DxDesigner\Linear/sym/chipres.1 
+nse::setmode -file -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Linear\\sym\\chipres.1 chipres.1
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -file C:\EDAWork\EDALibraries\DxDesigner\Active_Linear/sym/tip102.1 
+nse::setmode -file -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Active_Linear\\SYM\\tip102.1 tip102.1
+prop::delete -valueindex 0 DPART
+prop::delete -valueindex 0 PINORDER
+prop::delete -valueindex 0 PRICE
+prop::setvisible -valueindex 0 REFDES
+nse::savesymbol
+nse::selectitems 15
+nse::clearselection
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -file C:\EDAWork\EDALibraries\DxDesigner\Active_Linear/sym/adum1250.1 
+nse::setmode -file -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Active_Linear\\SYM\\adum1250.1 adum1250.1
+prop::delete -valueindex 0 DPART
+prop::delete -valueindex 0 PRICE
+prop::setvisible -valueindex 0 REFDES
+nse::savesymbol
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -parent dx -icdb C:\EDAWork\database -snapshot DxD mcp9700.1 
+nse::setmode -icdb C:\\EDAWork\\database -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -snapshot DxD mcp9700.1
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -file C:\EDAWork\EDALibraries\DxDesigner\Pins_etc/sym/banana.1 
+nse::setmode -file -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -file C:\\EDAWork\\EDALibraries\\DxDesigner\\Pins_etc\\sym\\banana.1 banana.1
+prop::delete -valueindex 0 DPART
+prop::delete -valueindex 0 PRICE
+prop::setvisible -valueindex 0 REFDES
+nse::savesymbol
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -parent dx -icdb C:\EDAWork\database -snapshot DxD eceborder_b.1 
+nse::setmode -icdb C:\\EDAWork\\database -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -snapshot DxD eceborder_b.1
+prop::add @DATETIME
+prop::setvisible -valueindex 0 @DATETIME
+prop::add @Name
+prop::setvisible -valueindex 0 @Name
+prop::add @Sheet
+prop::setvisible -valueindex 0 @Sheet
+prop::add @SheetTotal
+prop::setvisible -valueindex 0 @SheetTotal
+nse::selectitems 2
+nse::deselectitems 2
+nse::selectitems 59
+nse::clearselection
+prop::delete -valueindex 0 {$$NotCommonProperty_@DATETIME}
+prop::delete -valueindex 0 {$$NotCommonProperty_@NAME}
+prop::delete -valueindex 0 {$$NotCommonProperty_@SHEET}
+prop::delete -valueindex 0 {$$NotCommonProperty_@SHEETTOTAL}
+nse::selectitems 55
+nse::clearselection
+nse::selectitems 28
+nse::clearselection
+nse::selectitems 54
+nse::deselectitems 54
+nse::selectitems 50
+nse::deselectitems 50
+nse::selectitems 56
+nse::deselectitems 56
+nse::selectitems 50
+symbol::deleteitems
+nse::selectitems 57
+edit::move -offset -2540,-4572
+nse::deselectitems 57
+nse::selectitems 56
+edit::move -offset 20320,3048
+nse::deselectitems 56
+nse::selectitems 58
+edit::move -offset 45720,-9652
+edit::move -offset 27940,2540
+edit::move -offset 0,-1270
+nse::deselectitems 58
+nse::selectitems 56
+nse::deselectitems 56
+nse::selectitems 57
+nse::deselectitems 57
+nse::selectitems 59
+edit::move -offset 36830,-10922
+edit::move -offset 53340,0
+nse::clearselection
+nse::selectitems 56
+edit::move -offset 8890,-1270
+edit::move -offset 38100,12700
+nse::deselectitems 56
+nse::selectitems 53
+nse::deselectitems 53
+nse::selectitems 34
+nse::clearselection
+nse::selectitems 30
+nse::clearselection
+prop::delete -valueindex 0 {$$NotCommonProperty_AUTHOR}
+nse::selectitems 47
+nse::deselectitems 47
+nse::selectitems 55
+nse::deselectitems 55
+nse::selectitems 53
+nse::deselectitems 53
+nse::selectitems 56
+edit::move -offset -10160,-25400
+nse::clearselection
+nse::selectitems 56
+edit::move -offset 69850,7620
+edit::move -offset -3810,0
+nse::clearselection
+nse::selectitems 57
+edit::move -offset -1270,-1270
+nse::clearselection
+nse::selectitems 54
+nse::savesymbol
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -parent dx -icdb C:\EDAWork\database -snapshot DxD eceborder_b.1 
+nse::setmode -icdb C:\\EDAWork\\database -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -snapshot DxD eceborder_b.1
+prop::setvalue -value {DWG NAME} -valueindex 0 @Name
+prop::setvalue -value 1 -valueindex 0 @Sheet
+prop::setvalue -value 1 -valueindex 0 @SheetTotal
+nse::savesymbol
+nse::selectitems 57
+gfx::setfontsize -size 20
+edit::move -offset 21590,-19050
+edit::move -offset 33020,0
+nse::deselectitems 57
+nse::selectitems 55
+nse::deselectitems 55
+nse::selectitems 58
+edit::move -offset 2540,1270
+edit::move -offset 0,-2540
+edit::move -offset 1270,1270
+nse::deselectitems 58
+nse::selectitems 57
+nse::savesymbol
+nse::clearselection
+nse::selectitems 54
+nse::deselectitems 54
+nse::selectitems 6
+nse::clearselection
+nse::selectitems 22
+item::settext -text PROJECT
+nse::deselectitems 22
+nse::selectitems 54
+prop::delete -valueindex 0 {$$NotCommonProperty_COURSE}
+prop::delete -valueindex 0 {$$NotCommonProperty_ASSIGNMENT}
+prop::delete -valueindex 0 {$$NotCommonProperty_REVISION}
+nse::savesymbol
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -parent dx -icdb C:\EDAWork\database -snapshot DxD eceborder_b.1 
+nse::setmode -icdb C:\\EDAWork\\database -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -snapshot DxD eceborder_b.1
+prop::add AUTHOR
+prop::setvisible -valueindex 0 AUTHOR
+prop::add COURSE
+prop::setvisible -valueindex 0 COURSE
+prop::add REUSE_BLOCK
+prop::setvisible -valueindex 0 -visible none REUSE_BLOCK
+prop::delete -valueindex 0 REUSE_BLOCK
+prop::add REVISION
+prop::setvisible -valueindex 0 REVISION
+prop::setvalue -value {YOUR NAME} -valueindex 0 AUTHOR
+prop::setvalue -value {} -valueindex 0 @SheetTotal
+prop::setvalue -value {} -valueindex 0 @Sheet
+prop::setvalue -value {} -valueindex 0 @Name
+prop::setvalue -value ECE492 -valueindex 0 COURSE
+prop::setvalue -value 1 -valueindex 0 REVISION
+prop::setvalue -value 0 -valueindex 0 REVISION
+nse::selectitems 60
+edit::move -offset -48260,-1270
+edit::move -offset 0,-1270
+nse::deselectitems 60
+nse::selectitems 61
+edit::move -offset -1270,-5080
+nse::deselectitems 61
+nse::selectitems 63
+edit::move -offset 95250,-15240
+gfx::setfontsize -size 20
+edit::move -offset -1270,-1270
+nse::clearselection
+nse::savesymbol
+nse::selectitems 56
+edit::move -offset -17780,0
+nse::deselectitems 56
+nse::selectitems 59
+nse::clearselection
+nse::selectitems 60
+prop::setvalue -value {BEN RICHARDS} -valueindex 0 AUTHOR
+nse::deselectitems 60
+nse::selectitems 57
+nse::savesymbol
+nse::clearselection
+nse::selectitems 56
+edit::move -offset -11430,0
+nse::savesymbol sid1
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -parent dx -icdb C:\EDAWork\database -snapshot DxD eceborder_b.1 
+nse::setmode -icdb C:\\EDAWork\\database -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -snapshot DxD eceborder_b.1
+prop::setvalue -value 1 -valueindex 0 REVISION
+nse::savesymbol
+nse::closesymbol
+# C:\MentorGraphics\9.4PADS\SDD_HOME\nse\win32\nse.exe -prj C:\EDAWork\ICD.prj -parent dx -icdb C:\EDAWork\database -snapshot DxD eceborder_b.1 
+nse::setmode -icdb C:\\EDAWork\\database -prj C:\\EDAWork\\ICD.prj -flow netlist
+nse::opensymbol -snapshot DxD eceborder_b.1
+nse::selectitems 9
+nse::deselectitems 9
+nse::selectitems 57
+nse::clearselection
+nse::selectitems 57
+nse::clearselection
+nse::selectitems 57
+nse::closesymbol

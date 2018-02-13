@@ -1,0 +1,22 @@
+
+
+
+sensorarray                  Wednesday, February 20, 2013 3:00 pm                  Page  1
+
+
+ #  QTY   REFDES         DEVICE               PACKAGE     VALUE       DIGIKEY             
+------------------------------------------------------------------------------------------
+ 1   1     C1             CHIPCAP              0805        0.1UF       490-1666-1-ND       
+ 2   1     J1                                  HOLE125                                    
+ 3   13    R1,R2,R3,      CHIPRES              0805                                       
+           R4,R5,R6,                                                                      
+           R7,R8,R9,                                                                      
+           R10,R11,                                                                       
+           R12,R13                                                                        
+ 4   2     U1,U6                               SO8                     MCP6242-E/P-ND      
+ 5   3     U2,U4,U5       INA333               MSOP8                   296-23564-2-ND      
+ 6   1     U3             MCP130               SOT23                                      
+ 7   2     U7,U8                               SO8                     MCP6242-E/P-ND      
+    --                                                                                    
+    23                                                                                    
+

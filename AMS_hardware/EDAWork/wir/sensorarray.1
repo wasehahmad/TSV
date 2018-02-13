@@ -1,0 +1,140 @@
+| Wirelist created using version 6.0 
+V 6.0
+DW sensorarray
+|Q Linear:chipres 1
+AS Linear:chipres INOV_VER_REC=15:52:28_3-8-14
+AS Linear:chipres DEVICE=CHIPRES
+AS Linear:chipres PKG_TYPE=0805
+AS Linear:chipres Prefix=R
+AS Linear:chipres Order=R$
+AS Linear:chipres REFDES=R?
+AS Linear:chipres VALUE=1K
+AS Linear:chipres PINORDER=1 2
+AP Linear:chipres 1 #=1
+AP Linear:chipres 1 PINTYPE=BI
+AP Linear:chipres 2 #=2
+AP Linear:chipres 2 PINTYPE=BI
+AS Pins_etc:in Pin!Order=IN
+AS Pins_etc:in IN
+AS Pins_etc:in PINORDER=IN
+AP Pins_etc:in 1 PINTYPE=IN
+AS Pins_etc:out OUT
+AS Pins_etc:out Pin!Order=OUT
+AS Pins_etc:out PINORDER=OUT
+AP Pins_etc:out 1 PINTYPE=OUT
+|Q Linear:chipcap 1
+AS Linear:chipcap INOV_VER_REC=16:08:36_3-8-14
+AS Linear:chipcap DEVICE=CHIPCAP
+AS Linear:chipcap PKG_TYPE=0805
+AS Linear:chipcap REFDES=C?
+AS Linear:chipcap Order=C$
+AS Linear:chipcap VALUE=0.1UF
+AS Linear:chipcap Prefix=C
+AS Linear:chipcap PINORDER=1 2
+AP Linear:chipcap 1 #=1
+AP Linear:chipcap 1 PINTYPE=BI
+AP Linear:chipcap 2 #=2
+AP Linear:chipcap 2 PINTYPE=BI
+|Q Active_Linear:mcp6242 1
+AS Active_Linear:mcp6242 PRICE=0.40
+AS Active_Linear:mcp6242 DEVICE=MCP6242
+AS Active_Linear:mcp6242 DPART=MCP6242-E/SN-ND
+AS Active_Linear:mcp6242 PKG_TYPE=SO8
+AS Active_Linear:mcp6242 REFDES=U?
+AS Active_Linear:mcp6242 INOV_VER_REC=20:49_2-20-13
+AS Active_Linear:mcp6242 PINORDER=VDD VINA+ VINA- VINB+ VINB- VOUTA VOUTB VSS
+AP Active_Linear:mcp6242 1 #=8
+AP Active_Linear:mcp6242 2 #=3
+AP Active_Linear:mcp6242 3 #=2
+AP Active_Linear:mcp6242 4 #=5
+AP Active_Linear:mcp6242 5 #=6
+AP Active_Linear:mcp6242 6 #=1
+AP Active_Linear:mcp6242 7 #=7
+AP Active_Linear:mcp6242 8 #=4
+|Q mcp9700 1
+AS mcp9700 PRICE=0.38
+AS mcp9700 DPART=MCP9700AT-E/TTCT-ND
+AS mcp9700 PKG_TYPE=SOT23
+AS mcp9700 LEVEL=STD
+AS mcp9700 REFDES=U?
+AS mcp9700 DEVICE=MCP9700
+AS mcp9700 Primitive=YES
+AS mcp9700 INOV_VER_REC=23:41:26_2-20-14
+AS mcp9700 PINORDER=GND VDD VOUT
+AP mcp9700 1 #=3
+AP mcp9700 1 PINTYPE=IN
+AP mcp9700 2 #=1
+AP mcp9700 2 PINTYPE=IN
+AP mcp9700 3 #=2
+AP mcp9700 3 PINTYPE=OUT
+|Q Linear:caph_orig 1
+AS Linear:caph_orig IC=0
+AS Linear:caph_orig C=0.1UF
+AS Linear:caph_orig REFDES=C?
+AS Linear:caph_orig Prefix=C
+AS Linear:caph_orig Order=C$ IC=
+AS Linear:caph_orig INOV_VER_REC=0:19_3-7-08
+AS Linear:caph_orig PINORDER=1 2
+AP Linear:caph_orig 1 #=1
+AP Linear:caph_orig 1 PINTYPE=BI
+AP Linear:caph_orig 2 #=2
+AP Linear:caph_orig 2 PINTYPE=BI
+M Linear:chipres $1I2034
+I $1I2034 Linear:chipres CELL_NEG CELL_SCALE VALUE=100K`REFDES=R11`
+|R 15:52:28_3-8-14
+API $1I2034 Linear:chipres 1 #=1
+API $1I2034 Linear:chipres 2 #=2
+M Linear:chipres $1I2039
+I $1I2039 Linear:chipres CELL_POS CELL_SCALE VALUE=200K`REFDES=R12`
+|R 15:52:28_3-8-14
+API $1I2039 Linear:chipres 1 #=1
+API $1I2039 Linear:chipres 2 #=2
+P Pins_etc:in CELL_NEG
+I CELL_NEG Pins_etc:in CELL_NEG 
+P Pins_etc:in CELL_POS
+I CELL_POS Pins_etc:in CELL_POS 
+P Pins_etc:out TEMP
+I TEMP Pins_etc:out TEMP 
+P Pins_etc:out VOLT
+I VOLT Pins_etc:out VOLT 
+M Linear:chipcap $1I1785
+I $1I1785 Linear:chipcap V_REG CELL_NEG REFDES=C10`VALUE=0.1 UF`
+|R 16:08:36_3-8-14
+API $1I1785 Linear:chipcap 1 #=1
+API $1I1785 Linear:chipcap 2 #=2
+M Linear:chipcap $1I1802
+I $1I1802 Linear:chipcap CELL_NEG $1N1636 REFDES=C5`VALUE=10 UF`
+|R 16:08:36_3-8-14
+API $1I1802 Linear:chipcap 1 #=1
+API $1I1802 Linear:chipcap 2 #=2
+M Active_Linear:mcp6242 $1I1581
+I $1I1581 Active_Linear:mcp6242 V_REG CELL_SCALE VOLT $1N1636 TEMP VOLT TEMP CELL_NEG REFDES=U1`
+|R 20:49_2-20-13
+API $1I1581 Active_Linear:mcp6242 1 #=8
+API $1I1581 Active_Linear:mcp6242 2 #=3
+API $1I1581 Active_Linear:mcp6242 3 #=2
+API $1I1581 Active_Linear:mcp6242 4 #=5
+API $1I1581 Active_Linear:mcp6242 5 #=6
+API $1I1581 Active_Linear:mcp6242 6 #=1
+API $1I1581 Active_Linear:mcp6242 7 #=7
+API $1I1581 Active_Linear:mcp6242 8 #=4
+M mcp9700 $1I1605
+I $1I1605 mcp9700 CELL_NEG V_REG $1N1636 REFDES=U3`
+|R 23:41:26_2-20-14
+API $1I1605 mcp9700 1 #=3
+API $1I1605 mcp9700 2 #=1
+API $1I1605 mcp9700 3 #=2
+P Pins_etc:in V_REG
+I V_REG Pins_etc:in V_REG 
+M mcp9700 $1I2121
+I $1I2121 mcp9700 CELL_NEG V_REG $1N1636 REFDES=U5B`
+|R 23:41:26_2-20-14
+API $1I2121 mcp9700 1 #=3
+API $1I2121 mcp9700 2 #=1
+API $1I2121 mcp9700 3 #=2
+M Linear:caph_orig $1I2178
+I $1I2178 Linear:caph_orig CELL_NEG CELL_SCALE VALUE=1u`C`REFDES=C?`
+|R 0:19_3-7-08
+API $1I2178 Linear:caph_orig 1 #=1
+API $1I2178 Linear:caph_orig 2 #=2
+EW

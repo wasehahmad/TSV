@@ -1,0 +1,372 @@
+Info: Reading netlist file "/home/strong/Documents/ECE492/pacman/pacman/hardware/main-board/project/pacman-main.net".
+
+Info: Using references to match components and footprints.
+
+* Warning: component 'T1': board footprint 'w_smd_inductors:transf_smd_ep7-8', netlist footprint 'custom_footprints:trans_flyback_LT8302'
+
+* Warning: component 'Q2': board footprint 'w_smd_trans:sot23', netlist footprint 'custom_footprints:sot346'
+
+* Warning: component 'Q1': board footprint 'w_smd_trans:sot23', netlist footprint 'custom_footprints:sot346'
+
+* Warning: component 'U4': board footprint 'w_smd_dil:so-8', netlist footprint 'custom_footprints:msop_10_ads1015'
+
+* Warning: component 'U5': board footprint 'Housings_SSOP:MSOP-10_3x3mm_Pitch0.5mm', netlist footprint 'custom_footprints:msop_10_ads1015'
+
+* Warning: component 'D6': board footprint 'w_smd_diode:do214ac', netlist footprint 'custom_footprints:do214ac'
+
+* Warning: component 'D5': board footprint 'w_smd_diode:do214ac', netlist footprint 'custom_footprints:do214ac'
+
+* Warning: component 'D7': board footprint 'w_smd_diode:do214ac', netlist footprint 'custom_footprints:do214ac'
+
+* Warning: component 'D8': board footprint 'w_smd_diode:do214ac', netlist footprint 'custom_footprints:do214ac'
+
+* Warning: component 'D9': board footprint 'w_smd_diode:do214ac', netlist footprint 'custom_footprints:do214ac'
+
+* Warning: component 'D18': board footprint 'w_smd_diode:do214ac', netlist footprint 'custom_footprints:do214ac'
+
+* Warning: component 'D19': board footprint 'w_smd_diode:do214ac', netlist footprint 'custom_footprints:do214ac'
+
+* Warning: component 'D15': board footprint 'w_smd_diode:do214ac', netlist footprint 'custom_footprints:do214ac'
+
+* Warning: component 'X1': board footprint 'w_crystal:crystal_smd_5x3.2mm', netlist footprint 'custom_footprints:crystal_TXC_7A'
+
+* Warning: component 'U13': board footprint 'w_smd_trans:tsot-6', netlist footprint 'custom_footprints:TLP2361'
+
+* Warning: component 'SW1': board footprint 'w_switch:smd_push', netlist footprint 'custom_footprints:SW_RACON_8'
+
+* Warning: component 'U10': board footprint 'w_smd_dil:mdip_6', netlist footprint 'custom_footprints:DCK'
+
+* Warning: component 'R3': board footprint 'w_smd_resistors:r_0603', netlist footprint 'custom_footprints:CSNL1206'
+
+* Warning: component 'F1': board footprint 'w_smd_resistors:r_1210', netlist footprint 'custom_footprints:C1Q'
+
+* Warning: component 'P1': board footprint 'Connector_Molex_SL:molex_sl_smd_90_2', netlist footprint 'custom_footprints:AMPCONN_4POS'
+
+* Warning: component 'U2': board footprint 'w_smd_trans:sot23-5', netlist footprint 'TO_SOT_Packages_SMD:SOT-23-5'
+
+* Warning: component 'U9': board footprint 'w_smd_trans:sot223', netlist footprint 'TO_SOT_Packages_SMD:SOT-223'
+
+* Warning: component 'R20': board footprint 'w_smd_resistors:r_0805', netlist footprint 'Resistors_SMD:R_0805_HandSoldering'
+
+* Warning: component 'R19': board footprint 'w_smd_resistors:r_0805', netlist footprint 'Resistors_SMD:R_0805_HandSoldering'
+
+* Warning: component 'R18': board footprint 'w_smd_resistors:r_0805', netlist footprint 'Resistors_SMD:R_0805_HandSoldering'
+
+* Warning: component 'R25': board footprint 'w_smd_resistors:r_0805', netlist footprint 'Resistors_SMD:R_0805_HandSoldering'
+
+* Warning: component 'R4': board footprint 'w_smd_resistors:r_0603', netlist footprint 'Resistors_SMD:R_0603_HandSoldering'
+
+* Warning: component 'R30': board footprint 'w_smd_resistors:r_0603', netlist footprint 'Resistors_SMD:R_0603_HandSoldering'
+
+* Warning: component 'R32': board footprint 'w_smd_resistors:r_0603', netlist footprint 'Resistors_SMD:R_0603_HandSoldering'
+
+* Warning: component 'R31': board footprint 'w_smd_resistors:r_0603', netlist footprint 'Resistors_SMD:R_0603_HandSoldering'
+
+* Warning: component 'R7': board footprint 'w_smd_resistors:r_0603', netlist footprint 'Resistors_SMD:R_0603_HandSoldering'
+
+* Warning: component 'R6': board footprint 'w_smd_resistors:r_0603', netlist footprint 'Resistors_SMD:R_0603_HandSoldering'
+
+* Warning: component 'R5': board footprint 'w_smd_resistors:r_0603', netlist footprint 'Resistors_SMD:R_0603_HandSoldering'
+
+* Warning: component 'R37': board footprint 'w_smd_resistors:r_0603', netlist footprint 'Resistors_SMD:R_0603_HandSoldering'
+
+* Warning: component 'R38': board footprint 'w_smd_resistors:r_0603', netlist footprint 'Resistors_SMD:R_0603_HandSoldering'
+
+* Warning: component 'R23': board footprint 'w_smd_resistors:r_0603', netlist footprint 'Resistors_SMD:R_0603_HandSoldering'
+
+* Warning: component 'R9': board footprint 'w_smd_resistors:r_0603', netlist footprint 'Resistors_SMD:R_0603_HandSoldering'
+
+* Warning: component 'R24': board footprint 'w_smd_resistors:r_0603', netlist footprint 'Resistors_SMD:R_0603_HandSoldering'
+
+* Warning: component 'R35': board footprint 'w_smd_resistors:r_0603', netlist footprint 'Resistors_SMD:R_0603_HandSoldering'
+
+* Warning: component 'R36': board footprint 'w_smd_resistors:r_0603', netlist footprint 'Resistors_SMD:R_0603_HandSoldering'
+
+* Warning: component 'R8': board footprint 'w_smd_resistors:r_0603', netlist footprint 'Resistors_SMD:R_0603_HandSoldering'
+
+* Warning: component 'R14': board footprint 'w_smd_resistors:r_0603', netlist footprint 'Resistors_SMD:R_0603_HandSoldering'
+
+* Warning: component 'R17': board footprint 'w_smd_resistors:r_0603', netlist footprint 'Resistors_SMD:R_0603_HandSoldering'
+
+* Warning: component 'R16': board footprint 'w_smd_resistors:r_0603', netlist footprint 'Resistors_SMD:R_0603_HandSoldering'
+
+* Warning: component 'R10': board footprint 'w_smd_resistors:r_0603', netlist footprint 'Resistors_SMD:R_0603_HandSoldering'
+
+* Warning: component 'R34': board footprint 'w_smd_resistors:r_0603', netlist footprint 'Resistors_SMD:R_0603_HandSoldering'
+
+* Warning: component 'R2': board footprint 'w_smd_resistors:r_0603', netlist footprint 'Resistors_SMD:R_0603_HandSoldering'
+
+* Warning: component 'R15': board footprint 'w_smd_resistors:r_0603', netlist footprint 'Resistors_SMD:R_0603_HandSoldering'
+
+* Warning: component 'R13': board footprint 'w_smd_resistors:r_0603', netlist footprint 'Resistors_SMD:R_0603_HandSoldering'
+
+* Warning: component 'R1': board footprint 'w_smd_resistors:r_0603', netlist footprint 'Resistors_SMD:R_0603_HandSoldering'
+
+* Warning: component 'D3': board footprint 'w_smd_leds:Led_0603', netlist footprint 'LEDs:LED_0603'
+
+* Warning: component 'D12': board footprint 'w_smd_leds:Led_0603', netlist footprint 'LEDs:LED_0603'
+
+* Warning: component 'D2': board footprint 'w_smd_leds:Led_0603', netlist footprint 'LEDs:LED_0603'
+
+* Warning: component 'D1': board footprint 'w_smd_leds:Led_0603', netlist footprint 'LEDs:LED_0603'
+
+* Warning: component 'U3': board footprint 'w_smd_dil:soic-16', netlist footprint 'Housings_SOIC:SOIC-16_7.5x10.3mm_Pitch1.27mm'
+
+* Warning: component 'P4': board footprint 'w_conn_strip:vasch_strip_8x2', netlist footprint 'Connect:IDC_Header_Straight_16pins'
+
+* Warning: component 'C16': board footprint 'w_smd_cap:c_elec_6.3x7.7', netlist footprint 'Capacitors_SMD:c_elec_6.3x7.7'
+
+* Warning: component 'C10': board footprint 'w_smd_cap:c_elec_10x10', netlist footprint 'Capacitors_SMD:c_elec_10x10'
+
+* Warning: component 'C11': board footprint 'w_smd_cap:c_1210', netlist footprint 'Capacitors_SMD:C_1210_HandSoldering'
+
+* Warning: component 'C15': board footprint 'w_smd_cap:c_1210', netlist footprint 'Capacitors_SMD:C_1210_HandSoldering'
+
+* Warning: component 'C9': board footprint 'w_smd_cap:c_1210', netlist footprint 'Capacitors_SMD:C_1210_HandSoldering'
+
+* Warning: component 'C14': board footprint 'w_smd_cap:c_0805', netlist footprint 'Capacitors_SMD:C_0805'
+
+* Warning: component 'C2': board footprint 'w_smd_cap:c_0603', netlist footprint 'Capacitors_SMD:C_0603_HandSoldering'
+
+* Warning: component 'C18': board footprint 'w_smd_cap:c_0603', netlist footprint 'Capacitors_SMD:C_0603_HandSoldering'
+
+* Warning: component 'C12': board footprint 'w_smd_cap:c_0603', netlist footprint 'Capacitors_SMD:C_0603_HandSoldering'
+
+* Warning: component 'C21': board footprint 'w_smd_cap:c_0603', netlist footprint 'Capacitors_SMD:C_0603_HandSoldering'
+
+* Warning: component 'C8': board footprint 'w_smd_cap:c_0603', netlist footprint 'Capacitors_SMD:C_0603_HandSoldering'
+
+* Warning: component 'C20': board footprint 'w_smd_cap:c_0603', netlist footprint 'Capacitors_SMD:C_0603_HandSoldering'
+
+* Warning: component 'C19': board footprint 'w_smd_cap:c_0603', netlist footprint 'Capacitors_SMD:C_0603_HandSoldering'
+
+* Warning: component 'C7': board footprint 'w_smd_cap:c_1210', netlist footprint 'Capacitors_SMD:C_0603_HandSoldering'
+
+* Warning: component 'C13': board footprint 'w_smd_cap:c_0603', netlist footprint 'Capacitors_SMD:C_0603_HandSoldering'
+
+* Warning: component 'C17': board footprint 'w_smd_cap:c_0603', netlist footprint 'Capacitors_SMD:C_0603_HandSoldering'
+
+* Warning: component 'C1': board footprint 'w_smd_cap:c_0603', netlist footprint 'Capacitors_SMD:C_0603_HandSoldering'
+
+* Warning: component 'C4': board footprint 'w_smd_cap:c_0603', netlist footprint 'Capacitors_SMD:C_0603_HandSoldering'
+
+* Warning: component 'C6': board footprint 'w_smd_cap:c_0603', netlist footprint 'Capacitors_SMD:C_0603_HandSoldering'
+
+* Warning: component 'C3': board footprint 'w_smd_cap:c_0603', netlist footprint 'Capacitors_SMD:C_0603_HandSoldering'
+
+* Warning: component 'C5': board footprint 'w_smd_cap:c_0603', netlist footprint 'Capacitors_SMD:C_0603_HandSoldering'
+
+* Warning: component 'C23': board footprint 'w_smd_cap:c_0603', netlist footprint 'Capacitors_SMD:C_0603_HandSoldering'
+
+* Warning: component 'C22': board footprint 'w_smd_cap:c_0603', netlist footprint 'Capacitors_SMD:C_0603_HandSoldering'
+
+Info: Checking netlist component footprint "C1:/5572610D:Capacitors_SMD:C_0603_HandSoldering".
+
+Info: Checking netlist component footprint "C2:/557225A0:Capacitors_SMD:C_0603_HandSoldering".
+
+Info: Checking netlist component footprint "C3:/5572D9B1:Capacitors_SMD:C_0603_HandSoldering".
+
+Info: Checking netlist component footprint "C4:/55726574:Capacitors_SMD:C_0603_HandSoldering".
+
+Info: Checking netlist component footprint "C5:/5572DAEA:Capacitors_SMD:C_0603_HandSoldering".
+
+Info: Checking netlist component footprint "C6:/55727969:Capacitors_SMD:C_0603_HandSoldering".
+
+Info: Checking netlist component footprint "C7:/560A91B4/56DA9A93:Capacitors_SMD:C_0603_HandSoldering".
+
+Info: Checking netlist component footprint "C8:/5574E706/561A469B:Capacitors_SMD:C_0603_HandSoldering".
+
+Info: Checking netlist component footprint "C9:/5574E706/5574EF4E:Capacitors_SMD:C_1210_HandSoldering".
+
+Info: Checking netlist component footprint "C10:/5574E706/56149C59:Capacitors_SMD:c_elec_10x10".
+
+Info: Checking netlist component footprint "C11:/5574E706/560E8698:Capacitors_SMD:C_1210_HandSoldering".
+
+Info: Checking netlist component footprint "C12:/5574E706/5574EF55:Capacitors_SMD:C_0603_HandSoldering".
+
+Info: Checking netlist component footprint "C13:/5574E706/559EAEEF:Capacitors_SMD:C_0603_HandSoldering".
+
+Info: Checking netlist component footprint "C14:/5574E706/561A342C:Capacitors_SMD:C_0805".
+
+Info: Checking netlist component footprint "C15:/5574E706/560EA637:Capacitors_SMD:C_1210_HandSoldering".
+
+Info: Checking netlist component footprint "C16:/5574E706/5574EF8D:Capacitors_SMD:c_elec_6.3x7.7".
+
+Info: Checking netlist component footprint "C17:/5574E706/559EB3D2:Capacitors_SMD:C_0603_HandSoldering".
+
+Info: Checking netlist component footprint "C18:/5574E706/5574EFA4:Capacitors_SMD:C_0603_HandSoldering".
+
+Info: Checking netlist component footprint "C19:/561EAC87/561EE3E1:Capacitors_SMD:C_0603_HandSoldering".
+
+Info: Checking netlist component footprint "C20:/560D7137/560D7928:Capacitors_SMD:C_0603_HandSoldering".
+
+Info: Checking netlist component footprint "C21:/560D7137/560D79A3:Capacitors_SMD:C_0603_HandSoldering".
+
+Info: Checking netlist component footprint "C22:/5574E706/56251D56:Capacitors_SMD:C_0603_HandSoldering".
+
+Info: Checking netlist component footprint "C23:/5574E706/56252980:Capacitors_SMD:C_0603_HandSoldering".
+
+Info: Checking netlist component footprint "C24:/5574E706/56C84061:Capacitors_SMD:C_0603_HandSoldering".
+
+Info: Checking netlist component footprint "D1:/5572956F:LEDs:LED_0603".
+
+Info: Checking netlist component footprint "D2:/557296B7:LEDs:LED_0603".
+
+Info: Checking netlist component footprint "D3:/55735E6E:LEDs:LED_0603".
+
+Info: Checking netlist component footprint "D5:/5574E706/5614A4E6:custom_footprints:do214ac".
+
+Info: Checking netlist component footprint "D6:/5574E706/560E9E47:custom_footprints:do214ac".
+
+Info: Checking netlist component footprint "D7:/5574E706/561A26BD:custom_footprints:do214ac".
+
+Info: Checking netlist component footprint "D8:/5574E706/561F00F0:custom_footprints:do214ac".
+
+Info: Checking netlist component footprint "D9:/5574E706/561F2090:custom_footprints:do214ac".
+
+Info: Checking netlist component footprint "D12:/560A91B4/560D901A:LEDs:LED_0603".
+
+Info: Checking netlist component footprint "D15:/560D7137/5618023D:custom_footprints:do214ac".
+
+Info: Checking netlist component footprint "D18:/560A91B4/562AB319:custom_footprints:do214ac".
+
+Info: Checking netlist component footprint "D19:/560A91B4/562B02FC:custom_footprints:do214ac".
+
+Info: Checking netlist component footprint "D20:/5574E706/56C84F96:footprints:sod123".
+
+Info: Checking netlist component footprint "D21:/560A91B4/56C97FC6:custom_footprints:do214ac".
+
+Info: Checking netlist component footprint "F1:/5574E706/56D7F3E2:custom_footprints:C1Q".
+
+Info: Checking netlist component footprint "J1:/5623433E/56153025:custom_footprints:conn_usb_B".
+
+Info: Checking netlist component footprint "J2:/5623433E/56260A54:Connect:DB37FD".
+
+Info: Checking netlist component footprint "J3:/5623433E/56CD8443:custom_footprints:MOLEX_RJ11".
+
+Info: Checking netlist component footprint "L1:/5574E706/560E9174:Inductors:SELF-WE-TPC_M".
+
+Info: Checking netlist component footprint "P1:/5623433E/56D7CCD6:custom_footprints:AMPCONN_4POS".
+
+Info: Checking netlist component footprint "P2:/5623433E/562C320E:Connector_Molex_SL:molex_sl_smd_90_2".
+
+Info: Checking netlist component footprint "P3:/5623433E/56151585:Connector_Molex_SL:molex_sl_smd_90_6".
+
+Info: Checking netlist component footprint "P4:/5623433E/5623747B:Connect:IDC_Header_Straight_16pins".
+
+Info: Checking netlist component footprint "P5:/5623433E/5615226C:Connector_1-27mm:JTAG_10ARM".
+
+Info: Checking netlist component footprint "Q1:/560A91B4/562ABB38:custom_footprints:sot346".
+
+Info: Checking netlist component footprint "Q2:/560A91B4/56D1463E:custom_footprints:sot346".
+
+Info: Checking netlist component footprint "Q3:/560A91B4/56D0EFAD:custom_footprints:sot346".
+
+Info: Checking netlist component footprint "Q4:/5574E706/56DA35B2:custom_footprints:sot346".
+
+Info: Checking netlist component footprint "R1:/561E7314:Resistors_SMD:R_0603_HandSoldering".
+
+Info: Checking netlist component footprint "R2:/561E731A:Resistors_SMD:R_0603_HandSoldering".
+
+Info: Checking netlist component footprint "R3:/5574E706/56D7B790:custom_footprints:CSNL1206".
+
+Info: Checking netlist component footprint "R4:/560A91B4/56D86223:Resistors_SMD:R_0603_HandSoldering".
+
+Info: Checking netlist component footprint "R5:/55716F3C:Resistors_SMD:R_0603_HandSoldering".
+
+Info: Checking netlist component footprint "R6:/55729155:Resistors_SMD:R_0603_HandSoldering".
+
+Info: Checking netlist component footprint "R7:/55729416:Resistors_SMD:R_0603_HandSoldering".
+
+Info: Checking netlist component footprint "R8:/55735E62:Resistors_SMD:R_0603_HandSoldering".
+
+Info: Checking netlist component footprint "R9:/560A91B4/56DAA10E:Resistors_SMD:R_0603_HandSoldering".
+
+Info: Checking netlist component footprint "R10:/5574E706/5617C752:Resistors_SMD:R_0603_HandSoldering".
+
+Info: Checking netlist component footprint "R13:/5574E706/561427CD:Resistors_SMD:R_0603_HandSoldering".
+
+Info: Checking netlist component footprint "R14:/5574E706/56148A93:Resistors_SMD:R_0603_HandSoldering".
+
+Info: Checking netlist component footprint "R15:/5574E706/561A10DD:Resistors_SMD:R_0603_HandSoldering".
+
+Info: Checking netlist component footprint "R16:/5574E706/5614AFEA:Resistors_SMD:R_0603_HandSoldering".
+
+Info: Checking netlist component footprint "R17:/5574E706/5614A4DF:Resistors_SMD:R_0603_HandSoldering".
+
+Info: Checking netlist component footprint "R18:/5574E706/561A34B4:Resistors_SMD:R_0805_HandSoldering".
+
+Info: Checking netlist component footprint "R19:/5574E706/56135999:Resistors_SMD:R_0805_HandSoldering".
+
+Info: Checking netlist component footprint "R20:/5574E706/5613543A:Resistors_SMD:R_0805_HandSoldering".
+
+Info: Checking netlist component footprint "R23:/560A91B4/560D9022:Resistors_SMD:R_0603_HandSoldering".
+
+Info: Checking netlist component footprint "R24:/561EAC87/561EE3D3:Resistors_SMD:R_0603_HandSoldering".
+
+Info: Checking netlist component footprint "R25:/561EAC87/561EE3CB:Resistors_SMD:R_0805_HandSoldering".
+
+Info: Checking netlist component footprint "R30:/5574E706/563343E2:Resistors_SMD:R_0603_HandSoldering".
+
+Info: Checking netlist component footprint "R31:/5574E706/563371CA:Resistors_SMD:R_0603_HandSoldering".
+
+Info: Checking netlist component footprint "R32:/5574E706/56336F03:Resistors_SMD:R_0603_HandSoldering".
+
+Info: Checking netlist component footprint "R34:/5629F005:Resistors_SMD:R_0603_HandSoldering".
+
+Info: Checking netlist component footprint "R35:/5623433E/562BA965:Resistors_SMD:R_0603_HandSoldering".
+
+Info: Checking netlist component footprint "R36:/5623433E/562BAD35:Resistors_SMD:R_0603_HandSoldering".
+
+Info: Checking netlist component footprint "R37:/560A91B4/562A49C0:Resistors_SMD:R_0603_HandSoldering".
+
+Info: Checking netlist component footprint "R38:/560A91B4/562A59DB:Resistors_SMD:R_0603_HandSoldering".
+
+Info: Checking netlist component footprint "RLY1:/560A91B4/56C8F931:custom_footprints:relay_G5LE_1A4".
+
+Info: Checking netlist component footprint "RLY2:/560A91B4/56DBD4FE:custom_footprints:RLY_T9AS1D12-5".
+
+Info: Checking netlist component footprint "SW1:/55715F36:custom_footprints:SW_RACON_8".
+
+Info: Checking netlist component footprint "T1:/5574E706/557BAF56:custom_footprints:trans_flyback_LT8302".
+
+Info: Checking netlist component footprint "U1:/55247ABB:Housings_QFP:TQFP-64_14x14mm_Pitch0.8mm".
+
+Info: Checking netlist component footprint "U2:/558A42AE:TO_SOT_Packages_SMD:SOT-23-5".
+
+Info: Checking netlist component footprint "U3:/5574E706/560B0C11:Housings_SOIC:SOIC-16_7.5x10.3mm_Pitch1.27mm".
+
+Info: Checking netlist component footprint "U4:/5574E706/56D798E2:custom_footprints:msop_10_ads1015".
+
+Info: Checking netlist component footprint "U5:/5574E706/56C794D3:custom_footprints:msop_10_ads1015".
+
+Info: Checking netlist component footprint "U6:/5574E706/560E8451:custom_footprints:TSSOP16_LTC3638".
+
+Info: Checking netlist component footprint "U7:/5574E706/56145C36:custom_footprints:SOIC-8-1EP_3.9x4.9mm_Pitch1.27mm".
+
+Info: Checking netlist component footprint "U8:/5574E706/559EAA55:Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm".
+
+Info: Checking netlist component footprint "U9:/5574E706/5574EF3F:TO_SOT_Packages_SMD:SOT-223".
+
+Info: Checking netlist component footprint "U10:/560A91B4/56D82DAA:custom_footprints:DCK".
+
+Info: Checking netlist component footprint "U11:/561EAC87/561EE3B4:Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm".
+
+Info: Checking netlist component footprint "U12:/560D7137/560D798D:Housings_SSOP:SSOP-28_5.3x10.2mm_Pitch0.65mm".
+
+Info: Checking netlist component footprint "U13:/560A91B4/56DA73C4:custom_footprints:TLP2361".
+
+Info: Checking netlist component footprint "X1:/55722FB6:custom_footprints:crystal_TXC_7A".
+
+Error: Component 'J3' pad '8' not found in footprint 'custom_footprints:MOLEX_RJ11'
+
+Error: Component 'J3' pad '7' not found in footprint 'custom_footprints:MOLEX_RJ11'
+
+Error: Component 'P1' pad '3' not found in footprint 'Connector_Molex_SL:molex_sl_smd_90_2'
+
+Error: Component 'P1' pad '4' not found in footprint 'Connector_Molex_SL:molex_sl_smd_90_2'
+
+Error: Component 'U4' pad '10' not found in footprint 'w_smd_dil:so-8'
+
+Error: Component 'U4' pad '9' not found in footprint 'w_smd_dil:so-8'
+

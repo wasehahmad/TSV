@@ -1,0 +1,3 @@
+viewbase: Error 234: Error - The WIR file for SENSORARRAY.1 has error(s), correct and recheck the schematic:
+viewbase: Note 236:          - Schematic pin OB_IN_NEG at (240, 840) is in schematic but not in corresponding symbol.
+viewbase: Note 236:          - Schematic pin OB_IN_POS at (110, 840) is in schematic but not in corresponding symbol.

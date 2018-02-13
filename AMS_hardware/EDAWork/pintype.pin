@@ -1,0 +1,4 @@
+[PINCOMPONENTS]
+PORT_IN=Pins_etc:in.1
+PORT_OUT=Pins_etc:out.1
+PORT_BI=Pins_etc:bi.1

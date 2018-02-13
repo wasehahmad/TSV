@@ -1,0 +1,16 @@
+
+
+
+bypass                             Thursday, February 21, 2013 0:47 am                              Page  1
+
+
+ #  QTY   REFDES         DEVICE               PACKAGE         VALUE      DIGIKEY              PRICE  TOTAL 
+-----------------------------------------------------------------------------------------------------------
+ 1   1     D2             LED                  LED0805                    VLMS1300-GSO8CT-ND   0.50     0.50
+ 2   1     Q1             TIP102               TO-220                     TIP102TU-ND          0.91     0.91
+ 3   1     RBASE          CHIPRES              0805            500        RMCF0805FT499RCT-ND  0.04     0.04
+ 4   1     RLED           CHIPRES              0805            75         RMCF0805FT75R0CT-ND  0.04     0.04
+ 5   1     RPOW           PWR220T              TO-220          0.75       PWR220T-35-1002J-ND  4.00     4.00
+    --                                                                                                ------
+     5                                                                                                  5.49
+

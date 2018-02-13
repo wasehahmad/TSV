@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Generator" content="Microsoft Word 97">
+<meta name="GENERATOR" content="Mozilla/4.51 [en] (Win95; I) [Netscape]"><title>BMP2ASC Tool</title></head><body link="#0000ff">
+<center>
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: TimesNewRomanPSMT; color: black;"><span style="font-weight: bold;">BMP TO ASCII TOOL Directions.</span><o:p></o:p></span></p>
+
+
+<p class="MsoNormal" style="text-align: center;" align="center"><span style="font-family: TimesNewRomanPSMT; color: black;"><!--[if !supportEmptyParas]-->&nbsp;<!--[endif]--><o:p></o:p></span></p>
+
+
+
+
+<p class="MsoNormal" style=""><span style="font-family: TimesNewRomanPSMT; color: black;">This tool was written by
+James Tidman (<a href="mailto:jtidman@flash.net">jtidman@flash.net</a>) and was
+originally available from<br>
+<a href="http://www.flash.net/%7Ejtidman/BMP2ASC/BMP2ASC.html">http://www.flash.net/~jtidman/BMP2ASC/BMP2ASC.html</a><br>
+</span></p>
+<p class="MsoNormal" style=""><span style="font-family: TimesNewRomanPSMT; color: black;"><o:p></o:p></span></p>
+
+
+
+<p class="MsoNormal" style=""><span style="font-family: TimesNewRomanPSMT; color: black;">The file required is here.<br>
+<a href="http://www.ashevillecommunity.org/hawker/pcb/pads/bmp2asc.exe">Click Here for BMP2ASC.EXE</a><br>
+</span></p>
+<p class="MsoNormal" style=""><span style="font-family: TimesNewRomanPSMT; color: black;">&nbsp;&nbsp; Alas the web site is not
+there anymore and many people have had trouble using this utility.<span style="">&nbsp; </span>For this reason I have made directions for
+it&#8217;s use &#8211; they are taken from the original HTML made by James with some
+clarification from me.<span style="">&nbsp; </span>These directions assume you are using PADS PCB 4.x or higher.&nbsp; If you have any
+questions please email me at <a href="mailto:Hawker@Ashevillecommunity.orgt">Hawker@ashevillecommunity.org</a><o:p></o:p></span></p>
+</center>
+<br>
+If your on the PADS ListServer you probably know Mike Poorman.<br>
+This link is just to embarrass him.<br>
+<a href="http://www.ashevillecommunity.org/hawker/pcb/pads/mike.jpg">Mike Poorman as Product Tester</a><br>
+<br>
+<br>
+Here is a document I wrote on Embedding Drill tables in PADS PCB<br>
+<a href="http://www.ashevillecommunity.org/hawker/pcb/pads/embedding_drill_tables.doc">embedding_drill_tables.doc</a><br>
+<br>
+<br>
+Here is a document Dave White of Mentor <a href="mailto:dave_white@mentorg.com">dave_white@mentorg.com</a> gave me on comparing net lists with CAM350.<br>
+<a href="http://www.ashevillecommunity.org/hawker/pcb/pads/Netlist%20compare%20in%20CAM350%20V8.pdf">Netlist compare in CAM350 V8.pdf</a><br>
+<br>
+Utility to Port PADS Netlest from ORCARD with full atributes from chuck.tidwell@silabs.com.<br>
+<a href="http://www.ashevillecommunity.org/hawker/pcb/pads/PowerNET_v2_0b03.zip">PowerNET_v2_0b03.zip</a><br>
+
+
+<br>
+
+<p><font size="-1">Why?</font>
+</p><p><font size="-1">This tool is used to import company or regulatory logos,
+
+or other graphical elements into the PADS database. These images can then
+
+be placed on the silkscreen, or any other layer.</font>
+</p><p><font size="-1">How?</font>
+</p><p><font size="-1">This tool will scan a windows BMP (two color only) file
+
+and convert it into a PADS .ASC file format. This file can then be imported
+
+into the design database. In scanning the BMP file, a left to right, top
+
+to bottom approach is used. Each continuous group of white pixels is translated
+
+into a single line segment in the ASC file.</font>
+</p><p><font size="-1">What is the best method to use?</font>
+</p><p><font size="-1">Any two color, black and white BMP file can be converted.
+
+However, for best results, please use the following method (we&#8217;ll talk
+
+in Mils, and try to show examples):</font>
+</p><p><font size="-1">First, we need the image we need to&nbsp; convert the image to a size and format we can use.<br></font></p><p style="text-align: center;"><img src="bmp2asc_files/creek1.jpg" alt="" title="" style="border: 2px solid; width: 536px; height: 300px;" vspace="5" align="middle" hspace="5">
+</p><p><font size="-1">This is the original&nbsp; Image.&nbsp; First we need to convert to 2 colors and make it a BMP (Windows BitMap File).</font></p>
+<p><font size="-1">I would like to take this time to plug my favorite tool
+
+for the graphical work: PaintShop Pro. You can get it from <a href="http://www.jasc.com/">http://www.jasc.com/</a>.
+
+This is a useful tool for grabbing images from the screen, converting them
+
+to black and white, scaling them to fit and saving them in windows bitmap
+
+format.<br>
+</font></p>
+<p style="text-align: left;"><font size="-1">If using PSP use Colors /&nbsp; Decrease Color Depth / 2 colors.&nbsp; The image now looks like this.<br>
+</font></p>
+<p style="text-align: center;"><img src="bmp2asc_files/creek2.jpg" alt="" title="" style="border: 2px solid; width: 536px; height: 300px;" vspace="5" align="middle" hspace="5"></p>
+<p><font size="-1">Now Use Colors Negative Image to get this result.<br>
+</font></p>
+<div style="text-align: center;"><img src="bmp2asc_files/creek3.jpg" alt="" title="" style="border: 2px solid; width: 536px; height: 300px;" vspace="5" hspace="5"><br>
+</div>
+<p></p>
+<p><font size="-1">Lastly save as a BMP file - if the file is very large you might want to scale it first.<br>
+When the image is imported the ration is 1 pixel = 2 mills.&nbsp; So if
+you want the image to be 500mills x 250mills draw it as 250x125
+pixels.&nbsp; I usually take what I get and use PADS to scale it as I
+need for the application.<br>
+</font></p>
+<p><font size="-1">Once this bit map is saved in 2 color mode, we run the
+
+program with the following arguments (assuming the program and the bit
+
+map are in the same directory):</font>
+</p><p><big><big><tt><font size="1"><big><big>BMP2ASC input.bmp output.asc 2 26 0 0<br>
+The format for this command is BMP2ASC &lt;output file name&gt;
+&lt;line width&gt; &lt;layer&gt; &lt;origin X&gt; &lt;origin Y&gt;.</big></big></font></tt></big></big></p>
+<p><font size="-1">This will scan the data and convert it to horizontal lines
+
+2 mils wide. These lines will be placed on layer 26 (silkscreen top), and
+
+the lower left-hand corner of the image will be at 0,0.</font>
+</p>
+<p><font size="-1">Next open up a new PADS file, and import the ASC file <span style="font-weight: bold;">INTO AN EMPTY FILE</span>&nbsp;
+(FILE/ NEW&nbsp; FILE/IMPORT/ASCII FILE). Be sure to set the color and
+the minimum display width:&nbsp; Also be sure that the silk layer is
+turned on (has a color assigned to it).&nbsp; You will probably want to
+hit "home" to find your image.</font>
+</p><p style="text-align: center;"><img style="border: 2px solid; width: 419px; height: 497px;" src="bmp2asc_files/Preferences.jpg" title="" alt="" vspace="5" hspace="5">
+</p><p><font size="-1"></font></p>
+<p style="text-align: center;"><img src="bmp2asc_files/displaycolor.jpg" style="border: 2px solid; height: 493px; width: 563px;" title="" alt="" vspace="5" hspace="5">
+</p>
+<p><font size="-1">Select the complete item, and then combine it (Right
+Mouse Button - Select Anything - CTRL A - Right Mouse Button Combine).
+This may take a while for complex images. Once complete, select save
+to library from the mouse right-click menu when in the drafting..</font>
+</p>
+<p><font size="-1">You can now past it in to existing designs using the paste
+
+from library button bar:<br>
+If it is not scaled the way you want you may change scale and layer. Example scale 2:1 and move to copper layer.<br>
+To Scale - place the image where you want.<br>
+RMB - SELECT SHAPE - (select shape) - RMB EXPLODE&nbsp; - RMB SCALE <br>
+</font></p>
+<p style="text-align: center;"><img src="bmp2asc_files/scale.jpg" style="border: 2px solid; width: 218px; height: 194px;" title="" alt="" vspace="5" hspace="5">
+</p>
+<p>This example makes the output 1/2 the size of the original. Note the
+PADS scale command currently always puts 2d lines on the top
+layer.&nbsp; Next select the object - RMB Query Modify - change the
+layer back to silk (or where ever you want it).&nbsp; <br>
+</p>
+<p style="text-align: center;"><img src="bmp2asc_files/query.jpg" style="border: 2px solid; width: 326px; height: 329px;" title="" alt="" vspace="5" hspace="5">
+</p>
+<p>Now RBM Combine and your done.</p>
+<p><br>
+</p>
+<p>
+</p><p><font size="-1"></font></p><p><font size="-1">Regards,</font>
+</p><p><font size="-1">James Tidman<br>
+</font><a href="mailto:jtidman@flash.net">jtidman@flash.net</a><br>
+</p>
+<p>Rick Shaich<br>
+<a href="mailto:Hawker@AshevilleCommunity.org">Hawker@AshevilleCommunity.org</a><br>
+
+</p>
+</body></html>

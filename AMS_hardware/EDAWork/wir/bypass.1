@@ -1,0 +1,94 @@
+| Wirelist created using version 6.0 
+V 6.0
+DW bypass
+AS Pins_etc:in Pin!Order=IN
+AS Pins_etc:in IN
+AS Pins_etc:in PINORDER=IN
+AP Pins_etc:in 1 PINTYPE=IN
+|Q Linear:chipres 1
+AS Linear:chipres INOV_VER_REC=15:52:28_3-8-14
+AS Linear:chipres DEVICE=CHIPRES
+AS Linear:chipres PKG_TYPE=0805
+AS Linear:chipres Prefix=R
+AS Linear:chipres Order=R$
+AS Linear:chipres REFDES=R?
+AS Linear:chipres VALUE=1K
+AS Linear:chipres PINORDER=1 2
+AP Linear:chipres 1 #=1
+AP Linear:chipres 1 PINTYPE=BI
+AP Linear:chipres 2 #=2
+AP Linear:chipres 2 PINTYPE=BI
+|Q Transducers:led 1
+AS Transducers:led INOV_VER_REC=16:09:31_3-8-14
+AS Transducers:led DEVICE=LED
+AS Transducers:led Model=LUXSTAR-1WATT
+AS Transducers:led Order=MODEL$
+AS Transducers:led PKG_TYPE=LED0805
+AS Transducers:led Prefix=X
+AS Transducers:led REFDES=D?
+AS Transducers:led PINORDER=N P
+AP Transducers:led 1 #=1
+AP Transducers:led 1 PINTYPE=OUT
+AP Transducers:led 2 #=2
+AP Transducers:led 2 PINTYPE=IN
+|Q Linear:pwrres 1
+AS Linear:pwrres INOV_VER_REC=16:11:9_3-8-14
+AS Linear:pwrres DEVICE=PWR220T
+AS Linear:pwrres VALUE=0.5K
+AS Linear:pwrres PKG_TYPE=TO-220-RES-UP
+AS Linear:pwrres Prefix=R
+AS Linear:pwrres Order=R$
+AS Linear:pwrres REFDES=R?
+AS Linear:pwrres PINORDER=1 2
+AP Linear:pwrres 1 #=1
+AP Linear:pwrres 1 PINTYPE=BI
+AP Linear:pwrres 2 #=2
+AP Linear:pwrres 2 PINTYPE=BI
+|Q Active_Linear:tip102 1
+AS Active_Linear:tip102 INOV_VER_REC=16:12:41_3-8-14
+AS Active_Linear:tip102 DEVICE=TIP102
+AS Active_Linear:tip102 Model=TIP102
+AS Active_Linear:tip102 PKG_TYPE=TO-220-UP-HEATSINK
+AS Active_Linear:tip102 REFDES=Q?
+AS Active_Linear:tip102 Order=MODEL$
+AS Active_Linear:tip102 Prefix=X
+AS Active_Linear:tip102 PINORDER=B C E
+AP Active_Linear:tip102 1 #=1
+AP Active_Linear:tip102 1 PINTYPE=IN
+AP Active_Linear:tip102 2 #=2
+AP Active_Linear:tip102 2 PINTYPE=BI
+AP Active_Linear:tip102 3 #=3
+AP Active_Linear:tip102 3 PINTYPE=BI
+P Pins_etc:in CELL_POS
+I CELL_POS Pins_etc:in CELL_POS 
+P Pins_etc:in CELL_NEG
+I CELL_NEG Pins_etc:in CELL_NEG 
+P Pins_etc:in BYPASS
+I BYPASS Pins_etc:in BYPASS 
+M Linear:chipres $1I579
+I $1I579 Linear:chipres $1N557 CELL_POS REFDES=R9`VALUE=470`
+|R 15:52:28_3-8-14
+API $1I579 Linear:chipres 1 #=1
+API $1I579 Linear:chipres 2 #=2
+M Linear:chipres $1I572
+I $1I572 Linear:chipres BYPASS $1N567 REFDES=R8`VALUE=383`
+|R 15:52:28_3-8-14
+API $1I572 Linear:chipres 1 #=1
+API $1I572 Linear:chipres 2 #=2
+M Transducers:led $1I580
+I $1I580 Transducers:led $1N564 $1N557 REFDES=D2`VALUE=RED`
+|R 16:09:31_3-8-14
+API $1I580 Transducers:led 1 #=1
+API $1I580 Transducers:led 2 #=2
+M Linear:pwrres $1I578
+I $1I578 Linear:pwrres $1N564 CELL_POS REFDES=RPOW`VALUE=0.75`
+|R 16:11:9_3-8-14
+API $1I578 Linear:pwrres 1 #=1
+API $1I578 Linear:pwrres 2 #=2
+M Active_Linear:tip102 $1I563
+I $1I563 Active_Linear:tip102 $1N567 $1N564 CELL_NEG PKG_TYPE=TO-220-UP-HEATSINK`REFDES=Q1`
+|R 16:12:41_3-8-14
+API $1I563 Active_Linear:tip102 1 #=1
+API $1I563 Active_Linear:tip102 2 #=2
+API $1I563 Active_Linear:tip102 3 #=3
+EW

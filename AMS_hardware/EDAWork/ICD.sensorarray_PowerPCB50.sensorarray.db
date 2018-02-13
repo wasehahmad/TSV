@@ -1,0 +1,168 @@
+
+(pcb "ICD.sensorarray_PowerPCB50.sensorarray.db"
+	(version "4.1.0")
+	(units "basic")
+	(config_properties
+		(attributes
+			(attval "PcbConfigName" "c:\mentorgraphics\2004\standard\powerpcb50.cfg")
+			(attval "CnsFile" "c:\mentorgraphics\2004\standard\isis\powerpcb50.cns")
+			(attval "BeAdapter" "PowerPCB50")
+			(attval "FeAdapter" "DxDesigner")
+			(attval "SYSCONFIG" "pcbfwd")
+			(attval "LASTSYSCONFIG" "pcbfwd")))
+	(project_properties
+		(attributes
+			(attval "EPLANNER_DSN" "1.0")))
+	(files_ext
+		(file_ext "sensorarray.pxr" "1360791502"))
+	(part_library
+		(part "RESH")
+		(logical_part_mapping "RESH"
+			(comp "R4" "R3" "R2" "R1"))
+		(logical_part "RESH"
+			(slots
+				(slot "RESH__RESH_1"
+					(attributes
+						(attval "PKG_TYPE" "RESAD300W20L150D100-I")
+						(attval "REFDES" "R?"))))
+			(pin 2  5 "RESH__RESH_1" 0 "2" 0)
+			(pin 1  5 "RESH__RESH_1" 0 "1" 0))
+		(part "MCP6242")
+		(logical_part_mapping "MCP6242"
+			(comp "U2" "U1"))
+		(logical_part "MCP6242"
+			(slots
+				(slot "MCP6242__MCP6242_1"
+					(attributes
+						(attval "PKG_TYPE" "SO8")
+						(attval "REFDES" "U?"))))
+			(pin 4  0 "MCP6242__MCP6242_1" 0 "VSS" 0)
+			(pin 7  0 "MCP6242__MCP6242_1" 0 "VOUTB" 0)
+			(pin 1  0 "MCP6242__MCP6242_1" 0 "VOUTA" 0)
+			(pin 6  0 "MCP6242__MCP6242_1" 0 "VINB-" 0)
+			(pin 5  0 "MCP6242__MCP6242_1" 0 "VINB+" 0)
+			(pin 2  0 "MCP6242__MCP6242_1" 0 "VINA-" 0)
+			(pin 3  0 "MCP6242__MCP6242_1" 0 "VINA+" 0)
+			(pin 8  0 "MCP6242__MCP6242_1" 0 "VDD" 0))
+		(part "MCP130")
+		(logical_part_mapping "MCP130"
+			(comp "U3"))
+		(logical_part "MCP130"
+			(slots
+				(slot "MCP9700__MCP130_1"
+					(attributes
+						(attval "DEVICE" "MCP130")
+						(attval "PKG_TYPE" "SOT23")
+						(attval "REFDES" "U?"))))
+			(pin 1  4 "MCP9700__MCP130_1" 0 "VOUT" 0)
+			(pin 3  3 "MCP9700__MCP130_1" 0 "VDD" 0)
+			(pin 2  3 "MCP9700__MCP130_1" 0 "GND" 0))
+		(part "CAPV")
+		(logical_part_mapping "CAPV"
+			(comp "C1"))
+		(logical_part "CAPV"
+			(slots
+				(slot "CAPV__CAPV_1"
+					(attributes
+						(attval "REFDES" "C?"))))
+			(pin 2  5 "CAPV__CAPV_1" 0 "2" 0)
+			(pin 1  5 "CAPV__CAPV_1" 0 "1" 0)))
+	(placement
+		(component "SOT23"
+			(place "U3" 0.0 0.0 top 0.0
+				(comp_pin "1" 0.0 0.0 "OUT")
+				(comp_pin "3" 0.0 0.0 "IN")
+				(comp_pin "2" 0.0 0.0 "IN"))
+			(attributes
+				(attval "DEVICE" "MCP130")
+				(attval "REFDES" "U3")))
+		(component "SO8"
+			(place "U2" 0.0 0.0 top 0.0
+				(comp_pin "4" 0.0 0.0)
+				(comp_pin "7" 0.0 0.0)
+				(comp_pin "1" 0.0 0.0)
+				(comp_pin "6" 0.0 0.0)
+				(comp_pin "5" 0.0 0.0)
+				(comp_pin "2" 0.0 0.0)
+				(comp_pin "3" 0.0 0.0)
+				(comp_pin "8" 0.0 0.0))
+			(attributes
+				(attval "DEVICE" "MCP6242")
+				(attval "REFDES" "U2")))
+		(component "SO8"
+			(place "U1" 0.0 0.0 top 0.0
+				(comp_pin "4" 0.0 0.0)
+				(comp_pin "7" 0.0 0.0)
+				(comp_pin "1" 0.0 0.0)
+				(comp_pin "6" 0.0 0.0)
+				(comp_pin "5" 0.0 0.0)
+				(comp_pin "2" 0.0 0.0)
+				(comp_pin "3" 0.0 0.0)
+				(comp_pin "8" 0.0 0.0))
+			(attributes
+				(attval "DEVICE" "MCP6242")
+				(attval "REFDES" "U1")))
+		(component "RESAD300W20L150D100-I"
+			(place "R4" 0.0 0.0 top 0.0
+				(comp_pin "2" 0.0 0.0 "BI")
+				(comp_pin "1" 0.0 0.0 "BI"))
+			(attributes
+				(attval "DEVICE" "RESH")
+				(attval "REFDES" "R4")))
+		(component "RESAD300W20L150D100-I"
+			(place "R3" 0.0 0.0 top 0.0
+				(comp_pin "2" 0.0 0.0 "BI")
+				(comp_pin "1" 0.0 0.0 "BI"))
+			(attributes
+				(attval "DEVICE" "RESH")
+				(attval "REFDES" "R3")))
+		(component "RESAD300W20L150D100-I"
+			(place "R2" 0.0 0.0 top 0.0
+				(comp_pin "2" 0.0 0.0 "BI")
+				(comp_pin "1" 0.0 0.0 "BI"))
+			(attributes
+				(attval "DEVICE" "RESH")
+				(attval "REFDES" "R2")))
+		(component "RESAD300W20L150D100-I"
+			(place "R1" 0.0 0.0 top 0.0
+				(comp_pin "2" 0.0 0.0 "BI")
+				(comp_pin "1" 0.0 0.0 "BI"))
+			(attributes
+				(attval "DEVICE" "RESH")
+				(attval "REFDES" "R1")))
+		(component "C1"
+			(place "C1" 0.0 0.0 top 0.0
+				(comp_pin "2" 0.0 0.0 "BI")
+				(comp_pin "1" 0.0 0.0 "BI"))
+			(attributes
+				(attval "DEVICE" "CAPV")
+				(attval "REFDES" "C1"))))
+	(functions
+		(func "$1I1605" "" "U3" 1)
+		(func "$1I1622" "" "U2" 1)
+		(func "$1I1581" "" "U1" 1)
+		(func "$1I1617" "" "R4" 1)
+		(func "$1I1616" "" "R3" 1)
+		(func "$1I1585" "" "R2" 1)
+		(func "$1I1584" "" "R1" 1)
+		(func "$1I1609" "" "C1" 1))
+	(network
+		(net "$1N1594"
+			(pins U1-2 R1-1 R2-2))
+		(net "$1N1610"
+			(pins U1-5 C1-1 U3-1))
+		(net "$1N1615"
+			(pins U1-6 R3-1 R4-2))
+		(net "CELL_NEG"
+			(pins U1-4 C1-2 U3-2 R4-1))
+		(net "CELL_POS"
+			(pins U1-8 R2-1))
+		(net "TEMP"
+			(pins U1-7 R3-2))
+		(net "VOLT"
+			(pins U1-1 R1-2))
+		(net "V_REF"
+			(pins U1-3))
+		(net "V_REG"
+			(pins U3-3)))
+	(network_electrical))

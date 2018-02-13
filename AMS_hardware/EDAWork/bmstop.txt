@@ -1,0 +1,24 @@
+Part Lister output for bmstop
+Generated on Wednesday, April 16, 2014
+#   QTY   VALUE      DEVICE     REFDES                    PKG_TYPE       
+-------------------------------------------------------------------------
+ 1    1   680 PF     CHIPCAP    C2                        0805           
+ 2    1   1 UF       CHIPCAP    C3                        0805           
+ 3    1   RED        LED        D2                        LED0805        
+ 4    1   YELLOW     LED        D3                        LED0805        
+ 5    1   GREEN      LED        D4                        LED0805        
+ 6    1   10UH       SRN8040    L1                        SRN8040        
+ 7    1   470        CHIPRES    R1                        0805           
+ 8    1   1.02M      CHIPRES    R3                        0805           
+ 9    1   324K       CHIPRES    R4                        0805           
+10    1   383        CHIPRES    R8                        0805           
+11    1   36         CHIPRES    R9                        0805           
+12    1   200K       CHIPRES    R11                       0805           
+13    1   100        CHIPRES    R14                       0805           
+14    1   0.75       PWR220T    RPOW                      TO-220-RES-UP  
+15    1   3.3V       MCP1825S   U3                        SOT-223-3      
+16    2   200        CHIPRES    R6,R7                     0805           
+17    2   100K       CHIPRES    R5,R10                    0805           
+18    3   10 UF      CHIPCAP    C4,C5,C9                  0805           
+19    3   10K        CHIPRES    R2,R12,R13                0805           
+20    5   0.1 UF     CHIPCAP    C1,C6,C7,C8,C10           0805           

@@ -1,0 +1,286 @@
+** ECO In Report **
+
+Wed Mar 30 15:13:44 2011
+
+Input  File : G:\EDAWork\PCB\Video\videotop.eco
+Current Job : video.pcb
+
+
+
+Line 6 , Section *PART*
+U3  BA7654F
+* Failed to get SOIC-8 from library
+
+Line 7 , Section *PART*
+U4  BA7654F
+* Failed to get SOIC-8 from library
+
+Line 9 , Section *PART*
+C1  CHIPCAP
+* Failed to get 0805 from library
+
+Line 10 , Section *PART*
+C2  CHIPCAP
+* Failed to get 0805 from library
+
+Line 11 , Section *PART*
+C3  CHIPCAP
+* Failed to get 0805 from library
+
+Line 12 , Section *PART*
+C4  CHIPCAP
+* Failed to get 0805 from library
+
+Line 13 , Section *PART*
+C5  CHIPCAP
+* Failed to get 0805 from library
+
+Line 14 , Section *PART*
+C6  CHIPCAP
+* Failed to get 0805 from library
+
+Line 15 , Section *PART*
+C7  CHIPCAP
+* Failed to get 0805 from library
+
+Line 16 , Section *PART*
+C8  CHIPCAP
+* Failed to get 0805 from library
+
+Line 17 , Section *PART*
+C9  CHIPCAP
+* Failed to get 0805 from library
+
+Line 18 , Section *PART*
+R1  CHIPRES
+* Failed to get 0805 from library
+
+Line 19 , Section *PART*
+R2  CHIPRES
+* Failed to get 0805 from library
+
+Line 20 , Section *PART*
+R3  CHIPRES
+* Failed to get 0805 from library
+
+Line 21 , Section *PART*
+R4  CHIPRES
+* Failed to get 0805 from library
+
+Line 22 , Section *PART*
+R5  CHIPRES
+* Failed to get 0805 from library
+
+Line 23 , Section *PART*
+R6  CHIPRES
+* Failed to get 0805 from library
+
+Line 24 , Section *PART*
+R7  CHIPRES
+* Failed to get 0805 from library
+
+Line 25 , Section *PART*
+R8  CHIPRES
+* Failed to get 0805 from library
+
+Line 26 , Section *PART*
+J3  HEADER1
+* Failed to get HOLE080 from library
+
+Line 27 , Section *PART*
+J4  HEADER1
+* Failed to get HOLE080 from library
+
+Line 28 , Section *PART*
+J5  HEADER1
+* Failed to get HOLE080 from library
+
+Line 29 , Section *PART*
+J6  HEADER1
+* Failed to get HOLE080 from library
+
+Line 30 , Section *PART*
+J7  HEADER1
+* Failed to get HOLE080 from library
+
+Line 31 , Section *PART*
+J1  HEADER3
+* Failed to get SIP3-1P5MM from library
+
+Line 32 , Section *PART*
+J2  HEADER8X2
+* Failed to get HEADER2 from library
+
+Line 33 , Section *PART*
+U1  LM1881
+* Failed to get SOIC-8 from library
+
+Line 34 , Section *PART*
+U2  THS7316
+* Failed to get SOIC-8 from library
+
+Line 37 , Section *NET*
+C3.2  U2.3
+* Part name C3 not found
+* Part name U2 not found
+
+Line 39 , Section *NET*
+R4.2  U2.6
+* Part name R4 not found
+* Part name U2 not found
+
+Line 41 , Section *NET*
+U2.1  U3.7
+* Part name U2 not found
+* Part name U3 not found
+
+Line 43 , Section *NET*
+R8.2  U2.8
+* Part name R8 not found
+* Part name U2 not found
+
+Line 45 , Section *NET*
+R4.1  R3.2  U3.3
+* Part name R4 not found
+* Part name R3 not found
+* Part name U3 not found
+
+Line 47 , Section *NET*
+U4.1  R5.1  C1.2  R6.2
+* Part name U4 not found
+* Part name R5 not found
+* Part name C1 not found
+* Part name R6 not found
+
+Line 49 , Section *NET*
+U3.1  U4.7
+* Part name U3 not found
+* Part name U4 not found
+
+Line 51 , Section *NET*
+C2.1  R6.1  R7.2  U4.3
+* Part name C2 not found
+* Part name R6 not found
+* Part name R7 not found
+* Part name U4 not found
+
+Line 53 , Section *NET*
+U1.2  C4.2
+* Part name U1 not found
+* Part name C4 not found
+
+Line 55 , Section *NET*
+C11.1  R2.2  U1.6
+* Part name R2 not found
+* Part name U1 not found
+
+Line 57 , Section *NET*
+J2.3  U1.5
+* Part name J2 not found
+* Part name U1 not found
+
+Line 59 , Section *NET*
+U1.1  J2.9
+* Part name U1 not found
+* Part name J2 not found
+
+Line 61 , Section *NET*
+J2.5  U1.7
+* Part name J2 not found
+* Part name U1 not found
+
+Line 63 , Section *NET*
+J2.13  U3.2
+* Part name J2 not found
+* Part name U3 not found
+
+Line 65 , Section *NET*
+J2.11  U4.2
+* Part name J2 not found
+* Part name U4 not found
+
+Line 67 , Section *NET*
+J3.1  J5.1  J6.1  J4.1  J7.1  R1.1  R2.1
+* Part name J3 not found
+* Part name J5 not found
+* Part name J6 not found
+* Part name J4 not found
+* Part name J7 not found
+* Part name R1 not found
+* Part name R2 not found
+
+Line 68 , Section *NET*
+C1.1  R3.1  J2.10  J2.12  J2.14  J2.16  J1.2
+* Part name C1 not found
+* Part name R3 not found
+* Part name J2 not found
+* Part name J2 not found
+* Part name J2 not found
+* Part name J2 not found
+* Part name J1 not found
+
+Line 69 , Section *NET*
+C8.2  C11.2  C5.2  C6.2  C7.2  C9.2  R5.2
+* Part name C8 not found
+* Part name C5 not found
+* Part name C6 not found
+* Part name C7 not found
+* Part name C9 not found
+* Part name R5 not found
+
+Line 70 , Section *NET*
+U1.4  J2.4  U3.4  U4.4  U2.5  J2.6  J2.8
+* Part name U1 not found
+* Part name J2 not found
+* Part name U3 not found
+* Part name U4 not found
+* Part name U2 not found
+* Part name J2 not found
+* Part name J2 not found
+
+Line 71 , Section *NET*
+U3.8  U4.8
+* Part name U3 not found
+* Part name U4 not found
+
+Line 73 , Section *NET*
+J2.1  J1.3
+* Part name J2 not found
+* Part name J1 not found
+
+Line 75 , Section *NET*
+C8.1  C5.1  C6.1  C7.1  C9.1  R7.1  J2.2
+* Part name C8 not found
+* Part name C5 not found
+* Part name C6 not found
+* Part name C7 not found
+* Part name C9 not found
+* Part name R7 not found
+* Part name J2 not found
+
+Line 76 , Section *NET*
+C2.2  U2.4  U3.6  U4.6  U1.8
+* Part name C2 not found
+* Part name U2 not found
+* Part name U3 not found
+* Part name U4 not found
+* Part name U1 not found
+
+Line 78 , Section *NET*
+J1.1  C4.1  C3.1  R1.2
+* Part name J1 not found
+* Part name C4 not found
+* Part name C3 not found
+* Part name R1 not found
+
+Line 80 , Section *NET*
+R8.1  J2.15
+* Part name R8 not found
+* Part name J2 not found
+
+Line 82 , Section *NET*
+U1.3  J2.7
+* Part name U1 not found
+* Part name J2 not found
+* Warning: deleting single-pin signal $1N936
+* Warning: deleting single-pin signal V0

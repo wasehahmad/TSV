@@ -1,0 +1,15 @@
+Wed Apr 15 17:13:32 2015
+
+Project path: C:\EDAWork\database
+
+Loaded cns info: C:\MentorGraphics\9.4PADS\SDD_HOME\standard\ce_ee.cns=7.10.23;C:\PADS Projects\\user.cns=f5c2-b415-d7c0-6fb6-6341-dd4b-341d-d450-0fee-8eeb-9c29-49c8
+Before global upgrade from version: 7.10.23 to version: 7.10.23
+
+BeforeGlobalUpgrade took 11ms, 0s
+
+Upgrade snapshot DxD
+UpgradeSnapshot took 0ms, 0s
+
+After global upgrade
+AfterGlobalUpgrade took 0ms, 0s
+

@@ -1,0 +1,11 @@
+[ViewDraw_PC_Tool#0]
+Command=S:\ece_drive\ECE492\Alpha\VCO\Netlisters\LafayetteSub.bat
+Arguments=$BLOCKNAME
+InitialDir=.
+Text=ECE322 Netlister
+[ViewDraw_PC_Tool#1]
+Command=S:\ece_drive\ECE492\Alpha\VCO\Netlisters\SymGen1.bat
+Arguments=$BLOCKNAME
+InitialDir=.
+Text=ECE322 Symbol Generator
+

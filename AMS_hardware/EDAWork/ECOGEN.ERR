@@ -1,0 +1,18 @@
+PADS Layout ECO Generator (Version 6.1b) 3/11/2013 3:50:02 PM
+Copyright (c) 2003 Mentor Graphics Corp. - All rights reserved
+ASCII reading (part types and decals) - 9 msec
+ASCII reading (part types and decals) - 2 msec
+Reading the OLD DESIGN
+There are 59 parts in the design
+There are 35 signals in the design
+There are 147 pins in the design
+ASCII reading (parts, nets, attributes) - 1 msec
+Reading the NEW DESIGN
+There are 59 parts in the design
+There are 35 signals in the design
+There are 147 pins in the design
+ASCII reading (parts, nets, attributes) - 1 msec
+Final cost=64
+Partitioning - 1 msec
+Final Matching - 0 msec
+Deleted pins: 0,  Added pins: 0

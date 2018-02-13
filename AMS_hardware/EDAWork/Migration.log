@@ -1,0 +1,134 @@
+Migration log file
+
+00:00:00 Starting Migration
+00:00:00 old file backup
+00:00:00 Project configuration files are being read...
+00:00:00 Parse .dproj file
+00:00:00 Parse .dproj file: done
+00:00:00 CDB flow is not used. Migrate as NETLIST flow...
+00:00:00 The following schematics found in C:\EDAWork\: 
+00:00:00 'blankb.1' 'bmstop.1' 'bypass.1' 'isolator.1' 'sensorarray.1' 
+Reading navigator.ini for getting root block name
+navigator.ini cannot be opened
+The following schematics found in C:\EDAWork\: 
+'2n2222a.1' '2pinan.1' '2pinte.1' '2pinticou.1' '3pinmx.1' '3pinte.1' '4pinte.1' '74ac00dip.1' 'aaaaa.1' 'air.1' 'ax_sym.1' 'batterycell.1' 'batterypack.1' 'batterypacks.1' 'bms.1' 'bs170.1' 'bypass.1' 'caph.1' 'cd4007ubdip.1' 'cellstrap.1' 'display.1' 'eceborder.1' 'eceborder_a.1' 'eceborder_b.1' 'emgbuttons.1' 'fuse.1' 'fusebox.1' 'glvpower.1' 'header2.1' 'header3.1' 'header4.1' 'header5.1' 'imd.1' 'imdbox.1' 'imdcircuit.1' 'in.1' 'isolator.1' 'junction.1' 'laptop.1' 'lm2901dip.1' 'lm317.1' 'lm324dip.1' 'lm7805.1' 'load.1' 'loadcontrol.1' 'mcp9700.1' 'microcontroller.1' 'mirrors.1' 'offcar.1' 'oncar.1' 'out.1' 'pic16lf1827.1' 'pitstation.1' 'polarcap.1' 'pot.1' 'pot3352w.1' 'pushbutton.1' 'relay.1' 'relayclosed.1' 'relaycoil.1' 'relayopen.1' 'resh.1' 'safetybox.1' 'safetyloop.1' 'scada.1' 'sensorarray.1' 'shutdown.1' 'slbattery.1' 'sw_d601.1' 'teconn.1' 'vco.1' 'vgrip.1' 
+Checking wir files...
+00:00:00 The following schematics found in C:\EDAWork\: 
+00:00:00 'blankb.1' 'bmstop.1' 'bypass.1' 'isolator.1' 'sensorarray.1' 
+blankb.1
+bmstop.1
+bypass.1
+isolator.1
+sensorarray.1
+00:00:00 Parse Viewdraw.ini file
+The following user-specific settings are defined in the project:
+GRID: 10
+DETAIL: 1
+BORDERON: 1
+GRIDON: 1
+SDISTANCE: 10
+AUTOLOG: 10
+VALUESON: 1
+SORTON: 1
+XTRAERRS: 1
+DB_ERR_VERBOSE: 1
+COMPONENT_TOOLTIPS: 1
+SHEETSIZE: 1
+DEFSHEET: 0
+COMPTEXTON: 1
+PNUMSON: 1
+RNUMSON: 1
+BUBBLESIZE: 5
+DOTSIZE: 5
+BOXSIZE: 5
+BUSWIDTH: 4
+BUS_DOTSIZE: 12
+ROUTE: 2
+ADISTANCE: 20
+SNAPTOPIN: 1
+BEGIN_NETS_IN_SPACE: 0
+LABELON: 1
+UNIQUE_LABEL: 0
+TEXTON: 1
+TEXTORIGIN: 3
+WINDOW_BACKGROUND: 0 0 0
+SELECTION_LAYER: 15 0 0
+BORDER_LAYER: 15 0 0
+VALUE_LAYER: 7 0 0
+ANNO_LAYER: 7 0 0
+NET: 12 1 0
+COMPONENT: 15 0 0
+ATTRIBUTE: 14 0 0
+LABEL: 15 0 0
+PIN: 3 0 0
+BOX: 2 0 0
+LINE: 2 0 0
+CIRCLE: 2 0 0
+ARC: 2 0 0
+TEXT: 10 0 0
+The settings above have not been maintained during migration and it should be reset once the project has been opened. Note changing these settings will affect all projects that you open but do not affect the data in the project.
+00:00:00 Generating WIR files...
+00:00:00 The following schematics found in C:\EDAWork\: 
+00:00:00 'blankb.1' 'bmstop.1' 'bypass.1' 'isolator.1' 'sensorarray.1' 
+00:00:02 Generating WIR files: done
+00:00:02 CProjectMigration::OpenICDB()
+00:00:03 iCDB opened successfully
+00:00:03 AddSnapshot successful
+00:00:03 Design blocks conversion
+00:00:03 The following schematics found in C:\EDAWork\: 
+00:00:03 'blankb.1' 'bmstop.1' 'bypass.1' 'isolator.1' 'sensorarray.1' 
+00:00:03 Adding block blankb.1
+00:00:03 Adding block bmstop.1
+00:00:03 Adding block bypass.1
+00:00:03 Adding block isolator.1
+00:00:03 Adding block sensorarray.1
+00:00:03 Default configuration for blankb.1 has been created
+00:00:03 Default configuration for bypass.1 has been created
+00:00:03 Default configuration for isolator.1 has been created
+00:00:03 Default configuration for sensorarray.1 has been created
+00:00:03 Default configuration for bmstop.1 has been created
+00:00:03 Starting OATs conversion...
+00:00:03 OATs conversion: blankb.1
+00:00:03 OATs conversion: bmstop.1
+00:00:03 OATs conversion: bypass.1
+00:00:03 OATs conversion: isolator.1
+00:00:03 OATs conversion: sensorarray.1
+00:00:03 End of block migration to iCDB: success
+00:00:03 Add missing ports and update evaluated attributes...
+00:00:04 Add missing ports and update evaluated attributes complete.
+00:00:04 Check database integrity...
+00:00:04 Check database integrity complete.
+00:00:04 Side files migration...
+Side files conversion has been skipped because there are no valid side files
+00:00:04 Side files migration: done
+00:00:04 Importing OLE objects...
+00:00:04 Importing OLE objects: done
+No valid IODesigner data has been found
+00:00:04 Moving obsolete files to backup directory...
+00:00:04 Moving obsolete files to backup directory: done
+Migration complete 0 minutes, 4 seconds
+ 
+The following design attributes are not DxD common properties:
+@DATETIME
+@NAME
+@SHEET
+@SHEETTOTAL
+ASSIGNMENT
+AUTHOR
+C
+COURSE
+DPART
+IN
+L
+MPART
+Model
+OUT
+PINTYPE
+PRICE
+Pin Order
+Prefix
+R
+REVISION
+All definitions of common properties are stored in C:\MentorGraphics\9.4PADS\SDD_HOME\standard\netlist.prp.
+Copy this file to another location, use the Properties Definition Editor to add
+missing properties if needed, and point to the new file in the Settings dialog. See The DxDesigner Administrator's Guide in the InfoHub for details.

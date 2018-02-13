@@ -1,0 +1,13 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP LTC3638
+D 140V 250mA  Step-Down Regulator
+K DC/DC Buck Regulator
+$ENDCMP
+#
+$CMP Si8600
+D Silicon Labs I2C Isolator
+K I2C Optical Isolator
+$ENDCMP
+#
+#End Doc Library
