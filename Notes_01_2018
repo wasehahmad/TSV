@@ -3,3 +3,5 @@
 3. added fault condition for being unlocked
 
 4. PackMan s06 Expander GND is loose, had to resolder it
+
+5. There is no code for monitoring temperature and shutting off based off of that. make sure to include that as well. Remember that soemtimes some AMS board spike up
