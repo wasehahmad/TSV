@@ -14,7 +14,7 @@ void task_heartbeat(uint32_t data) {
 	heartbeat_init();
 	
 	for(;;) {
-		watch_dog_list[WATCH_HEART]++;
+		watch_dog_list[WATCH_HEART]=watch_dog_list[WATCH_HEART]==0xFF?1:watch_dog_list[WATCH_HEART];//avoid overflow
 
 		//turn on the fault led if pack state is fault, updates about twice a second
 		if(pack_state == flt){

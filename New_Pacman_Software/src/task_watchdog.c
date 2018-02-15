@@ -32,7 +32,7 @@ void task_watchdog(uint32_t data) {
 		}
 
 
-		if(wait_counter == MAX_WAIT){
+		if(wait_counter >= MAX_WAIT){
 			pet_dog = false;
 		}
 

@@ -42,8 +42,8 @@ void task_charge(uint32_t data) {
 	uint8_t i = 0;
 	task_charge_init();
 	for(;;) {
+		watch_dog_list[WATCH_CHARGE]=watch_dog_list[WATCH_CHARGE]==0xFF?1:watch_dog_list[WATCH_CHARGE];//avoid overflow
 
-		watch_dog_list[WATCH_CHARGE]++;
 
 
 	if(pack_state != boot){//wait 2 sec for all other tasks to start successfully

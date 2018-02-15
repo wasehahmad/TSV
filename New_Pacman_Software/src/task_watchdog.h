@@ -3,7 +3,7 @@
 
 #include <stdint.h>
 
-#define MAX_WAIT 1000
+#define MAX_WAIT 250
 
 void task_watchdog(uint32_t data);
 void reset_watch_list(void);
