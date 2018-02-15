@@ -16,7 +16,7 @@ void task_safety(uint32_t data) {
 	safety_init();
 	
 	for(;;) {
-		watch_dog_list[WATCH_SAFETY]=watch_dog_list[WATCH_SAFETY]==0xFF?1:watch_dog_list[WATCH_SAFETY];//avoid overflow
+		watch_dog_list[WATCH_SAFETY]=watch_dog_list[WATCH_SAFETY]==0xFF?1:watch_dog_list[WATCH_SAFETY]+1;//avoid overflow
 		sloop_state = (PINA & 0x04)==0x04? false : true;
 		if(pack_state == rdy){
 			PORTA &= ~(0x08);// close safety loop relay

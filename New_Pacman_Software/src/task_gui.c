@@ -41,7 +41,7 @@ void task_gui(uint32_t data) {
   atomTimerDelay(100);
 	
   for(;;){
-  	watch_dog_list[WATCH_GUI]=watch_dog_list[WATCH_GUI]==0xFF?1:watch_dog_list[WATCH_GUI];//avoid overflow
+  	watch_dog_list[WATCH_GUI]=watch_dog_list[WATCH_GUI]==0xFF?1:watch_dog_list[WATCH_GUI]+1;//avoid overflow
 
     if(((atomTimeGet() - sleep_time)/100) > screen_reset_time){ // NO BUTTONS HAVE BEEN PRESSED FOR 30 SECONDS, GO BACK TO ORIGINAL MENU
       menu = 0;

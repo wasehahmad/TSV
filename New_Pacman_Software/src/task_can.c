@@ -62,7 +62,7 @@ void task_can(uint32_t data){
 	//uint16_t PACK_NUM = 0x001;
 	//uint32_t system_time = 0;  // PROBABLY WANT TO USE AGAIN
 	for(;;){	//loop forever
-		watch_dog_list[WATCH_CAN]=watch_dog_list[WATCH_CAN]==0xFF?1:watch_dog_list[WATCH_CAN];//avoid overflow
+		watch_dog_list[WATCH_CAN]=watch_dog_list[WATCH_CAN]==0xFF?1:watch_dog_list[WATCH_CAN]+1;//avoid overflow
 
 
 

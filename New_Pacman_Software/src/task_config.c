@@ -124,7 +124,7 @@ void task_config(uint32_t data) {
   save_SOC();
   uint8_t i = 0;
   for(;;) {
-    watch_dog_list[WATCH_CONFIG]=watch_dog_list[WATCH_CONFIG]==0xFF?1:watch_dog_list[WATCH_CONFIG];//avoid overflow
+    watch_dog_list[WATCH_CONFIG]=watch_dog_list[WATCH_CONFIG]==0xFF?1:watch_dog_list[WATCH_CONFIG]+1;//avoid overflow
     
     save_SOC();
     //Detect Fault in all states
