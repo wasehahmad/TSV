@@ -29,6 +29,7 @@ void task_watchdog(uint32_t data) {
 		}
 		if(i==NUM_TASKS){//if no break occurred in for loop
 			reset_watch_list();
+			wait_counter = 0;
 		}
 
 

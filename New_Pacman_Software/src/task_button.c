@@ -41,7 +41,7 @@ void task_button(uint32_t data){
 	
 	atomTimerDelay(50);
 	for(;;){
-		watch_dog_list[WATCH_BUTTON]=watch_dog_list[WATCH_BUTTON]==0xFF?1:watch_dog_list[WATCH_BUTTON]+1;//avoid overflow
+		watch_dog_list[WATCH_BUTTON]=1;//avoid overflow
 
 		if((PINB & 0x04) != 0x04 && !prev_button_up){// button 0 is depressed (up)
 			prev_button_up=true;

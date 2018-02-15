@@ -61,7 +61,7 @@ void task_i2c(uint32_t data) {
 	lcd_flag = true;
 	bypass_flag = false;
 	for(;;) {
-		watch_dog_list[WATCH_I2C]=watch_dog_list[WATCH_I2C]==0xFE?1:watch_dog_list[WATCH_I2C]+1;
+		watch_dog_list[WATCH_I2C]=1;
 
 		//write to LCD once a second.
 		if(atomTimeGet()%100>50){

@@ -88,34 +88,37 @@ void display_top(void){
     line1[9] = '-';
     disp_current = disp_current *-1.0;
   }
-  // line1[10] = (disp_current/100000)%10 + 48;
-  // line1[11] = (disp_current/10000)%10 + 48;
-  // line1[12] = (disp_current/1000)%10 +48;
-  // line1[13] = '.';
-  // line1[14] = (disp_current/100)%10 +48;
-  // line1[15] = (disp_current/10)%10 +48;
-  // line1[16] = disp_current%10 +48;
-char wd;
-wd = (watch_dog_list[0]>0)?'T':'F';
-line1[10] = wd;
-wd = (watch_dog_list[1]>0)?'T':'F';
-line1[11] = wd;
-wd = (watch_dog_list[2]>0)?'T':'F';
-line1[12] = wd;
-wd = (watch_dog_list[3]>0)?'T':'F';
-line1[13] = wd;
-wd = (watch_dog_list[4]>0)?'T':'F';
-line1[14] = wd;
-wd = (watch_dog_list[5]>0)?'T':'F';
-line1[15] = wd;
-wd = (watch_dog_list[6]>0)?'T':'F';
-line1[16] = wd;
-wd = (watch_dog_list[7]>0)?'T':'F';
-line1[17] = wd;
-wd = (wait_counter>250)?'T':'F';
-line1[18] = wd;
-wd = (pet_dog)?'T':'F';
-line1[19] = wd;
+  line1[10] = (disp_current/100000)%10 + 48;
+  line1[11] = (disp_current/10000)%10 + 48;
+  line1[12] = (disp_current/1000)%10 +48;
+  line1[13] = '.';
+  line1[14] = (disp_current/100)%10 +48;
+  line1[15] = (disp_current/10)%10 +48;
+  line1[16] = disp_current%10 +48;
+  
+// char wd;
+// wd = test_can%10+48;
+// line1[9] = wd;
+// wd = (watch_dog_list[0]>0)?'T':'F';
+// line1[10] = wd;
+// wd = (watch_dog_list[1]>0)?'T':'F';
+// line1[11] = wd;
+// wd = (watch_dog_list[2]>0)?'T':'F';
+// line1[12] = wd;
+// wd = (watch_dog_list[3]>0)?'T':'F';
+// line1[13] = wd;
+// wd = (watch_dog_list[4]>0)?'T':'F';
+// line1[14] = wd;
+// wd = (watch_dog_list[5]>0)?'T':'F';
+// line1[15] = wd;
+// wd = (watch_dog_list[6]>0)?'T':'F';
+// line1[16] = wd;
+// wd = (watch_dog_list[7]>0)?'T':'F';
+// line1[17] = wd;
+// wd = (wait_counter>250)?'T':'F';
+// line1[18] = wd;
+// wd = (pet_dog)?'T':'F';
+// line1[19] = wd;
 
 
 
