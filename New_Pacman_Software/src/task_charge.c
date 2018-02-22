@@ -60,7 +60,7 @@ void task_charge(uint32_t data) {
 		// TODO change this logic to check for all cells to be at least 3700
 		//if a cell voltage peaks or rolls off we know it is completely full/empty
 		for(i = 0; i<ams_board_count; i = i+1){
-			if((cell_V[i] > max_charge_cell_voltage) && CHRG_DET){//3700 mV cell voltage
+			if((cell_V[i] > (100*max_charge_cell_voltage)) && CHRG_DET){//3700 mV cell voltage
 			  if(cell_V[i] != 0xFFF6){
 				pack_coulombs = MAX_COULOMBS;// * 10^-4 coulombs in a full pack
 				pack_SOC = 100;
