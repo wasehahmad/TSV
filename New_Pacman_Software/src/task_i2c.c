@@ -60,7 +60,9 @@ void task_i2c(uint32_t data) {
 	uint8_t i = 0;
 	lcd_flag = true;
 	bypass_flag = false;
+
 	for(;;) {
+	
 		watch_dog_list[WATCH_I2C]=1;
 
 		//write to LCD once a second.

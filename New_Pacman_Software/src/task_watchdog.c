@@ -21,6 +21,16 @@ void task_watchdog(uint32_t data) {
 	atomTimerDelay(30);//wait before trying to check again
 	uint8_t i = 0;
 	for(;;) {
+		watch_dog_list[0]=1;//Yes
+		// watch_dog_list[1]=1;//No
+		// watch_dog_list[2]=1;//no
+		// watch_dog_list[3]=1;//no
+		// watch_dog_list[4]=1;//no
+		// watch_dog_list[5]=1;//no
+		// watch_dog_list[6]=1;//no
+		// watch_dog_list[7]=1;//no
+
+
 		for(i=0;i<NUM_TASKS;i++){
 			if(watch_dog_list[i]==0){
 				wait_counter++;
