@@ -45,7 +45,7 @@ void display_top(void){
   memcpy(line2,"SAFETY", 6);
   memcpy(line2+7,"LOOP:", 5);
 
-  memcpy(line3,"M>",2);
+  memcpy(line3,"W>",2);//W for Waseh
 	
   char* d = "DEAD";
   switch(pack_state){

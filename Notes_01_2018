@@ -1,7 +1,7 @@
-1. Added config param min_voltage to the new pacman software. need to update documentation for that
+1. Added config param min_voltage to the new pacman software. need to update documentation for that 0x08
 2. Added two more config params. max cell volatage at 0x09 and min current at 0x0A
 3. added fault condition for being unlocked
 
 4. PackMan s06 Expander GND is loose, had to resolder it
 
-5. There is no code for monitoring temperature and shutting off based off of that. make sure to include that as well. Remember that soemtimes some AMS board spike up
+5. Added RC delay circuit to safety control. 2.2 Mohm reistor and 10uf capacitor. Gives enough time to reset without opening safety loop. 

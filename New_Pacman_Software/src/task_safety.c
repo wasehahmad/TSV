@@ -20,6 +20,8 @@ void task_safety(uint32_t data) {
 		sloop_state = (PINA & 0x04)==0x04? false : true;
 		if(pack_state == rdy){
 			PORTA &= ~(0x08);// close safety loop relay
+			
+			
 			if(sloop_state){//ready and loop is closed
 				
 			}
