@@ -5,3 +5,5 @@
 4. PackMan s06 Expander GND is loose, had to resolder it
 
 5. Added RC delay circuit to safety control. 2.2 Mohm reistor and 10uf capacitor. Gives enough time to reset without opening safety loop. 
+	Updated to 1.1 Mohm as the 2.2ohm would not rise fast enough for actual fault.
+	Make sure there is enough delay between watchdog reset at least 20 second so that the capacitor has enough time to discharge

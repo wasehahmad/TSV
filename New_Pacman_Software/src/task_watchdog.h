@@ -3,7 +3,7 @@
 
 #include <stdint.h>
 
-#define MAX_WAIT 50
+#define MAX_WAIT 200 //this allows enough time for the reset to occur without tripping the safety loop
 
 void task_watchdog(uint32_t data);
 void reset_watch_list(void);
