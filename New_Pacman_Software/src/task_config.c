@@ -96,6 +96,7 @@ void task_config(uint32_t data) {
 
   
   locked = eeprom_read_byte((uint8_t*)EEPROM_LOCK);
+  
 
   //?
   flt_cnd.active = 0;

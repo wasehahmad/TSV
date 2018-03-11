@@ -19,7 +19,7 @@ void display_cal1_vslp(void);
 void display_cal1_aoff(void);
 void display_cal1_aslp(void);
 void display_cal2(void);
-void display_cell(uint8_t cell);
+void display_cell(uint8_t type);
 void display_cell_cal(uint8_t cell);
 void display_cell_cal_voff(uint8_t cell);
 void display_cell_cal_vslp(uint8_t cell);
@@ -69,6 +69,7 @@ char slp_result[5];		// cell voltage slpope
 
 char curr_buff[2];
 char next_buff[2];
+char val_buff[2];
 
 /* char curr_num_cells[2]; */
 /* char next_num_cells[2]; */
@@ -82,6 +83,7 @@ unsigned char line0[20];
 unsigned char line1[20];
 unsigned char line2[20];
 unsigned char line3[20];
+
 
 
 

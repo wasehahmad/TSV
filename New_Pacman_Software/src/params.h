@@ -13,7 +13,7 @@
 
 
 //SOFTWARE VERSION (based on commit number in gitlab)
-#define version 2.0
+#define version 2.1
 
 // LCD values
 #define EN_LOW	0x08
@@ -78,6 +78,7 @@ volatile uint8_t pack_SOC;
 volatile int32_t pack_coulombs;
 volatile uint16_t cell_V[7];
 volatile uint16_t cell_T[7];
+
 volatile uint8_t cell_status[7];
 volatile State pack_state;
 volatile bool sloop_state;

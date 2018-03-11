@@ -38,64 +38,64 @@ void display_top(void){
   memcpy(line0, "STATE:", 6);
   memcpy(line0+12, "SOC:", 4);
   memcpy(line0+19, "%", 1);
-	
+
   memcpy(line1,"V:",2);
   memcpy(line1+7,"A:",2);
-	
+
   memcpy(line2,"SAFETY", 6);
   memcpy(line2+7,"LOOP:", 5);
 
   memcpy(line3,"W>",2);//W for Waseh
-	
+
   char* d = "DEAD";
   switch(pack_state){
-  case chrg: d = "CHRG";
+    case chrg: d = "CHRG";
     break;
-  case chrgd: d = "CHRGD";
+    case chrgd: d = "CHRGD";
     break;
-  case lco: d = "LCO ";
+    case lco: d = "LCO ";
     break;
   case flt: d = "FLT"; line0[10] = flt_cnd.cond+48;//line0[10] = fault_code+48; TESTING, REVERT BACK 03292017
-    break;
+  break;
   case dead: d = "DEAD";
-    break;
+  break;
   case rdy: d = "RDY";
-    break;
+  break;
   case boot: d = "BOOT";
-    break;
-  }
-		
-  memcpy(line0+6,d, strlen(d));
-	
-  line3[2] = 'v';
-  line3[3] = (int8_t)version+48;
-  line3[4] = '.';
-  line3[5] = (int8_t)(version*10)%10+48;
-  line3[6] = (int8_t)(version*100)%10+48;
-	
-	
-  line0[16] = (pack_SOC/100)+48;
-  line0[17] = ((pack_SOC%100)/10)+48;
-  line0[18] = (pack_SOC%10)+48;
-	
-  line1[2] = (int)(pack_voltage)/100 +48;
-  line1[3] = ((int)(pack_voltage/10) % 10)+48;
-  line1[4] = '.';
-  line1[5] = ((int)(pack_voltage) % 10)+48;
-	
-  int32_t disp_current = pack_current;
-  if(pack_current<0.0){
-    line1[9] = '-';
-    disp_current = disp_current *-1.0;
-  }
-  line1[10] = (disp_current/100000)%10 + 48;
-  line1[11] = (disp_current/10000)%10 + 48;
-  line1[12] = (disp_current/1000)%10 +48;
-  line1[13] = '.';
-  line1[14] = (disp_current/100)%10 +48;
-  line1[15] = (disp_current/10)%10 +48;
-  line1[16] = disp_current%10 +48;
-  
+  break;
+}
+
+memcpy(line0+6,d, strlen(d));
+
+line3[2] = 'v';
+line3[3] = (int8_t)version+48;
+line3[4] = '.';
+line3[5] = (int8_t)(version*10)%10+48;
+line3[6] = (int8_t)(version*100)%10+48;
+
+
+line0[16] = (pack_SOC/100)+48;
+line0[17] = ((pack_SOC%100)/10)+48;
+line0[18] = (pack_SOC%10)+48;
+
+line1[2] = (int)(pack_voltage)/100 +48;
+line1[3] = ((int)(pack_voltage/10) % 10)+48;
+line1[4] = '.';
+line1[5] = ((int)(pack_voltage) % 10)+48;
+
+int32_t disp_current = pack_current;
+if(pack_current<0.0){
+  line1[9] = '-';
+  disp_current = disp_current *-1.0;
+}
+line1[10] = (disp_current/100000)%10 + 48;
+line1[11] = (disp_current/10000)%10 + 48;
+line1[12] = (disp_current/1000)%10 +48;
+line1[13] = '.';
+line1[14] = (disp_current/100)%10 +48;
+line1[15] = (disp_current/10)%10 +48;
+line1[16] = disp_current%10 +48;
+
 // char wd;
 // wd = test_can%10+48;
 // line1[9] = wd;
@@ -122,24 +122,24 @@ void display_top(void){
 
 
 
-	
-  if(sloop_state == true){
-    line2[13] = 'C';
-    line2[14] = 'L';
-    line2[15] = 'O';
-    line2[16] = 'S';
-    line2[17] = 'E';
-    line2[18] = 'D';
-  }
-  else{
-    line2[13] = 'O';
-    line2[14] = 'P';
-    line2[15] = 'E';
-    line2[16] = 'N';
-    line2[17] = ' ';
-    line2[18] = ' ';
-  }
-	
+
+if(sloop_state == true){
+  line2[13] = 'C';
+  line2[14] = 'L';
+  line2[15] = 'O';
+  line2[16] = 'S';
+  line2[17] = 'E';
+  line2[18] = 'D';
+}
+else{
+  line2[13] = 'O';
+  line2[14] = 'P';
+  line2[15] = 'E';
+  line2[16] = 'N';
+  line2[17] = ' ';
+  line2[18] = ' ';
+}
+
   uint32_t seconds = (atomTimeGet()/100); //100 system ticks per sec
   uint32_t minutes = (seconds/60);
   uint32_t hours = minutes/60;
@@ -159,7 +159,7 @@ void display_top(void){
   line3[10]= (days)%10+48;
   line3[9]=  (days/10)%10+48;
   line3[8]=  (days/100)%10+48;
-	
+
   memcpy((void*)display_0, (void*) line0, 20);
   memcpy((void*)display_1, (void*) line1, 20);
   memcpy((void*)display_2, (void*) line2, 20);
@@ -189,7 +189,7 @@ void display_top(void){
 /* 	line0[6] = pack_Voff/1+48; */
 /* 	line0[7] = '.'; */
 /* 	line0[8] = (int16_t)(pack_Voff*10)%10+48; */
-	
+
 /* //	lin0[15] =  */
 /* 	memcpy((void*)display_0, (void*) line0, 20); */
 /* 	memcpy((void*)display_1, (void*) line1, 20); */
@@ -251,48 +251,48 @@ void display_top(void){
 // 	memcpy((void*)display_2, (void*) line2, 20);
 // 	memcpy((void*)display_3, (void*) line3, 20);
 // }
- 
-void display_cell(uint8_t cell){
+
+void display_cell(uint8_t type){//type 0 = voltage, type 1 = temperatures
   //                             0   1   2   3   4   5   6   7   8   9   10  11  12  13  14  15  16  17  18  19
   /* unsigned char line0[20] = {'S','T','A','T','E',':',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}; */
   /* unsigned char line1[20] = {'C',cell+48,'_','V',':',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}; */
   /* unsigned char line2[20] = {'C',cell+48,'_','T',':',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}; */
   /* unsigned char line3[20] = {'P','/','C',cell+48,'>',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}; */
   clear_screen();
+  //copy relavent values to temp array
+
+  //dipslay 1st cell on the top to make room
+  memcpy(line0+5,"0:",2);
 
 
-  memcpy(line0,"STATE:",6);
+  if(type==0){
+    memcpy(line0,"Volt:",4);
 
-  line1[0] = 'C';
-  line1[1] = cell+48;
-  line1[2] = '_';
-  line1[3] = 'V';
-  line1[4] = ':';
+    line0[6]=cell_V[0]/1000+48;
+    line0[7]='.';
+    line0[8]=(cell_V[0]%1000)/100 + 48;
+    line0[9]=(cell_V[0]%1000)%100/10 +48;
 
-  line2[0] = 'C';
-  line2[1] = cell+48;
-  line2[2] = '_';
-  line2[3] = 'T';
-  line2[4] = ':';
+    sprintf((char*)line1,"1:%.1f 2:%.1f",((double)cell_V[1])/1000,((double)cell_V[2])/1000);
+    sprintf((char*)line2,"3:%.1f 4:%.1f",((double)cell_V[3])/1000,((double)cell_V[4])/1000);
+    sprintf((char*)line3,"5:%.1f 6:%.1f",((double)cell_V[5])/1000,((double)cell_V[6])/1000);
 
-  line3[0] = 'P';
-  line3[1] = '/';
-  line3[2] = 'C';
-  line3[3] = cell+48;
-  line3[4] = '>';
+  }else{
+    memcpy(line0,"Temp:",4);
 
-  line1[5] = cell_V[cell]/1000 + 48;
-  line1[6] = '.';
-  line1[7] = (cell_V[cell]%1000)/100 + 48;
-  line1[8] = (cell_V[cell]%1000)%100/10 +48;
-  line1[9] = cell_V[cell] %10 + 48;
-	
+    line0[6]=cell_T[0]/1000+48;
+    line0[7]=(cell_T[0]%1000)/100 + 48;
+    line0[8]=(cell_T[0]%1000)%100/10 +48;
 
-  line2[5] = cell_T[cell]/1000 + 48;
-  line2[6] = (cell_T[cell]%1000)/100 + 48;
-  line2[7] = (cell_T[cell]%1000)%100/10 +48;
-  line2[8] = '.';
-  line2[9] = cell_T[cell]%10 +48;
+    sprintf((char*)line1,"1:%.1f 2:%.1f",((double)cell_T[1])/10,((double)cell_T[2])/10);
+    sprintf((char*)line2,"3:%.1f 4:%.1f",((double)cell_T[3])/10,((double)cell_T[4])/10);
+    sprintf((char*)line3,"5:%.1f 6:%.1f",((double)cell_T[5])/10,((double)cell_T[6])/10);
+  }
+
+ 
+
+
+
 
   memcpy((void*)display_0, (void*) line0, 20);
   memcpy((void*)display_1, (void*) line1, 20);
@@ -322,13 +322,13 @@ void display_cell_cal(uint8_t cell){
   memcpy(line3,"P/C",3);
   line3[3] = cell+48;
   memcpy(line3+4,"/CAL>",3);
-	
+
   // Clears the arrays
   for(int8_t i = 0; i<5;i++){
     slp_result[i] = ' ';
     off_result[i] = ' ';
   }
-	
+
   // int to ascii method 
   // changes cell slp/off to ascii char arrays
   // might want to use the modulus division technique to display ints as used in above methods to save memory 
@@ -340,7 +340,7 @@ void display_cell_cal(uint8_t cell){
     if(slp_result[i] == '\0') slp_result[i] = ' ';
     if(off_result[i] == '\0') off_result[i] = ' ';
   }
-	
+
   //Vslp
   line1[5]  = slp_result[0];
   line1[6]  = slp_result[1];
@@ -358,7 +358,7 @@ void display_cell_cal(uint8_t cell){
   //Toff
   line0[15] = ((cell_Toff[cell]%100)/10)+48;
   line0[16] = (cell_Toff[cell]%10)+48;
-	
+
   // Tslp
   line1[15] = (int8_t)cell_Tslp[cell]+48;
   line1[16] = '.';
@@ -452,7 +452,7 @@ void display_cell_cal(uint8_t cell){
 /*   line0[7] = 'K'; */
 /*   line0[9] = 'I'; */
 /*   line0[10] = 'D'; */
-  
+
 
 /*   memcpy(line1,"UP/DOWN",7); */
 /*   line1[8] = 'T'; */
@@ -466,11 +466,11 @@ void display_cell_cal(uint8_t cell){
 /*   line2[9] = 'S'; */
 /*   line2[10] = 'E'; */
 /*   line2[11] = 'T'; */
-  
+
 
 /*   memcpy(line3,"CURR>",5); */
 /*   memcpy(line3+11,"NXT>",4); */
-  
+
 
 /*   memcpy((void*)display_0, (void*) line0, 20); */
 /*   memcpy((void*)display_1, (void*) line1, 20); */
@@ -478,30 +478,30 @@ void display_cell_cal(uint8_t cell){
 /*   memcpy((void*)display_3, (void*) line3, 20); */
 
 /*   atomTimerDelay(10); */
-	
+
 /*   param_choice = PACK_NUM; */
 /*   sprintf(&curr_buff[0], "%02X", PACK_NUM); */
 /*   sprintf(&next_buff[0], "%02X", param_choice); */
 
 /*   //atomTimerDelay(50); */
-	
+
 /*   sel = 1; */
 /*   // choice for pack id: 1 - 0x7f = 1 - 127 */
 /*   for(;;){ */
-		
+
 /*     if(button_up){ */
 /*       //if(sel < 4){ */
 /* 	sel++; */
 /* 	//} */
 /*       param_choice = sel; */
-      
+
 /*       if(param_choice == 128){ */
 /* 	sel = 1; */
 /* 	param_choice = sel; */
 /*       } */
 /*       sprintf(&next_buff[0], "%02X", param_choice); */
 /*       button_up = false; */
-		
+
 /*     }else if(button_down){ */
 /*       sel--; */
 /*       if(sel == 0){ */
@@ -511,7 +511,7 @@ void display_cell_cal(uint8_t cell){
 /*       sprintf(&next_buff[0], "%02X", param_choice); */
 /*       button_down = false; */
 /*     } */
-		
+
 /*     //displays var sel */
 /*     //should change when down is pressed */
 /*     //line1[17] = sel+48; */
@@ -520,7 +520,7 @@ void display_cell_cal(uint8_t cell){
 /*     line3[7] = curr_buff[0]; */
 /*     line3[8] = curr_buff[1]; */
 /*     //line3[8] = curr_buff[2];lcd.h */
-    
+
 /*     //line3[9] = curr_buff[3]; */
 
 
@@ -605,7 +605,7 @@ void display_cell_cal(uint8_t cell){
 /*   memcpy(line1,"UP/DOWN",7); */
 /*   memcpy(line1+8,"TO",2); */
 /*   memcpy(line1+11,"CHANGE",6); */
-  
+
 
 
 /*   memcpy((void*)display_0, (void*) line0, 20); */
@@ -614,30 +614,30 @@ void display_cell_cal(uint8_t cell){
 /*   memcpy((void*)display_3, (void*) line3, 20); */
 
 /*   atomTimerDelay(10); */
-	
+
 /*   param_choice = num_cells; */
 /*   sprintf(&curr_buff[0], "%02X", num_cells); */
 /*   sprintf(&next_buff[0], "%02X", param_choice); */
 
 /*   //atomTimerDelay(50); */
-	
+
 /*   sel = 1; */
 /*   // choice for pack id: 1 - 0x7f = 1 - 127 */
 /*   for(;;){ */
-		
+
 /*     if(button_up){ */
 /*       //if(sel < 4){ */
 /* 	sel++; */
 /* 	//} */
 /*       param_choice = sel; */
-      
+
 /*       /\* if(param_choice == 255){ *\/ */
 /*       /\* 	sel = 1; *\/ */
 /*       /\* 	param_choice = sel; *\/ */
 /*       /\* } *\/ */
 /*       sprintf(&next_buff[0], "%02X", param_choice); */
 /*       button_up = false; */
-		
+
 /*     }else if(button_down){ */
 /*       sel--; */
 /*       if(sel == 0){ */
@@ -647,7 +647,7 @@ void display_cell_cal(uint8_t cell){
 /*       sprintf(&next_buff[0], "%02X", param_choice); */
 /*       button_down = false; */
 /*     } */
-		
+
 /*     //displays var sel */
 /*     //should change when down is pressed */
 /*     //line1[17] = sel+48; */
@@ -656,7 +656,7 @@ void display_cell_cal(uint8_t cell){
 /*     line3[7] = curr_buff[0]; */
 /*     line3[8] = curr_buff[1]; */
 /*     //line3[8] = curr_buff[2];lcd.h */
-    
+
 /*     //line3[9] = curr_buff[3]; */
 
 
@@ -761,7 +761,7 @@ void wrong_password(void){
 
   memcpy(line0, "WRONG",5);
   memcpy(line0+6, "PASSWORD!",9);
-      
+
   
   memcpy((void*)display_0, (void*) line0, 20);
   memcpy((void*)display_1, (void*) line1, 20);
@@ -790,7 +790,7 @@ void lock_toggled(void){
     memcpy(line0+5, "UNLOCKED",8);
   }
   
-      
+
   
   memcpy((void*)display_0, (void*) line0, 20);
   memcpy((void*)display_1, (void*) line1, 20);
@@ -878,7 +878,7 @@ void set_config_param(void){
   /* unsigned char line2[20] = {'E','N','T','E','R',' ','A','D','D','R',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}; */ // ADDR REPLACED BY VAL
   /* unsigned char line1[20] = {'C','U','R','R','>',' ',' ',' ',' ',' ',' ','N','X','T','>',' ',' ',' ',' ',' '}; */
   /* unsigned char line3[20] = {'D','E','F','A','U','L','T',':',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}; */
-  
+
   clear_screen();
 
   memcpy(line0, "CONFIG",6);
@@ -888,10 +888,11 @@ void set_config_param(void){
   memcpy(line2+6,"ADDR",4);
 
   memcpy(line1,"EDIT:",5);
+  memcpy(line2,"CURR:",5);
   //memcpy(line1+11,"NXT>",4);
 
   // FIRST SET THE ADDRESS FOR THE CONFIG PARAM WE ARE LOOKING TO SET
-	
+
   param_choice = 0x01;
   //sprintf(&curr_buff[0], "%02X", param_choice);
   sprintf(&next_buff[0], "%02X", param_choice);
@@ -910,7 +911,7 @@ void set_config_param(void){
 
   atomTimerDelay(10);
   //atomTimerDelay(50);
-	
+
   sel = 1;
 
   for(;;){
@@ -918,7 +919,7 @@ void set_config_param(void){
     if(((atomTimeGet() - sleep_time)/100) > screen_reset_time){
       return;
     }
-		
+
     if(button_up){
       sleep_time = atomTimeGet();
       sel++;
@@ -926,7 +927,7 @@ void set_config_param(void){
       
       sprintf(&next_buff[0], "%02X", param_choice);
       button_up = false;
-		
+
     }else if(button_down){
       sleep_time = atomTimeGet();
       sel--;
@@ -935,7 +936,7 @@ void set_config_param(void){
       sprintf(&next_buff[0], "%02X", param_choice);
       button_down = false;
     }
-		
+
     //displays var sel
     //should change when down is pressed
     //line1[17] = sel+48;
@@ -943,8 +944,62 @@ void set_config_param(void){
     //current pack CAN address
     line1[5] = next_buff[0];
     line1[6] = next_buff[1];
+
+    uint8_t param_val;
+    //Get the current value of parameter
+    switch(param_choice){
+      case 1:
+      param_val = PACK_NUM;
+      break;
+      case 2:
+      param_val = num_cells;
+      break;
+      case 3:
+      param_val = locked;
+      break;
+      case 4:
+      param_val = max_cell_temp;
+      break;
+      case 5:
+      param_val = max_cell_voltage;
+      break;
+      case 6:
+      param_val = screen_reset_time;
+      break;
+      case 7:
+      param_val = screen_sleep_time;
+      break;
+      case 8:
+      param_val = min_cell_voltage;
+      break;
+      case 9:
+      param_val = max_charge_cell_voltage;
+      break;
+      case 10:
+      param_val = min_current;
+      break;
+      default:
+      param_val= '-';
+  } // end switch
+
+  sprintf(&curr_buff[0], "%02X", param_choice);
+  sprintf(&next_buff[0], "%02X", param_choice);
+
+  //print out the current value as well
+  if(param_val != '-'){
+    sprintf(&val_buff[0],"%02X", param_val);
+    line2[5]=val_buff[0];
+    line2[6]=val_buff[1];
+  }else{
+    line2[5]='-';
+  }
+
+
+
+
+
     //line3[8] = curr_buff[2];lcd.h
-    
+
     //line3[9] = curr_buff[3];
 
 
@@ -953,11 +1008,11 @@ void set_config_param(void){
     //line3[17] = next_can_addr[2];
     //line3[18] = next_can_addr[3];
 
-    memcpy((void*)display_0, (void*) line0, 20);
-    memcpy((void*)display_1, (void*) line1, 20);
-    memcpy((void*)display_2, (void*) line2, 20);
-    memcpy((void*)display_3, (void*) line3, 20);
-    
+  memcpy((void*)display_0, (void*) line0, 20);
+  memcpy((void*)display_1, (void*) line1, 20);
+  memcpy((void*)display_2, (void*) line2, 20);
+  memcpy((void*)display_3, (void*) line3, 20);
+
     if( (PINB & 0x01) == 0x00){ // if the enter button is pressed
       sleep_time = atomTimeGet();
       break;					// didn't work correctly when button_enter bool was used 
@@ -972,13 +1027,13 @@ void set_config_param(void){
     // param_choice and config_addr[i] matching?
     if(i == NUM_CONFIG_PARAMS){// DIDN'T MATCH ANY CONFIG ADDRESSES
       disp_invalid_addr();
-      return;
-    }
-    if((config_addr[i] == param_choice) /*&& (!locked || (param_choice == 0x03))*/){ //commented out 01/24/2018. for no longer using lock for configs but for pack_state 
-      break;
-    }
-    
+    return;
   }
+    if((config_addr[i] == param_choice) /*&& (!locked || (param_choice == 0x03))*/){ //commented out 01/24/2018. for no longer using lock for configs but for pack_state 
+  break;
+}
+
+}
 
   // WE HAVE A VALID ADDRESS, NOW CONFIGURE THE PARAM.
 
@@ -988,57 +1043,57 @@ void set_config_param(void){
   /* unsigned char line1[20] = {'C','U','R','R','>',' ',' ',' ',' ',' ',' ','N','X','T','>',' ',' ',' ',' ',' '}; */
   /* unsigned char line3[20] = {'A','D','D','R',':',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '}; */
 
-  clear_screen();
-  memcpy(line0, "CONFIG",6);
-  memcpy(line0+7, "PARAMS",6);
+clear_screen();
+memcpy(line0, "CONFIG",6);
+memcpy(line0+7, "PARAMS",6);
 
-  memcpy(line2,"ENTER",5);
-  memcpy(line2+6,"VAL",3);
+memcpy(line2,"ENTER",5);
+memcpy(line2+6,"VAL",3);
 
-  if(param_choice != 0x03){
-    memcpy(line1,"CURR>",5);
-  }
-  memcpy(line1+11,"NXT>",4);
+if(param_choice != 0x03){
+  memcpy(line1,"CURR>",5);
+}
+memcpy(line1+11,"NXT>",4);
 
-  memcpy(line3,"ADDR:",5);
-  line3[5] = next_buff[0];
-  line3[6] = next_buff[1];
+memcpy(line3,"ADDR:",5);
+line3[5] = next_buff[0];
+line3[6] = next_buff[1];
 
   //memcpy(line3,"DEFAULT:",8);
 
-  uint8_t param_addr = param_choice;
+uint8_t param_addr = param_choice;
 
-  switch(param_addr){
+switch(param_addr){
   case 1:
-    param_choice = PACK_NUM;
-    break;
+  param_choice = PACK_NUM;
+  break;
   case 2:
-    param_choice = num_cells;
-    break;
+  param_choice = num_cells;
+  break;
   case 3:
-    param_choice = 0x01;
-    break;
+  param_choice = locked;
+  break;
   case 4:
-    param_choice = max_cell_temp;
-    break;
+  param_choice = max_cell_temp;
+  break;
   case 5:
-    param_choice = max_cell_voltage;
-    break;
+  param_choice = max_cell_voltage;
+  break;
   case 6:
-    param_choice = screen_reset_time;
-    break;
+  param_choice = screen_reset_time;
+  break;
   case 7:
-    param_choice = screen_sleep_time;
-    break;
+  param_choice = screen_sleep_time;
+  break;
   case 8:
-    param_choice = min_cell_voltage;
-    break;
+  param_choice = min_cell_voltage;
+  break;
   case 9:
-    param_choice = max_charge_cell_voltage;
-    break;
+  param_choice = max_charge_cell_voltage;
+  break;
   case 10:
-    param_choice = min_current;
-    break;
+  param_choice = min_current;
+  break;
   } // end switch
 
   sprintf(&curr_buff[0], "%02X", param_choice);
@@ -1071,7 +1126,7 @@ void set_config_param(void){
     if(((atomTimeGet() - sleep_time)/100) > screen_reset_time){
       return;
     }
-		
+
     if(button_up){
       sel++;
       param_choice = sel;
@@ -1079,7 +1134,7 @@ void set_config_param(void){
       
       sprintf(&next_buff[0], "%02X", param_choice);
       button_up = false;
-		
+
     }else if(button_down){
       sel--;
       param_choice = sel;
@@ -1088,7 +1143,7 @@ void set_config_param(void){
       sprintf(&next_buff[0], "%02X", param_choice);
       button_down = false;
     }
-		
+
     //displays var sel
     //should change when down is pressed
     //line1[17] = sel+48;
@@ -1142,15 +1197,15 @@ void set_config_param(void){
   /* PACK_NUM = eeprom_read_byte((uint8_t*)EEPROM_PACK_ID); */
 
   switch(param_addr){
-  case 1:
+    case 1:
     eeprom_write_byte((uint8_t*)EEPROM_PACK_ID, param_choice);
     PACK_NUM = eeprom_read_byte((uint8_t*)EEPROM_PACK_ID);
     break;
-  case 2:
+    case 2:
     eeprom_write_byte((uint8_t*)EEPROM_CELL_COUNT, param_choice);
     num_cells = eeprom_read_byte((uint8_t*)EEPROM_CELL_COUNT);
     break;
-  case 3:
+    case 3:
     if(param_choice == PASSWORD){
       //locked = !locked;
       eeprom_write_byte((uint8_t*)EEPROM_LOCK, !locked);
@@ -1167,31 +1222,31 @@ void set_config_param(void){
       wrong_password();
     }
     break;
-  case 4:
+    case 4:
     eeprom_write_byte((uint8_t*)EEPROM_MAX_CELL_TEMP, param_choice);
     max_cell_temp = eeprom_read_byte((uint8_t*)EEPROM_MAX_CELL_TEMP);
     break;
-  case 5:
+    case 5:
     eeprom_write_byte((uint8_t*)EEPROM_MAX_CELL_VOLTAGE, param_choice);
     max_cell_voltage = eeprom_read_byte((uint8_t*)EEPROM_MAX_CELL_VOLTAGE);
     break;
-  case 6:
+    case 6:
     eeprom_write_byte((uint8_t*)EEPROM_SCREEN_RESET_TIME, param_choice);
     screen_reset_time = eeprom_read_byte((uint8_t*)EEPROM_SCREEN_RESET_TIME);
     break;
-  case 7:
+    case 7:
     eeprom_write_byte((uint8_t*)EEPROM_SCREEN_SLEEP_TIME, param_choice);
     screen_sleep_time = eeprom_read_byte((uint8_t*)EEPROM_SCREEN_SLEEP_TIME);
     break;
-  case 8:
+    case 8:
     eeprom_write_byte((uint8_t*)EEPROM_MIN_CELL_VOLTAGE, param_choice);
     min_cell_voltage = eeprom_read_byte((uint8_t*)EEPROM_MIN_CELL_VOLTAGE);
     break;
-  case 9:
+    case 9:
     eeprom_write_byte((uint8_t*)EEPROM_MAX_CHARGE_CELL_VOLTAGE, param_choice);
     max_charge_cell_voltage = eeprom_read_byte((uint8_t*)EEPROM_MAX_CHARGE_CELL_VOLTAGE);
     break;
-  case 10:
+    case 10:
     eeprom_write_byte((uint8_t*)EEPROM_MIN_CURRENT, param_choice);
     min_current = eeprom_read_byte((uint8_t*)EEPROM_MIN_CURRENT);
     break;
@@ -1238,7 +1293,7 @@ void display_error(){
 
 void disp_cell_info_screen(){
 
-  
+
   //                            0   1   2   3   4   5   6   7   8   9   10  11  12  13  14  15  16  17  18  19
   //unsigned char line0[20] = {'P','R','E','S','S',' ','E','N','T','E','R',' ','T','O',' ',' ',' ',' ',' ',' '};
   //unsigned char line2[20] = {'D','I','S','P','L','A','Y',' ','C','E','L','L',' ','I','N','F','O',' ',' ',' '};
@@ -1351,22 +1406,22 @@ void display_logged_states(uint8_t state_num){
 
   char* d = "DEAD";
   switch(disp_state){
-  case chrg: d = "CHRG";
+    case chrg: d = "CHRG";
     break;
-  case chrgd: d = "CHRGD";
+    case chrgd: d = "CHRGD";
     break;
-  case lco: d = "LCO";
+    case lco: d = "LCO";
     break;
   case flt: d = "FLT"; line1[10] = flt_cnd.cond+48;//line0[10] = fault_code+48; TESTING, REVERT BACK 03292017
-    break;
+  break;
   case dead: d = "DEAD";
-    break;
+  break;
   case rdy: d = "RDY";
-    break;
+  break;
   case boot: d = "BOOT";
-    break;
-  }
-		
+  break;
+}
+
   memcpy(line1+6,d, strlen(d)); // COPY INTO THE LINE
 
   //char hex_flt_val[4];
@@ -1439,7 +1494,7 @@ void display_logged_states(uint8_t state_num){
   line3[8]=  (state_days/100)%10+48;
 
   
-	
+
   memcpy((void*)display_0, (void*) line0, 20);
   memcpy((void*)display_1, (void*) line1, 20);
   memcpy((void*)display_2, (void*) line2, 20);
@@ -1458,15 +1513,15 @@ void display_logged_states(uint8_t state_num){
 /* 	/\* unsigned char line1[20] = {'U','P','/','D','O','W','N',' ','T','O',' ','C','H','A','N','G','E',' ',' ',' '}; *\/ */
 /* 	/\* unsigned char line2[20] = {'E','N','T','E','R',' ','T','O',' ','S','E','T',' ',' ',' ',' ',' ',' ',' ',' '}; *\/ */
 /* 	/\* unsigned char line3[20] = {'C','U','R','R','>','0','x',' ',' ',' ',' ','N','X','T','>','0','x',' ',' ',' '}; *\/ */
-	
+
 /* 	addr_choice = CANADD_PACKINFO1; */
 /* 	sprintf(&curr_can_addr[0], "%04X", CANADD_PACKINFO1); */
 /* 	sprintf(&next_can_addr[0], "%04X", addr_choice); */
 /* 	atomTimerDelay(50); */
-	
+
 /* 	sel = 0; */
 /* 	for(;;){ */
-		
+
 
 /* 		if(button_up){ */
 /* 			sel++; */
@@ -1477,7 +1532,7 @@ void display_logged_states(uint8_t state_num){
 /* 				addr_choice = 0x0500; */
 /* 			} */
 /* 			button_up = false; */
-		
+
 /* 		}else if(button_down){ */
 /* 			if(sel != 0){ */
 /* 				sel--; */
@@ -1486,7 +1541,7 @@ void display_logged_states(uint8_t state_num){
 /* 			} */
 /* 			button_down = false; */
 /* 		} */
-		
+
 /* 		//displays var sel */
 /* 		//should change when down is pressed */
 /* 		//line1[17] = sel+48; */
@@ -1557,7 +1612,7 @@ void display_logged_states(uint8_t state_num){
 
 /* 	atomTimerDelay(100); */
 /* 	return 0; */
-	
+
 
 /* 	//return temp_num; */
 /* } */
