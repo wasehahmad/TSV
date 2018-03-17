@@ -41,6 +41,7 @@ volatile uint8_t config_addr[NUM_CONFIG_PARAMS];
 
 
 //4 arrays for the 4 lines on the LCD
+//displays 1 and 2 are switched (lines will be opposite)
 unsigned char display_0[20];
 unsigned char display_1[20];
 unsigned char display_2[20];

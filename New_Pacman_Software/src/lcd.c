@@ -42,8 +42,25 @@ void display_top(void){
   memcpy(line1,"V:",2);
   memcpy(line1+7,"A:",2);
 
-  memcpy(line2,"SAFETY", 6);
-  memcpy(line2+7,"LOOP:", 5);
+  memcpy(line2,"SLOOP:", 6);
+  
+  if(sloop_state == true){
+    memcpy(line2+6,"CL",2);
+  }
+  else{
+    memcpy(line2+6,"OP",2);
+  }
+
+//status of the relay of the pacman
+  memcpy(line2+9,"RELAY:",6);
+  if(PORTA & 0x08){
+    memcpy(line2+15,"OP",2);
+  }else{
+    memcpy(line2+15,"CL",2);
+  }
+  
+
+
 
   memcpy(line3,"W>",2);//W for Waseh
 
@@ -123,22 +140,7 @@ line1[16] = disp_current%10 +48;
 
 
 
-if(sloop_state == true){
-  line2[13] = 'C';
-  line2[14] = 'L';
-  line2[15] = 'O';
-  line2[16] = 'S';
-  line2[17] = 'E';
-  line2[18] = 'D';
-}
-else{
-  line2[13] = 'O';
-  line2[14] = 'P';
-  line2[15] = 'E';
-  line2[16] = 'N';
-  line2[17] = ' ';
-  line2[18] = ' ';
-}
+
 
   uint32_t seconds = (atomTimeGet()/100); //100 system ticks per sec
   uint32_t minutes = (seconds/60);
@@ -273,9 +275,29 @@ void display_cell(uint8_t type){//type 0 = voltage, type 1 = temperatures
     line0[8]=(cell_V[0]%1000)/100 + 48;
     line0[9]=(cell_V[0]%1000)%100/10 +48;
 
-    sprintf((char*)line1,"1:%.1f 2:%.1f",((double)cell_V[1])/1000,((double)cell_V[2])/1000);
-    sprintf((char*)line2,"3:%.1f 4:%.1f",((double)cell_V[3])/1000,((double)cell_V[4])/1000);
-    sprintf((char*)line3,"5:%.1f 6:%.1f",((double)cell_V[5])/1000,((double)cell_V[6])/1000);
+    sprintf((char*)line2,"1:%i.%i%i 2:%i.%i%i",
+                                            cell_V[1]/1000,
+                                            (cell_V[1]%1000)/100, 
+                                            (cell_V[1]%1000)%100/10,
+                                             cell_V[2]/1000,
+                                            (cell_V[2]%1000)/100, 
+                                            (cell_V[2]%1000)%100/10);
+
+    sprintf((char*)line1,"3:%i.%i%i 4:%i.%i%i",
+                                            cell_V[3]/1000,
+                                            (cell_V[3]%1000)/100, 
+                                            (cell_V[3]%1000)%100/10,
+                                             cell_V[4]/1000,
+                                            (cell_V[4]%1000)/100, 
+                                            (cell_V[4]%1000)%100/10);
+
+    sprintf((char*)line3,"5:%i.%i%i 6:%i.%i%i",
+                                            cell_V[5]/1000,
+                                            (cell_V[5]%1000)/100, 
+                                            (cell_V[5]%1000)%100/10,
+                                             cell_V[6]/1000,
+                                            (cell_V[6]%1000)/100, 
+                                            (cell_V[6]%1000)%100/10);
 
   }else{
     memcpy(line0,"Temp:",4);
@@ -284,9 +306,30 @@ void display_cell(uint8_t type){//type 0 = voltage, type 1 = temperatures
     line0[7]=(cell_T[0]%1000)/100 + 48;
     line0[8]=(cell_T[0]%1000)%100/10 +48;
 
-    sprintf((char*)line1,"1:%.1f 2:%.1f",((double)cell_T[1])/10,((double)cell_T[2])/10);
-    sprintf((char*)line2,"3:%.1f 4:%.1f",((double)cell_T[3])/10,((double)cell_T[4])/10);
-    sprintf((char*)line3,"5:%.1f 6:%.1f",((double)cell_T[5])/10,((double)cell_T[6])/10);
+
+    sprintf((char*)line2,"1:%i.%i%i 2:%i.%i%i",
+                                            cell_T[1]/1000,
+                                            (cell_T[1]%1000)/100, 
+                                            (cell_T[1]%1000)%100/10,
+                                             cell_T[2]/1000,
+                                            (cell_T[2]%1000)/100, 
+                                            (cell_T[2]%1000)%100/10);
+
+    sprintf((char*)line1,"3:%i.%i%i 4:%i.%i%i",
+                                            cell_T[3]/1000,
+                                            (cell_T[3]%1000)/100, 
+                                            (cell_T[3]%1000)%100/10,
+                                             cell_T[4]/1000,
+                                            (cell_T[4]%1000)/100, 
+                                            (cell_T[4]%1000)%100/10);
+
+    sprintf((char*)line3,"5:%i.%i%i 6:%i.%i%i",
+                                            cell_T[5]/1000,
+                                            (cell_T[5]%1000)/100, 
+                                            (cell_T[5]%1000)%100/10,
+                                             cell_T[6]/1000,
+                                            (cell_T[6]%1000)/100, 
+                                            (cell_T[6]%1000)%100/10);
   }
 
  
@@ -884,8 +927,8 @@ void set_config_param(void){
   memcpy(line0, "CONFIG",6);
   memcpy(line0+7, "PARAMS",6);
 
-  memcpy(line2,"ENTER",5);
-  memcpy(line2+6,"ADDR",4);
+  // memcpy(line2,"ENTER",5);
+  // memcpy(line2+6,"ADDR",4);
 
   memcpy(line1,"EDIT:",5);
   memcpy(line2,"CURR:",5);
