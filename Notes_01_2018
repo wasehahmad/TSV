@@ -8,3 +8,6 @@
 	Updated to 1.1 Mohm as the 2.2ohm would not rise fast enough for actual fault.
 	Make sure there is enough delay between watchdog reset at least 20 second so that the capacitor has enough time to discharge
 	for PACK 3 packman,  used 1.6Mohm
+
+
+6. The current display on the pacman display , when sloop not closed, is the current used by the pacman
