@@ -4,6 +4,12 @@
 void task_button_init(void){
 	DDRB &= ~(0x07);
 	PORTB |= 0x07;
+	button_enter=false;
+	button_down=false;
+	button_up=false;
+	prev_button_up=false;
+	prev_button_down=false;
+	prev_button_enter=false;
 }
 
 void task_button(uint32_t data){
@@ -53,13 +59,14 @@ void task_button(uint32_t data){
 			button_down = true;
 			atomTimerDelay(30);
 
-		}else if((PINB & 0x01) != 0x01 && !prev_button_enter){// button 2 is depressed (select)
+		}
+		/*else if((PINB & 0x01) != 0x01 && !prev_button_enter){// button 2 is depressed (select)
 			prev_button_enter=true;
 			button_enter = true;
 			atomTimerDelay(30);	
-		}
+		}*/
 		//check if button has been used in lcd (!button_*) and the mechanical button has been released
-		if((PINB & 0x01) == 0x01 && !button_enter) {
+		if((PINB & 0x01) == 0x01 ) {
 			prev_button_enter=false;
 		}
 		if((PINB & 0x04) == 0x04 && !button_up) {

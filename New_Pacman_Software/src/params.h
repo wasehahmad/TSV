@@ -85,9 +85,10 @@ volatile State pack_state;
 volatile bool sloop_state;
 volatile bool CHRG_DET;
 volatile bool LOW_DET;
+volatile bool button_enter; // Is always high for some reason
 volatile bool button_up;
 volatile bool button_down;
-volatile bool button_enter; // Is always high for some reason
+
 
 //debouncing variables
 volatile bool prev_button_up;

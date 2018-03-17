@@ -307,7 +307,7 @@ void display_cell(uint8_t type){//type 0 = voltage, type 1 = temperatures
     line0[8]=(cell_T[0]%1000)%100/10 +48;
 
 
-    sprintf((char*)line2,"1:%i.%i%i 2:%i.%i%i",
+    sprintf((char*)line2,"1:%i%i%i 2:%i%i%i",
                                             cell_T[1]/1000,
                                             (cell_T[1]%1000)/100, 
                                             (cell_T[1]%1000)%100/10,
@@ -315,7 +315,7 @@ void display_cell(uint8_t type){//type 0 = voltage, type 1 = temperatures
                                             (cell_T[2]%1000)/100, 
                                             (cell_T[2]%1000)%100/10);
 
-    sprintf((char*)line1,"3:%i.%i%i 4:%i.%i%i",
+    sprintf((char*)line1,"3:%i%i%i 4:%i%i%i",
                                             cell_T[3]/1000,
                                             (cell_T[3]%1000)/100, 
                                             (cell_T[3]%1000)%100/10,
@@ -323,7 +323,7 @@ void display_cell(uint8_t type){//type 0 = voltage, type 1 = temperatures
                                             (cell_T[4]%1000)/100, 
                                             (cell_T[4]%1000)%100/10);
 
-    sprintf((char*)line3,"5:%i.%i%i 6:%i.%i%i",
+    sprintf((char*)line3,"5:%i%i%i 6:%i%i%i",
                                             cell_T[5]/1000,
                                             (cell_T[5]%1000)/100, 
                                             (cell_T[5]%1000)%100/10,
@@ -1056,8 +1056,9 @@ void set_config_param(void){
   memcpy((void*)display_2, (void*) line2, 20);
   memcpy((void*)display_3, (void*) line3, 20);
 
-    if( (PINB & 0x01) == 0x00){ // if the enter button is pressed
+    if( (PINB & 0x01) == 0x00 && !prev_button_enter ){ // if the enter button is pressed
       sleep_time = atomTimeGet();
+      prev_button_enter = true;
       break;					// didn't work correctly when button_enter bool was used 
     }
 
@@ -1212,7 +1213,8 @@ switch(param_addr){
     memcpy((void*)display_2, (void*) line2, 20);
     memcpy((void*)display_3, (void*) line3, 20);
     
-    if( (PINB & 0x01) == 0x00){ // if the enter button is pressed
+    if( (PINB & 0x01) == 0x00 && !prev_button_enter){ // if the enter button is pressed
+      prev_button_enter = true;
       break;					// didn't work correctly when button_enter bool was used 
     }
 

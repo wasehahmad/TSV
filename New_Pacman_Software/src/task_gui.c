@@ -96,7 +96,8 @@ void task_gui(uint32_t data) {
       //}
   }
     //ENTER BUTTON PRESSED:
-  if((PINB & 0x01) == 0x00){
+  if((PINB & 0x01) == 0x00 && !prev_button_enter){
+  	prev_button_enter=true;
   	sleep_time = atomTimeGet();
   	switch(menu){
   		case 0:
