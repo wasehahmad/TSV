@@ -268,12 +268,12 @@ void display_cell(uint8_t type){//type 0 = voltage, type 1 = temperatures
 
 
   if(type==0){
-    memcpy(line0,"Volt:",4);
+    memcpy(line0,"Volt:",5);
 
-    line0[6]=cell_V[0]/1000+48;
-    line0[7]='.';
-    line0[8]=(cell_V[0]%1000)/100 + 48;
-    line0[9]=(cell_V[0]%1000)%100/10 +48;
+    line0[7]=cell_V[0]/1000+48;
+    line0[8]='.';
+    line0[9]=(cell_V[0]%1000)/100 + 48;
+    line0[10]=(cell_V[0]%1000)%100/10 +48;
 
     sprintf((char*)line2,"1:%i.%i%i 2:%i.%i%i",
                                             cell_V[1]/1000,
@@ -302,9 +302,9 @@ void display_cell(uint8_t type){//type 0 = voltage, type 1 = temperatures
   }else{
     memcpy(line0,"Temp:",4);
 
-    line0[6]=cell_T[0]/1000+48;
-    line0[7]=(cell_T[0]%1000)/100 + 48;
-    line0[8]=(cell_T[0]%1000)%100/10 +48;
+    line0[7]=cell_T[0]/1000+48;
+    line0[8]=(cell_T[0]%1000)/100 + 48;
+    line0[9]=(cell_T[0]%1000)%100/10 +48;
 
 
     sprintf((char*)line2,"1:%i%i%i 2:%i%i%i",
@@ -930,8 +930,8 @@ void set_config_param(void){
   // memcpy(line2,"ENTER",5);
   // memcpy(line2+6,"ADDR",4);
 
-  memcpy(line1,"EDIT:",5);
-  memcpy(line2,"CURR:",5);
+  memcpy(line1,"ADDR:",5);
+  memcpy(line2,"VAL:",4);
   //memcpy(line1+11,"NXT>",4);
 
   // FIRST SET THE ADDRESS FOR THE CONFIG PARAM WE ARE LOOKING TO SET
@@ -987,42 +987,54 @@ void set_config_param(void){
     //current pack CAN address
     line1[5] = next_buff[0];
     line1[6] = next_buff[1];
-
+    //clear the 4th line
+    memcpy(line3, "--------------------",20);
     uint8_t param_val;
     //Get the current value of parameter
     switch(param_choice){
       case 1:
       param_val = PACK_NUM;
+      memcpy(line3, "PACK_NUM",8);
       break;
       case 2:
       param_val = num_cells;
+      memcpy(line3, "NUM_CELLS",9);
       break;
       case 3:
       param_val = locked;
+      memcpy(line3, "LOCK PACK",9);
       break;
       case 4:
       param_val = max_cell_temp;
+      memcpy(line3, "MAX_CELL_TEMP",13);
       break;
       case 5:
       param_val = max_cell_voltage;
+      memcpy(line3, "MAX_CELL_VOLT",13);
       break;
       case 6:
       param_val = screen_reset_time;
+      memcpy(line3, "SCR_RST_TIME",12);
       break;
       case 7:
       param_val = screen_sleep_time;
+      memcpy(line3, "SCR_SLP_TIME",12);
       break;
       case 8:
       param_val = min_cell_voltage;
+      memcpy(line3, "MIN_CELL_VOLT",13);
       break;
       case 9:
       param_val = max_charge_cell_voltage;
+      memcpy(line3, "MAX_CHRG_CELL_VOLT",18);
       break;
       case 10:
       param_val = min_current;
+      memcpy(line3, "MIN_CURR",8);
       break;
       default:
       param_val= '-';
+      memcpy(line3, "UNUSED",6);
   } // end switch
 
   sprintf(&curr_buff[0], "%02X", param_choice);
@@ -1035,6 +1047,7 @@ void set_config_param(void){
     line2[6]=val_buff[1];
   }else{
     line2[5]='-';
+    line2[6]='-';
   }
 
 

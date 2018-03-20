@@ -24,7 +24,7 @@ int8_t read_SOC(void){
 	 	 eeprom_write_byte((uint8_t*)EEPROM_SOC, 50);
 	 	 pack_SOC = eeprom_read_byte((uint8_t*)EEPROM_SOC); 
 	 }
-	 return pack_SOC;
+	return pack_SOC;
 }
 // called in task_config
 void save_SOC(void){
@@ -68,12 +68,13 @@ void task_charge(uint32_t data) {
 			}
 		}
 		// TODO remove or change to check for no current (<1A)
-		for(i = 0; i<ams_board_count; i = i+1){
-			if((cell_V[i] < (100*min_cell_voltage)) /*&& pack_current < min_current*/){//2700 mV cell voltage and less than 1A
-				pack_coulombs = 0;
-				pack_SOC = 0;
-			}
-		}
+		
+		// for(i = 0; i<ams_board_count; i = i+1){
+		// 	if((cell_V[i] < (100*min_cell_voltage)) && pack_current < min_current){//2700 mV cell voltage and less than 1A
+		// 		pack_coulombs = 0;
+		// 		pack_SOC = 0;
+		// 	}
+		// }
 
 		//integrate current
 		current_tick = atomTimeGet();

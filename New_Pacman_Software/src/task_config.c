@@ -119,11 +119,13 @@ void task_config(uint32_t data) {
     state_ts[i] = atomTimeGet();
   }
 	
-
-  pack_SOC = read_SOC();//(uint16_t)(10000.0 * pack_coulombs / ((float)MAX_COULOMBS));
+  //add+1 as the instant it turns on, the value on display drops by 1 e.g. 50 - 0.001 =49.999 --> to int =49
+  pack_SOC = read_SOC()+1;//(uint16_t)(10000.0 * pack_coulombs / ((float)MAX_COULOMBS));
   pack_coulombs = (uint32_t)(MAX_COULOMBS*((float)pack_SOC/100));
   save_SOC();
   uint8_t i = 0;
+
+
   for(;;) {
     watch_dog_list[WATCH_CONFIG]=1;//avoid overflow
     
@@ -141,7 +143,7 @@ void task_config(uint32_t data) {
       	  flt_cnd.area = i;
       	}
       }
-      if(cell_V[i] > 100*max_cell_voltage){// || (cell_V[i] <2000)){//>4000 mV or <2000 mV cell voltage //**** COMMENTED: IF UNCOMMENTED, PACK GOES INTO STATE DEAD
+      if((cell_V[i] > 100*max_cell_voltage) || (cell_V[i] <(100*min_cell_voltage))){//>4000 mV or <2000 mV cell voltage //**** COMMENTED: IF UNCOMMENTED, PACK GOES INTO STATE DEAD
       	if(cell_V[i] != 0xFFF6){//workaround to problem with i2c...
       	  pack_state = flt;
       	  fault_code = 1;
@@ -236,7 +238,7 @@ void task_config(uint32_t data) {
       	    flt_cnd.active = 1;
       	  }
       	}
-      	if(cell_V[i] > 100*max_cell_voltage){// || (cell_V[i] <2000)){//>4000 mV or <2000 mV cell voltage
+      	if((cell_V[i] > 100*max_cell_voltage)|| (cell_V[i] <(100*min_cell_voltage))){//>4000 mV or <2000 mV cell voltage
       	  if(cell_V[i] != 0xFFF6){//workaround to problem with i2c...
       	    temp = flt;
       	    fault_code = 1;

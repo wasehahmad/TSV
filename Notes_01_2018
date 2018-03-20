@@ -11,3 +11,6 @@
 
 
 6. The current display on the pacman display , when sloop not closed, is the current used by the pacman
+
+
+7. Made it so pack SOC never = 0, i.e. pack wont go dead when a cell voltage goes below threshold, a fault condition happens instead
