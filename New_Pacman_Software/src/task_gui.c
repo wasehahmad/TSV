@@ -44,6 +44,9 @@ void task_gui(uint32_t data) {
   	watch_dog_list[WATCH_GUI]=1;//avoid overflow
 
     if(((atomTimeGet() - sleep_time)/100) > screen_reset_time){ // NO BUTTONS HAVE BEEN PRESSED FOR 30 SECONDS, GO BACK TO ORIGINAL MENU
+    	if(pack_state==chrg){
+    		menu=1;
+    	}
     	menu = 0;
     	screen = 0;
     }
