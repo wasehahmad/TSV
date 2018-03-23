@@ -774,15 +774,10 @@ void disp_invalid_addr(void){
 
   clear_screen();
 
-  if( !locked ){
-
-    memcpy(line0, "INVALID",7);
-    memcpy(line0+8, "ADDRESS!",8);
-  }else{
-    memcpy(line0, "PACK",4);
-    memcpy(line0+5, "LOCKED!",7);
-  }
-
+  
+  memcpy(line0, "INVALID",7);
+  memcpy(line0+8, "ADDRESS!",8);
+  
   memcpy((void*)display_0, (void*) line0, 20);
   memcpy((void*)display_1, (void*) line1, 20);
   memcpy((void*)display_2, (void*) line2, 20);
@@ -1032,6 +1027,10 @@ void set_config_param(void){
       param_val = min_current;
       memcpy(line3, "MIN_CURR",8);
       break;
+      case 11:
+      param_val = sloop_always_closed;
+      memcpy(line3, "SLOOP_ALWAYS_CLOSED",19);
+      break;
       default:
       param_val= '-';
       memcpy(line3, "UNUSED",6);
@@ -1150,6 +1149,9 @@ switch(param_addr){
   break;
   case 10:
   param_choice = min_current;
+  break;
+  case 11:
+  param_choice = sloop_always_closed;
   break;
   } // end switch
 
@@ -1307,6 +1309,10 @@ switch(param_addr){
     case 10:
     eeprom_write_byte((uint8_t*)EEPROM_MIN_CURRENT, param_choice);
     min_current = eeprom_read_byte((uint8_t*)EEPROM_MIN_CURRENT);
+    break;
+    case 11:
+    eeprom_write_byte((uint8_t*)EEPROM_SLOOP_ALWAYS_CLOSED, param_choice);
+    sloop_always_closed = eeprom_read_byte((uint8_t*)EEPROM_SLOOP_ALWAYS_CLOSED);
     break;
   }
 

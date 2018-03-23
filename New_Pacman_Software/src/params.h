@@ -18,7 +18,7 @@
 // LCD values
 #define EN_LOW	0x08
 
-#define NUM_CONFIG_PARAMS 10
+#define NUM_CONFIG_PARAMS 11
 #define PASSWORD 0xFF
 #define NUM_TASKS 8
 
@@ -98,6 +98,7 @@ volatile bool prev_button_enter;
 volatile uint8_t num_cells;
 
 volatile uint8_t locked;
+volatile uint8_t sloop_always_closed;
 
 // NEED TO LOG RECENT STATE TRANSITIONS AND TIMESTAMPS:
 volatile State recent_states[5];
@@ -158,8 +159,9 @@ ATOM_MUTEX A_mutex;
 #define DEFAULT_MIN_CELL_VOLTAGE 0x1B
 #define DEFAULT_SCREEN_RESET_TIME 0x0F
 #define DEFAULT_SCREEN_SLEEP_TIME 0x78
-#define DEFAULT_MAX_CHARGE_CELL_VOLTAGE 0x25
+#define DEFAULT_MAX_CHARGE_CELL_VOLTAGE 0x24
 #define DEFAULT_MIN_CURRENT 0x01
+#define DEFAULT_SLOOP_ALWAYS_CLOSED 0x00
 
 
 volatile uint8_t min_cell_voltage;
@@ -184,6 +186,7 @@ volatile uint8_t screen_sleep_time;
 #define EEPROM_MIN_CELL_VOLTAGE 10
 #define EEPROM_MAX_CHARGE_CELL_VOLTAGE 11
 #define EEPROM_MIN_CURRENT 12
+#define EEPROM_SLOOP_ALWAYS_CLOSED 13
 
 
 

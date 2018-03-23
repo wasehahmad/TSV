@@ -57,6 +57,7 @@ void task_config(uint32_t data) {
   config_addr[6] = 0x08; // MIN CELL VOLTAGE
   config_addr[7] = 0x09; // MAX CHARGE CELL VOLTAGE
   config_addr[8] = 0x0A; // MIN CURRENT
+  config_addr[9] = 0x0B; // SLOOP_ALWAYS_CLOSED
 
 
   //asdf
@@ -92,6 +93,11 @@ void task_config(uint32_t data) {
     min_current = eeprom_read_byte((uint8_t*)EEPROM_MIN_CURRENT);
   }
   
+  sloop_always_closed = eeprom_read_byte((uint8_t*)EEPROM_SLOOP_ALWAYS_CLOSED);
+  if((sloop_always_closed == 0) || (sloop_always_closed == 0xFF)) {
+    eeprom_write_byte((uint8_t*)EEPROM_SLOOP_ALWAYS_CLOSED, DEFAULT_SLOOP_ALWAYS_CLOSED);
+    sloop_always_closed = eeprom_read_byte((uint8_t*)EEPROM_SLOOP_ALWAYS_CLOSED);
+  }
 
 
   
@@ -120,7 +126,9 @@ void task_config(uint32_t data) {
   }
 	
   //add+1 as the instant it turns on, the value on display drops by 1 e.g. 50 - 0.001 =49.999 --> to int =49
-  pack_SOC = read_SOC()+1;//(uint16_t)(10000.0 * pack_coulombs / ((float)MAX_COULOMBS));
+  pack_SOC=read_SOC();
+  pack_SOC = (pack_SOC<1 || pack_SOC>99)?pack_SOC:pack_SOC+1;
+  //(uint16_t)(10000.0 * pack_coulombs / ((float)MAX_COULOMBS));
   pack_coulombs = (uint32_t)(MAX_COULOMBS*((float)pack_SOC/100));
   save_SOC();
   uint8_t i = 0;
