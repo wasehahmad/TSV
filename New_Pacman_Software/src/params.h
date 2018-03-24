@@ -18,7 +18,7 @@
 // LCD values
 #define EN_LOW	0x08
 
-#define NUM_CONFIG_PARAMS 11
+#define NUM_CONFIG_PARAMS 12
 #define PASSWORD 0xFF
 #define NUM_TASKS 8
 
@@ -162,6 +162,7 @@ ATOM_MUTEX A_mutex;
 #define DEFAULT_MAX_CHARGE_CELL_VOLTAGE 0x27
 #define DEFAULT_MIN_CURRENT 0x01
 #define DEFAULT_SLOOP_ALWAYS_CLOSED 0x00
+#define DEFAULT_SET_SOC 50
 
 
 volatile uint8_t min_cell_voltage;

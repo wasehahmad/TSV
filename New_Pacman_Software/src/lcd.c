@@ -1031,6 +1031,9 @@ void set_config_param(void){
       param_val = sloop_always_closed;
       memcpy(line3, "SLOOP_ALWAYS_CLOSED",19);
       break;
+      case 12:
+      param_val = DEFAULT_SET_SOC;
+      memcpy(line3, "SET SOC VALUE",13)
       default:
       param_val= '-';
       memcpy(line3, "UNUSED",6);
@@ -1153,6 +1156,8 @@ switch(param_addr){
   case 11:
   param_choice = sloop_always_closed;
   break;
+  case 12:
+  param choice = DEFAULT_SET_SOC;
   } // end switch
 
   sprintf(&curr_buff[0], "%02X", param_choice);
@@ -1187,7 +1192,11 @@ switch(param_addr){
     }
 
     if(button_up){
-      sel++;
+      if(param_addr==12){//SET SOC
+        sel=sel+25;
+      }else{
+        sel++;
+      }
       param_choice = sel;
       sleep_time = atomTimeGet();
       
@@ -1195,7 +1204,11 @@ switch(param_addr){
       button_up = false;
 
     }else if(button_down){
-      sel--;
+      if(param_addr==12){//SET SOC
+        sel=sel-25;
+      }else{
+        sel--;
+      }
       param_choice = sel;
       sleep_time = atomTimeGet();
       
@@ -1313,6 +1326,9 @@ switch(param_addr){
     case 11:
     eeprom_write_byte((uint8_t*)EEPROM_SLOOP_ALWAYS_CLOSED, param_choice);
     sloop_always_closed = eeprom_read_byte((uint8_t*)EEPROM_SLOOP_ALWAYS_CLOSED);
+    break;
+    case 12:
+    pack_SOC=param_choice;
     break;
   }
 
