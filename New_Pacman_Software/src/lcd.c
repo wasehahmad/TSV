@@ -1033,7 +1033,8 @@ void set_config_param(void){
       break;
       case 12:
       param_val = DEFAULT_SET_SOC;
-      memcpy(line3, "SET SOC VALUE",13)
+      memcpy(line3, "SET SOC VALUE",13);
+      break;
       default:
       param_val= '-';
       memcpy(line3, "UNUSED",6);
@@ -1157,7 +1158,8 @@ switch(param_addr){
   param_choice = sloop_always_closed;
   break;
   case 12:
-  param choice = DEFAULT_SET_SOC;
+  param_choice = DEFAULT_SET_SOC;
+  break;
   } // end switch
 
   sprintf(&curr_buff[0], "%02X", param_choice);

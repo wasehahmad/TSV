@@ -58,6 +58,7 @@ void task_config(uint32_t data) {
   config_addr[7] = 0x09; // MAX CHARGE CELL VOLTAGE
   config_addr[8] = 0x0A; // MIN CURRENT
   config_addr[9] = 0x0B; // SLOOP_ALWAYS_CLOSED
+  config_addr[10]= 0x0C;
 
 
   //asdf
