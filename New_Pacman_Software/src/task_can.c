@@ -190,6 +190,20 @@ void task_can(uint32_t data){
 		  }
 		}
 
+		can_frame.id.std = ((PACK_NUM<<8) + packet_num) & 0x7FF;
+		can_frame.dlc = 1;
+		
+		can_buff[0] = sloop_state;
+		//after filling rest of packetet, uncomment the following
+		/*
+		packet_num++;
+		packet_offset = 0;
+		*/
+		
+		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
+		}
+		while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
+
 		/* can_frame.dlc = 2; */
 		/* can_frame.id.std = (PACK_NUM<<8 | 0x001) & 0x7FF; */
 		/* while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){ */
